@@ -212,10 +212,10 @@ function homeView() {
       <div class="hero-copy">
         <p class="eyebrow">Hebrew reading games</p>
         <h1>Hebrew reading, one belt at a time.</h1>
-        <p class="lede">Review games for every level. Finish a stripe to earn a star, and earn all three to move up to the next belt.</p>
+        <p class="lede">Play the games in a stripe to earn a star. Get 3 stars to move up a belt.</p>
         <div class="hero-actions">
           ${cta}
-          ${up ? `<span class="hero-next">${doneTotal ? "Next up" : "Begin with"}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
+          ${up ? `<span class="hero-next">${doneTotal ? "Next up" : "Start with"}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
         </div>
         <dl class="stats">
           <div><dt>Games to play</dt><dd>${every.length}</dd></div>
@@ -229,7 +229,7 @@ function homeView() {
     <section class="section" id="belts">
       <div class="section-head">
         <h2>Choose your belt</h2>
-        <p>Start at White and work your way up to Black.</p>
+        <p>Start with White. Work up to Black.</p>
       </div>
       <ol class="belt-grid">${cards}</ol>
     </section>`;
@@ -288,7 +288,7 @@ function beltView(b) {
 
   const prev = BELTS[idx - 1], next = BELTS[idx + 1];
   const got = STRIPES.filter(s => stripeDone(b.key, s, done)).length;
-  const sub = all.length ? `${plural(all.length, "game")} across 3 stripes · ${got} of 3 stars earned` : "Games for this belt are coming soon.";
+  const sub = all.length ? `${plural(all.length, "game")} · ${got} of 3 stars` : "Coming soon.";
   return `
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`]])}
     ${pageHead(b, `${b.name} Belt`, sub)}
@@ -334,7 +334,7 @@ function stripeView(b, stripe) {
 
   let body;
   if (!list.length) {
-    body = `<div class="empty-note">${icon("clock", "icon icon-lg")}<p>Games for this stripe are on the way. Check back soon!</p></div>`;
+    body = `<div class="empty-note">${icon("clock", "icon icon-lg")}<p>Coming soon.</p></div>`;
   } else if (view === "type") {
     body = types.map(k => {
       const group = list.filter(g => g.type === k);
@@ -379,39 +379,39 @@ function stripeView(b, stripe) {
     ${body}`;
 }
 
-// What to do in each kind of Wordwall game, in a sentence a student can follow.
+// What to do in each kind of Wordwall game. Kids read this, so keep it short and simple.
 const HOW_TO = {
-  "Matching pairs": "Tap two cards to turn them over. Find the pairs that match.",
-  "Match up": "Drag each item into the box next to its match.",
-  "Find the match": "Tap the answer that matches. Keep going until they're all gone.",
-  "Group sort": "Drag each item into the group it belongs in.",
-  "Rank order": "Drag the items into the right order.",
-  "Balloon pop": "Pop a balloon to drop its item onto the matching spot.",
-  "Flying fruit": "Answers fly across the screen. Tap the right one as it goes by.",
-  "Whack-a-mole": "Moles pop up with answers. Tap only the right ones.",
-  "Open the box": "Tap a box to open it, then read what's inside out loud.",
-  "Spin the wheel": "Spin the wheel, then read what it lands on out loud.",
-  "Speaking cards": "Tap the deck to deal a card, then read it out loud.",
-  "True or false": "Decide if each answer is true or false before time runs out.",
-  "Quiz": "Read each question and tap the right answer.",
-  "Gameshow quiz": "Tap the right answer before time runs out.",
-  "Win or lose quiz": "Choose how many points to play for, then answer the question.",
-  "Airplane": "Fly into the right answers and dodge the wrong ones. Use the arrow keys or tap.",
-  "Labelled diagram": "Drag each label to its place on the picture.",
+  "Matching pairs": "Flip two cards. Find the ones that match.",
+  "Match up": "Drag each one to its match.",
+  "Find the match": "Tap the one that matches.",
+  "Group sort": "Drag each one into the right group.",
+  "Rank order": "Drag them into the right order.",
+  "Balloon pop": "Pop the balloon to drop it on its match.",
+  "Flying fruit": "Tap the right answer as it flies by.",
+  "Whack-a-mole": "Tap the moles with the right answer.",
+  "Open the box": "Tap a box. Read what is inside out loud.",
+  "Spin the wheel": "Spin the wheel. Read it out loud.",
+  "Speaking cards": "Tap to get a card. Read it out loud.",
+  "True or false": "Is it right? Tap True or False.",
+  "Quiz": "Tap the right answer.",
+  "Gameshow quiz": "Tap the right answer. Be quick!",
+  "Win or lose quiz": "Pick your points. Then tap the right answer.",
+  "Airplane": "Fly into the right answers. Miss the wrong ones.",
+  "Labelled diagram": "Drag each word to its spot.",
   "Anagram": "Drag the letters into the right order.",
-  "Watch and memorize": "Watch the items carefully, then pick the ones you saw.",
-  "Speed sorting": "Sort each item into the right group as fast as you can.",
-  "Flash cards": "Say the answer, then flip the card to check.",
-  "Complete the sentence": "Drag each piece into the blank where it belongs.",
-  "Categorize": "Drag each item into the right group.",
+  "Watch and memorize": "Watch closely. Then pick what you saw.",
+  "Speed sorting": "Put each one in the right group. Be quick!",
+  "Flash cards": "Say the answer. Then flip the card.",
+  "Complete the sentence": "Drag each word into the right blank.",
+  "Categorize": "Drag each one into the right group.",
 };
 
 function howToPlay(g, next) {
   const how = HOW_TO[g.game];
   const steps = [
-    "Press <b>Start</b> on the game.",
-    `${how ? esc(how) : "Follow the directions on the game."}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
-    next ? "When you finish, press <b>Next game</b>." : "When you finish, press <b>Stripe done</b>.",
+    "Press <b>Start</b>.",
+    `${how ? esc(how) : "Do what the game says."}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
+    next ? "Done? Press <b>Next game</b>." : "Done? Press <b>Stripe done</b>.",
   ];
   return `
     <aside class="how-to">
@@ -479,7 +479,7 @@ function maybeCelebrate(b, stripe) {
   const toast = document.createElement("div");
   toast.className = "toast";
   toast.setAttribute("role", "status");
-  toast.innerHTML = `<span class="toast-star">${icon("star")}</span><span><b>Stripe ${stripe} complete</b><br>You earned a ${b.name} Belt star.</span>`;
+  toast.innerHTML = `<span class="toast-star">${icon("star")}</span><span><b>Stripe ${stripe} done</b><br>You got a ${b.name} Belt star.</span>`;
   document.body.append(toast);
   setTimeout(() => toast.classList.add("out"), 4200);
   setTimeout(() => toast.remove(), 4800);
