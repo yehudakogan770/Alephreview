@@ -71,12 +71,6 @@ function beltStyle(b) {
   return `--belt:${b.color};--belt-ink:${b.ink}`;
 }
 
-// A karate belt drawn in CSS: colored band with a black tip holding stripes.
-function beltGraphic(b, filled = 0) {
-  const stripes = STRIPES.map(s => `<span class="stripe${s <= filled ? " on" : ""}"></span>`).join("");
-  return `<div class="belt" style="${beltStyle(b)}" aria-hidden="true"><span class="belt-tip">${stripes}</span></div>`;
-}
-
 function crumbs(parts) {
   const html = parts.map(([label, href]) => href ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`);
   return `<nav class="crumbs" aria-label="Breadcrumb">${html.join('<span class="sep">›</span>')}</nav>`;
@@ -94,7 +88,6 @@ function homeView() {
           <span class="rank">${i + 1}</span>
           <span class="belt-card-body">
             <span class="belt-name">${b.name} Belt</span>
-            ${beltGraphic(b)}
             <span class="belt-meta">${status}</span>
           </span>
         </a>
@@ -119,7 +112,6 @@ function beltView(b) {
     return `
       <li>
         <a class="stripe-card${n ? "" : " empty"}" href="#/${b.key}/${s}" style="${beltStyle(b)}">
-          ${beltGraphic(b, s)}
           <span class="stripe-name">Stripe ${s}</span>
           <span class="stripe-meta">${n ? `${n} games${p ? ` · ${p} played` : ""}` : "Coming soon"}</span>
         </a>
@@ -204,7 +196,6 @@ function stripeView(b, stripe) {
           <h1>${b.name} Belt · Stripe ${stripe}</h1>
           <p>${list.length} games${list.length ? ` · ${p} played` : ""}</p>
         </div>
-        ${beltGraphic(b, stripe)}
       </div>
     </section>
     <div class="toolbar">
