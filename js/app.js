@@ -1,7 +1,8 @@
-// Aleph Review Dojo — hash-routed single page.
+// Aleph Review — hash-routed single page.
 //   #/            all belts
 //   #/red         one belt, its three stripes
 //   #/red/2       the games for Red belt, Stripe 2
+//   #/red/2/play/123   play one game inside the site
 
 const BELTS = [
   { key: "white",  name: "White",  color: "#f4f4f2", ink: "#1f2937" },
@@ -46,6 +47,14 @@ function beltCount(beltKey) {
 
 function thumbUrl(thumb) {
   return /^https?:/.test(thumb) ? thumb : THUMB_BASE + thumb;
+}
+
+function embedUrl(g) {
+  return `https://wordwall.net/embed/${g.embed}`;
+}
+
+function playHref(b, stripe, g) {
+  return `#/${b.key}/${stripe}/play/${g.id}`;
 }
 
 function gameUrl(g) {
@@ -131,14 +140,14 @@ function beltView(b) {
     </nav>`;
 }
 
-function gameCard(g, done) {
+function gameCard(g, done, b, stripe) {
   const t = GAME_TYPES[g.type] || { label: "Game", icon: "⭐" };
   const thumb = g.thumb
     ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'thumb-fallback',textContent:'${t.icon}'}))">`
     : `<span class="thumb-fallback">${t.icon}</span>`;
   return `
     <li>
-      <a class="game-card${done.has(g.id) ? " played" : ""}" href="${gameUrl(g)}" target="_blank" rel="noopener" data-id="${esc(g.id)}">
+      <a class="game-card${done.has(g.id) ? " played" : ""}" ${g.embed ? `href="${playHref(b, stripe, g)}"` : `href="${gameUrl(g)}" target="_blank" rel="noopener"`} data-id="${esc(g.id)}">
         <span class="thumb">${thumb}</span>
         <span class="game-body">
           <span class="game-title" dir="auto">${esc(g.title)}</span>
@@ -168,7 +177,7 @@ function stripeView(b, stripe) {
       return `
         <section class="type-group">
           <h2>${t.icon} ${t.label} <span class="count">${group.length}</span></h2>
-          <ul class="game-grid">${group.map(g => gameCard(g, done)).join("")}</ul>
+          <ul class="game-grid">${group.map(g => gameCard(g, done, b, stripe)).join("")}</ul>
         </section>`;
     }).join("");
   } else {
@@ -180,7 +189,7 @@ function stripeView(b, stripe) {
     const shown = active === "all" ? list : list.filter(g => g.type === active);
     body = `
       <div class="chips" role="group" aria-label="Filter by game type">${chips}</div>
-      <ul class="game-grid">${shown.map(g => gameCard(g, done)).join("")}</ul>`;
+      <ul class="game-grid">${shown.map(g => gameCard(g, done, b, stripe)).join("")}</ul>`;
   }
 
   const stripeTabs = STRIPES.map(s =>
@@ -209,6 +218,36 @@ function stripeView(b, stripe) {
     ${body}`;
 }
 
+function playerView(b, stripe, id) {
+  const list = gamesFor(b.key, stripe);
+  const i = list.findIndex(g => g.id === id);
+  const g = list[i];
+  if (!g) return notFoundView();
+  markPlayed(g.id);
+
+  const t = GAME_TYPES[g.type] || { label: "Game", icon: "⭐" };
+  const prev = list[i - 1], next = list[i + 1];
+  const stage = g.embed
+    ? `<iframe src="${esc(embedUrl(g))}" title="${esc(g.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe>`
+    : `<p class="empty-note">This game can't play here. <a href="${gameUrl(g)}" target="_blank" rel="noopener">Open it on Wordwall</a>.</p>`;
+
+  return `
+    ${crumbs([["All belts", "#/"], [`${b.name} Belt`, `#/${b.key}`], [`Stripe ${stripe}`, `#/${b.key}/${stripe}`], [g.title]])}
+    <div class="player-head">
+      <div>
+        <h1 dir="auto">${esc(g.title)}</h1>
+        <p class="game-type">${t.icon} ${esc(g.game || t.label)} · Game ${i + 1} of ${list.length}</p>
+      </div>
+      <a class="back-btn" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">← All ${b.name} Stripe ${stripe} games</a>
+    </div>
+    <div class="player">${stage}</div>
+    <nav class="pager">
+      ${prev ? `<a href="${playHref(b, stripe, prev)}">← Previous game</a>` : "<span></span>"}
+      <a class="subtle" href="${gameUrl(g)}" target="_blank" rel="noopener">Open on Wordwall ↗</a>
+      ${next ? `<a href="${playHref(b, stripe, next)}">Next game →</a>` : "<span></span>"}
+    </nav>`;
+}
+
 function notFoundView() {
   return `<section class="hero"><h1>Page not found</h1><p><a href="#/">Back to all belts</a></p></section>`;
 }
@@ -216,16 +255,19 @@ function notFoundView() {
 // ---- router --------------------------------------------------------------
 
 function render() {
-  const [beltKey, stripeStr] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+  const [beltKey, stripeStr, action, gameId] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   const belt = BELTS.find(b => b.key === beltKey);
   const stripe = Number(stripeStr);
 
   if (!beltKey) app.innerHTML = homeView();
   else if (belt && !stripeStr) app.innerHTML = beltView(belt);
-  else if (belt && STRIPES.includes(stripe)) app.innerHTML = stripeView(belt, stripe);
+  else if (belt && STRIPES.includes(stripe) && action === "play") app.innerHTML = playerView(belt, stripe, gameId);
+  else if (belt && STRIPES.includes(stripe) && !action) app.innerHTML = stripeView(belt, stripe);
   else app.innerHTML = notFoundView();
 
-  document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review Dojo` : "Aleph Review Dojo";
+  document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review` : "Aleph Review";
+  const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
+  if (playing) document.title = `${playing.title} — Aleph Review`;
 }
 
 app.addEventListener("click", e => {

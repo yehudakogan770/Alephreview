@@ -1,11 +1,11 @@
-# Aleph Review Dojo
+# Aleph Review
 
 A website of Hebrew reading and fluency review games, set up like karate belts.
 
 - **10 belts, in order:** White, Red, Orange, Yellow, Green, Blue, Purple, Brown, Gray, Black
 - **3 stripes on each belt.** Each stripe has its own set of games.
 - **Two ways to see a stripe's games:** *All games* (you can filter by game type), or *By game type* (games grouped under headings like Matching and Sorting).
-- Games open on Wordwall in a new tab. A green ✓ marks games a student has already opened on that device.
+- Games play right inside the site, with Previous / Next buttons to move through a stripe. A green ✓ marks games a student has already played on that device.
 
 The site is plain HTML, CSS and JavaScript. It doesn't need a build step.
 
@@ -29,6 +29,7 @@ All the games are listed in [`js/games.js`](js/games.js), grouped by belt and th
 | `game`  | *(optional)* The Wordwall template name, like `Balloon pop`, which is shown on the card |
 | `hidden` | *(optional)* Set to `true` to hide a game without deleting it |
 | `play`  | *(optional)* The student play link: `wordwall.net/play/`**`94309/859/562`**. Without it, the game opens its Wordwall resource page instead. |
+| `embed` | The game's embed code, so it plays inside the site. On Wordwall, click **Share → Embed** and copy the part after `wordwall.net/embed/`, like `51273b8d55314041b929b99e1bc131be?themeId=1`. Without it, the game opens on Wordwall in a new tab. |
 | `thumb` | *(optional)* The picture ID from Wordwall's embed code |
 
 To start a new belt (for example Yellow), add a block to `js/games.js` shaped like the `orange` block:
