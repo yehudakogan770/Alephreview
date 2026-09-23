@@ -335,6 +335,7 @@ a { color: inherit; }
 
 .hero-art {
   display: grid;
+  direction: rtl; /* Hebrew order: א starts on the right */
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   justify-self: center;
