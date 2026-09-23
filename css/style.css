@@ -7,9 +7,6 @@
   --accent: #1c64d6;
   --shadow: 0 1px 2px rgba(20, 20, 30, .06), 0 4px 14px rgba(20, 20, 30, .06);
   --radius: 14px;
-  --belt-tip: #15171a;
-  --stripe-off: #3a3d44;
-  --stripe-on: #f6c426;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,8 +18,6 @@
     --line: #2d313a;
     --accent: #6ea2ff;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
-    --belt-tip: #000;
-    --stripe-off: #3a3d44;
   }
 }
 
@@ -90,39 +85,6 @@ a { color: var(--accent); }
   font-size: 14px;
   text-align: center;
 }
-
-/* ---- belt graphic ---- */
-
-.belt {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  max-width: 220px;
-  height: 22px;
-  border-radius: 4px;
-  background: var(--belt);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .18);
-}
-
-.belt-tip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  width: 34%;
-  height: 100%;
-  border-radius: 0 4px 4px 0;
-  background: var(--belt-tip);
-}
-
-.stripe {
-  width: 6px;
-  height: 100%;
-  background: var(--stripe-off);
-}
-
-.stripe.on { background: var(--stripe-on); }
 
 /* ---- home ---- */
 
@@ -228,10 +190,6 @@ button:focus-visible, .tab:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-}
-.level-head .belt {
-  width: 200px;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, .5), inset 0 0 0 1px rgba(0, 0, 0, .2);
 }
 
 .stripe-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
