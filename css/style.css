@@ -1,0 +1,400 @@
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --text: #1f2430;
+  --muted: #5f6673;
+  --line: #e4e0d6;
+  --accent: #1c64d6;
+  --shadow: 0 1px 2px rgba(20, 20, 30, .06), 0 4px 14px rgba(20, 20, 30, .06);
+  --radius: 14px;
+  --belt-tip: #15171a;
+  --stripe-off: #3a3d44;
+  --stripe-on: #f6c426;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161b;
+    --surface: #1d2027;
+    --text: #eceef2;
+    --muted: #a3a9b5;
+    --line: #2d313a;
+    --accent: #6ea2ff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+    --belt-tip: #000;
+    --stripe-off: #3a3d44;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 17px/1.5 "Nunito", system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans Hebrew", sans-serif;
+}
+
+h1, h2, .brand-text, .belt-name, .stripe-name {
+  font-family: "Fredoka", "Nunito", system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a { color: var(--accent); }
+
+#app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+  outline: none;
+}
+
+/* ---- header / footer ---- */
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #15171a;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.brand-text { font-size: 22px; }
+
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ---- belt graphic ---- */
+
+.belt {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 220px;
+  height: 22px;
+  border-radius: 4px;
+  background: var(--belt);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .18);
+}
+
+.belt-tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 34%;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: var(--belt-tip);
+}
+
+.stripe {
+  width: 6px;
+  height: 100%;
+  background: var(--stripe-off);
+}
+
+.stripe.on { background: var(--stripe-on); }
+
+/* ---- home ---- */
+
+.hero { margin: 8px 0 24px; }
+.hero h1 { font-size: clamp(28px, 5vw, 40px); margin: 0 0 8px; }
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; }
+
+.belt-grid, .stripe-grid, .game-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.belt-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+
+.belt-card, .stripe-card {
+  display: flex;
+  gap: 14px;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--belt);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.belt-card:hover, .stripe-card:hover, .game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(20, 20, 30, .08), 0 10px 24px rgba(20, 20, 30, .1);
+}
+
+.belt-card:focus-visible, .stripe-card:focus-visible, .game-card:focus-visible,
+button:focus-visible, .tab:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.rank {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--belt);
+  color: var(--belt-ink);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+  font-weight: 700;
+}
+
+.belt-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+.belt-name { font-size: 20px; }
+.belt-meta, .stripe-meta { color: var(--muted); font-size: 14px; font-weight: 600; }
+
+.empty { opacity: .6; }
+.empty:hover { opacity: .85; }
+
+/* ---- belt + stripe pages ---- */
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.crumbs a { color: var(--muted); }
+.crumbs .sep { opacity: .6; }
+
+.level-head {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--belt);
+  color: var(--belt-ink);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12);
+}
+.level-head h1 { margin: 0 0 4px; font-size: clamp(24px, 4.5vw, 34px); }
+.level-head p { margin: 0; opacity: .9; font-weight: 600; }
+
+.level-head-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.level-head .belt {
+  width: 200px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .5), inset 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+.stripe-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+
+.stripe-card {
+  flex-direction: column;
+  gap: 10px;
+}
+.stripe-name { font-size: 22px; }
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  font-weight: 700;
+}
+.pager a { text-decoration: none; }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tabs, .view-toggle {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.tab, .view-toggle button {
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: 700 15px/1.2 "Nunito", system-ui, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab[aria-current="page"], .view-toggle button[aria-pressed="true"] {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: 600 14px/1.2 "Nunito", system-ui, sans-serif;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+
+.count {
+  margin-left: 2px;
+  font-size: .85em;
+  opacity: .65;
+}
+
+.type-group { margin-bottom: 28px; }
+.type-group h2 { margin: 0 0 12px; font-size: 22px; }
+
+/* ---- game cards ---- */
+
+.game-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  background: var(--line);
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumb-fallback { font-size: 44px; }
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px 14px;
+}
+
+.game-title {
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.game-type {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #2f9e44;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+.game-card.played .check { display: grid; }
+
+.empty-note {
+  padding: 24px;
+  border: 2px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .game-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .game-body { padding: 10px; }
+  .game-title { font-size: 15px; }
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .tabs, .view-toggle { justify-content: space-between; }
+  .tab, .view-toggle button { flex: 1; text-align: center; padding: 8px 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
