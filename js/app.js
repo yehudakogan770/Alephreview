@@ -163,6 +163,7 @@ function typeClass(k) { return `t-${k}`; }
 
 // ---- views ---------------------------------------------------------------
 
+// Each tile opens the belt of its color.
 const HERO_TILES = [
   ["א", "red"], ["ב", "orange"], ["ג", "yellow"],
   ["ד", "green"], ["ה", "blue"], ["ו", "purple"],
@@ -180,7 +181,9 @@ function homeView() {
 
   const tiles = HERO_TILES.map(([letter, key], i) => {
     const b = BELTS.find(x => x.key === key);
-    return `<span class="tile" style="${beltStyle(b)};--i:${i}">${letter}</span>`;
+    return beltGames(b.key).length
+      ? `<a class="tile" href="#/${b.key}" style="${beltStyle(b)};--i:${i}" title="${b.name} Belt" aria-label="${b.name} Belt">${letter}</a>`
+      : `<span class="tile soon" style="${beltStyle(b)};--i:${i}" title="${b.name} Belt: coming soon" aria-label="${b.name} Belt, coming soon">${letter}</span>`;
   }).join("");
 
   const cards = BELTS.map((b, i) => {
@@ -220,7 +223,7 @@ function homeView() {
           <div class="stat-stars"><dt>Stars earned</dt><dd>${icon("star")} ${starCount(done)}</dd></div>
         </dl>
       </div>
-      <div class="hero-art" aria-hidden="true">${tiles}</div>
+      <nav class="hero-art" aria-label="Belts">${tiles}</nav>
     </section>
 
     <section class="section" id="belts">
