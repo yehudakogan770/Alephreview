@@ -43,3 +43,7 @@ To start a new belt (for example Yellow), add a block to `js/games.js` shaped li
 ```
 
 Belts and stripes that have no games yet say "Coming soon". To rename a game type or add a new one, edit `GAME_TYPES` at the top of `js/games.js`.
+
+## After you change a file
+
+Browsers keep a saved copy of the site's files for a few minutes. When you change `js/games.js`, `js/app.js` or `css/style.css`, raise the `?v=` number for that file in `index.html` (for example `?v=3` → `?v=4`). Then everyone gets the new version right away.
