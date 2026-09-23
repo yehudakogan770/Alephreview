@@ -157,7 +157,7 @@ function homeView() {
     const p = countPlayed(list, done);
     return `
       <li>
-        <a class="belt-card${n ? "" : " soon"}" href="#/${b.key}" style="${beltStyle(b)}">
+        ${n ? `<a class="belt-card" href="#/${b.key}" style="${beltStyle(b)}">` : `<div class="belt-card soon" style="${beltStyle(b)}" aria-disabled="true">`}
           <span class="belt-row">
             <span class="rank">${i + 1}</span>
             <span class="belt-text">
@@ -168,7 +168,7 @@ function homeView() {
           ${n
             ? `<span class="belt-progress">${progressBar(p, n, `${b.name} Belt progress`)}<span class="progress-label">${p ? `${p} of ${n} played` : "Not started"}</span></span>`
             : `<span class="tag">${icon("clock")} Coming soon</span>`}
-        </a>
+        ${n ? "</a>" : "</div>"}
       </li>`;
   }).join("");
 
@@ -231,7 +231,7 @@ function beltView(b) {
     const p = countPlayed(list, done);
     return `
       <li>
-        <a class="stripe-card${n ? "" : " soon"}" href="#/${b.key}/${s}" style="${beltStyle(b)}">
+        ${n ? `<a class="stripe-card" href="#/${b.key}/${s}" style="${beltStyle(b)}">` : `<div class="stripe-card soon" style="${beltStyle(b)}" aria-disabled="true">`}
           <span class="stripe-top">
             <span class="stripe-num">${s}</span>
             <span class="stripe-text">
@@ -246,7 +246,7 @@ function beltView(b) {
               <span class="progress-label">${p ? `${p} of ${n} played` : "Not started"}</span>
               <span class="go">${p === n ? "Play again" : p ? "Continue" : "Start"} ${icon("right")}</span>
             </span>` : `<span class="tag">${icon("clock")} Coming soon</span>`}
-        </a>
+        ${n ? "</a>" : "</div>"}
       </li>`;
   }).join("");
 
@@ -259,7 +259,9 @@ function beltView(b) {
     <ol class="stripe-grid">${stripeCards}</ol>
     <nav class="pager">
       ${prev ? `<a class="btn btn-ghost" href="#/${prev.key}">${icon("left")} ${prev.name} Belt</a>` : "<span></span>"}
-      ${next ? `<a class="btn btn-ghost" href="#/${next.key}">${next.name} Belt ${icon("right")}</a>` : "<span></span>"}
+      ${!next ? "<span></span>" : beltGames(next.key).length
+        ? `<a class="btn btn-ghost" href="#/${next.key}">${next.name} Belt ${icon("right")}</a>`
+        : `<span class="btn btn-ghost" aria-disabled="true">${icon("clock")} ${next.name} Belt coming soon</span>`}
     </nav>`;
 }
 
@@ -318,7 +320,9 @@ function stripeView(b, stripe) {
   }
 
   const stripeTabs = STRIPES.map(s =>
-    `<a class="seg" href="#/${b.key}/${s}"${s === stripe ? ' aria-current="page"' : ""}>Stripe ${s}</a>`).join("");
+    s === stripe || gamesFor(b.key, s).length
+      ? `<a class="seg" href="#/${b.key}/${s}"${s === stripe ? ' aria-current="page"' : ""}>Stripe ${s}</a>`
+      : `<span class="seg" aria-disabled="true" title="Coming soon">Stripe ${s}</span>`).join("");
 
   const headExtra = list.length
     ? `<div class="head-progress">${progressBar(p, list.length, "Stripe progress")}<span>${p} of ${list.length} played</span></div>`
@@ -385,6 +389,10 @@ function render() {
   const [beltKey, stripeStr, action, gameId] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
   const belt = BELTS.find(b => b.key === beltKey);
   const stripe = Number(stripeStr);
+
+  // Coming-soon belts and stripes have nothing to show: go to the nearest page that does.
+  if (belt && !beltGames(belt.key).length) { location.replace("#/"); return; }
+  if (belt && STRIPES.includes(stripe) && !gamesFor(belt.key, stripe).length) { location.replace(`#/${belt.key}`); return; }
 
   if (!beltKey) app.innerHTML = homeView();
   else if (belt && !stripeStr) app.innerHTML = beltView(belt);
