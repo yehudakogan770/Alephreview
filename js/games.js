@@ -9,12 +9,12 @@
 // hidden: true = keep in the list but don't show it (e.g. the game is private on Wordwall)
 
 const GAME_TYPES = {
-  match:  { label: "Matching",         icon: "🔗" },
-  sort:   { label: "Sorting",          icon: "🗂️" },
-  order:  { label: "Put in Order",     icon: "🔢" },
-  arcade: { label: "Arcade",           icon: "🎈" },
-  quiz:   { label: "Quiz",             icon: "❓" },
-  cards:  { label: "Cards & Wheels",   icon: "🎡" },
+  match:  { label: "Matching" },
+  sort:   { label: "Sorting" },
+  order:  { label: "Put in Order" },
+  arcade: { label: "Arcade" },
+  quiz:   { label: "Quiz" },
+  cards:  { label: "Cards & Wheels" },
 };
 
 const GAMES = {
