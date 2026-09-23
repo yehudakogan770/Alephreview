@@ -37,11 +37,15 @@ function esc(s) {
 }
 
 function gamesFor(beltKey, stripe) {
-  return ((GAMES[beltKey] || {})[stripe]) || [];
+  return (((GAMES[beltKey] || {})[stripe]) || []).filter(g => !g.hidden);
 }
 
 function beltCount(beltKey) {
   return STRIPES.reduce((n, s) => n + gamesFor(beltKey, s).length, 0);
+}
+
+function thumbUrl(thumb) {
+  return /^https?:/.test(thumb) ? thumb : THUMB_BASE + thumb;
 }
 
 function gameUrl(g) {
@@ -128,9 +132,9 @@ function beltView(b) {
 }
 
 function gameCard(g, done) {
-  const t = GAME_TYPES[g.type] || GAME_TYPES.review;
+  const t = GAME_TYPES[g.type] || { label: "Game", icon: "⭐" };
   const thumb = g.thumb
-    ? `<img src="${THUMB_BASE}${esc(g.thumb)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'thumb-fallback',textContent:'${t.icon}'}))">`
+    ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'thumb-fallback',textContent:'${t.icon}'}))">`
     : `<span class="thumb-fallback">${t.icon}</span>`;
   return `
     <li>
@@ -138,7 +142,7 @@ function gameCard(g, done) {
         <span class="thumb">${thumb}</span>
         <span class="game-body">
           <span class="game-title" dir="auto">${esc(g.title)}</span>
-          <span class="game-type">${t.icon} ${t.label}</span>
+          <span class="game-type">${t.icon} ${esc(g.game || t.label)}</span>
         </span>
         <span class="check" aria-label="Played">✓</span>
       </a>
