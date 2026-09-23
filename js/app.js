@@ -379,6 +379,47 @@ function stripeView(b, stripe) {
     ${body}`;
 }
 
+// What to do in each kind of Wordwall game, in a sentence a student can follow.
+const HOW_TO = {
+  "Matching pairs": "Tap two cards to turn them over. Find the pairs that match.",
+  "Match up": "Drag each item into the box next to its match.",
+  "Find the match": "Tap the answer that matches. Keep going until they're all gone.",
+  "Group sort": "Drag each item into the group it belongs in.",
+  "Rank order": "Drag the items into the right order.",
+  "Balloon pop": "Pop a balloon to drop its item onto the matching spot.",
+  "Flying fruit": "Answers fly across the screen. Tap the right one as it goes by.",
+  "Whack-a-mole": "Moles pop up with answers. Tap only the right ones.",
+  "Open the box": "Tap a box to open it, then read what's inside out loud.",
+  "Spin the wheel": "Spin the wheel, then read what it lands on out loud.",
+  "Speaking cards": "Tap the deck to deal a card, then read it out loud.",
+  "True or false": "Decide if each answer is true or false before time runs out.",
+  "Quiz": "Read each question and tap the right answer.",
+  "Gameshow quiz": "Tap the right answer before time runs out.",
+  "Win or lose quiz": "Choose how many points to play for, then answer the question.",
+  "Airplane": "Fly into the right answers and dodge the wrong ones. Use the arrow keys or tap.",
+  "Labelled diagram": "Drag each label to its place on the picture.",
+  "Anagram": "Drag the letters into the right order.",
+  "Watch and memorize": "Watch the items carefully, then pick the ones you saw.",
+  "Speed sorting": "Sort each item into the right group as fast as you can.",
+  "Flash cards": "Say the answer, then flip the card to check.",
+  "Complete the sentence": "Drag each piece into the blank where it belongs.",
+  "Categorize": "Drag each item into the right group.",
+};
+
+function howToPlay(g, next) {
+  const how = HOW_TO[g.game];
+  const steps = [
+    "Press <b>Start</b> on the game.",
+    `${how ? esc(how) : "Follow the directions on the game."}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
+    next ? "When you finish, press <b>Next game</b>." : "When you finish, press <b>Stripe done</b>.",
+  ];
+  return `
+    <aside class="how-to">
+      <h2>${icon(g.type)} How to play</h2>
+      <ol>${steps.map(x => `<li>${x}</li>`).join("")}</ol>
+    </aside>`;
+}
+
 function playerView(b, stripe, id) {
   const list = gamesFor(b.key, stripe);
   const i = list.findIndex(g => g.id === id);
@@ -400,6 +441,8 @@ function playerView(b, stripe, id) {
       </div>
       <a class="btn btn-belt" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">${icon("all")} All Stripe ${stripe} games</a>
     </div>
+    <div class="player-layout">
+    <div class="player-main">
     <div class="player" id="player">${stage}</div>
     <div class="player-bar">
       ${prev
@@ -413,6 +456,9 @@ function playerView(b, stripe, id) {
       ${next
         ? `<a class="btn btn-primary" href="${playHref(b, stripe, next)}"><span>Next game</span> ${icon("right")}</a>`
         : `<a class="btn btn-primary" href="#/${b.key}">${icon("check")} <span>Stripe done</span></a>`}
+    </div>
+    </div>
+    ${howToPlay(g, next)}
     </div>`;
 }
 

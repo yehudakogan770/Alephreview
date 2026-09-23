@@ -690,10 +690,74 @@ a.tile:active { scale: .94; }
 .player-title { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; }
 .player-title h1 { font-size: clamp(24px, 3.6vw, 34px); overflow-wrap: anywhere; }
 
-.player {
+/* How to play sits beside the game on wide screens and above it on narrow ones. */
+.player-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+.player-main {
+  flex: 0 1 auto;
   width: min(100%, calc((100vh - 330px) * 4 / 3));
   min-width: min(100%, 420px);
-  margin: 0 auto;
+}
+
+.how-to {
+  order: -1;
+  flex: 0 0 270px;
+  padding: 20px 20px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.how-to h2 { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; font-size: 19px; }
+.how-to ol { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.how-to li {
+  position: relative;
+  padding-left: 38px;
+  font-size: 15.5px;
+  line-height: 1.45;
+  counter-increment: step;
+}
+.how-to li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -2px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+}
+.how-to .tip {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-left: 3px solid #f5b301;
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in srgb, #f5b301 12%, var(--surface));
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .player-layout { flex-direction: column; align-items: stretch; }
+  .how-to { flex: none; }
+  .how-to ol { grid-template-columns: repeat(3, 1fr); gap: 12px 20px; }
+  .player-main { margin: 0 auto; width: min(100%, calc((100vh - 470px) * 4 / 3)); }
+}
+@media (max-width: 640px) {
+  .how-to ol { grid-template-columns: 1fr; }
+}
+
+.player {
+  width: 100%;
   overflow: hidden;
   border-radius: var(--radius);
   background: #000;
@@ -713,9 +777,7 @@ a.tile:active { scale: .94; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  width: min(100%, calc((100vh - 330px) * 4 / 3));
-  min-width: min(100%, 420px);
-  margin: 16px auto 0;
+  margin-top: 16px;
 }
 .player-mid { display: flex; align-items: center; gap: 10px; }
 .counter { margin-right: 4px; color: var(--muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
