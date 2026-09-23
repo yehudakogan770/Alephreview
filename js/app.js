@@ -1,4 +1,4 @@
-// Aleph Review Dojo — hash-routed single page.
+// Aleph Review — hash-routed single page.
 //   #/            all belts
 //   #/red         one belt, its three stripes
 //   #/red/2       the games for Red belt, Stripe 2
@@ -265,9 +265,9 @@ function render() {
   else if (belt && STRIPES.includes(stripe) && !action) app.innerHTML = stripeView(belt, stripe);
   else app.innerHTML = notFoundView();
 
-  document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review Dojo` : "Aleph Review Dojo";
+  document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review` : "Aleph Review";
   const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
-  if (playing) document.title = `${playing.title} — Aleph Review Dojo`;
+  if (playing) document.title = `${playing.title} — Aleph Review`;
 }
 
 app.addEventListener("click", e => {

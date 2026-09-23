@@ -1,4 +1,4 @@
-# Aleph Review Dojo
+# Aleph Review
 
 A website of Hebrew reading and fluency review games, set up like karate belts.
 
