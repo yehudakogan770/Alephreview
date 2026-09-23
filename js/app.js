@@ -140,9 +140,13 @@ function starCount(done) {
 }
 
 function stars(beltKey, done) {
+  const shown = new Set(store.get("stars-shown", []));
   const html = STRIPES.map(s => {
     const on = stripeDone(beltKey, s, done);
-    return `<span class="star${on ? " on" : ""}" title="Stripe ${s}${on ? ": star earned" : ""}">${icon("star")}</span>`;
+    // A newly earned star shines once, the first time it appears.
+    const fresh = on && !shown.has(`${beltKey}/${s}`);
+    if (fresh) { shown.add(`${beltKey}/${s}`); store.set("stars-shown", [...shown]); }
+    return `<span class="star${on ? " on" : ""}${fresh ? " fresh" : ""}" title="Stripe ${s}${on ? ": star earned" : ""}">${icon("star")}</span>`;
   }).join("");
   return `<span class="stars" aria-label="${STRIPES.filter(s => stripeDone(beltKey, s, done)).length} of 3 stars">${html}</span>`;
 }
@@ -176,7 +180,7 @@ function homeView() {
 
   const tiles = HERO_TILES.map(([letter, key], i) => {
     const b = BELTS.find(x => x.key === key);
-    return `<span class="tile" style="${beltStyle(b)}">${letter}</span>`;
+    return `<span class="tile" style="${beltStyle(b)};--i:${i}">${letter}</span>`;
   }).join("");
 
   const cards = BELTS.map((b, i) => {
