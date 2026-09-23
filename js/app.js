@@ -163,11 +163,11 @@ function typeClass(k) { return `t-${k}`; }
 
 // ---- views ---------------------------------------------------------------
 
-// Each tile opens the belt of its color.
+// Each tile opens the belt of its color, in level order (Black has no tile).
 const HERO_TILES = [
-  ["א", "red"], ["ב", "orange"], ["ג", "yellow"],
-  ["ד", "green"], ["ה", "blue"], ["ו", "purple"],
-  ["ז", "brown"], ["ח", "gray"], ["ט", "white"],
+  ["א", "white"], ["ב", "red"], ["ג", "orange"],
+  ["ד", "yellow"], ["ה", "green"], ["ו", "blue"],
+  ["ז", "purple"], ["ח", "brown"], ["ט", "gray"],
 ];
 
 function homeView() {
