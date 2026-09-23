@@ -176,8 +176,7 @@ function homeView() {
 
   const tiles = HERO_TILES.map(([letter, key], i) => {
     const b = BELTS.find(x => x.key === key);
-    const face = i === 0 ? '<span class="eyes"><i></i><i></i></span><span class="bubble" dir="rtl">שָׁלוֹם!</span>' : "";
-    return `<span class="tile${i === 0 ? " mascot" : ""}" style="${beltStyle(b)};--i:${i}">${face}<b>${letter}</b></span>`;
+    return `<span class="tile" style="${beltStyle(b)}">${letter}</span>`;
   }).join("");
 
   const cards = BELTS.map((b, i) => {
@@ -205,8 +204,8 @@ function homeView() {
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Hebrew reading games</p>
-        <h1>Let's learn to read Hebrew!</h1>
-        <p class="lede">Play fun games, earn stars, and climb all the way from White Belt to Black Belt.</p>
+        <h1>Hebrew reading, one belt at a time.</h1>
+        <p class="lede">Review games for every level. Finish a stripe to earn a star, and earn all three to move up to the next belt.</p>
         <div class="hero-actions">
           ${cta}
           ${up ? `<span class="hero-next">${doneTotal ? "Next up" : "Begin with"}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
@@ -223,7 +222,7 @@ function homeView() {
     <section class="section" id="belts">
       <div class="section-head">
         <h2>Choose your belt</h2>
-        <p>Finish every game in a stripe to earn a star. Get all 3 stars, then move up a belt.</p>
+        <p>Start at White and work your way up to Black.</p>
       </div>
       <ol class="belt-grid">${cards}</ol>
     </section>`;
@@ -437,7 +436,7 @@ function maybeCelebrate(b, stripe) {
   const box = document.createElement("div");
   box.className = "confetti";
   box.setAttribute("aria-hidden", "true");
-  for (let i = 0; i < 70; i++) {
+  for (let i = 0; i < 40; i++) {
     const c = document.createElement("i");
     c.style.cssText = `left:${Math.random() * 100}%;background:${colors[i % colors.length]};` +
       `animation-delay:${Math.random() * .5}s;animation-duration:${1.8 + Math.random() * 1.2}s;` +
