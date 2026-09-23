@@ -396,6 +396,9 @@ function render() {
   const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
   if (playing) document.title = `${playing.title} — Aleph Review`;
 
+  // The "All belts" link only makes sense away from the home page.
+  document.querySelector(".header-link").hidden = !beltKey;
+
   const n = played().size;
   const badge = document.getElementById("played-count");
   badge.hidden = !n;

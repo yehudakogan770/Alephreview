@@ -124,6 +124,7 @@ a { color: inherit; }
   text-decoration: none;
 }
 .header-link:hover { background: var(--surface-2); }
+.header-link[hidden] { display: none; }
 
 .played-badge {
   display: inline-flex;
