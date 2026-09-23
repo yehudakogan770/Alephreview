@@ -35,6 +35,7 @@ const ICON_PATHS = {
   out:    '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
   full:   '<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>',
   clock:  '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  star:   '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
 };
 
 function icon(name, cls = "icon") {
@@ -128,6 +129,34 @@ function nextUp(done) {
   return null;
 }
 
+// A stripe earns its star once every game in it has been played.
+function stripeDone(beltKey, s, done) {
+  const list = gamesFor(beltKey, s);
+  return list.length > 0 && countPlayed(list, done) === list.length;
+}
+
+function starCount(done) {
+  return BELTS.reduce((n, b) => n + STRIPES.filter(s => stripeDone(b.key, s, done)).length, 0);
+}
+
+function stars(beltKey, done) {
+  const html = STRIPES.map(s => {
+    const on = stripeDone(beltKey, s, done);
+    return `<span class="star${on ? " on" : ""}" title="Stripe ${s}${on ? ": star earned" : ""}">${icon("star")}</span>`;
+  }).join("");
+  return `<span class="stars" aria-label="${STRIPES.filter(s => stripeDone(beltKey, s, done)).length} of 3 stars">${html}</span>`;
+}
+
+// Plain progress text: no more cheering than a star already gives.
+function cheer(p, n) {
+  if (!p) return "Not started";
+  if (p === n) return "All done";
+  return `${p} of ${n} played`;
+}
+
+// Game types get their own friendly color (see .t-* in style.css).
+function typeClass(k) { return `t-${k}`; }
+
 // ---- views ---------------------------------------------------------------
 
 const HERO_TILES = [
@@ -140,7 +169,6 @@ function homeView() {
   const done = played();
   const every = allGames();
   const doneTotal = countPlayed(every, done);
-  const open = BELTS.filter(b => beltGames(b.key).length).length;
   const up = nextUp(done);
   const cta = up
     ? `<a class="btn btn-primary btn-lg" href="#/${up.b.key}/${up.s}">${icon("play")} ${doneTotal ? "Keep going" : "Start playing"}</a>`
@@ -148,7 +176,8 @@ function homeView() {
 
   const tiles = HERO_TILES.map(([letter, key], i) => {
     const b = BELTS.find(x => x.key === key);
-    return `<span class="tile" style="${beltStyle(b)};--i:${i}">${letter}</span>`;
+    const face = i === 0 ? '<span class="eyes"><i></i><i></i></span><span class="bubble" dir="rtl">שָׁלוֹם!</span>' : "";
+    return `<span class="tile${i === 0 ? " mascot" : ""}" style="${beltStyle(b)};--i:${i}">${face}<b>${letter}</b></span>`;
   }).join("");
 
   const cards = BELTS.map((b, i) => {
@@ -166,7 +195,7 @@ function homeView() {
             </span>
           </span>
           ${n
-            ? `<span class="belt-progress">${progressBar(p, n, `${b.name} Belt progress`)}<span class="progress-label">${p ? `${p} of ${n} played` : "Not started"}</span></span>`
+            ? `<span class="belt-progress">${progressBar(p, n, `${b.name} Belt progress`)}<span class="belt-foot"><span class="progress-label">${cheer(p, n)}</span>${stars(b.key, done)}</span></span>`
             : `<span class="tag">${icon("clock")} Coming soon</span>`}
         ${n ? "</a>" : "</div>"}
       </li>`;
@@ -175,17 +204,17 @@ function homeView() {
   return `
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Hebrew reading practice</p>
-        <h1>Read Hebrew with confidence, one belt at a time.</h1>
-        <p class="lede">Short, fun review games for every level. Finish all three stripes on a belt, then move up to the next color.</p>
+        <p class="eyebrow">Hebrew reading games</p>
+        <h1>Let's learn to read Hebrew!</h1>
+        <p class="lede">Play fun games, earn stars, and climb all the way from White Belt to Black Belt.</p>
         <div class="hero-actions">
           ${cta}
           ${up ? `<span class="hero-next">${doneTotal ? "Next up" : "Begin with"}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
         </div>
         <dl class="stats">
-          <div><dt>Games</dt><dd>${every.length}</dd></div>
-          <div><dt>Belts open</dt><dd>${open}<small> / ${BELTS.length}</small></dd></div>
-          <div><dt>You've played</dt><dd>${doneTotal}</dd></div>
+          <div><dt>Games to play</dt><dd>${every.length}</dd></div>
+          <div><dt>Games played</dt><dd>${doneTotal}</dd></div>
+          <div class="stat-stars"><dt>Stars earned</dt><dd>${icon("star")} ${starCount(done)}</dd></div>
         </dl>
       </div>
       <div class="hero-art" aria-hidden="true">${tiles}</div>
@@ -194,7 +223,7 @@ function homeView() {
     <section class="section" id="belts">
       <div class="section-head">
         <h2>Choose your belt</h2>
-        <p>Start at White and work your way up to Black.</p>
+        <p>Finish every game in a stripe to earn a star. Get all 3 stars, then move up a belt.</p>
       </div>
       <ol class="belt-grid">${cards}</ol>
     </section>`;
@@ -204,7 +233,7 @@ function typeSummary(list) {
   return Object.keys(GAME_TYPES)
     .map(k => [k, list.filter(g => g.type === k).length])
     .filter(([, n]) => n)
-    .map(([k, n]) => `<span class="mini-pill" title="${esc(GAME_TYPES[k].label)}">${icon(k)} ${n}</span>`)
+    .map(([k, n]) => `<span class="mini-pill ${typeClass(k)}" title="${esc(GAME_TYPES[k].label)}">${icon(k)} ${n}</span>`)
     .join("");
 }
 
@@ -213,6 +242,7 @@ function pageHead(b, title, sub, extra = "") {
   return `
     <section class="page-head" style="${beltStyle(b)}">
       <span class="page-head-mark" aria-hidden="true">${idx + 1}</span>
+      <span class="head-stars">${stars(b.key, played())}</span>
       <p class="eyebrow">Level ${idx + 1} of ${BELTS.length}</p>
       <h1>${title}</h1>
       <p class="page-head-sub">${sub}</p>
@@ -233,7 +263,7 @@ function beltView(b) {
       <li>
         ${n ? `<a class="stripe-card" href="#/${b.key}/${s}" style="${beltStyle(b)}">` : `<div class="stripe-card soon" style="${beltStyle(b)}" aria-disabled="true">`}
           <span class="stripe-top">
-            <span class="stripe-num">${s}</span>
+            <span class="stripe-num">${stripeDone(b.key, s, done) ? icon("star") : s}</span>
             <span class="stripe-text">
               <span class="stripe-name">Stripe ${s}</span>
               <span class="stripe-meta">${n ? plural(n, "game") : "No games yet"}</span>
@@ -243,7 +273,7 @@ function beltView(b) {
             <span class="mini-pills">${typeSummary(list)}</span>
             ${progressBar(p, n, `Stripe ${s} progress`)}
             <span class="stripe-foot">
-              <span class="progress-label">${p ? `${p} of ${n} played` : "Not started"}</span>
+              <span class="progress-label">${cheer(p, n)}</span>
               <span class="go">${p === n ? "Play again" : p ? "Continue" : "Start"} ${icon("right")}</span>
             </span>` : `<span class="tag">${icon("clock")} Coming soon</span>`}
         ${n ? "</a>" : "</div>"}
@@ -251,7 +281,8 @@ function beltView(b) {
   }).join("");
 
   const prev = BELTS[idx - 1], next = BELTS[idx + 1];
-  const sub = all.length ? `${plural(all.length, "game")} across 3 stripes · ${countPlayed(all, done)} played` : "Games for this belt are coming soon.";
+  const got = STRIPES.filter(s => stripeDone(b.key, s, done)).length;
+  const sub = all.length ? `${plural(all.length, "game")} across 3 stripes · ${got} of 3 stars earned` : "Games for this belt are coming soon.";
   return `
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`]])}
     ${pageHead(b, `${b.name} Belt`, sub)}
@@ -279,7 +310,7 @@ function gameCard(g, done, b, stripe) {
         </span>
         <span class="game-body">
           <span class="game-title" dir="auto">${esc(g.title)}</span>
-          <span class="type-pill">${icon(g.type)} ${esc(typeLabel(g))}</span>
+          <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
         </span>
       </a>
     </li>`;
@@ -303,7 +334,7 @@ function stripeView(b, stripe) {
       const group = list.filter(g => g.type === k);
       return `
         <section class="type-group">
-          <h2>${icon(k)} ${esc(GAME_TYPES[k].label)} <span class="count">${group.length}</span></h2>
+          <h2><span class="type-dot ${typeClass(k)}">${icon(k)}</span> ${esc(GAME_TYPES[k].label)} <span class="count">${group.length}</span></h2>
           <ul class="game-grid">${group.map(g => gameCard(g, done, b, stripe)).join("")}</ul>
         </section>`;
     }).join("");
@@ -311,7 +342,7 @@ function stripeView(b, stripe) {
     const chips = ["all", ...types].map(k => {
       const label = k === "all" ? "All" : esc(GAME_TYPES[k].label);
       const n = k === "all" ? list.length : list.filter(g => g.type === k).length;
-      return `<button class="chip" data-filter="${k}" aria-pressed="${k === active}">${icon(k)} ${label} <span class="count">${n}</span></button>`;
+      return `<button class="chip${k === "all" ? "" : " " + typeClass(k)}" data-filter="${k}" aria-pressed="${k === active}">${icon(k)} ${label} <span class="count">${n}</span></button>`;
     }).join("");
     const shown = active === "all" ? list : list.filter(g => g.type === active);
     body = `
@@ -325,7 +356,7 @@ function stripeView(b, stripe) {
       : `<span class="seg" aria-disabled="true" title="Coming soon">Stripe ${s}</span>`).join("");
 
   const headExtra = list.length
-    ? `<div class="head-progress">${progressBar(p, list.length, "Stripe progress")}<span>${p} of ${list.length} played</span></div>`
+    ? `<div class="head-progress">${progressBar(p, list.length, "Stripe progress")}<span>${p === list.length ? `${icon("star")} Star earned` : `${p} of ${list.length} played`}</span></div>`
     : "";
 
   return `
@@ -358,7 +389,7 @@ function playerView(b, stripe, id) {
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`, `#/${b.key}`], [`Stripe ${stripe}`, `#/${b.key}/${stripe}`], [g.title]])}
     <div class="player-head">
       <div class="player-title">
-        <span class="type-pill">${icon(g.type)} ${esc(typeLabel(g))}</span>
+        <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
         <h1 dir="auto">${esc(g.title)}</h1>
       </div>
       <a class="btn btn-belt" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">${icon("all")} All Stripe ${stripe} games</a>
@@ -383,6 +414,40 @@ function notFoundView() {
   return `<div class="empty-note">${icon("quiz", "icon icon-lg")}<p>We couldn't find that page.</p><a class="btn btn-primary" href="#/">Back to all belts</a></div>`;
 }
 
+// ---- celebration ---------------------------------------------------------
+
+// The first time a student comes back to a finished stripe: a short confetti
+// burst and a note. It never runs on a game page, so it can't get in the way.
+function maybeCelebrate(b, stripe) {
+  const key = `${b.key}/${stripe}`;
+  const seen = new Set(store.get("celebrated", []));
+  if (!stripeDone(b.key, stripe, played()) || seen.has(key)) return;
+  seen.add(key); store.set("celebrated", [...seen]);
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.setAttribute("role", "status");
+  toast.innerHTML = `<span class="toast-star">${icon("star")}</span><span><b>Stripe ${stripe} complete</b><br>You earned a ${b.name} Belt star.</span>`;
+  document.body.append(toast);
+  setTimeout(() => toast.classList.add("out"), 4200);
+  setTimeout(() => toast.remove(), 4800);
+
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colors = BELTS.slice(1, 7).map(x => x.color);
+  const box = document.createElement("div");
+  box.className = "confetti";
+  box.setAttribute("aria-hidden", "true");
+  for (let i = 0; i < 70; i++) {
+    const c = document.createElement("i");
+    c.style.cssText = `left:${Math.random() * 100}%;background:${colors[i % colors.length]};` +
+      `animation-delay:${Math.random() * .5}s;animation-duration:${1.8 + Math.random() * 1.2}s;` +
+      `--drift:${(Math.random() - .5) * 160}px;--spin:${(Math.random() - .5) * 1080}deg`;
+    box.append(c);
+  }
+  document.body.append(box);
+  setTimeout(() => box.remove(), 3600);
+}
+
 // ---- router --------------------------------------------------------------
 
 function render() {
@@ -397,7 +462,7 @@ function render() {
   if (!beltKey) app.innerHTML = homeView();
   else if (belt && !stripeStr) app.innerHTML = beltView(belt);
   else if (belt && STRIPES.includes(stripe) && action === "play") app.innerHTML = playerView(belt, stripe, gameId);
-  else if (belt && STRIPES.includes(stripe) && !action) app.innerHTML = stripeView(belt, stripe);
+  else if (belt && STRIPES.includes(stripe) && !action) { app.innerHTML = stripeView(belt, stripe); maybeCelebrate(belt, stripe); }
   else app.innerHTML = notFoundView();
 
   document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review` : "Aleph Review — Hebrew reading games";
