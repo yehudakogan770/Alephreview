@@ -68,6 +68,8 @@ const TEXT_FIELDS = [
   ]],
   ["Games made here (what students see)", [
     ["gameStart", "Start button"],
+    ["gameSoundButton", "Tip on the sound button"],
+    ["gameMusicButton", "Tip on the music button"],
     ["gameRound", "Round number. {n} and {total} become numbers."],
     ["gameQuestion", "Question number. {n} and {total} become numbers."],
     ["gameScore", "Score. {right} and {total} become numbers."],

@@ -51,6 +51,7 @@
 .og-dots i { width: 1.6cqw; height: 1.6cqw; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .2); }
 .og-dots i.ok { background: var(--og-good); }
 .og-dots i.no { background: var(--og-bad); }
+.og-mute + .og-mute { margin-left: -1cqw; }
 .og-mute {
   display: grid;
   place-items: center;

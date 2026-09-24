@@ -41,13 +41,19 @@ function clock(sec) {
 
 // ---- sounds: short tones, no files to load --------------------------------------
 
+let ogCtx = null;
+function ogAudio() {
+  ogCtx = ogCtx || new (window.AudioContext || window.webkitAudioContext)();
+  if (ogCtx.state === "suspended") ogCtx.resume();
+  return ogCtx;
+}
+
 const gameSound = (() => {
-  let ctx = null;
   const muted = () => { try { return localStorage.getItem("og-mute") === "1"; } catch { return false; } };
   function tone(freq, start, dur, type = "sine", vol = 0.18) {
     if (muted()) return;
     try {
-      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      const ctx = ogAudio();
       const t = ctx.currentTime + start;
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -68,6 +74,134 @@ const gameSound = (() => {
     done() { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.11, 0.25)); },
     muted,
     toggle() { try { localStorage.setItem("og-mute", muted() ? "0" : "1"); } catch { /* ignore */ } return muted(); },
+  };
+})();
+
+// ---- background music: a soft tune for each theme, played while a game runs -------
+//
+// Each song is 8 bars of eighth notes. "-" holds the note before, "." is a rest.
+// One chord per bar gives the bass and a quiet arpeggio.
+const GAME_SONGS = {
+  meadow: { bpm: 112, wave: "triangle", vol: 0.05,
+    chords: "C G Am F C G F C",
+    tune: `E5 - G5 - A5 G5 E5 - | D5 - . B4 D5 - G5 - | C5 - E5 - A5 - G5 E5 | F5 - E5 - D5 - C5 - |
+           E5 G5 C6 - B5 - G5 - | A5 - G5 - D5 - . . | F5 - A5 - G5 F5 E5 D5 | C5 - - - . . . .` },
+  desert: { bpm: 100, wave: "triangle", vol: 0.05,
+    chords: "Am Am G G F F E E",
+    tune: `A4 - C5 - E5 - D5 C5 | B4 - A4 - . . E4 - | G4 - B4 - D5 - C5 B4 | A4 - G4 - . . . . |
+           A4 - C5 - F5 - E5 D5 | C5 - A4 - . . C5 - | B4 - G#4 - B4 - D5 - | E5 - - - . . . .` },
+  ocean: { bpm: 88, wave: "sine", vol: 0.06,
+    chords: "F Dm A# C F Dm A# C",
+    tune: `A4 - - C5 F5 - - . | E5 - D5 - A4 - - . | D5 - - F5 A#5 - A5 G5 | G5 - - - . . . . |
+           C6 - A5 - F5 - - . | F5 - E5 - D5 - A4 - | A#4 - D5 - G5 - F5 E5 | E5 - - - G5 - - -` },
+  space: { bpm: 80, wave: "sine", vol: 0.06,
+    chords: "Dm A# F C Dm A# Gm A",
+    tune: `D5 - - - A5 - - - | F5 - - - D5 - - - | C5 - - - F5 - A5 - | G5 - - - - - . . |
+           D5 - F5 - A5 - D6 - | C6 - A#5 - F5 - - - | G5 - A#5 - D6 - C6 A#5 | A5 - - - C#5 - - -` },
+  classic: { bpm: 116, wave: "square", vol: 0.022,
+    chords: "G Em C D G C D G",
+    tune: `G4 B4 D5 B4 G5 - D5 - | E5 - G5 - B4 - . . | C5 E5 G5 E5 C6 - G5 - | F#5 - A5 - D5 - . . |
+           B5 - A5 - G5 - D5 - | E5 - G5 - C6 - B5 A5 | A5 - F#5 - D5 - E5 F#5 | G5 - - - . . . .` },
+};
+
+const gameMusic = (() => {
+  const NAMES = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
+  const midi = name => { const m = /^([A-G])(#?)(\d)$/.exec(name); return 12 * (+m[3] + 1) + NAMES[m[1]] + (m[2] ? 1 : 0); };
+  const hz = n => 440 * Math.pow(2, (n - 69) / 12);
+  const songs = {};
+  // Turn a song into notes: { step, note, len, wave, vol }.
+  function build(name) {
+    if (songs[name]) return songs[name];
+    const s = GAME_SONGS[name] || GAME_SONGS.meadow;
+    const notes = [];
+    const tokens = s.tune.replace(/\|/g, " ").trim().split(/\s+/);
+    tokens.forEach((tok, i) => {
+      if (tok === "-" || tok === ".") return;
+      let len = 1;
+      while (tokens[i + len] === "-") len++;
+      notes.push({ step: i, note: midi(tok), len, wave: s.wave, vol: s.vol });
+    });
+    s.chords.split(/\s+/).forEach((c, bar) => {
+      const m = /^([A-G]#?)(m?)$/.exec(c);
+      const root = midi(m[1].length > 1 ? m[1][0] + "#3" : m[1] + "3");
+      const third = root + (m[2] ? 3 : 4);
+      const at = bar * 8;
+      notes.push({ step: at, note: root - 12, len: 3, wave: "triangle", vol: 0.07 });
+      notes.push({ step: at + 4, note: root - 12, len: 2, wave: "triangle", vol: 0.06 });
+      notes.push({ step: at + 6, note: root - 5, len: 2, wave: "triangle", vol: 0.05 });
+      [root + 12, third + 12, root + 19, third + 12].forEach((n, k) =>
+        notes.push({ step: at + 1 + k * 2, note: n, len: 1, wave: "sine", vol: 0.022 }));
+    });
+    return (songs[name] = { bpm: s.bpm, steps: tokens.length, notes });
+  }
+
+  const off = () => { try { return localStorage.getItem("og-music") === "0"; } catch { return false; } };
+  let song = null, theme = "meadow", alive = null, timer = null, out = null, step = 0, next = 0;
+
+  function play(ctx, n, t, eighth) {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const end = t + n.len * eighth * 0.92;
+    osc.type = n.wave;
+    osc.frequency.setValueAtTime(hz(n.note), t);
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(n.vol, t + 0.02);
+    gain.gain.setValueAtTime(n.vol, Math.max(t + 0.02, end - 0.08));
+    gain.gain.exponentialRampToValueAtTime(0.0001, end);
+    osc.connect(gain).connect(out);
+    osc.start(t);
+    osc.stop(end + 0.05);
+  }
+  function tick() {
+    if (!alive || !alive()) { stop(); return; }
+    const ctx = ogAudio();
+    const eighth = 30 / song.bpm;
+    // Quieter while a word is read aloud; silent while the page is hidden.
+    const talking = window.speechSynthesis && speechSynthesis.speaking;
+    out.gain.setTargetAtTime(document.hidden ? 0 : talking ? 0.25 : 1, ctx.currentTime, 0.08);
+    if (document.hidden) { next = ctx.currentTime + 0.1; return; }
+    if (next < ctx.currentTime) next = ctx.currentTime + 0.05;
+    while (next < ctx.currentTime + 0.3) {
+      for (const n of song.notes) if (n.step === step) play(ctx, n, next, eighth);
+      step = (step + 1) % song.steps;
+      next += eighth;
+    }
+  }
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+    if (out) {
+      const o = out, ctx = ogAudio();
+      o.gain.setTargetAtTime(0, ctx.currentTime, 0.15);
+      setTimeout(() => o.disconnect(), 800);
+      out = null;
+    }
+  }
+  function begin() {
+    stop();
+    if (off() || gameSound.muted() || !alive || !alive()) return;
+    try {
+      const ctx = ogAudio();
+      song = build(theme);
+      const soft = ctx.createBiquadFilter();
+      soft.type = "lowpass";
+      soft.frequency.value = 2400;
+      out = ctx.createGain();
+      out.gain.value = 1;
+      out.connect(soft).connect(ctx.destination);
+      step = 0;
+      next = ctx.currentTime + 0.1;
+      tick();
+      timer = setInterval(tick, 80);
+    } catch { /* no sound available */ }
+  }
+  return {
+    // Plays until isAlive() turns false (the game ends, restarts or is left).
+    start(name, isAlive) { theme = name || "meadow"; alive = isAlive; begin(); },
+    // After a sound or music button: start or stop to match.
+    refresh() { if (off() || gameSound.muted()) stop(); else if (!timer) begin(); },
+    off,
+    toggle() { try { localStorage.setItem("og-music", off() ? "1" : "0"); } catch { /* ignore */ } this.refresh(); return off(); },
   };
 })();
 
@@ -94,6 +228,8 @@ const OG_ICONS = {
   sound: '<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>',
   mute: '<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6"/><path d="m17 9 6 6"/>',
   play: '<polygon points="7 4 20 12 7 20 7 4" fill="currentColor"/>',
+  music: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  musicoff: '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="m2 2 20 20"/>',
   clock: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
 };
 function ogIcon(name) {
@@ -126,7 +262,8 @@ function playOwnGame(stage, g, opts) {
         <span class="og-timer" data-timer hidden>${ogIcon("clock")} <span>0:00</span></span>
         <span class="og-round" data-round></span>
         <span class="og-dots" data-dots></span>
-        <button class="og-mute" type="button" data-mute title="Sound on or off">${ogIcon(gameSound.muted() ? "mute" : "sound")}</button>
+        <button class="og-mute og-music" type="button" data-music title="${ogEsc(strip(opts.t("gameMusicButton")))}">${ogIcon(gameMusic.off() ? "musicoff" : "music")}</button>
+        <button class="og-mute" type="button" data-mute title="${ogEsc(strip(opts.t("gameSoundButton")))}">${ogIcon(gameSound.muted() ? "mute" : "sound")}</button>
       </div>
       <div class="og-body" data-body></div>
     </div>`;
@@ -136,6 +273,10 @@ function playOwnGame(stage, g, opts) {
   const timerEl = stage.querySelector("[data-timer]");
   stage.querySelector("[data-mute]").addEventListener("click", e => {
     e.currentTarget.innerHTML = ogIcon(gameSound.toggle() ? "mute" : "sound");
+    gameMusic.refresh();
+  });
+  stage.querySelector("[data-music]").addEventListener("click", e => {
+    e.currentTarget.innerHTML = ogIcon(gameMusic.toggle() ? "musicoff" : "music");
   });
 
   const stopTimer = () => { clearInterval(timer); timer = null; };
@@ -225,6 +366,7 @@ function playOwnGame(stage, g, opts) {
       const box = stage.getBoundingClientRect();
       if (box.top < 0 || box.bottom > window.innerHeight) stage.scrollIntoView({ behavior: "smooth", block: box.height > window.innerHeight ? "start" : "center" });
     }
+    gameMusic.start(own.theme, alive);
     kind.play(body, own, api);
   }
 
