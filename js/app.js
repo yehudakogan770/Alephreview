@@ -443,33 +443,33 @@ function playerView(b, stripe, id) {
     });
   }
 
+  // One slim row above the game (title, Previous / Next, back), so the game can be as big as the screen allows.
   return `
-    ${crumbs([["All belts", "#/"], [`${b.name} Belt`, `#/${b.key}`], [`Stripe ${stripe}`, `#/${b.key}/${stripe}`], [g.title]])}
     <div class="player-head">
       <div class="player-title">
         <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
         <h1 dir="auto">${esc(g.title)}</h1>
       </div>
-      <a class="btn btn-belt" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">${icon("all")} All Stripe ${stripe} games</a>
+      <div class="player-bar">
+        ${prev
+          ? `<a class="btn btn-ghost" href="${playHref(b, stripe, prev)}">${icon("left")} <span>Previous</span></a>`
+          : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
+        <div class="player-mid">
+          <span class="counter">Game ${i + 1} of ${list.length}</span>
+          ${g.embed || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
+          ${g.own ? "" : `<a class="icon-btn" href="${gameUrl(g)}" target="_blank" rel="noopener" title="Open on Wordwall" aria-label="Open on Wordwall">${icon("out")}</a>`}
+        </div>
+        ${next
+          ? `<a class="btn btn-primary" href="${playHref(b, stripe, next)}"><span>Next game</span> ${icon("right")}</a>`
+          : `<a class="btn btn-primary" href="#/${b.key}">${icon("check")} <span>Stripe done</span></a>`}
+      </div>
+      <a class="btn btn-belt" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">${icon("all")} ${b.name} Belt · Stripe ${stripe}</a>
     </div>
     <div class="player-layout">
-    <div class="player-main">
-    <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
-    <div class="player-bar">
-      ${prev
-        ? `<a class="btn btn-ghost" href="${playHref(b, stripe, prev)}">${icon("left")} <span>Previous</span></a>`
-        : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
-      <div class="player-mid">
-        <span class="counter">Game ${i + 1} of ${list.length}</span>
-        ${g.embed || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
-        ${g.own ? "" : `<a class="icon-btn" href="${gameUrl(g)}" target="_blank" rel="noopener" title="Open on Wordwall" aria-label="Open on Wordwall">${icon("out")}</a>`}
+      <div class="player-main">
+        <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
       </div>
-      ${next
-        ? `<a class="btn btn-primary" href="${playHref(b, stripe, next)}"><span>Next game</span> ${icon("right")}</a>`
-        : `<a class="btn btn-primary" href="#/${b.key}">${icon("check")} <span>Stripe done</span></a>`}
-    </div>
-    </div>
-    ${howToPlay(g, next)}
+      ${howToPlay(g, next)}
     </div>`;
 }
 
@@ -587,7 +587,8 @@ async function homeworkView() {
     return;
   }
   let list;
-  try { list = await loadMyHomework(u); } catch { app.innerHTML = homeworkShell(`<p class="hw-note">The homework didn't load. Please refresh the page.</p>`); return; }
+  try { list = await loadMyHomework(u); } catch (err) {
+    console.error("Homework didn't load:", err); app.innerHTML = homeworkShell(`<p class="hw-note">The homework didn't load. Please refresh the page.</p>`); return; }
   if (!location.hash.startsWith("#/homework")) return;
   const who = `<p class="hw-who">${esc(u.email)} · <button class="link-btn" data-hw-signout>Sign out</button></p>`;
   if (!list.length) { app.innerHTML = homeworkShell(`<p class="hw-note">${T("homeworkNone")}</p>${who}`); return; }
@@ -657,11 +658,18 @@ async function homeworkPlayView(hwId, gameId) {
   document.body.classList.add("playing");
   document.title = `${g.title} — ${plainT("homeworkTitle")}`;
   app.innerHTML = `
-    ${crumbs([["All belts", "#/"], [plainT("homeworkTitle"), "#/homework"], [g.title]])}
     <div class="player-head">
       <div class="player-title">
         <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
         <h1 dir="auto">${esc(g.title)}</h1>
+      </div>
+      <div class="player-bar">
+        ${prev ? `<a class="btn btn-ghost" href="${href(prev)}">${icon("left")} <span>Previous</span></a>` : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
+        <div class="player-mid">
+          <span class="counter">Game ${i + 1} of ${items.length}</span>
+          ${src || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
+        </div>
+        ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("left")} <span>${T("homeworkBack")}</span></a>`}
       </div>
       <a class="btn btn-ghost" href="#/homework">${icon("left")} ${T("homeworkBack")}</a>
     </div>
@@ -669,14 +677,6 @@ async function homeworkPlayView(hwId, gameId) {
     <div class="player-layout">
       <div class="player-main">
         <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
-        <div class="player-bar">
-          ${prev ? `<a class="btn btn-ghost" href="${href(prev)}">${icon("left")} <span>Previous</span></a>` : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
-          <div class="player-mid">
-            <span class="counter">Game ${i + 1} of ${items.length}</span>
-            ${src || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
-          </div>
-          ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("left")} <span>${T("homeworkBack")}</span></a>`}
-        </div>
       </div>
       ${howToPlay(g, next)}
     </div>`;

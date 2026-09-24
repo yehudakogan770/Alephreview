@@ -489,6 +489,9 @@ function openEdit(id) {
 //
 // Each kind has a content editor. The game itself is in js/games/<kind>.js.
 
+// Scenes behind games made here (drawn in js/games/themes.js).
+const GAME_THEMES = [["meadow", "Meadow"], ["desert", "Desert"], ["ocean", "Ocean"], ["space", "Space"], ["classic", "Classic"]];
+
 function ownKinds() {
   return Object.entries(draft.templates).filter(([, t]) => t.own).map(([name, t]) => ({ name, kind: t.own }));
 }
@@ -510,12 +513,12 @@ function parsePairs(text) {
 
 const CONTENT_EDITORS = {
   match: {
-    help: "Each pair: what the student sees, and its match. Like א and Aleph. Use at least 3 pairs. More than 6 are split into rounds.",
+    help: "Each pair: a colorful tile the student drags, and the word it goes next to. Like א and Aleph. Use at least 3 pairs. More than 6 are split into rounds.",
     html(content) {
       const pairs = (content && content.pairs && content.pairs.length) ? content.pairs : [{ a: "", b: "" }, { a: "", b: "" }, { a: "", b: "" }];
       return `
         <div class="pairs-editor" data-pairs>
-          <div class="pairs-head"><span>Shows</span><span></span><span>Match</span><span></span></div>
+          <div class="pairs-head"><span>Tile (dragged)</span><span></span><span>Goes next to</span><span></span></div>
           ${pairs.map(p => pairRow(p)).join("")}
         </div>
         <div class="pairs-tools">
@@ -536,7 +539,7 @@ const CONTENT_EDITORS = {
       if (pairs.length < 3) return { error: "Add at least 3 pairs." };
       const seen = new Set();
       for (const p of pairs) {
-        if (seen.has(p.b)) return { error: `"${p.b}" is used twice as a match. Each match must be different.` };
+        if (seen.has(p.b)) return { error: `"${p.b}" is used twice. Each word must be different.` };
         seen.add(p.b);
       }
       return { content: { kind: "match", pairs } };
@@ -592,6 +595,10 @@ function openMake(stripe, where) {
         <label class="field"><span>Game type</span><select name="kind"${g ? " disabled" : ""}>${kinds.map(k => `<option value="${esc(k.name)}"${k.name === kindName ? " selected" : ""}>${esc(k.name)}</option>`).join("")}</select></label>
       </div>
       <p class="hint" data-kind-help>${esc(CONTENT_EDITORS[kind].help)}</p>
+      <div class="field"><span>Theme</span>
+        <div class="theme-pick">${GAME_THEMES.map(([k, name]) => `
+          <label class="theme-opt theme-${k}"><input type="radio" name="theme" value="${k}"${k === ((g && g.own && g.own.theme) || "meadow") ? " checked" : ""}><span>${name}</span></label>`).join("")}
+        </div></div>
       <div data-content>${CONTENT_EDITORS[kind].html(g && g.own)}</div>
       <label class="field"><span>Instruction for this game (optional)</span>
         <textarea name="tip" rows="2" dir="auto" placeholder="Like: Match each letter to its name.">${esc(g && g.tip || "")}</textarea></label>
@@ -627,7 +634,7 @@ function openMake(stripe, where) {
       list(belt, s).push(game);
     }
     game.title = title;
-    game.own = res.content;
+    game.own = { ...res.content, theme: (f.querySelector("input[name=theme]:checked") || {}).value || "meadow" };
     if (tip) game.tip = tip; else delete game.tip;
     if (g) {
       if (f.elements.hidden.checked) game.hidden = true; else delete game.hidden;

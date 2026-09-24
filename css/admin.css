@@ -338,3 +338,28 @@ body.locked .admin-bar, body.locked .admin-tabs, body.locked .admin-main, body.l
 .hw-table.results td.fail { color: #b35c00; font-weight: 600; white-space: nowrap; }
 .hw-table.results td.opened { color: var(--muted); white-space: nowrap; }
 .hw-table.results td small { display: block; color: var(--muted); font-weight: 500; }
+
+/* Theme picker */
+.theme-pick { display: flex; flex-wrap: wrap; gap: 8px; }
+.theme-opt { position: relative; cursor: pointer; }
+.theme-opt input { position: absolute; opacity: 0; }
+.theme-opt span {
+  display: grid;
+  place-items: end center;
+  width: 92px;
+  height: 58px;
+  padding-bottom: 4px;
+  border: 2px solid var(--line-strong);
+  border-radius: 10px;
+  color: #1b2437;
+  font-size: 13px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+}
+.theme-opt input:checked + span { border-color: var(--text); box-shadow: 0 0 0 2px var(--text); }
+.theme-opt input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+.theme-meadow span { background: linear-gradient(#5bb8f5 0 55%, #6cc24a 55%); }
+.theme-desert span { background: linear-gradient(#f7a76c 0 55%, #f5c98a 55%); }
+.theme-ocean span { background: linear-gradient(#6ec6ff 0 45%, #2aa6e0 45% 85%, #f5d9a0 85%); }
+.theme-space span { background: radial-gradient(circle at 75% 30%, #ffb86b 0 10px, transparent 11px), linear-gradient(135deg, #1a1f5c, #4a2a7a); color: #fff; text-shadow: none; }
+.theme-classic span { background: #fff; }

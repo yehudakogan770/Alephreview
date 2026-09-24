@@ -170,6 +170,46 @@
   "white": {
    "1": [
     {
+     "id": "own-white-1",
+     "title": "Letters א to ו",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       }
+      ]
+     }
+    },
+    {
      "id": "32232123",
      "title": "Bet Vs. Vet",
      "type": "quiz",
@@ -267,6 +307,62 @@
    ],
    "2": [
     {
+     "id": "own-white-2",
+     "title": "Letters א to י",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
+    },
+    {
      "id": "72336687",
      "title": "א thru ך Cloud Tap",
      "type": "cards",
@@ -349,6 +445,50 @@
     }
    ],
    "3": [
+    {
+     "id": "own-white-3",
+     "title": "Letters כ to ן",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       }
+      ]
+     }
+    },
     {
      "id": "28882522",
      "title": "123 Kriah 01 Page 07",
@@ -452,6 +592,42 @@
   "red": {
    "1": [
     {
+     "id": "own-red-1",
+     "title": "Letters ס to ף",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       }
+      ]
+     }
+    },
+    {
      "id": "9895499",
      "title": "From KAF to SAMECH",
      "type": "match",
@@ -547,6 +723,54 @@
     }
    ],
    "2": [
+    {
+     "id": "own-red-2",
+     "title": "Final letters and look-alikes",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadik"
+       },
+       {
+        "a": "ק",
+        "b": "Kuf"
+       },
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       }
+      ]
+     }
+    },
     {
      "id": "94192438",
      "title": "Hebrew Letter Order R2",
@@ -664,6 +888,42 @@
     }
    ],
    "3": [
+    {
+     "id": "own-red-3",
+     "title": "Letters ר to ת",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       },
+       {
+        "a": "ת",
+        "b": "Sav"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       }
+      ]
+     }
+    },
     {
      "id": "94302110",
      "title": "Rank order from Yud to Sav R3",
@@ -916,6 +1176,50 @@
   "orange": {
    "1": [
     {
+     "id": "own-orange-1",
+     "title": "Letters with Kamatz",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Alef"
+       },
+       {
+        "a": "בָּ",
+        "b": "Beis"
+       },
+       {
+        "a": "גָ",
+        "b": "Gimmel"
+       },
+       {
+        "a": "דָ",
+        "b": "Dalet"
+       },
+       {
+        "a": "הָ",
+        "b": "Hey"
+       },
+       {
+        "a": "וָ",
+        "b": "Vov"
+       },
+       {
+        "a": "זָ",
+        "b": "Zayin"
+       },
+       {
+        "a": "חָ",
+        "b": "Ches"
+       }
+      ]
+     }
+    },
+    {
      "id": "62269918",
      "title": "Kamatz Whack-a-Mole",
      "type": "arcade",
@@ -1037,6 +1341,50 @@
     }
    ],
    "2": [
+    {
+     "id": "own-orange-2",
+     "title": "Kamatz or Patach",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "בַּ",
+        "b": "Beis Patach"
+       },
+       {
+        "a": "מָ",
+        "b": "Mem Kamatz"
+       },
+       {
+        "a": "מַ",
+        "b": "Mem Patach"
+       },
+       {
+        "a": "לָ",
+        "b": "Lamed Kamatz"
+       },
+       {
+        "a": "לַ",
+        "b": "Lamed Patach"
+       },
+       {
+        "a": "שָׁ",
+        "b": "Shin Kamatz"
+       },
+       {
+        "a": "שַׁ",
+        "b": "Shin Patach"
+       }
+      ]
+     }
+    },
     {
      "id": "94381851",
      "title": "Kumatz Patach Wheel O2",

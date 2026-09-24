@@ -22,6 +22,12 @@ const TEXT_DEFAULTS = {
   gameNotPassed: "You need {pass}% to pass. Try again.",
   gameTryAgain: "Try again",
   gameNext: "Next game",
+  gameSubmit: "Submit answers",
+  gameSubmitAnyway: "Some boxes are empty. Submit anyway?",
+  gameNextRound: "Next round",
+  gameSeeScore: "See my score",
+  gameShowAnswers: "Show answers",
+  gameAnswers: "Answers",
 };
 
 // Game types made on this site (js/games/*.js).
@@ -29,7 +35,7 @@ const OWN_TEMPLATES = {
   "Match it": { group: "match", own: "match" },
 };
 const OWN_HOWTO = {
-  "Match it": "Drag each answer to its match.",
+  "Match it": "Drag each tile to its match. Then press Submit.",
 };
 
 function withDefaults(data) {
