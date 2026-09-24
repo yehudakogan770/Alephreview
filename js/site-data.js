@@ -15,6 +15,8 @@ const TEXT_DEFAULTS = {
   homeworkBack: "Back to my homework",
   homeworkPlayed: "Played",
   gameStart: "Start",
+  gameSoundButton: "Sound on or off",
+  gameMusicButton: "Music on or off",
   gameRound: "Round {n} of {total}",
   gameScore: "{right} of {total} right",
   gamePassMark: "Get {pass}% to pass.",
