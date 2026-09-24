@@ -54,6 +54,11 @@ function spinGame(body, content, api, quiz) {
     if (quiz) revealQuestions(api, questions);
     let turn = 0;
     let spinning = false;
+    // Done shows up after a few spins, so the wheel is really played.
+    let spins = 0;
+    const need = Math.min(5, items.length);
+    const doneBtn = () => spins >= need ? `<button class="og-btn" type="button" data-done>${api.t("gameDone")}</button>` : "";
+    const bindDone = () => body.querySelector("[data-done]")?.addEventListener("click", () => api.finish());
 
     function draw() {
       const n = items.length;
@@ -79,12 +84,12 @@ function spinGame(body, content, api, quiz) {
           <div class="og-spin-side">
             <button class="og-btn og-go og-big" type="button" data-spin>${api.t("gameSpin")}</button>
             <span class="og-speed-left">${api.t("gameCardsLeft", { n: items.length })}</span>
-            ${quiz ? "" : `<button class="og-btn" type="button" data-done>${api.t("gameDone")}</button>`}
+            ${quiz ? "" : doneBtn()}
           </div>
           <div data-result></div>
         </div>`;
       body.querySelector("[data-spin]").addEventListener("click", spin);
-      body.querySelector("[data-done]")?.addEventListener("click", () => api.finish());
+      bindDone();
     }
 
     function spin() {
@@ -115,6 +120,11 @@ function spinGame(body, content, api, quiz) {
         }
         api.sound.good();
         api.say(items[pick]);
+        spins++;
+        if (!body.querySelector("[data-done]") && doneBtn()) {
+          body.querySelector(".og-spin-side").insertAdjacentHTML("beforeend", doneBtn());
+          bindDone();
+        }
         res.innerHTML = bigCard(api, items[pick], api.color(pick),
           `<button class="og-btn og-go" type="button" data-again>${api.t("gameSpin")}</button>
            <button class="og-btn" type="button" data-out>${api.t("gameRemove")}</button>`);
