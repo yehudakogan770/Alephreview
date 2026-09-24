@@ -106,6 +106,9 @@ const TEXT_FIELDS = [
     ["gameRemove", "Take a card or slice out"],
     ["gameCardsLeft", "Cards left. {n} becomes a number."],
   ]],
+  ["Phones", [
+    ["turnPhone", "Tip on game pages when a phone is held upright"],
+  ]],
   ["Bottom of every page", [
     ["footer", "Footer"],
   ]],

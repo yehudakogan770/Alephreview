@@ -342,7 +342,7 @@ function ownThumb(g) {
 
 function gameCard(g, done, b, stripe) {
   const inSite = !!g.embed || !!g.own;
-  const thumb = g.own ? ownThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : "";
+  const thumb = g.own ? gameThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : "";
   return `
     <li>
       <a class="game-card${done.has(g.id) ? " played" : ""}" ${inSite ? `href="${playHref(b, stripe, g)}"` : `href="${gameUrl(g)}" target="_blank" rel="noopener"`} data-id="${esc(g.id)}">
@@ -474,6 +474,7 @@ function playerView(b, stripe, id) {
       </div>
       <a class="btn btn-belt" href="#/${b.key}/${stripe}" style="${beltStyle(b)}">${icon("all")} ${b.name} Belt · Stripe ${stripe}</a>
     </div>
+    <p class="turn-hint">${T("turnPhone")}</p>
     <div class="player-layout">
       <div class="player-main">
         <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
@@ -616,7 +617,7 @@ async function homeworkView() {
       return `
         <li>
           <a class="hw-game${ok ? " done" : ""}" href="#/homework/${esc(hw.id)}/${esc(it.game)}">
-            <span class="hw-thumb">${g.own ? ownThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
+            <span class="hw-thumb">${g.own ? gameThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
             <span class="hw-name" dir="auto">${esc(g.title)}</span>
             <span class="hw-state">${state}</span>
           </a>
@@ -683,6 +684,7 @@ async function homeworkPlayView(hwId, gameId) {
       <a class="btn btn-ghost" href="#/homework">${icon("left")} ${T("homeworkBack")}</a>
     </div>
     ${it.assign ? `<p class="hw-name-hint">${T("homeworkTypeName", { name: esc(firstName(u)) })}</p>` : ""}
+    <p class="turn-hint">${T("turnPhone")}</p>
     <div class="player-layout">
       <div class="player-main">
         <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
