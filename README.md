@@ -19,18 +19,26 @@ Click the small **Admin** button at the top right of the site (or go to `admin.h
 | **Words on the site** | Change any words students see. Put `**` around a word to make it bold. |
 | **How to play** | The step 2 text for each kind of Wordwall game. |
 | **Home page** | Show or hide the letter tiles and the numbers row. |
-| **Homework** | Make classes (students' Google emails), give homework with games and a due date, and see who did it. |
+| **Homework** | Make classes (students' Google emails), give homework with games, a due date and a passing score, and see who passed. |
 | **Admins** | Full admins only: add or remove sub-admins. Paste a list or import a file (like a Google Workspace user export) to add many at once. Sub-admins can do everything else. |
 
 Use **Preview** to see your changes before students do, then **Save & publish**. Changes go live right away; students see them the next time they load a page.
 
+### Making games on this site
+
+Games made here know the student's score, so homework can require passing. On the **Games** tab, click **+ Make a game** on a stripe.
+
+- **Match it:** type pairs (what the student sees, and its match, like `א = Aleph`), or paste many at once. At least 3 pairs; more than 6 are split into rounds.
+- **Save and try it** opens the game so you can play it before publishing.
+
+More game types (Quiz, Find it, Put in order) are coming one at a time.
+
 ### Homework
 
 1. On the **Homework** tab, click **+ New class**. Name it and paste the students' Google emails (or **Import a file**).
-2. Click **+ New homework**. Give it a title, pick the class and a due date, and find games to add.
-3. For scores, make a Wordwall assignment (on Wordwall: **Set assignment**) and paste its link next to the game. Students type their name in the game, and the scores show in your Wordwall results.
-4. Students click **My homework** at the top of the site and sign in with Google. They see only their homework. Anyone can still play the games without signing in.
-5. Click **Who did it** to see which students opened each game and for how long.
+2. Click **+ New homework**. Give it a title, pick the class, a due date and the **passing score**, and add games made on this site.
+3. Students click **My homework** at the top of the site and sign in with Google. They see only their homework. A game is **Done** only when they pass it; they can try again as many times as they like. Anyone can still play the games without signing in.
+4. Click **Who did it** to see each student's best score, how many tries, and whether they passed.
 
 ### Adding a game
 
@@ -113,6 +121,8 @@ The first **Save & publish** copies everything into Firebase. After that, the si
 |---|---|
 | `index.html`, `js/app.js`, `css/style.css` | The student site |
 | `admin.html`, `js/admin.js`, `css/admin.css` | The admin page |
+| `js/games/` | Games made on this site: `engine.js` (start, score, pass) and one file per game type |
+| `css/games.css` | How those games look |
 | `js/cloud.js` | Loads Firebase (Google sign-in and the database) when a page needs it |
 | `js/site-data.js` | Loads the site's words and games (from Firebase, or `data/site.json` if Firebase isn't set up) |
 | `js/firebase-config.js` | Firebase settings |

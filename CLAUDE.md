@@ -23,7 +23,14 @@ Plain HTML/CSS/JS, no build step, hosted on GitHub Pages from `main`.
 
 - Teachers (admins) make classes and homework on the admin page's Homework tab. Students sign in with Google on `#/homework` and see only homework whose `students` list has their email.
 - Playing games never needs sign-in. Only homework does.
-- While a homework game is open, students' browsers save `progress/{homework}__{email}` (opened, seconds). Scores come from Wordwall assignment links, not from this site.
+- While a homework game is open, students' browsers save `progress/{homework}__{email}`: opened, seconds, and for games made here `best`, `last`, `tries`, `passed`.
+- A homework game is done only when it's passed (score ≥ the homework's `pass`, set by the teacher). Wordwall games can't report scores (checked: their embeds send nothing to the page), so homework uses only games made on this site.
+
+## Games made on this site
+
+- `js/games/engine.js` runs every game (start screen, rounds, score dots, end screen, pass mark, sounds). Each type is its own file calling `registerKind()`; the admin editor for it is in `CONTENT_EDITORS` in `js/admin.js`, and its name and How to play default are in `OWN_TEMPLATES` / `OWN_HOWTO` in `js/site-data.js`.
+- In the site data a game made here has `own: { kind, ...content }` and no `embed`.
+- Types are built one at a time, each at least as good as the Wordwall version: Match it (done), then Quiz, Find it, Put in order.
 
 ## Rules for this site
 

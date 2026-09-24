@@ -1050,3 +1050,27 @@ body.playing .player-head .btn { min-height: 38px; padding: 7px 16px; }
   .homework-link, .admin-link { padding: 8px; }
   .played-badge { padding: 6px 10px; font-size: 13px; }
 }
+
+/* Picture for games made on this site */
+.own-thumb {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  background: color-mix(in srgb, var(--t, #1c64d6) 14%, #fff);
+  color: color-mix(in srgb, var(--t, #1c64d6) 80%, #1b2437);
+  font: 600 clamp(22px, 3vw, 40px)/1 var(--font-tile);
+}
+.own-thumb b {
+  display: grid;
+  place-items: center;
+  min-width: 22%;
+  aspect-ratio: 1;
+  padding: 0 6%;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--t, #1c64d6) 25%, #fff);
+  font-weight: inherit;
+}
