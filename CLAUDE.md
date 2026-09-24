@@ -19,6 +19,12 @@ Plain HTML/CSS/JS, no build step, hosted on GitHub Pages from `main`.
 - Any new text students see goes in `text` in the site data (editable on the admin page), not hard-coded in `js/app.js`.
 - The admin page stays locked until an admin signs in with Google. Full admins are listed only in the Firestore security rules (Firebase console), never in the repository. Sub-admins are Firestore documents `editors/{email}`, managed by full admins on the Admins tab; they can do everything except manage admins.
 
+## Homework
+
+- Teachers (admins) make classes and homework on the admin page's Homework tab. Students sign in with Google on `#/homework` and see only homework whose `students` list has their email.
+- Playing games never needs sign-in. Only homework does.
+- While a homework game is open, students' browsers save `progress/{homework}__{email}` (opened, seconds). Scores come from Wordwall assignment links, not from this site.
+
 ## Rules for this site
 
 - Hebrew runs right to left (letter tiles start with א on the right).

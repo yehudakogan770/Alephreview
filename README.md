@@ -19,9 +19,18 @@ Click the small **Admin** button at the top right of the site (or go to `admin.h
 | **Words on the site** | Change any words students see. Put `**` around a word to make it bold. |
 | **How to play** | The step 2 text for each kind of Wordwall game. |
 | **Home page** | Show or hide the letter tiles and the numbers row. |
-| **Admins** | Full admins only: add or remove sub-admins. Sub-admins can do everything else. |
+| **Homework** | Make classes (students' Google emails), give homework with games and a due date, and see who did it. |
+| **Admins** | Full admins only: add or remove sub-admins. Paste a list or import a file (like a Google Workspace user export) to add many at once. Sub-admins can do everything else. |
 
 Use **Preview** to see your changes before students do, then **Save & publish**. Changes go live right away; students see them the next time they load a page.
+
+### Homework
+
+1. On the **Homework** tab, click **+ New class**. Name it and paste the students' Google emails (or **Import a file**).
+2. Click **+ New homework**. Give it a title, pick the class and a due date, and find games to add.
+3. For scores, make a Wordwall assignment (on Wordwall: **Set assignment**) and paste its link next to the game. Students type their name in the game, and the scores show in your Wordwall results.
+4. Students click **My homework** at the top of the site and sign in with Google. They see only their homework. Anyone can still play the games without signing in.
+5. Click **Who did it** to see which students opened each game and for how long.
 
 ### Adding a game
 
@@ -45,16 +54,17 @@ The admin page uses Google's Firebase for sign-in and to store published changes
        function signedIn() {
          return request.auth != null && request.auth.token.email_verified == true;
        }
+       function myEmail() { return request.auth.token.email; }
        // Full admins: can do everything, including adding sub-admins.
        function isFullAdmin() {
-         return signedIn() && request.auth.token.email in [
+         return signedIn() && myEmail() in [
            'admin-one@gmail.com',
            'admin-two@gmail.com'
          ];
        }
        // Sub-admins: added on the admin page's Admins tab.
        function isSubAdmin() {
-         return signedIn() && exists(/databases/$(database)/documents/editors/$(request.auth.token.email));
+         return signedIn() && exists(/databases/$(database)/documents/editors/$(myEmail()));
        }
        function isAdmin() { return isFullAdmin() || isSubAdmin(); }
 
@@ -62,6 +72,19 @@ The admin page uses Google's Firebase for sign-in and to store published changes
        match /admin/check  { allow read: if isAdmin(); }
        match /admin/owner  { allow read: if isFullAdmin(); }
        match /editors/{email} { allow read: if isAdmin(); allow write: if isFullAdmin(); }
+
+       // Homework
+       match /classes/{id} { allow read, write: if isAdmin(); }
+       match /homework/{id} {
+         allow read: if isAdmin() || (signedIn() && myEmail() in resource.data.students);
+         allow write: if isAdmin();
+       }
+       match /progress/{id} {
+         allow read: if isAdmin() || (signedIn() && (resource == null || resource.data.email == myEmail()));
+         allow create, update: if signedIn()
+           && request.resource.data.email == myEmail()
+           && id == request.resource.data.hw + '__' + myEmail();
+       }
      }
    }
    ```
@@ -90,6 +113,7 @@ The first **Save & publish** copies everything into Firebase. After that, the si
 |---|---|
 | `index.html`, `js/app.js`, `css/style.css` | The student site |
 | `admin.html`, `js/admin.js`, `css/admin.css` | The admin page |
+| `js/cloud.js` | Loads Firebase (Google sign-in and the database) when a page needs it |
 | `js/site-data.js` | Loads the site's words and games (from Firebase, or `data/site.json` if Firebase isn't set up) |
 | `js/firebase-config.js` | Firebase settings |
 | `data/site.json` | The starting copy of all words, settings and games, and the backup if Firebase can't be reached |

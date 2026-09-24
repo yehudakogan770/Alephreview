@@ -253,3 +253,55 @@ body.locked .admin-bar, body.locked .admin-tabs, body.locked .admin-main, body.l
 .admin-email { font-weight: 600; }
 .admin-list .btn { margin-left: auto; }
 .muted { color: var(--muted); font-size: 14px; }
+
+/* Homework tab */
+.wide-panel { max-width: 1100px; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.panel-head h3 { margin: 0; }
+.hw-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.hw-table th, .hw-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+.hw-table th { color: var(--muted); font-size: 13px; font-weight: 600; }
+.hw-table .actions { text-align: right; white-space: nowrap; }
+.hw-table .actions .btn + .btn { margin-left: 6px; }
+.results-wrap { max-height: 60vh; overflow: auto; border: 1px solid var(--line); border-radius: 10px; }
+.hw-table.results th { position: sticky; top: 0; background: var(--surface); }
+.hw-table.results td.yes { color: var(--good); font-weight: 600; white-space: nowrap; }
+.hw-table.results td.yes small { color: var(--muted); font-weight: 500; }
+.hw-table.results td.no { color: var(--line-strong); }
+.admin-dialog.wide { width: min(900px, calc(100vw - 32px)); }
+
+.hw-picked { display: grid; gap: 8px; margin: 0 0 10px; padding: 0; list-style: none; }
+.hw-picked > li { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; }
+.hw-picked-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.hw-picked-top b { flex: 1; min-width: 0; }
+.hw-picked .assign, .hw-pick-row input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font: 400 14px/1.4 var(--font-body);
+}
+.hw-results { margin: 6px 0 0; padding: 0; list-style: none; max-height: 240px; overflow: auto; }
+.hw-results button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--text);
+  font: 600 14.5px/1.3 var(--font-body);
+  text-align: left;
+  cursor: pointer;
+}
+.hw-results button:hover { background: var(--surface-2); }
+.hw-results .muted { font-weight: 400; font-size: 13px; }
+.icon-btn:disabled { opacity: .35; cursor: default; }
+
+/* Bulk import */
+.import-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.file-btn { cursor: pointer; }

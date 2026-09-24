@@ -958,3 +958,95 @@ body.playing .player-head { align-items: center; margin-bottom: 12px; }
 body.playing .player-title { flex-direction: row; align-items: center; gap: 12px; }
 body.playing .player-title h1 { font-size: clamp(20px, 2.2vw, 26px); }
 body.playing .player-head .btn { min-height: 38px; padding: 7px 16px; }
+
+/* ---- homework (students) ---- */
+
+.homework-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.homework-link[hidden] { display: none; }
+.homework-link .icon { width: 16px; height: 16px; }
+
+.hw-page h1 { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; font-size: clamp(26px, 3.4vw, 36px); }
+.hw-note { color: var(--muted); font-size: 18px; }
+.hw-who { margin-top: 28px; color: var(--muted); font-size: 14px; }
+.hw-who .link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hw-signin {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+  max-width: 520px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  font-size: 18px;
+}
+.hw-signin p { margin: 0; }
+
+.hw-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 18px; }
+.hw-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.hw-card header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; }
+.hw-card h2 { font-size: 21px; }
+.hw-due { color: var(--muted); font-size: 14px; font-weight: 600; }
+.hw-games { display: grid; gap: 8px; margin: 6px 0 0; padding: 0; list-style: none; }
+.hw-game {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color .12s ease, background .12s ease;
+}
+.hw-game:hover { border-color: var(--text); }
+.hw-game.done { background: color-mix(in srgb, var(--good) 7%, var(--surface)); }
+.hw-thumb { flex: none; width: 64px; height: 48px; overflow: hidden; border-radius: 8px; background: var(--surface-2); }
+.hw-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hw-name { flex: 1; min-width: 0; font-weight: 600; }
+.hw-state { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 14px; font-weight: 600; }
+.hw-game.done .hw-state { color: var(--good); }
+
+.hw-name-hint {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border-left: 4px solid #f5b301;
+  border-radius: 0 12px 12px 0;
+  background: color-mix(in srgb, #f5b301 14%, var(--surface));
+  font-size: 17px;
+}
+
+/* Small screens: header buttons become icons so everything fits. */
+@media (max-width: 560px) {
+  .homework-link span, .admin-link span { display: none; }
+  .homework-link, .admin-link { padding: 8px; }
+  .played-badge { padding: 6px 10px; font-size: 13px; }
+}
