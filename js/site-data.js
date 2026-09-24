@@ -14,6 +14,7 @@ const TEXT_DEFAULTS = {
   homeworkTypeName: "Type your name: **{name}**",
   homeworkBack: "Back to my homework",
   homeworkPlayed: "Played",
+  step3Homework: "Done? Press **Back to my homework**.",
   gameStart: "Start",
   gameSoundButton: "Sound on or off",
   gameMusicButton: "Music on or off",
