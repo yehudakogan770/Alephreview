@@ -8,8 +8,6 @@
 //  - sub-admins, stored in Firestore under editors/{email}: can do everything
 //    except manage admins.
 
-const FIREBASE_VERSION = "12.3.0";
-
 // Same belts, in level order, as js/app.js.
 const BELTS = [
   { key: "white",  name: "White",  color: "#f1f1ee", ink: "#1b2437" },
@@ -56,6 +54,17 @@ const TEXT_FIELDS = [
   ["When a stripe is done", [
     ["stripeDoneTitle", "Title. {stripe} becomes the stripe number."],
     ["stripeDoneText", "Line under it. {belt} becomes the belt name."],
+  ]],
+  ["Homework (what students see)", [
+    ["homeworkButton", "Button at the top of the site"],
+    ["homeworkTitle", "Homework page title"],
+    ["homeworkSignIn", "Asks students to sign in"],
+    ["signInButton", "Sign-in button"],
+    ["homeworkNone", "When there's no homework"],
+    ["homeworkDue", "Due date. {date} becomes the date."],
+    ["homeworkDone", "Label for a finished game"],
+    ["homeworkTypeName", "Reminder above a scored game. {name} becomes the student's first name."],
+    ["homeworkBack", "Back button on a homework game"],
   ]],
   ["Bottom of every page", [
     ["footer", "Footer"],
@@ -115,21 +124,13 @@ function showStatus(text, kind) {
 
 // ---- Firebase: Google sign-in and publishing --------------------------------------
 
-function firebaseReady() {
-  return typeof FIREBASE_CONFIG !== "undefined" && !!FIREBASE_CONFIG;
-}
+function firebaseReady() { return cloudReady(); }
 
+// Firebase (js/cloud.js), watching who is signed in.
 async function firebase() {
   if (fb) return fb;
-  const base = `https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}`;
-  const [appMod, authMod, fsMod] = await Promise.all([
-    import(`${base}/firebase-app.js`),
-    import(`${base}/firebase-auth.js`),
-    import(`${base}/firebase-firestore.js`),
-  ]);
-  const app = appMod.initializeApp(FIREBASE_CONFIG);
-  fb = { auth: authMod.getAuth(app), db: fsMod.getFirestore(app), authMod, fsMod };
-  authMod.onAuthStateChanged(fb.auth, onAuth);
+  const c = await cloud();
+  if (!fb) { fb = c; c.authMod.onAuthStateChanged(c.auth, onAuth); }
   return fb;
 }
 
@@ -144,10 +145,8 @@ function gate(msg, { signIn = false, signOut = false } = {}) {
 
 async function signIn() {
   try {
-    const { auth, authMod } = await firebase();
-    const provider = new authMod.GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: "select_account" });
-    await authMod.signInWithPopup(auth, provider);
+    await firebase();
+    await googleSignIn();
     // onAuthStateChanged takes it from here.
   } catch (err) {
     if (err.code === "auth/popup-closed-by-user" || err.code === "auth/cancelled-popup-request") return;
@@ -658,11 +657,16 @@ function adminsTab() {
   return `
     <p class="tab-help">Sub-admins can do everything on this page: edit games and words, and publish. They can't add or remove admins.</p>
     <section class="panel">
-      <h3>Add a sub-admin</h3>
-      <form class="add-admin" id="add-admin">
-        <label class="field grow"><span>Their Google email</span>
-          <input type="email" name="email" placeholder="name@gmail.com" required autocomplete="off"></label>
-        <button class="btn btn-primary" type="submit">Add</button>
+      <h3>Add sub-admins</h3>
+      <form id="add-admin">
+        <label class="field"><span>Google emails of teachers</span>
+          <textarea name="emails" rows="4" placeholder="one@school.org&#10;two@gmail.com" autocomplete="off"></textarea>
+          <small>Paste one or many. Any list works: one per line, or with commas.</small></label>
+        <div class="import-row">
+          <button class="btn btn-primary" type="submit">Add</button>
+          <label class="btn btn-ghost file-btn">Import a file…<input type="file" accept=".csv,.txt,.tsv,text/csv,text/plain" data-import="admins" hidden></label>
+          <small class="muted">A CSV or text file, like a Google Workspace user export. Every email in it is added.</small>
+        </div>
       </form>
       <p class="form-error" id="admin-error" hidden></p>
     </section>
@@ -697,21 +701,31 @@ async function loadSubAdmins() {
     </li>`).join("") : `<li class="muted">No sub-admins yet.</li>`;
 }
 
-async function addSubAdmin(email) {
+// Every email address found in pasted text or a file, lowercased, no repeats.
+function findEmails(text) {
+  return [...new Set((String(text).match(/[^\s,;<>"'()\[\]]+@[^\s,;<>"'()\[\]]+\.[a-z]{2,}/gi) || []).map(e => e.toLowerCase()))];
+}
+
+async function addSubAdmins(text) {
   const errEl = $("#admin-error");
   errEl.hidden = true;
-  email = email.trim().toLowerCase();
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { errEl.textContent = "That doesn't look like an email address."; errEl.hidden = false; return false; }
-  if (email === user.email.toLowerCase()) { errEl.textContent = "You're already a full admin."; errEl.hidden = false; return false; }
+  const me = user.email.toLowerCase();
+  const emails = findEmails(text).filter(e => e !== me);
+  if (!emails.length) { errEl.textContent = "No email addresses found."; errEl.hidden = false; return false; }
   try {
     const { db, fsMod } = await firebase();
-    await fsMod.setDoc(fsMod.doc(db, "editors", email), { addedBy: user.email, addedAt: fsMod.serverTimestamp() });
+    // Firestore writes up to 500 changes at once.
+    for (let i = 0; i < emails.length; i += 400) {
+      const batch = fsMod.writeBatch(db);
+      for (const e of emails.slice(i, i + 400)) batch.set(fsMod.doc(db, "editors", e), { addedBy: user.email, addedAt: fsMod.serverTimestamp() });
+      await batch.commit();
+    }
   } catch (err) {
     errEl.textContent = err.code === "permission-denied" ? "Only full admins can add sub-admins." : "Couldn't add them. Try again.";
     errEl.hidden = false;
     return false;
   }
-  toast(`${email} is now a sub-admin. They can sign in with Google.`, "good");
+  toast(emails.length === 1 ? `${emails[0]} is now a sub-admin.` : `Added ${emails.length} sub-admins.`, "good");
   loadSubAdmins();
   return true;
 }
@@ -732,7 +746,328 @@ async function removeSubAdmin(email) {
 main.addEventListener("submit", async e => {
   if (e.target.id !== "add-admin") return;
   e.preventDefault();
-  if (await addSubAdmin(e.target.elements.email.value)) e.target.reset();
+  if (await addSubAdmins(e.target.elements.emails.value)) e.target.reset();
+});
+
+// ---- Homework tab (all admins) --------------------------------------------------------------
+//
+// classes/{id}:  { name, students: [emails] }
+// homework/{id}: { title, classId, className, students, due: "YYYY-MM-DD",
+//                  items: [{ game, assign }] }   (assign: Wordwall assignment link)
+// progress/{hw}__{email}: written by students' browsers while they play.
+
+let hwData = { classes: [], homework: [] };
+
+function allGamesFlat() {
+  const out = [];
+  for (const b of BELTS) for (const s of STRIPES) for (const g of list(b.key, s)) out.push({ g, b, s });
+  return out;
+}
+
+function gameById(id) { return allGamesFlat().find(x => x.g.id === id); }
+
+async function loadHomeworkData() {
+  const { db, fsMod } = await firebase();
+  const [c, h] = await Promise.all([
+    fsMod.getDocs(fsMod.collection(db, "classes")),
+    fsMod.getDocs(fsMod.collection(db, "homework")),
+  ]);
+  hwData.classes = c.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+  hwData.homework = h.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => String(b.due || "").localeCompare(String(a.due || "")));
+}
+
+function homeworkTab() {
+  refreshHomework();
+  return `
+    <p class="tab-help">Give a class homework: pick games and a due date. Students sign in with Google and see only their homework. For scores, paste a Wordwall assignment link for each game (on Wordwall: <b>Set assignment</b>).</p>
+    <section class="panel wide-panel">
+      <div class="panel-head"><h3>Homework</h3><button class="btn btn-primary small" data-hw-new>+ New homework</button></div>
+      <div id="hw-list"><p class="muted">Loading…</p></div>
+    </section>
+    <section class="panel wide-panel">
+      <div class="panel-head"><h3>Classes</h3><button class="btn btn-ghost small" data-class-new>+ New class</button></div>
+      <div id="class-list"><p class="muted">Loading…</p></div>
+    </section>`;
+}
+
+async function refreshHomework() {
+  try { await loadHomeworkData(); } catch {
+    const el = $("#hw-list");
+    if (el) el.innerHTML = `<p class="muted">Couldn't load homework. Reload the page to try again.</p>`;
+    return;
+  }
+  const hwEl = $("#hw-list"), clEl = $("#class-list");
+  if (!hwEl || !clEl) return;
+  hwEl.innerHTML = hwData.homework.length ? `
+    <table class="hw-table">
+      <thead><tr><th>Homework</th><th>Class</th><th>Due</th><th>Games</th><th></th></tr></thead>
+      <tbody>${hwData.homework.map(h => `
+        <tr>
+          <td><b dir="auto">${esc(h.title)}</b></td>
+          <td>${esc(h.className || "")}</td>
+          <td>${esc(h.due || "")}</td>
+          <td>${(h.items || []).length}</td>
+          <td class="actions">
+            <button class="btn btn-primary small" data-hw-results="${esc(h.id)}">Who did it</button>
+            <button class="btn btn-ghost small" data-hw-edit="${esc(h.id)}">Edit</button>
+          </td>
+        </tr>`).join("")}</tbody>
+    </table>` : `<p class="muted">No homework yet.${hwData.classes.length ? "" : " Start by making a class."}</p>`;
+  clEl.innerHTML = hwData.classes.length ? `
+    <ul class="admin-list">${hwData.classes.map(c => `
+      <li>
+        <span class="admin-email">${esc(c.name)}</span>
+        <span class="muted">${(c.students || []).length} students</span>
+        <button class="btn btn-ghost small" data-class-edit="${esc(c.id)}">Edit</button>
+      </li>`).join("")}</ul>` : `<p class="muted">No classes yet.</p>`;
+}
+
+function hwDialog(html) {
+  const dlg = $("#dlg-hw");
+  dlg.innerHTML = `<form method="dialog" class="dlg-body">${html}</form>`;
+  dlg.showModal();
+  return dlg.querySelector("form");
+}
+
+function formError(f, msg) {
+  const el = f.querySelector(".form-error");
+  el.textContent = msg;
+  el.hidden = false;
+}
+
+// -- classes --
+
+function openClass(id) {
+  const c = hwData.classes.find(x => x.id === id) || { name: "", students: [] };
+  const f = hwDialog(`
+    <h2>${id ? "Edit class" : "New class"}</h2>
+    <label class="field"><span>Class name</span><input name="name" value="${esc(c.name)}" placeholder="Grade 2 — Morning" required></label>
+    <label class="field"><span>Students' Google emails</span>
+      <textarea name="students" rows="8" placeholder="one per line, or paste a list">${esc((c.students || []).join("\n"))}</textarea>
+      <small class="muted" data-count></small></label>
+    <label class="btn btn-ghost small file-btn">Import a file…<input type="file" accept=".csv,.txt,.tsv,text/csv,text/plain" data-import="class" hidden></label>
+    <p class="form-error" hidden></p>
+    <div class="dlg-actions">
+      ${id ? `<button class="btn btn-danger" type="button" data-act="delete">Delete class</button>` : ""}
+      <span class="spacer"></span>
+      <button class="btn btn-ghost" value="cancel" formnovalidate>Cancel</button>
+      <button class="btn btn-primary" type="button" data-act="save">Save</button>
+    </div>`);
+  const count = () => { f.querySelector("[data-count]").textContent = `${findEmails(f.elements.students.value).length} emails found`; };
+  f.elements.students.addEventListener("input", count);
+  count();
+
+  f.querySelector('[data-act="save"]').addEventListener("click", async () => {
+    const name = f.elements.name.value.trim();
+    const students = findEmails(f.elements.students.value);
+    if (!name) return formError(f, "Give the class a name.");
+    if (!students.length) return formError(f, "Add at least one student email.");
+    try {
+      const { db, fsMod } = await firebase();
+      const ref = id ? fsMod.doc(db, "classes", id) : fsMod.doc(fsMod.collection(db, "classes"));
+      const batch = fsMod.writeBatch(db);
+      batch.set(ref, { name, students, updatedBy: user.email, updatedAt: fsMod.serverTimestamp() });
+      // Homework for this class keeps its own copy of the students.
+      for (const h of hwData.homework.filter(x => x.classId === ref.id)) {
+        batch.update(fsMod.doc(db, "homework", h.id), { students, className: name });
+      }
+      await batch.commit();
+    } catch { return formError(f, "Couldn't save. Try again."); }
+    $("#dlg-hw").close();
+    toast(`Saved ${name}.`, "good");
+    refreshHomework();
+  });
+
+  f.querySelector('[data-act="delete"]')?.addEventListener("click", async () => {
+    const used = hwData.homework.filter(x => x.classId === id).length;
+    if (used) return formError(f, `This class has ${used} homework. Delete the homework first.`);
+    if (!confirm(`Delete the class "${c.name}"?`)) return;
+    try { const { db, fsMod } = await firebase(); await fsMod.deleteDoc(fsMod.doc(db, "classes", id)); } catch { return formError(f, "Couldn't delete. Try again."); }
+    $("#dlg-hw").close();
+    toast(`Deleted ${c.name}.`);
+    refreshHomework();
+  });
+}
+
+// -- homework --
+
+function openHomework(id) {
+  if (!hwData.classes.length) { toast("Make a class first.", "bad"); return; }
+  const h = hwData.homework.find(x => x.id === id) || { title: "", classId: hwData.classes[0].id, due: "", items: [] };
+  let items = (h.items || []).map(x => ({ ...x }));
+
+  const f = hwDialog(`
+    <h2>${id ? "Edit homework" : "New homework"}</h2>
+    <label class="field"><span>Title</span><input name="title" value="${esc(h.title)}" placeholder="Kamatz practice" required dir="auto"></label>
+    <div class="field-row">
+      <label class="field"><span>Class</span><select name="classId">${hwData.classes.map(c => `<option value="${esc(c.id)}"${c.id === h.classId ? " selected" : ""}>${esc(c.name)}</option>`).join("")}</select></label>
+      <label class="field"><span>Due</span><input type="date" name="due" value="${esc(h.due || "")}"></label>
+    </div>
+    <div class="field"><span>Games</span>
+      <ol class="hw-picked" data-picked></ol>
+      <div class="hw-pick-row">
+        <input type="search" data-search placeholder="Find a game to add…" autocomplete="off">
+      </div>
+      <ul class="hw-results" data-results></ul>
+    </div>
+    <p class="form-error" hidden></p>
+    <div class="dlg-actions">
+      ${id ? `<button class="btn btn-danger" type="button" data-act="delete">Delete homework</button>` : ""}
+      <span class="spacer"></span>
+      <button class="btn btn-ghost" value="cancel" formnovalidate>Cancel</button>
+      <button class="btn btn-primary" type="button" data-act="save">Save</button>
+    </div>`);
+
+  const pickedEl = f.querySelector("[data-picked]");
+  const resultsEl = f.querySelector("[data-results]");
+  const search = f.querySelector("[data-search]");
+
+  const drawPicked = () => {
+    pickedEl.innerHTML = items.length ? items.map((it, i) => {
+      const found = gameById(it.game);
+      return `
+        <li>
+          <div class="hw-picked-top">
+            <b dir="auto">${esc(found ? found.g.title : "(game was removed)")}</b>
+            <span class="muted">${found ? `${found.b.name} ${found.s}` : ""}</span>
+            <button class="icon-btn small" type="button" data-up="${i}" title="Move up"${i ? "" : " disabled"}>↑</button>
+            <button class="icon-btn small" type="button" data-remove="${i}" title="Remove">✕</button>
+          </div>
+          <input class="assign" data-assign="${i}" value="${esc(it.assign || "")}" placeholder="Wordwall assignment link for scores (optional): https://wordwall.net/play/…">
+        </li>`;
+    }).join("") : `<li class="muted">No games yet. Find one below.</li>`;
+  };
+
+  const drawResults = () => {
+    const q = search.value.trim().toLowerCase();
+    const chosen = new Set(items.map(x => x.game));
+    const all = allGamesFlat().filter(x => !x.g.hidden && !chosen.has(x.g.id));
+    const hits = q ? all.filter(x => x.g.title.toLowerCase().includes(q) || `${x.b.name} ${x.s}`.toLowerCase().includes(q) || (x.g.game || "").toLowerCase().includes(q)) : [];
+    resultsEl.innerHTML = hits.slice(0, 12).map(x => `
+      <li><button type="button" data-pick="${esc(x.g.id)}">
+        <span dir="auto">${esc(x.g.title)}</span><span class="muted">${x.b.name} Belt, Stripe ${x.s} · ${esc(x.g.game || "")}</span>
+      </button></li>`).join("") || (q ? `<li class="muted">No games found.</li>` : "");
+  };
+
+  drawPicked();
+  search.addEventListener("input", drawResults);
+  f.addEventListener("click", e => {
+    const pick = e.target.closest("[data-pick]");
+    if (pick) { items.push({ game: pick.dataset.pick, assign: "" }); drawPicked(); drawResults(); search.focus(); return; }
+    const rm = e.target.closest("[data-remove]");
+    if (rm) { items.splice(Number(rm.dataset.remove), 1); drawPicked(); drawResults(); return; }
+    const up = e.target.closest("[data-up]");
+    if (up) { const i = Number(up.dataset.up); [items[i - 1], items[i]] = [items[i], items[i - 1]]; drawPicked(); }
+  });
+  f.addEventListener("input", e => {
+    const a = e.target.closest("[data-assign]");
+    if (a) items[Number(a.dataset.assign)].assign = a.value.trim();
+  });
+
+  f.querySelector('[data-act="save"]').addEventListener("click", async () => {
+    const title = f.elements.title.value.trim();
+    const cls = hwData.classes.find(c => c.id === f.elements.classId.value);
+    if (!title) return formError(f, "Give the homework a title.");
+    if (!items.length) return formError(f, "Add at least one game.");
+    const bad = items.find(it => it.assign && !/^https:\/\/wordwall\.net\/play\/\d+\/\d+\/\d+/.test(it.assign));
+    if (bad) return formError(f, "An assignment link doesn't look right. It should start with https://wordwall.net/play/");
+    const data = {
+      title, classId: cls.id, className: cls.name, students: cls.students || [],
+      due: f.elements.due.value || "",
+      items: items.map(it => (it.assign ? { game: it.game, assign: it.assign } : { game: it.game })),
+      updatedBy: user.email,
+    };
+    try {
+      const { db, fsMod } = await firebase();
+      const ref = id ? fsMod.doc(db, "homework", id) : fsMod.doc(fsMod.collection(db, "homework"));
+      await fsMod.setDoc(ref, { ...data, updatedAt: fsMod.serverTimestamp() });
+    } catch { return formError(f, "Couldn't save. Try again."); }
+    $("#dlg-hw").close();
+    toast(`Saved "${title}". ${cls.name} can see it now.`, "good");
+    refreshHomework();
+  });
+
+  f.querySelector('[data-act="delete"]')?.addEventListener("click", async () => {
+    if (!confirm(`Delete the homework "${h.title}"?`)) return;
+    try { const { db, fsMod } = await firebase(); await fsMod.deleteDoc(fsMod.doc(db, "homework", id)); } catch { return formError(f, "Couldn't delete. Try again."); }
+    $("#dlg-hw").close();
+    toast(`Deleted "${h.title}".`);
+    refreshHomework();
+  });
+}
+
+// -- results --
+
+function minutes(sec) {
+  if (!sec) return "under 1 min";
+  const m = Math.round(sec / 60);
+  return m < 1 ? "under 1 min" : `${m} min`;
+}
+
+async function openResults(id) {
+  const h = hwData.homework.find(x => x.id === id);
+  if (!h) return;
+  const f = hwDialog(`<h2 dir="auto">${esc(h.title)}</h2><p class="muted">Loading…</p>`);
+  let rows;
+  try {
+    const { db, fsMod } = await firebase();
+    const snap = await fsMod.getDocs(fsMod.query(fsMod.collection(db, "progress"), fsMod.where("hw", "==", id)));
+    rows = Object.fromEntries(snap.docs.map(d => [d.data().email, d.data()]));
+  } catch { f.querySelector("p").textContent = "Couldn't load results. Try again."; return; }
+
+  const items = h.items || [];
+  const students = h.students || [];
+  const doneCount = st => items.filter(it => rows[st] && rows[st].items && rows[st].items[it.game]).length;
+  const cell = (st, it) => {
+    const p = rows[st] && rows[st].items && rows[st].items[it.game];
+    return p ? `<td class="yes">✓ <small>${minutes(p.seconds)}</small></td>` : `<td class="no">—</td>`;
+  };
+  const finished = students.filter(st => doneCount(st) === items.length).length;
+  f.innerHTML = `
+    <h2 dir="auto">${esc(h.title)}</h2>
+    <p class="muted">${esc(h.className || "")}${h.due ? ` · Due ${esc(h.due)}` : ""} · ${finished} of ${students.length} students opened every game</p>
+    <div class="results-wrap">
+      <table class="hw-table results">
+        <thead><tr><th>Student</th>${items.map(it => { const x = gameById(it.game); return `<th dir="auto">${esc(x ? x.g.title : "?")}${it.assign ? " <small>(scores on Wordwall)</small>" : ""}</th>`; }).join("")}<th>Done</th></tr></thead>
+        <tbody>${students.map(st => `
+          <tr><td><b>${esc((rows[st] && rows[st].name) || st)}</b>${rows[st] && rows[st].name ? `<br><small class="muted">${esc(st)}</small>` : ""}</td>
+          ${items.map(it => cell(st, it)).join("")}
+          <td><b>${doneCount(st)}/${items.length}</b></td></tr>`).join("")}</tbody>
+      </table>
+    </div>
+    <p class="hint">✓ means the student opened the game, with the time they spent. For scores, open your Wordwall results. Students type their name there.</p>
+    <div class="dlg-actions">
+      ${items.some(it => it.assign) ? `<a class="btn btn-ghost" href="https://wordwall.net/myresults" target="_blank" rel="noopener">Wordwall scores</a>` : ""}
+      <span class="spacer"></span>
+      <button class="btn btn-primary" value="ok">Close</button>
+    </div>`;
+}
+
+// Import a file of emails into the Admins tab or a class.
+main.addEventListener("change", e => {
+  const input = e.target.closest("[data-import]");
+  if (!input || !input.files[0]) return;
+  input.files[0].text().then(text => {
+    const found = findEmails(text);
+    if (input.dataset.import === "admins") {
+      const box = $("#add-admin textarea");
+      box.value = [box.value.trim(), ...found].filter(Boolean).join("\n");
+      toast(`Found ${found.length} emails. Check the list, then press Add.`);
+    }
+    input.value = "";
+  });
+});
+
+$("#dlg-hw").addEventListener("change", e => {
+  const input = e.target.closest('[data-import="class"]');
+  if (!input || !input.files[0]) return;
+  input.files[0].text().then(text => {
+    const box = $("#dlg-hw textarea[name=students]");
+    const all = findEmails(`${box.value}\n${text}`);
+    box.value = all.join("\n");
+    box.dispatchEvent(new Event("input"));
+    input.value = "";
+  });
 });
 
 // ---- page -------------------------------------------------------------------------------
@@ -740,7 +1075,7 @@ main.addEventListener("submit", async e => {
 function render() {
   document.querySelectorAll(".admin-tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
   if (tab === "admins" && !isFullAdmin) tab = "games";
-  main.innerHTML = { games: gamesTab, words: wordsTab, howto: howToTab, home: homeTab, admins: adminsTab }[tab]();
+  main.innerHTML = { games: gamesTab, words: wordsTab, howto: howToTab, home: homeTab, homework: homeworkTab, admins: adminsTab }[tab]();
   if (tab === "words") TEXT_FIELDS.forEach(([, f]) => f.forEach(([k]) => updateCount(k)));
   showStatus();
 }
@@ -752,6 +1087,14 @@ main.addEventListener("click", e => {
   if (edit) { openEdit(edit.dataset.edit); return; }
   const add = e.target.closest("[data-add]");
   if (add) { openAdd(Number(add.dataset.add)); return; }
+  if (e.target.closest("[data-hw-new]")) { openHomework(); return; }
+  if (e.target.closest("[data-class-new]")) { openClass(); return; }
+  const hwEdit = e.target.closest("[data-hw-edit]");
+  if (hwEdit) { openHomework(hwEdit.dataset.hwEdit); return; }
+  const hwRes = e.target.closest("[data-hw-results]");
+  if (hwRes) { openResults(hwRes.dataset.hwResults); return; }
+  const clEdit = e.target.closest("[data-class-edit]");
+  if (clEdit) { openClass(clEdit.dataset.classEdit); return; }
   const remove = e.target.closest("[data-remove-admin]");
   if (remove) { removeSubAdmin(remove.dataset.removeAdmin); return; }
   const row = e.target.closest(".row");

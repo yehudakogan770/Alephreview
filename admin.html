@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20">
-  <link rel="stylesheet" href="css/admin.css?v=20">
+  <link rel="stylesheet" href="css/style.css?v=22">
+  <link rel="stylesheet" href="css/admin.css?v=22">
 </head>
 <body class="admin locked">
   <!-- Nothing else on this page shows until an admin signs in. -->
@@ -47,6 +47,7 @@
     <button role="tab" data-tab="words">Words on the site</button>
     <button role="tab" data-tab="howto">How to play</button>
     <button role="tab" data-tab="home">Home page</button>
+    <button role="tab" data-tab="homework">Homework</button>
     <button role="tab" data-tab="admins" hidden>Admins</button>
   </nav>
 
@@ -56,11 +57,14 @@
   <dialog id="dlg-game" class="admin-dialog"></dialog>
   <!-- Add a game -->
   <dialog id="dlg-add" class="admin-dialog"></dialog>
+  <!-- Classes, homework and results -->
+  <dialog id="dlg-hw" class="admin-dialog wide"></dialog>
 
   <div class="admin-toast" id="toast" role="status" hidden></div>
 
-  <script src="js/firebase-config.js?v=20"></script>
-  <script src="js/site-data.js?v=20"></script>
-  <script src="js/admin.js?v=20"></script>
+  <script src="js/firebase-config.js?v=22"></script>
+  <script src="js/cloud.js?v=22"></script>
+  <script src="js/site-data.js?v=22"></script>
+  <script src="js/admin.js?v=22"></script>
 </body>
 </html>

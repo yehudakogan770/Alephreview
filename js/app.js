@@ -495,10 +495,196 @@ function maybeCelebrate(b, stripe) {
   setTimeout(() => box.remove(), 3600);
 }
 
+// ---- homework --------------------------------------------------------------------
+//   #/homework               the signed-in student's homework
+//   #/homework/<hw>/<game>   play one homework game
+//
+// Teachers set homework on the admin page. Each homework has the students'
+// Google emails, so a student only sees their own. While a homework game is
+// open, the time spent is saved to progress/<hw>__<email> for the teacher.
+// Scores come from Wordwall when the teacher gives an assignment link.
+
+let hwTimer = null;
+
+function stopTracking() {
+  clearInterval(hwTimer);
+  hwTimer = null;
+}
+
+function findAnyGame(id) {
+  for (const b of BELTS) for (const s of STRIPES) {
+    const g = ((SITE.games[b.key] || {})[s] || []).find(x => x.id === id);
+    if (g) return { g, b, s };
+  }
+  return null;
+}
+
+function firstName(u) {
+  return ((u.displayName || u.email || "").split(/[\s@]/)[0]) || "";
+}
+
+function dueText(due) {
+  if (!due) return "";
+  const d = new Date(`${due}T12:00:00`);
+  if (isNaN(d)) return "";
+  return T("homeworkDue", { date: d.toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" }) });
+}
+
+function homeworkShell(inner) {
+  return `
+    ${crumbs([["All belts", "#/"], [plainT("homeworkTitle")]])}
+    <section class="hw-page">
+      <h1>${icon("check")} ${T("homeworkTitle")}</h1>
+      ${inner}
+    </section>`;
+}
+
+async function loadMyHomework(u) {
+  const { db, fsMod } = await cloud();
+  const email = u.email.toLowerCase();
+  const snap = await fsMod.getDocs(fsMod.query(fsMod.collection(db, "homework"), fsMod.where("students", "array-contains", email)));
+  const list = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  const progress = await Promise.all(list.map(hw =>
+    fsMod.getDoc(fsMod.doc(db, "progress", `${hw.id}__${email}`)).then(d => (d.exists() ? d.data().items || {} : {})).catch(() => ({}))));
+  list.forEach((hw, i) => { hw.progress = progress[i]; });
+  return list.sort((a, b) => String(a.due || "9").localeCompare(String(b.due || "9")));
+}
+
+async function homeworkView() {
+  if (!cloudReady()) { app.innerHTML = homeworkShell(`<p class="hw-note">${T("homeworkNone")}</p>`); return; }
+  app.innerHTML = homeworkShell(`<p class="hw-note">…</p>`);
+  let u;
+  try { u = await currentUser(); } catch { app.innerHTML = homeworkShell(`<p class="hw-note">The homework didn't load. Please refresh the page.</p>`); return; }
+  if (!location.hash.startsWith("#/homework")) return;
+  if (!u) {
+    app.innerHTML = homeworkShell(`
+      <div class="hw-signin">
+        <p>${T("homeworkSignIn")}</p>
+        <button class="btn btn-primary btn-lg" data-hw-signin>${T("signInButton")}</button>
+      </div>`);
+    return;
+  }
+  let list;
+  try { list = await loadMyHomework(u); } catch { app.innerHTML = homeworkShell(`<p class="hw-note">The homework didn't load. Please refresh the page.</p>`); return; }
+  if (!location.hash.startsWith("#/homework")) return;
+  const who = `<p class="hw-who">${esc(u.email)} · <button class="link-btn" data-hw-signout>Sign out</button></p>`;
+  if (!list.length) { app.innerHTML = homeworkShell(`<p class="hw-note">${T("homeworkNone")}</p>${who}`); return; }
+
+  const cards = list.map(hw => {
+    const items = (hw.items || []).map(it => ({ it, found: findAnyGame(it.game) })).filter(x => x.found);
+    const done = items.filter(x => hw.progress[x.it.game]).length;
+    const rows = items.map(({ it, found }) => {
+      const g = found.g;
+      const ok = !!hw.progress[it.game];
+      return `
+        <li>
+          <a class="hw-game${ok ? " done" : ""}" href="#/homework/${esc(hw.id)}/${esc(it.game)}">
+            <span class="hw-thumb">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
+            <span class="hw-name" dir="auto">${esc(g.title)}</span>
+            <span class="hw-state">${ok ? `${icon("check")} ${T("homeworkDone")}` : icon("play")}</span>
+          </a>
+        </li>`;
+    }).join("");
+    return `
+      <article class="hw-card">
+        <header>
+          <h2 dir="auto">${esc(hw.title || "")}</h2>
+          <span class="hw-due">${dueText(hw.due)}</span>
+        </header>
+        ${progressBar(done, items.length, "Homework progress")}
+        <span class="progress-label">${cheer(done, items.length)}</span>
+        <ul class="hw-games">${rows}</ul>
+      </article>`;
+  }).join("");
+  app.innerHTML = homeworkShell(`<div class="hw-list">${cards}</div>${who}`);
+}
+
+async function homeworkPlayView(hwId, gameId) {
+  app.innerHTML = `<p class="hw-note">…</p>`;
+  let u, hw;
+  try {
+    u = await currentUser();
+    if (!u) { location.replace("#/homework"); return; }
+    const { db, fsMod } = await cloud();
+    const d = await fsMod.getDoc(fsMod.doc(db, "homework", hwId));
+    if (!d.exists()) { location.replace("#/homework"); return; }
+    hw = { id: d.id, ...d.data() };
+  } catch {
+    location.replace("#/homework");
+    return;
+  }
+  if (!location.hash.startsWith(`#/homework/${hwId}/${gameId}`)) return;
+
+  const items = (hw.items || []).filter(it => findAnyGame(it.game));
+  const i = items.findIndex(it => it.game === gameId);
+  if (i < 0) { location.replace("#/homework"); return; }
+  const it = items[i];
+  const { g } = findAnyGame(it.game);
+  const prev = items[i - 1], next = items[i + 1];
+  const src = it.assign || (g.embed ? embedUrl(g) : "");
+  const stage = src
+    ? `<iframe src="${esc(src)}" title="${esc(g.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe>`
+    : `<div class="empty-note">${icon("out", "icon icon-lg")}<p><a href="${gameUrl(g)}" target="_blank" rel="noopener">Open the game</a></p></div>`;
+  const href = x => `#/homework/${esc(hw.id)}/${esc(x.game)}`;
+
+  document.body.classList.add("playing");
+  document.title = `${g.title} — ${plainT("homeworkTitle")}`;
+  app.innerHTML = `
+    ${crumbs([["All belts", "#/"], [plainT("homeworkTitle"), "#/homework"], [g.title]])}
+    <div class="player-head">
+      <div class="player-title">
+        <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
+        <h1 dir="auto">${esc(g.title)}</h1>
+      </div>
+      <a class="btn btn-ghost" href="#/homework">${icon("left")} ${T("homeworkBack")}</a>
+    </div>
+    ${it.assign ? `<p class="hw-name-hint">${T("homeworkTypeName", { name: esc(firstName(u)) })}</p>` : ""}
+    <div class="player-layout">
+      <div class="player-main">
+        <div class="player" id="player">${stage}</div>
+        <div class="player-bar">
+          ${prev ? `<a class="btn btn-ghost" href="${href(prev)}">${icon("left")} <span>Previous</span></a>` : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
+          <div class="player-mid">
+            <span class="counter">Game ${i + 1} of ${items.length}</span>
+            ${src ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
+          </div>
+          ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("check")} <span>${T("homeworkDone")}</span></a>`}
+        </div>
+      </div>
+      ${howToPlay(g, next)}
+    </div>`;
+  track(hw.id, it.game, u);
+}
+
+// Save that the game was opened, then add the time while the page is showing.
+async function track(hwId, gameId, u) {
+  stopTracking();
+  const email = u.email.toLowerCase();
+  const { db, fsMod } = await cloud();
+  const ref = fsMod.doc(db, "progress", `${hwId}__${email}`);
+  const base = { hw: hwId, email, name: u.displayName || "" };
+  const save = extra => fsMod.setDoc(ref, { ...base, items: { [gameId]: extra } }, { merge: true }).catch(() => {});
+  await save({ opened: fsMod.serverTimestamp() });
+  const STEP = 15;
+  hwTimer = setInterval(() => {
+    if (!location.hash.startsWith(`#/homework/${hwId}/${gameId}`)) { stopTracking(); return; }
+    if (!document.hidden) save({ seconds: fsMod.increment(STEP) });
+  }, STEP * 1000);
+}
+
 // ---- router --------------------------------------------------------------
 
 function render() {
   const [beltKey, stripeStr, action, gameId] = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+  stopTracking();
+  document.querySelector(".header-link").hidden = !beltKey;
+  if (beltKey === "homework") {
+    document.body.classList.remove("playing");
+    document.title = `${plainT("homeworkTitle")} — Aleph Review`;
+    if (stripeStr && action) homeworkPlayView(stripeStr, action);
+    else homeworkView();
+    return;
+  }
   const belt = BELTS.find(b => b.key === beltKey);
   const stripe = Number(stripeStr);
 
@@ -518,9 +704,6 @@ function render() {
   document.title = belt ? `${belt.name} Belt${STRIPES.includes(stripe) ? ` · Stripe ${stripe}` : ""} — Aleph Review` : "Aleph Review — Hebrew reading games";
   const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
   if (playing) document.title = `${playing.title} — Aleph Review`;
-
-  // The "All belts" link only makes sense away from the home page.
-  document.querySelector(".header-link").hidden = !beltKey;
 
   const n = played().size;
   const badge = document.getElementById("played-count");
@@ -542,6 +725,15 @@ app.addEventListener("click", e => {
     return;
   }
 
+  if (e.target.closest("[data-hw-signin]")) {
+    googleSignIn().then(() => render()).catch(() => {});
+    return;
+  }
+  if (e.target.closest("[data-hw-signout]")) {
+    cloud().then(({ auth, authMod }) => authMod.signOut(auth)).then(() => render());
+    return;
+  }
+
   const game = e.target.closest(".game-card");
   if (game) { markPlayed(game.dataset.id); game.classList.add("played"); }
 });
@@ -552,7 +744,7 @@ async function loadSite() {
   PREVIEW = new URLSearchParams(location.search).has("preview");
   if (PREVIEW) {
     const draft = store.get("admin-draft", null);
-    if (draft) return draft;
+    if (draft) return withDefaults(draft);
   }
   return fetchSiteData();
 }
@@ -560,6 +752,8 @@ async function loadSite() {
 loadSite().then(data => {
   SITE = data;
   document.querySelector(".footer-inner > span:last-child").innerHTML = T("footer");
+  const hwLink = document.querySelector(".homework-link");
+  if (cloudReady()) { hwLink.querySelector("span").innerHTML = T("homeworkButton"); hwLink.hidden = false; }
   if (PREVIEW) {
     const bar = document.createElement("div");
     bar.className = "preview-bar";
