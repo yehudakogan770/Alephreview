@@ -1135,7 +1135,16 @@ function allGamesFlat() {
   return out;
 }
 
-function gameById(id) { return allGamesFlat().find(x => x.g.id === id); }
+function gameById(id) {
+  const all = allGamesFlat();
+  const found = all.find(x => x.g.id === id);
+  // A Wordwall game in old homework is played as its copy made here (see findAnyGame in app.js).
+  if (found && !found.g.own) {
+    const copy = all.find(x => x.g.own && x.g.id.endsWith(`-ww${id}`) && !(draft.templates[x.g.game] || {}).noScore);
+    if (copy) return copy;
+  }
+  return found;
+}
 
 async function loadHomeworkData() {
   const { db, fsMod } = await firebase();
