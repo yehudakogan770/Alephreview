@@ -770,7 +770,9 @@ function render() {
   const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
   if (playing) document.title = `${playing.title} — Aleph Review`;
 
-  const n = played().size;
+  // Only games students can see now (not hidden or removed ones).
+  const done = played();
+  const n = BELTS.reduce((sum, b) => sum + STRIPES.reduce((t, st) => t + countPlayed(gamesFor(b.key, st), done), 0), 0);
   const badge = document.getElementById("played-count");
   badge.hidden = !n;
   badge.querySelector("span").textContent = `${n} played`;
