@@ -448,6 +448,7 @@ function playerView(b, stripe, id) {
       t: T,
       howTo: (SITE.howTo || {})[g.game],
       pass: null,
+      tune: i + BELTS.findIndex(x => x.key === b.key) * 3 + Number(stripe),
       next: next ? { label: plainT("gameNext"), href: playHref(b, stripe, next) } : null,
     });
   }
