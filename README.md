@@ -28,10 +28,23 @@ Use **Preview** to see your changes before students do, then **Save & publish**.
 
 Games made here know the student's score, so homework can require passing. On the **Games** tab, click **+ Make a game** on a stripe.
 
-- **Match it** (like Wordwall's Match up): type pairs (the tile the student drags, and the word it goes next to, like `א = Alef`), or paste many at once. At least 3 pairs; more than 6 are split into even rounds. Pick a theme: Meadow, Desert, Ocean, Space or Classic.
+Pick a game type, a theme (Meadow, Desert, Ocean, Space or Classic), and type the content, or use **Paste many at once** (one row per line, parts split by `|`).
+
+| Game type | Like Wordwall's | Content |
+|---|---|---|
+| **Match it** | Match up | Pairs: a tile and the word it goes next to (`א = Alef`) |
+| **Flip and match** | Matching pairs | Pairs, played as face-down cards |
+| **Find it** | Find the match | Pairs: students see the word and tap its tile |
+| **Right or wrong** | True or false | Pairs: the site sometimes mixes them up, students say Yes or No |
+| **Pick the answer** | Quiz | Questions: `question \| right answer \| wrong, wrong` |
+| **Game show** | Gameshow quiz | Questions, with a clock and two helps |
+| **Win or lose** | Win or lose quiz | Questions, with points to play for |
+
+More than a round's worth is split into even rounds.
+
 - **Save and try it** opens the game so you can play it before publishing.
 
-Ready-made Match it games are already at the top of each White, Red and Orange stripe. More game types are coming one at a time, each with ready-made games.
+Ready-made games of each type are already at the top of the White, Red and Orange stripes. More game types are coming, each with ready-made games.
 
 ### Homework
 

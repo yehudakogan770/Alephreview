@@ -7,19 +7,11 @@
 registerKind("match", {
   label: "Match up",
   play(body, content, api) {
-    const pairs = api.shuffle((content.pairs || []).filter(p => p.a && p.b));
+    const pairs = api.shuffle(goodPairs(content));
     const rounds = api.chunk(pairs, 6);
     let r = 0;
 
-    api.onReveal(el => {
-      el.innerHTML = `
-        <h3 class="og-answers-title">${api.t("gameAnswers")}</h3>
-        <ul class="og-answer-list">
-          ${pairs.map((p, i) => `
-            <li><span class="og-tile-face small" style="--c:${api.color(i)}" dir="auto">${api.esc(p.a)}</span>
-            <span class="og-answer-word" dir="auto">${api.esc(p.b)}</span></li>`).join("")}
-        </ul>`;
-    });
+    revealPairs(api, pairs);
 
     function round() {
       api.round(r + 1, rounds.length);
@@ -91,7 +83,7 @@ registerKind("match", {
       else api.finish();
     }
 
-    if (!rounds.length) { body.innerHTML = `<div class="og-screen"><div class="og-panel"><p class="og-lead">No pairs yet.</p></div></div>`; return; }
+    if (!rounds.length) { emptyGame(body); return; }
     round();
   },
 });

@@ -31,7 +31,8 @@ Plain HTML/CSS/JS, no build step, hosted on GitHub Pages from `main`.
 - `js/games/engine.js` runs every game (start screen, rounds, score dots, end screen, pass mark, sounds). Each type is its own file calling `registerKind()`; the admin editor for it is in `CONTENT_EDITORS` in `js/admin.js`, and its name and How to play default are in `OWN_TEMPLATES` / `OWN_HOWTO` in `js/site-data.js`.
 - In the site data a game made here has `own: { kind, ...content }` and no `embed`.
 - Each game has a theme (`own.theme`: meadow, desert, ocean, space, classic), drawn as SVG in `js/games/themes.js`. Keep the fun Wordwall-like look and formats, but all art, code and content are our own: never copy Wordwall's images, sounds, code or other people's games.
-- Types are built one at a time, each at least as good as the Wordwall version, and each ships with ready-made games (`own-<belt>-<stripe>` in `data/site.json`) so the owner has nothing to do. Order: Match up (done), then Matching pairs, Balloon pop, Group sort, Rank order, Find the match, Flying fruit, Whack-a-mole, Quiz, then the rest.
+- Types are built one at a time, each at least as good as the Wordwall version, and each ships with ready-made games (`own-<belt>-<stripe>` in `data/site.json`) so the owner has nothing to do. Done: Match it, Flip and match, Find it, Right or wrong, Pick the answer, Game show, Win or lose. Next: sorting and ordering types, then arcade types (Balloon pop, Flying fruit, Whack-a-mole, Airplane, Watch and memorize), then cards (no score, so not for homework).
+- Own game type names must differ from Wordwall template names in the site data (those win on a clash).
 - Game pages keep everything above the game in one slim row, so the game fills the screen height.
 
 ## Rules for this site
