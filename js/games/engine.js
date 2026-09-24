@@ -220,6 +220,11 @@ function playOwnGame(stage, g, opts) {
     };
     body.innerHTML = "";
     startTimer();
+    // On a phone, bring the whole game into view.
+    if (window.innerWidth <= 700 || window.innerHeight <= 520) {
+      const box = stage.getBoundingClientRect();
+      if (box.top < 0 || box.bottom > window.innerHeight) stage.scrollIntoView({ behavior: "smooth", block: box.height > window.innerHeight ? "start" : "center" });
+    }
     kind.play(body, own, api);
   }
 

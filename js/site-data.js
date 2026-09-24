@@ -30,6 +30,7 @@ const TEXT_DEFAULTS = {
   gameAnswers: "Answers",
   gameQuestion: "Question {n} of {total}",
   gameAllDone: "All done",
+  turnPhone: "Turn your phone sideways for a bigger game.",
   gamePlayAgain: "Play again",
   gameFind: "Find:",
   gameTrue: "Yes",
