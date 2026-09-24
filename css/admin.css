@@ -242,3 +242,14 @@ body.locked .admin-bar, body.locked .admin-tabs, body.locked .admin-main, body.l
 .gate-card p { margin: 0; color: var(--muted); }
 .gate-back { margin-top: 8px !important; font-size: 14px; }
 .gate [hidden] { display: none !important; }
+
+/* Admins tab */
+.admin-tabs [hidden] { display: none; }
+.add-admin { display: flex; align-items: flex-end; gap: 12px; }
+.add-admin .btn { margin-bottom: 14px; }
+.admin-list { margin: 0; padding: 0; list-style: none; }
+.admin-list li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.admin-list li:last-child { border-bottom: 0; }
+.admin-email { font-weight: 600; }
+.admin-list .btn { margin-left: auto; }
+.muted { color: var(--muted); font-size: 14px; }
