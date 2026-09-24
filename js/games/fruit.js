@@ -1,6 +1,7 @@
 // Fruit catch (like Wordwall's Flying fruit): fruit fly across the screen,
 // each carrying a tile. The word to find is at the top. Tap its fruit.
-// Content: { kind: "fruit", theme, pairs: [{ a: on the fruit, b: to find }, …] }.
+// Content: { kind: "fruit", theme, pairs: [{ a: on the fruit, b: to find }, …] },
+//   or questions (see findRounds in engine.js).
 // The first tap for each word counts. After a wrong tap, keep looking.
 
 const FRUITS = [
@@ -24,10 +25,8 @@ function fruitSvg(f) {
 registerKind("fruit", {
   label: "Fruit catch",
   play(body, content, api) {
-    const pairs = goodPairs(content);
-    if (pairs.length < 2) { emptyGame(body); return; }
-    revealPairs(api, pairs);
-    const order = api.shuffle(pairs);
+    const order = findRounds(content, api);
+    if (!order.length) { emptyGame(body); return; }
     let at = 0;
     let first = true;
 
@@ -43,24 +42,28 @@ registerKind("fruit", {
 
     function show() {
       api.round(at + 1, order.length, "gameQuestion");
-      prompt.textContent = order[at].b;
+      prompt.textContent = order[at].prompt;
+      api.say(order[at].prompt);
       prompt.classList.remove("og-in"); void prompt.offsetWidth; prompt.classList.add("og-in");
       first = true;
       wait = 0.2;
     }
 
     function spawn() {
-      const want = order[at];
-      // The right one about every third fruit, and always if it isn't flying now.
-      const rightFlying = flying.some(f => f.p === want && !f.hit);
-      const p = !rightFlying && Math.random() < 0.6 ? want : api.shuffle(pairs.filter(x => x !== want))[0];
+      const r = order[at];
+      // Often the right one, when it isn't flying now.
+      const rightFlying = flying.some(f => r.right.includes(f.text) && !f.hit);
+      const wrong = r.options.filter(x => !r.right.includes(x));
+      const text = (!rightFlying && Math.random() < 0.6) || !wrong.length
+        ? r.right[Math.floor(Math.random() * r.right.length)]
+        : wrong[Math.floor(Math.random() * wrong.length)];
       const f = FRUITS[Math.floor(Math.random() * FRUITS.length)];
       const el = document.createElement("button");
       el.type = "button";
       el.className = "og-fruit";
-      el.innerHTML = `${fruitSvg(f)}<span class="og-fruit-text" dir="auto">${api.esc(p.a)}</span>`;
+      el.innerHTML = `${fruitSvg(f)}<span class="og-fruit-text" dir="auto">${api.esc(text)}</span>`;
       lane = (lane + 1 + Math.floor(Math.random() * 2)) % 3;
-      const item = { el, shape: el.querySelector(".og-fruit-shape"), p, x: 108, y: 30 + lane * 22 + Math.random() * 6, speed: 14 + Math.random() * 6, spin: Math.random() * 20 - 10, hit: false };
+      const item = { el, shape: el.querySelector(".og-fruit-shape"), text, x: 108, y: 30 + lane * 22 + Math.random() * 6, speed: 14 + Math.random() * 6, spin: Math.random() * 20 - 10, hit: false };
       el.style.top = `${item.y}%`;
       el.addEventListener("pointerdown", e => { e.preventDefault(); tap(item); });
       arena.append(el);
@@ -69,7 +72,7 @@ registerKind("fruit", {
 
     function tap(item) {
       if (item.hit || at >= order.length) return;
-      const ok = item.p === order[at];
+      const ok = order[at].right.includes(item.text);
       if (first) api.mark(ok);
       first = false;
       if (!ok) {

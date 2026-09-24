@@ -28,7 +28,7 @@ registerKind("find", {
           </div>
         </div>`;
       const prompt = body.querySelector("[data-prompt]");
-      const show = () => { prompt.textContent = set[order[at]].b; prompt.classList.remove("og-in"); void prompt.offsetWidth; prompt.classList.add("og-in"); };
+      const show = () => { prompt.textContent = set[order[at]].b; api.say(set[order[at]].b); prompt.classList.remove("og-in"); void prompt.offsetWidth; prompt.classList.add("og-in"); };
       show();
 
       body.querySelectorAll("[data-i]").forEach(tile => tile.addEventListener("click", () => {

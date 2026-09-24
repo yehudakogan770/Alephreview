@@ -57,6 +57,7 @@ registerKind("order", {
       dragOrTap(root, (tile, target) => {
         if (tile === target) return;
         api.sound.pop();
+        api.say(tile.querySelector(".og-rank-text").textContent);
         const els = [...list.children];
         if (els.indexOf(tile) < els.indexOf(target)) target.after(tile);
         else target.before(tile);

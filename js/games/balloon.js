@@ -2,7 +2,8 @@
 // back and forth above a row of carts. Pop it (click, tap or Space) when the
 // tile is over its match. The tile drops into the cart below.
 // Content: { kind: "balloon", theme, pairs: [{ a: tile, b: cart word }, …] }.
-// Up to 4 carts a round. Each balloon counts once.
+// Up to 4 carts a round. Each balloon counts once. Carts go by their word, so
+// many balloons can belong to one cart (like Bet and Vet).
 
 const BALLOON_SPEED = 22; // % of the width per second
 
@@ -12,13 +13,16 @@ registerKind("balloon", {
     const pairs = api.shuffle(goodPairs(content));
     if (pairs.length < 2) { emptyGame(body); return; }
     revealPairs(api, pairs);
-    const rounds = api.chunk(pairs, 4);
+    // When there are 4 words or fewer, all balloons go in one round.
+    const words = [...new Set(pairs.map(p => p.b))];
+    const rounds = words.length <= 4 ? [pairs] : api.chunk(pairs, 4);
     let r = 0;
 
     function round() {
       api.round(r + 1, rounds.length);
       const set = rounds[r];
-      const carts = api.shuffle(set.map((p, i) => i));
+      // One cart per word: the index of the first pair with that word.
+      const carts = api.shuffle([...new Set(set.map(p => p.b))].map(b => set.findIndex(p => p.b === b)));
       const queue = api.shuffle(set.map((p, i) => i));
       body.innerHTML = `
         <div class="og-sky" data-sky>
@@ -45,6 +49,7 @@ registerKind("balloon", {
         if (!queue.length) { api.later(next, 500); return; }
         current = queue.shift();
         carry.textContent = set[current].a;
+        api.say(set[current].a);
         balloon.style.color = api.color(shown++);
         balloon.querySelector(".og-balloon-tile").style.setProperty("--c", balloon.style.color);
         balloon.className = "og-balloon";
@@ -65,7 +70,7 @@ registerKind("balloon", {
         balloon.classList.add("popped");
         balloon.style.left = `${((at + 0.5) / cartEls.length) * 100}%`;
         api.later(() => {
-          const ok = Number(cart.dataset.cart) === current;
+          const ok = set[cart.dataset.cart].b === set[current].b;
           api.mark(ok);
           if (ok) {
             api.sound.good();
@@ -77,7 +82,7 @@ registerKind("balloon", {
             flashWrong(cart);
             balloon.className = "og-balloon gone";
             // Show where it belonged.
-            const home = cartEls.find(c => Number(c.dataset.cart) === current);
+            const home = cartEls.find(c => set[c.dataset.cart].b === set[current].b);
             home.classList.add("filled", "shown");
             home.querySelector(".og-cart-in").innerHTML = `<span class="og-tile" style="--c:${balloon.style.color}"><span class="og-tile-face" dir="auto">${api.esc(set[current].a)}</span></span>`;
           }

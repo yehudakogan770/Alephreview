@@ -333,7 +333,10 @@ function ownThumb(g) {
     ...(o.groups || []).flatMap(g => g.items.slice(0, 2)),
     ...(o.items || []),
     ...(o.sentences || []).map(x => (x.match(/\[([^\]]+)\]/) || [])[1]),
-  ].filter(x => x && x.length <= 4).slice(0, 3);
+  ].filter(x => x && x.length <= 4);
+  // Hebrew first: the picture shows letters, not English names.
+  const heb = items.filter(x => /[\u0590-\u05FF]/.test(x));
+  items.splice(0, items.length, ...(heb.length ? heb : items).slice(0, 3));
   return `<span class="own-thumb t-${esc(g.type)}" dir="auto">${items.map(x => `<b>${esc(x)}</b>`).join("")}</span>`;
 }
 
@@ -613,7 +616,7 @@ async function homeworkView() {
       return `
         <li>
           <a class="hw-game${ok ? " done" : ""}" href="#/homework/${esc(hw.id)}/${esc(it.game)}">
-            <span class="hw-thumb">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
+            <span class="hw-thumb">${g.own ? ownThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
             <span class="hw-name" dir="auto">${esc(g.title)}</span>
             <span class="hw-state">${state}</span>
           </a>
@@ -770,7 +773,9 @@ function render() {
   const playing = action === "play" && belt && gamesFor(belt.key, stripe).find(g => g.id === gameId);
   if (playing) document.title = `${playing.title} — Aleph Review`;
 
-  const n = played().size;
+  // Only games students can see now (not hidden or removed ones).
+  const done = played();
+  const n = BELTS.reduce((sum, b) => sum + STRIPES.reduce((t, st) => t + countPlayed(gamesFor(b.key, st), done), 0), 0);
   const badge = document.getElementById("played-count");
   badge.hidden = !n;
   badge.querySelector("span").textContent = `${n} played`;

@@ -540,7 +540,7 @@ function ownKinds() {
 function ownSample(o) {
   const all = [...(o.pairs || []).map(p => p.a), ...(o.questions || []).map(q => q.answers[0]),
     ...(o.groups || []).flatMap(g => g.items), ...(o.items || [])];
-  return all.find(x => x && x.length <= 4) || (o.kind || "").slice(0, 1).toUpperCase();
+  return all.find(x => x && x.length <= 4 && /[\u0590-\u05FF]/.test(x)) || all.find(x => x && x.length <= 4) || (o.kind || "").slice(0, 1).toUpperCase();
 }
 
 function ownCount(g) {
@@ -563,24 +563,37 @@ const SHAPES = {
     toRows: c => (c.pairs || []).map(p => [p.a, p.b]),
     fromRows(rows, ed) {
       if (rows.some(r => !r[0] || !r[1])) return { error: "Every row needs both sides filled in." };
+      // In games where students look for a word, each word must be different.
       const seen = new Set();
-      for (const [a, b] of rows) {
-        if (seen.has("a" + a)) return { error: `"${a}" is used twice. Each one must be different.` };
-        if (seen.has("b" + b) && !ed.repeatB) return { error: `"${b}" is used twice. Each one must be different.` };
-        seen.add("a" + a); seen.add("b" + b);
+      if (ed.unique) for (const [a, b] of rows) {
+        if (seen.has(b)) return { error: `"${b}" is used twice. Each one must be different.` };
+        seen.add(b);
       }
       return { content: { pairs: rows.map(([a, b]) => ({ a, b })) } };
     },
   },
   // { questions: [{ q, answers: [right, wrong, …] }] }
   quiz: {
-    toRows: c => (c.questions || []).map(q => [q.q, q.answers[0], q.answers.slice(1).join(", ")]),
+    toRows: c => (c.questions || []).map(q => [q.q, q.answers.slice(0, q.right || 1).join(", "), q.answers.slice(q.right || 1).join(", ")]),
     fromRows(rows) {
       for (const [q, right, wrong] of rows) {
-        if (!q || !right) return { error: "Every question needs the question and the right answer." };
+        if (!q || !split(right).length) return { error: "Every question needs the question and the right answer." };
         if (!split(wrong).length) return { error: `"${q}" needs at least one wrong answer.` };
       }
-      return { content: { questions: rows.map(([q, right, wrong]) => ({ q, answers: [right, ...split(wrong).slice(0, 5)] })) } };
+      // Several right answers can go in, with commas.
+      return { content: { questions: rows.map(([q, right, wrong]) => {
+        const r = split(right).slice(0, 3);
+        return { q, answers: [...r, ...split(wrong).slice(0, 6 - r.length)], ...(r.length > 1 ? { right: r.length } : {}) };
+      }) } };
+    },
+  },
+  // { statements: [{ a, b, right }] }  (Right or wrong with fixed answers)
+  statements: {
+    toRows: c => (c.statements || []).map(x => [x.a, x.b, x.right ? "yes" : "no"]),
+    fromRows(rows) {
+      const bad = rows.find(r => !r[0] || !r[1] || !/^(yes|no)$/i.test(r[2] || ""));
+      if (bad) return { error: "Every row needs both sides, and yes or no." };
+      return { content: { statements: rows.map(([a, b, r]) => ({ a, b, right: /^yes$/i.test(r) })) } };
     },
   },
   // { groups: [{ name, items: [] }] }
@@ -609,14 +622,15 @@ const SHAPES = {
 
 // One editor per kind: which shape, the column names, and how many rows.
 const pairsEd = (help, a, b, min = 3) => ({ shape: "pairs", help, cols: [[a, "א"], [b, "Alef"]], min, pasteHint: "א = Alef" });
+const uniqueEd = (...a) => ({ ...pairsEd(...a), unique: true });
 const quizEd = help => ({ shape: "quiz", help, cols: [["Question", "Which one is Beis?"], ["Right answer", "בּ"], ["Wrong answers, with commas", "ב, כ, פ"]], min: 2, pasteHint: "Which one is Beis? | בּ | ב, כ, פ" });
 const groupsEd = (help, max) => ({ shape: "groups", help, cols: [["Group", "Beis"], ["What goes in it, with commas", "בּ, בָּ, בַּ"]], min: 2, max, pasteHint: "Beis | בּ, בָּ, בַּ\nVeis | ב, בָ, בַ" });
 const CONTENT_EDITORS = {
   match: pairsEd("Each pair: a colorful tile the student drags, and the word it goes next to. Like א and Alef. More than 6 are split into rounds.", "Tile (dragged)", "Goes next to"),
   pairs: pairsEd("Each pair becomes two cards, face down. Students flip two at a time to find the pairs. More than 6 are split into rounds.", "Card", "Its match"),
-  find: pairsEd("Students see the right side and tap the tile with the left side. More than 8 are split into rounds.", "Tile to find", "What students see"),
-  truefalse: { ...pairsEd("Students see a pair and say if it's right. Sometimes the site mixes up a pair on purpose. The right side can repeat, like Kamatz and Patach.", "Tile", "Its match"), repeatB: true },
-  quiz: quizEd("Each question has one right answer and up to 5 wrong ones. The answers are mixed up for students."),
+  find: uniqueEd("Students see the right side and tap the tile with the left side. More than 8 are split into rounds.", "Tile to find", "What students see"),
+  truefalse: pairsEd("Students see a pair and say if it's right. Sometimes the site mixes up a pair on purpose. The right side can repeat, like Kamatz and Patach.", "Tile", "Its match"),
+  quiz: quizEd("Each question has a right answer (or a few, with commas) and wrong ones: up to 6 answers in all. The answers are mixed up for students."),
   gameshow: quizEd("Like a quiz, with a clock for each question and 2 helps: 50 : 50 and Second try."),
   winlose: quizEd("Like a quiz, but students pick how many points to play for before each question."),
   sort: groupsEd("2 to 4 groups. Students drag each tile into its group. A wrong drop bounces back.", 4),
@@ -626,19 +640,35 @@ const CONTENT_EDITORS = {
   anagram: { shape: "list", help: "One word on each row. Students see its letters mixed up and put them in order. Letters keep their vowels.", cols: [["Word", "שָׁלוֹם"]], min: 1 },
   gaps: { shape: "sentences", help: "Put [ ] around each missing part, like: א ב [ג] ד. Students drag the missing parts into the gaps.", cols: [["Line, with [ ] around the missing parts", "א בּ [ג] ד [ה]"]], min: 1 },
   balloon: pairsEd("Each pair: the tile on the balloon, and the word on its cart. Up to 4 carts a round.", "On the balloon", "On the cart", 2),
-  fruit: pairsEd("Each pair: what's on the fruit, and the word students look for.", "On the fruit", "Word to find", 2),
-  whack: pairsEd("Each pair: the tile that pops up, and the word students look for. Up to 6 words.", "Pops up", "Word to find", 2),
-  plane: pairsEd("Each pair: what's in the cloud, and the word students look for.", "In the cloud", "Word to find", 2),
+  fruit: uniqueEd("Each pair: what's on the fruit, and the word students look for.", "On the fruit", "Word to find", 2),
+  whack: uniqueEd("Each pair: the tile that pops up, and the word students look for. Up to 6 words.", "Pops up", "Word to find", 2),
+  plane: uniqueEd("Each pair: what's in the cloud, and the word students look for.", "In the cloud", "Word to find", 2),
   watch: { shape: "list", help: "Tiles to remember. Students see 4, then find them among others. Use at least 8.", cols: [["Tile", "א"]], min: 4 },
   spin: { shape: "list", help: "What's on the wheel (up to 16). No score, so it can't be homework.", cols: [["On the wheel", "בָּ"]], min: 2 },
   openbox: { shape: "list", help: "What's in the boxes (up to 24). No score, so it can't be homework.", cols: [["In a box", "בָּ"]], min: 2 },
-  flip: { ...pairsEd("Each card: the front, and the back (shown when it's flipped). No score, so it can't be homework.", "Front", "Back", 1), repeatB: true },
+  flip: pairsEd("Each card: the front, and the back (shown when it's flipped). No score, so it can't be homework.", "Front", "Back", 1),
+  spinquiz: quizEd("Each question goes on the wheel (up to 16). Students spin, then answer it."),
+  boxquiz: quizEd("Each question goes in a box (up to 24). Students open a box, then answer it."),
   deal: { shape: "list", help: "The cards in the deck. No score, so it can't be homework.", cols: [["Card", "שָׁם"]], min: 2 },
   label: pairsEd("Each row: a big part on the board (like a letter) and its label. Keep them in order: they show right to left. Up to 6 a round.", "Big part", "Label", 2),
 };
 
+// Some games use a different kind of content than their type's usual editor
+// (games copied from Wordwall): fixed statements, or "hit these" groups.
+const VARIANT_EDITORS = {
+  truefalse: { when: c => c && c.statements, ed: { shape: "statements", help: "Each row: a tile, a word, and if they match (yes or no).", cols: [["Tile", "בּ"], ["Word", "Bet"], ["Right? yes or no", "yes"]], min: 2, pasteHint: "בּ | Bet | yes" } },
+  fruit: { when: c => c && c.questions, ed: quizEd("Each question: what students look for, the right answer (or a few, with commas), and wrong answers.") },
+  plane: { when: c => c && c.questions, ed: quizEd("Each question: what students fly to, the right answer (or a few, with commas), and wrong answers.") },
+  whack: { when: c => c && c.groups, ed: { shape: "groups", help: "The first group is the tiles to hit. The other groups pop up too, but shouldn't be hit.", cols: [["Group", "Fay"], ["Tiles, with commas", "פ, פ, פ"]], min: 2, pasteHint: "Fay | פ, פ, פ\nPay | פּ, פּ" } },
+};
+let editingContent = null; // the content of the game open in the maker
+function editorOf(kind) {
+  const v = VARIANT_EDITORS[kind];
+  return v && v.when(editingContent) ? v.ed : CONTENT_EDITORS[kind];
+}
+
 function contentEditorHtml(kind, content) {
-  const ed = CONTENT_EDITORS[kind];
+  const ed = editorOf(kind);
   const rows = content && SHAPES[ed.shape].toRows(content);
   const list = rows && rows.length ? rows : [...Array(ed.min || 1)].map(() => ed.cols.map(() => ""));
   return `
@@ -677,7 +707,7 @@ function parseRows(text, ed) {
 }
 
 function readContent(form, kind) {
-  const ed = CONTENT_EDITORS[kind];
+  const ed = editorOf(kind);
   const rows = [...form.querySelectorAll(".content-row")]
     .map(r => [...r.querySelectorAll("[data-col]")].map(i => i.value.trim()))
     .filter(r => r.some(Boolean));
@@ -692,7 +722,7 @@ function readContent(form, kind) {
 // Wire up the buttons inside a content editor.
 function bindContentEditor(form, getKind) {
   form.addEventListener("click", e => {
-    const ed = CONTENT_EDITORS[getKind()];
+    const ed = editorOf(getKind());
     if (e.target.closest("[data-add-row]")) {
       form.querySelector("[data-rows]").insertAdjacentHTML("beforeend", contentRow(ed));
       form.querySelector(".content-row:last-child [data-col]").focus();
@@ -720,6 +750,7 @@ function openMake(stripe, where) {
   if (!kinds.length) { toast("Game types didn't load. Please reload the page.", "bad"); return; }
   const kindName = g ? g.game : kinds[0].name;
   let kind = (draft.templates[kindName] || {}).own || kinds[0].kind;
+  editingContent = g ? g.own : null;
   const dlg = $("#dlg-game");
   dlg.innerHTML = `
     <form method="dialog" class="dlg-body">
@@ -728,7 +759,7 @@ function openMake(stripe, where) {
         <label class="field grow"><span>Name</span><input name="title" value="${esc(g ? g.title : "")}" dir="auto" placeholder="Letters א to ו" required></label>
         <label class="field"><span>Game type</span><select name="kind"${g ? " disabled" : ""}>${kinds.map(k => `<option value="${esc(k.name)}"${k.name === kindName ? " selected" : ""}>${esc(k.name)}</option>`).join("")}</select></label>
       </div>
-      <p class="hint" data-kind-help>${esc(CONTENT_EDITORS[kind].help)}</p>
+      <p class="hint" data-kind-help>${esc(editorOf(kind).help)}</p>
       <div class="field"><span>Theme</span>
         <div class="theme-pick">${GAME_THEMES.map(([k, name]) => `
           <label class="theme-opt theme-${k}"><input type="radio" name="theme" value="${k}"${k === ((g && g.own && g.own.theme) || "meadow") ? " checked" : ""}><span>${name}</span></label>`).join("")}
@@ -755,10 +786,11 @@ function openMake(stripe, where) {
   f.elements.kind.addEventListener("change", () => {
     const next = draft.templates[f.elements.kind.value].own;
     // Keep what was typed when the new type uses the same kind of content.
-    const same = CONTENT_EDITORS[next].shape === CONTENT_EDITORS[kind].shape;
+    const same = CONTENT_EDITORS[next].shape === editorOf(kind).shape;
     const kept = same ? readContent(f, kind).content : null;
     kind = next;
-    f.querySelector("[data-kind-help]").textContent = CONTENT_EDITORS[kind].help;
+    editingContent = null;
+    f.querySelector("[data-kind-help]").textContent = editorOf(kind).help;
     f.querySelector("[data-content]").innerHTML = contentEditorHtml(kind, kept);
   });
   const fail = msg => { const el = f.querySelector(".form-error"); el.textContent = msg; el.hidden = false; };
@@ -777,7 +809,10 @@ function openMake(stripe, where) {
       list(belt, s).push(game);
     }
     game.title = title;
-    game.own = { ...res.content, theme: (f.querySelector("input[name=theme]:checked") || {}).value || "meadow" };
+    // Keep settings the editor doesn't show (reading aloud, the whack instruction).
+    const keep = {};
+    for (const k of ["speak", "speech", "prompt"]) if (g && g.own && g.own[k] !== undefined && g.own.kind === res.content.kind) keep[k] = g.own[k];
+    game.own = { ...keep, ...res.content, theme: (f.querySelector("input[name=theme]:checked") || {}).value || "meadow" };
     if (tip) game.tip = tip; else delete game.tip;
     if (g) {
       if (f.elements.hidden.checked) game.hidden = true; else delete game.hidden;
@@ -1109,7 +1144,7 @@ async function loadHomeworkData() {
 function homeworkTab() {
   refreshHomework();
   return `
-    <p class="tab-help">Give a class homework: pick games and a due date. Students sign in with Google and see only their homework. For scores, paste a Wordwall assignment link for each game (on Wordwall: <b>Set assignment</b>).</p>
+    <p class="tab-help">Give a class homework: pick games made on this site, a passing score and a due date. Students sign in with Google and see only their homework. A game counts as done when the student passes it.</p>
     <section class="panel wide-panel">
       <div class="panel-head"><h3>Homework</h3><button class="btn btn-primary small" data-hw-new>+ New homework</button></div>
       <div id="hw-list"><p class="muted">Loading…</p></div>

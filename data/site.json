@@ -21,7 +21,7 @@
   "step3Last": "Done? Press **Stripe done**.",
   "stripeDoneTitle": "Stripe {stripe} done",
   "stripeDoneText": "You got a {belt} Belt star.",
-  "footer": "Games made with Wordwall."
+  "footer": "Hebrew reading games, one belt at a time."
  },
  "home": {
   "showTiles": true,
@@ -553,12 +553,147 @@
      }
     },
     {
+     "id": "own-white-1-ww32232123",
+     "title": "Bet Vs. Vet",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet"
+        ]
+       },
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet"
+        ]
+       },
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet"
+        ]
+       },
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet"
+        ]
+       }
+      ]
+     }
+    },
+    {
      "id": "32232123",
      "title": "Bet Vs. Vet",
      "type": "quiz",
      "game": "Quiz",
      "embed": "9350d1b56af74e4e9ca7493c1ee56240?themeId=46",
-     "thumb": "https://wordwallscreens.azureedge.net/200/9350d1b56af74e4e9ca7493c1ee56240_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/9350d1b56af74e4e9ca7493c1ee56240_46",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww38791608",
+     "title": "Bet Vs. Vet",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       }
+      ]
+     }
     },
     {
      "id": "38791608",
@@ -566,7 +701,26 @@
      "type": "arcade",
      "game": "Balloon pop",
      "embed": "58ae70bcbe854aa0aa9683b36a098feb?themeId=22",
-     "thumb": "https://wordwallscreens.azureedge.net/200/58ae70bcbe854aa0aa9683b36a098feb_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/58ae70bcbe854aa0aa9683b36a098feb_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww27259465",
+     "title": "Alef Bet Gan 06.7",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "desert",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה"
+      ]
+     }
     },
     {
      "id": "27259465",
@@ -574,7 +728,24 @@
      "type": "order",
      "game": "Rank order",
      "embed": "20184132c17b4a83a1a0c4c2217c3ed5?themeId=23",
-     "thumb": "https://wordwallscreens.azureedge.net/200/20184132c17b4a83a1a0c4c2217c3ed5"
+     "thumb": "https://wordwallscreens.azureedge.net/200/20184132c17b4a83a1a0c4c2217c3ed5",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww27621153",
+     "title": "Alef Bet Gan 04.11",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "space",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג"
+      ]
+     }
     },
     {
      "id": "27621153",
@@ -582,7 +753,40 @@
      "type": "order",
      "game": "Rank order",
      "embed": "80a1048c60da4e6c874af91eeca5059d?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/80a1048c60da4e6c874af91eeca5059d"
+     "thumb": "https://wordwallscreens.azureedge.net/200/80a1048c60da4e6c874af91eeca5059d",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww7947346",
+     "title": "Hebrew Ballon Pop from Aleph to Hay",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       }
+      ]
+     }
     },
     {
      "id": "7947346",
@@ -590,7 +794,60 @@
      "type": "arcade",
      "game": "Balloon pop",
      "embed": "606c022765c944a28acbb5621f5157a8?themeId=22",
-     "thumb": "https://wordwallscreens.azureedge.net/200/606c022765c944a28acbb5621f5157a8_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/606c022765c944a28acbb5621f5157a8_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww3964427",
+     "title": "Hebrew Letter Alef-Vav",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
     },
     {
      "id": "3964427",
@@ -598,7 +855,174 @@
      "type": "arcade",
      "game": "Balloon pop",
      "embed": "146ebc061c5f4d81af67abd0dc38bf9f?themeId=22",
-     "thumb": "https://wordwallscreens.azureedge.net/200/146ebc061c5f4d81af67abd0dc38bf9f_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/146ebc061c5f4d81af67abd0dc38bf9f_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww35128434",
+     "title": "Alef - Vov Gameshow",
+     "type": "quiz",
+     "game": "Game show",
+     "own": {
+      "kind": "gameshow",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "Vav",
+        "answers": [
+         "ו",
+         "ז",
+         "ן",
+         "י",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which letter is this? א",
+        "answers": [
+         "Alef",
+         "Nun",
+         "Bet",
+         "Vav",
+         "Hey",
+         "Gimmel"
+        ]
+       },
+       {
+        "q": "Alef",
+        "answers": [
+         "א",
+         "ע",
+         "ט",
+         "צ",
+         "בּ",
+         "ב"
+        ]
+       },
+       {
+        "q": "Hey",
+        "answers": [
+         "ה",
+         "ח",
+         "ת",
+         "ד",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which letter is this? ו",
+        "answers": [
+         "Vav",
+         "Daled",
+         "Reish",
+         "Nun",
+         "Hey",
+         "Gimmel"
+        ]
+       },
+       {
+        "q": "Gimmel",
+        "answers": [
+         "ג",
+         "נ",
+         "ז",
+         "ו",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which letter is this? ה",
+        "answers": [
+         "Hey",
+         "Alef",
+         "Bet",
+         "Gimmel",
+         "Daled",
+         "Vav"
+        ]
+       },
+       {
+        "q": "Daled",
+        "answers": [
+         "ד",
+         "ר",
+         "ך",
+         "ה",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which letter is this? ב",
+        "answers": [
+         "Vet",
+         "Alef",
+         "Gimmel",
+         "Daled",
+         "Hey",
+         "Vav"
+        ]
+       },
+       {
+        "q": "Vet",
+        "answers": [
+         "ב",
+         "בּ",
+         "כ",
+         "פ",
+         "כּ",
+         "א"
+        ]
+       },
+       {
+        "q": "Which letter is this? ג",
+        "answers": [
+         "Gimmel",
+         "Vav",
+         "Daled",
+         "Reish",
+         "Nun",
+         "Hey"
+        ]
+       },
+       {
+        "q": "Bet",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ",
+         "כ",
+         "פּ",
+         "א"
+        ]
+       },
+       {
+        "q": "Which letter is this? ד",
+        "answers": [
+         "Daled",
+         "Nun",
+         "Vav",
+         "Bet",
+         "Hey",
+         "Reish"
+        ]
+       },
+       {
+        "q": "Which letter is this? בּ",
+        "answers": [
+         "Bet",
+         "Nun",
+         "Alef",
+         "Vav",
+         "Hey",
+         "Gimmel"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "35128434",
@@ -606,7 +1030,44 @@
      "type": "quiz",
      "game": "Gameshow quiz",
      "embed": "7bae12fb59b347b3aac15b20028069f6?themeId=21",
-     "thumb": "https://wordwallscreens.azureedge.net/200/7bae12fb59b347b3aac15b20028069f6_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/7bae12fb59b347b3aac15b20028069f6_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww5783609",
+     "title": "Hebrew letters (alef- vav)",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "alef"
+       },
+       {
+        "a": "בּ",
+        "b": "bet"
+       },
+       {
+        "a": "ג",
+        "b": "gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "dalet"
+       },
+       {
+        "a": "ה",
+        "b": "hay"
+       },
+       {
+        "a": "ו",
+        "b": "vav"
+       }
+      ]
+     }
     },
     {
      "id": "5783609",
@@ -614,7 +1075,164 @@
      "type": "match",
      "game": "Match up",
      "embed": "ff7e1272547c42c69fe391aada949e1e?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/ff7e1272547c42c69fe391aada949e1e_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/ff7e1272547c42c69fe391aada949e1e_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww23872088",
+     "title": "Aleph til vov",
+     "type": "quiz",
+     "game": "Game show",
+     "own": {
+      "kind": "gameshow",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "Aleph",
+        "answers": [
+         "א",
+         "ע",
+         "ט"
+        ]
+       },
+       {
+        "q": "Bet",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ"
+        ]
+       },
+       {
+        "q": "Bet",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ"
+        ]
+       },
+       {
+        "q": "Vet",
+        "answers": [
+         "ב",
+         "בּ",
+         "כ"
+        ]
+       },
+       {
+        "q": "Vet",
+        "answers": [
+         "ב",
+         "בּ",
+         "כ"
+        ]
+       },
+       {
+        "q": "Bet",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ"
+        ]
+       },
+       {
+        "q": "Daled",
+        "answers": [
+         "ד",
+         "ר",
+         "ך"
+        ]
+       },
+       {
+        "q": "Hay",
+        "answers": [
+         "ה",
+         "ח",
+         "ת"
+        ]
+       },
+       {
+        "q": "Daled",
+        "answers": [
+         "ד",
+         "ר",
+         "ך"
+        ]
+       },
+       {
+        "q": "Aleph",
+        "answers": [
+         "א",
+         "ע",
+         "ט"
+        ]
+       },
+       {
+        "q": "Daled",
+        "answers": [
+         "ד",
+         "ר",
+         "ך"
+        ]
+       },
+       {
+        "q": "Aleph",
+        "answers": [
+         "א",
+         "ע",
+         "ט"
+        ]
+       },
+       {
+        "q": "Vov",
+        "answers": [
+         "ו",
+         "ז",
+         "ן"
+        ]
+       },
+       {
+        "q": "Hay",
+        "answers": [
+         "ה",
+         "ח",
+         "ת"
+        ]
+       },
+       {
+        "q": "Hay",
+        "answers": [
+         "ה",
+         "ח",
+         "ת"
+        ]
+       },
+       {
+        "q": "Gimmel",
+        "answers": [
+         "ג",
+         "נ",
+         "ז"
+        ]
+       },
+       {
+        "q": "vov",
+        "answers": [
+         "ו",
+         "ז",
+         "ן"
+        ]
+       },
+       {
+        "q": "Gimmel",
+        "answers": [
+         "ג",
+         "נ",
+         "ז"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "23872088",
@@ -622,7 +1240,37 @@
      "type": "quiz",
      "game": "Gameshow quiz",
      "embed": "2b26eb32f3bc4d60970efaa1faa05d7d?themeId=21",
-     "thumb": "https://wordwallscreens.azureedge.net/200/2b26eb32f3bc4d60970efaa1faa05d7d"
+     "thumb": "https://wordwallscreens.azureedge.net/200/2b26eb32f3bc4d60970efaa1faa05d7d",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww59697148",
+     "title": "Rank order with Sound",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "ocean",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו"
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav"
+      }
+     }
     },
     {
      "id": "59697148",
@@ -630,7 +1278,48 @@
      "type": "order",
      "game": "Rank order",
      "embed": "47cee647323e44488102684cc4af31b9?themeId=23",
-     "thumb": "https://wordwallscreens.azureedge.net/200/47cee647323e44488102684cc4af31b9_23b"
+     "thumb": "https://wordwallscreens.azureedge.net/200/47cee647323e44488102684cc4af31b9_23b",
+     "hidden": true
+    },
+    {
+     "id": "own-white-1-ww59696981",
+     "title": "What is the order? Alef - Vav Match",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "1",
+        "b": "א"
+       },
+       {
+        "a": "5",
+        "b": "ד"
+       },
+       {
+        "a": "2",
+        "b": "בּ"
+       },
+       {
+        "a": "6",
+        "b": "ה"
+       },
+       {
+        "a": "4",
+        "b": "ג"
+       },
+       {
+        "a": "3",
+        "b": "ב"
+       },
+       {
+        "a": "7",
+        "b": "ו"
+       }
+      ]
+     }
     },
     {
      "id": "59696981",
@@ -640,12 +1329,63 @@
      "thumb": "https://wordwallscreens.azureedge.net/200/d831f5c674de481bbbb5c724ed9e0420_43"
     },
     {
+     "id": "own-white-1-ww38448776",
+     "title": "Alef - Vav Match",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav"
+      }
+     }
+    },
+    {
      "id": "38448776",
      "title": "Alef - Vav Match",
      "type": "match",
      "game": "Match up",
      "embed": "7b6e48a11d364c30aaa558b370d43692?themeId=46",
-     "thumb": "https://wordwallscreens.azureedge.net/200/7b6e48a11d364c30aaa558b370d43692_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/7b6e48a11d364c30aaa558b370d43692_46",
+     "hidden": true
     }
    ],
    "2": [
@@ -1014,13 +1754,145 @@
      }
     },
     {
+     "id": "own-white-2-ww72336687",
+     "title": "א thru ך Cloud Tap",
+     "type": "cards",
+     "game": "Open a box quiz",
+     "own": {
+      "kind": "boxquiz",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ח",
+        "answers": [
+         "Chet",
+         "Chaf",
+         "Tav",
+         "Sav"
+        ]
+       },
+       {
+        "q": "ט",
+        "answers": [
+         "Tet",
+         "Chet",
+         "Mem",
+         "Bet"
+        ]
+       },
+       {
+        "q": "י",
+        "answers": [
+         "Yud",
+         "Nun",
+         "Vav",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "כּ",
+        "answers": [
+         "Kaf",
+         "Bet",
+         "Vet",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ךּ",
+        "answers": [
+         "Final Kaf",
+         "Final Chaf",
+         "Final Nun",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "כ",
+        "answers": [
+         "Chaf",
+         "Vet",
+         "Bet",
+         "Kaf"
+        ]
+       },
+       {
+        "q": "ך",
+        "answers": [
+         "Final Chaf",
+         "Final Nun",
+         "Final Kaf",
+         "Final Fay"
+        ]
+       }
+      ]
+     },
+     "tip": "Tap on the cloud and say the name of letter"
+    },
+    {
      "id": "72336687",
      "title": "א thru ך Cloud Tap",
      "type": "cards",
      "game": "Open the box",
      "tip": "Tap on the cloud and say the name of letter.",
      "embed": "aee0545723e74326844f48b23d3e0f93?themeId=46",
-     "thumb": "https://wordwallscreens.azureedge.net/200/aee0545723e74326844f48b23d3e0f93_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/aee0545723e74326844f48b23d3e0f93_46",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww28882327",
+     "title": "123 Kriah 01 Page 05",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "ocean",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י"
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud"
+      }
+     }
     },
     {
      "id": "28882327",
@@ -1028,7 +1900,60 @@
      "type": "cards",
      "game": "Spin the wheel",
      "embed": "52813ce44908440591aef0fb2ffe6e45?themeId=52",
-     "thumb": "https://wordwallscreens.azureedge.net/200/6b902690245c4136a53a066f6656c4d0_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/6b902690245c4136a53a066f6656c4d0_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww3769520",
+     "title": "from Aleph to Yud",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "ה",
+        "b": "Hay"
+       }
+      ]
+     }
     },
     {
      "id": "3769520",
@@ -1036,7 +1961,40 @@
      "type": "match",
      "game": "Match up",
      "embed": "efdfcd33b41a437cb7e3a96e6211cdf5?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/a5414ef43582492b9a4941cdc95eadc7_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/a5414ef43582492b9a4941cdc95eadc7_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww8173810",
+     "title": "From Vav to Yud",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       }
+      ]
+     }
     },
     {
      "id": "8173810",
@@ -1044,7 +2002,34 @@
      "type": "match",
      "game": "Find the match",
      "embed": "ba9efcbb983d464d849205d6eb0e19d2?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/ba9efcbb983d464d849205d6eb0e19d2"
+     "thumb": "https://wordwallscreens.azureedge.net/200/ba9efcbb983d464d849205d6eb0e19d2",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww27260003",
+     "title": "Alef Bet Gan 14.7",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "meadow",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך"
+      ]
+     }
     },
     {
      "id": "27260003",
@@ -1052,7 +2037,46 @@
      "type": "order",
      "game": "Rank order",
      "embed": "aaf24e2849104d8dac334179c941eac4?themeId=45",
-     "thumb": "https://wordwallscreens.azureedge.net/200/aaf24e2849104d8dac334179c941eac4"
+     "thumb": "https://wordwallscreens.azureedge.net/200/aaf24e2849104d8dac334179c941eac4",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww27327116",
+     "title": "Hey Vs. Chet",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "ocean",
+      "groups": [
+       {
+        "name": "Hey",
+        "items": [
+         "ה",
+         "ה",
+         "ה",
+         "ה",
+         "ה",
+         "ה",
+         "ה",
+         "ה"
+        ]
+       },
+       {
+        "name": "Chet",
+        "items": [
+         "ח",
+         "ח",
+         "ח",
+         "ח",
+         "ח",
+         "ח",
+         "ח",
+         "ח"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27327116",
@@ -1060,7 +2084,48 @@
      "type": "sort",
      "game": "Group sort",
      "embed": "17a6f3c91182409b83d432cb10a15785?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/17a6f3c91182409b83d432cb10a15785_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/17a6f3c91182409b83d432cb10a15785_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww28882149",
+     "title": "123 Kriah 01 page 04",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ו",
+        "b": "ו"
+       },
+       {
+        "a": "ז",
+        "b": "ז"
+       },
+       {
+        "a": "ח",
+        "b": "ח"
+       },
+       {
+        "a": "ט",
+        "b": "ט"
+       },
+       {
+        "a": "י",
+        "b": "י"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud"
+      }
+     }
     },
     {
      "id": "28882149",
@@ -1068,7 +2133,45 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "ce6b9f8fd9f84a769937d2c2755310e6?themeId=52",
-     "thumb": "https://wordwallscreens.azureedge.net/200/d02874cd9fc2416abfbe4851758de1cb_48"
+     "thumb": "https://wordwallscreens.azureedge.net/200/d02874cd9fc2416abfbe4851758de1cb_48",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww59697259",
+     "title": "Rank order with Sound",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "space",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י"
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud"
+      }
+     }
     },
     {
      "id": "59697259",
@@ -1076,7 +2179,78 @@
      "type": "order",
      "game": "Rank order",
      "embed": "0cfd092976a342cc8e5931fdbd9666f0?themeId=54",
-     "thumb": "https://wordwallscreens.azureedge.net/200/f6301e305d6148c6810348a4dd4271be_27"
+     "thumb": "https://wordwallscreens.azureedge.net/200/f6301e305d6148c6810348a4dd4271be_27",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww39044626",
+     "title": "Alef - Yud Match",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud"
+      }
+     }
     },
     {
      "id": "39044626",
@@ -1084,7 +2258,52 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "efc7853cde5047ac805c6db60483ce75?themeId=2",
-     "thumb": "https://wordwallscreens.azureedge.net/200/efc7853cde5047ac805c6db60483ce75_2"
+     "thumb": "https://wordwallscreens.azureedge.net/200/efc7853cde5047ac805c6db60483ce75_2",
+     "hidden": true
+    },
+    {
+     "id": "own-white-2-ww59697708",
+     "title": "Balloon Pop Edited",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ד",
+        "b": "ד DALET"
+       },
+       {
+        "a": "ו",
+        "b": "ו VAV"
+       },
+       {
+        "a": "ח",
+        "b": "ח CHET"
+       },
+       {
+        "a": "ז",
+        "b": "ז ZAYIN"
+       },
+       {
+        "a": "כ",
+        "b": "כ CHAF"
+       },
+       {
+        "a": "ך",
+        "b": "ך FINAL CHAF"
+       },
+       {
+        "a": "כּ",
+        "b": "כּ KAF"
+       },
+       {
+        "a": "ה",
+        "b": "ה HEY"
+       }
+      ]
+     }
     },
     {
      "id": "59697708",
@@ -1092,7 +2311,8 @@
      "type": "arcade",
      "game": "Balloon pop",
      "embed": "492505ede9ca4af3a3169966dc7311de?themeId=22",
-     "thumb": "https://wordwallscreens.azureedge.net/200/492505ede9ca4af3a3169966dc7311de_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/492505ede9ca4af3a3169966dc7311de_0",
+     "hidden": true
     }
    ],
    "3": [
@@ -1523,12 +2743,130 @@
      }
     },
     {
+     "id": "own-white-3-ww28882522",
+     "title": "123 Kriah 01 Page 07",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "כּ",
+        "b": "כּ"
+       },
+       {
+        "a": "כ",
+        "b": "כ"
+       },
+       {
+        "a": "ך",
+        "b": "ך"
+       },
+       {
+        "a": "ל",
+        "b": "ל"
+       },
+       {
+        "a": "מ",
+        "b": "מ"
+       },
+       {
+        "a": "ם",
+        "b": "ם"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "כּ": "Kaf",
+       "כ": "Chaf",
+       "ך": "Final Chaf",
+       "ל": "Lamed",
+       "מ": "Mem",
+       "ם": "Final Mem"
+      }
+     }
+    },
+    {
      "id": "28882522",
      "title": "123 Kriah 01 Page 07",
      "type": "match",
      "game": "Matching pairs",
      "embed": "f0ce9f9d2bf947e29dbda8a8529fc924?themeId=26",
-     "thumb": "https://wordwallscreens.azureedge.net/200/059c8e1de7704301a4331bef47588daa"
+     "thumb": "https://wordwallscreens.azureedge.net/200/059c8e1de7704301a4331bef47588daa",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww35128652",
+     "title": "Alef Bet Alef - Lamed",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "Alef",
+        "b": "א"
+       },
+       {
+        "a": "Vet",
+        "b": "ב"
+       },
+       {
+        "a": "Gimel",
+        "b": "ג"
+       },
+       {
+        "a": "Dalet",
+        "b": "ד"
+       },
+       {
+        "a": "Hey",
+        "b": "ה"
+       },
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Bet",
+        "b": "בּ"
+       },
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "Kaf",
+        "b": "כּ"
+       },
+       {
+        "a": "Chaf",
+        "b": "כ"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       },
+       {
+        "a": "Final Chaf",
+        "b": "ך"
+       }
+      ]
+     }
     },
     {
      "id": "35128652",
@@ -1536,7 +2874,48 @@
      "type": "arcade",
      "game": "Balloon pop",
      "embed": "1f1b273eb1cd407cb37e0ebb931dcbce?themeId=22",
-     "thumb": "https://wordwallscreens.azureedge.net/200/1f1b273eb1cd407cb37e0ebb931dcbce_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/1f1b273eb1cd407cb37e0ebb931dcbce_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww59409628",
+     "title": "Zayin-Lamed",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "Kaf",
+        "b": "כּ"
+       },
+       {
+        "a": "Chaf",
+        "b": "כ"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       }
+      ]
+     }
     },
     {
      "id": "59409628",
@@ -1544,7 +2923,96 @@
      "type": "match",
      "game": "Match up",
      "embed": "4f3992349e8544b4952b40b60997d57b?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/4f3992349e8544b4952b40b60997d57b_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/4f3992349e8544b4952b40b60997d57b_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww26346624",
+     "title": "Alef-Final Nun",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Daled"
+       },
+       {
+        "a": "ה",
+        "b": "Hay"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       }
+      ]
+     }
     },
     {
      "id": "26346624",
@@ -1552,7 +3020,46 @@
      "type": "match",
      "game": "Find the match",
      "embed": "ea1bdedca2aa409a9a5dff800a1bc919?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/ea1bdedca2aa409a9a5dff800a1bc919_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/ea1bdedca2aa409a9a5dff800a1bc919_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww27326532",
+     "title": "Mem Vs. Tet",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "desert",
+      "groups": [
+       {
+        "name": "Tet",
+        "items": [
+         "ט",
+         "ט",
+         "ט",
+         "ט",
+         "ט",
+         "ט",
+         "ט",
+         "ט"
+        ]
+       },
+       {
+        "name": "Mem",
+        "items": [
+         "מ",
+         "מ",
+         "מ",
+         "מ",
+         "מ",
+         "מ",
+         "מ",
+         "מ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27326532",
@@ -1560,7 +3067,53 @@
      "type": "sort",
      "game": "Group sort",
      "embed": "b7648c0cb3034eadb74424532ea0748e?themeId=1",
-     "thumb": "https://wordwallscreens.azureedge.net/200/b7648c0cb3034eadb74424532ea0748e_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/b7648c0cb3034eadb74424532ea0748e_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww29162023",
+     "title": "123 Kriah 01 Page 20",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "מ",
+        "b": "מ"
+       },
+       {
+        "a": "ם",
+        "b": "ם"
+       },
+       {
+        "a": "נ",
+        "b": "נ"
+       },
+       {
+        "a": "ן",
+        "b": "ן"
+       },
+       {
+        "a": "ס",
+        "b": "ס"
+       },
+       {
+        "a": "ל",
+        "b": "ל"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "מ": "Mem",
+       "ם": "Final Mem",
+       "נ": "Nun",
+       "ן": "Final Nun",
+       "ס": "Samech",
+       "ל": "Lamed"
+      }
+     }
     },
     {
      "id": "29162023",
@@ -1568,7 +3121,46 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "12c0c7f9bc204e39ac9f94d8a70d480b?themeId=55",
-     "thumb": "https://wordwallscreens.azureedge.net/200/01d6d890016548cca966f6fbf8591dd1_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/01d6d890016548cca966f6fbf8591dd1_46",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww27327984",
+     "title": "Nun Vs. Gimmel",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "Nun",
+        "items": [
+         "נ",
+         "נ",
+         "נ",
+         "נ",
+         "נ",
+         "נ",
+         "נ",
+         "נ"
+        ]
+       },
+       {
+        "name": "Gimmel",
+        "items": [
+         "ג",
+         "ג",
+         "ג",
+         "ג",
+         "ג",
+         "ג",
+         "ג",
+         "ג"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27327984",
@@ -1576,7 +3168,43 @@
      "type": "sort",
      "game": "Group sort",
      "embed": "8e43b0dc90524524886f3f286d957c3d?themeId=43",
-     "thumb": "https://wordwallscreens.azureedge.net/200/8e43b0dc90524524886f3f286d957c3d_43"
+     "thumb": "https://wordwallscreens.azureedge.net/200/8e43b0dc90524524886f3f286d957c3d_43",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww59409436",
+     "title": "Vov Gimmel Zayin Nun",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ו",
+        "b": "ו"
+       },
+       {
+        "a": "ג",
+        "b": "ג"
+       },
+       {
+        "a": "ז",
+        "b": "ז"
+       },
+       {
+        "a": "נ",
+        "b": "נ"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "ו": "Vav",
+       "ג": "Gimmel",
+       "ז": "Zayin",
+       "נ": "Nun"
+      }
+     }
     },
     {
      "id": "59409436",
@@ -1584,7 +3212,147 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "0e67ed27f6bb4a8fa83c074c66039191?themeId=45",
-     "thumb": "https://wordwallscreens.azureedge.net/200/0e67ed27f6bb4a8fa83c074c66039191_45"
+     "thumb": "https://wordwallscreens.azureedge.net/200/0e67ed27f6bb4a8fa83c074c66039191_45",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww72336553",
+     "title": "א thru ן Cloud Tap",
+     "type": "cards",
+     "game": "Open a box quiz",
+     "own": {
+      "kind": "boxquiz",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ח",
+        "answers": [
+         "Chet",
+         "Chaf",
+         "Tav",
+         "Sav"
+        ]
+       },
+       {
+        "q": "ט",
+        "answers": [
+         "Tet",
+         "Chet",
+         "Mem",
+         "Bet"
+        ]
+       },
+       {
+        "q": "י",
+        "answers": [
+         "Yud",
+         "Nun",
+         "Vav",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "כּ",
+        "answers": [
+         "Kaf",
+         "Bet",
+         "Vet",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ךּ",
+        "answers": [
+         "Final Kaf",
+         "Final Chaf",
+         "Final Nun",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "כ",
+        "answers": [
+         "Chaf",
+         "Vet",
+         "Bet",
+         "Kaf"
+        ]
+       },
+       {
+        "q": "ך",
+        "answers": [
+         "Final Chaf",
+         "Final Nun",
+         "Final Kaf",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "ל",
+        "answers": [
+         "Lamed",
+         "Chaf",
+         "Tzaddik",
+         "Final Chaf"
+        ]
+       },
+       {
+        "q": "מ",
+        "answers": [
+         "Mem",
+         "Tet",
+         "Final Mem",
+         "Samech"
+        ]
+       },
+       {
+        "q": "ם",
+        "answers": [
+         "Final Mem",
+         "Samech",
+         "Mem",
+         "Ayin"
+        ]
+       },
+       {
+        "q": "נ",
+        "answers": [
+         "Nun",
+         "Gimmel",
+         "Vav",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ן",
+        "answers": [
+         "Final Nun",
+         "Vav",
+         "Zayin",
+         "Final Fay"
+        ]
+       }
+      ]
+     },
+     "tip": "Tap on the cloud and say the name of letter"
     },
     {
      "id": "72336553",
@@ -1593,7 +3361,113 @@
      "game": "Open the box",
      "tip": "Tap on the cloud and say the name of letter.",
      "embed": "fca2e9a698ff46af814dd1a3c61635bc?themeId=46",
-     "thumb": "https://wordwallscreens.azureedge.net/200/fca2e9a698ff46af814dd1a3c61635bc_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/fca2e9a698ff46af814dd1a3c61635bc_46",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww38450327",
+     "title": "Alef - Nun Match",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "א"
+       },
+       {
+        "a": "בּ",
+        "b": "בּ"
+       },
+       {
+        "a": "ב",
+        "b": "ב"
+       },
+       {
+        "a": "ג",
+        "b": "ג"
+       },
+       {
+        "a": "ד",
+        "b": "ד"
+       },
+       {
+        "a": "ה",
+        "b": "ה"
+       },
+       {
+        "a": "ו",
+        "b": "ו"
+       },
+       {
+        "a": "ז",
+        "b": "ז"
+       },
+       {
+        "a": "ח",
+        "b": "ח"
+       },
+       {
+        "a": "ט",
+        "b": "ט"
+       },
+       {
+        "a": "י",
+        "b": "י"
+       },
+       {
+        "a": "כּ",
+        "b": "כּ"
+       },
+       {
+        "a": "כ",
+        "b": "כ"
+       },
+       {
+        "a": "ל",
+        "b": "ל"
+       },
+       {
+        "a": "מ",
+        "b": "מ"
+       },
+       {
+        "a": "ם",
+        "b": "ם"
+       },
+       {
+        "a": "נ",
+        "b": "נ"
+       },
+       {
+        "a": "ן",
+        "b": "ן"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud",
+       "כּ": "Kaf",
+       "כ": "Chaf",
+       "ל": "Lamed",
+       "מ": "Mem",
+       "ם": "Final Mem",
+       "נ": "Nun",
+       "ן": "Final Nun"
+      }
+     }
     },
     {
      "id": "38450327",
@@ -1601,7 +3475,24 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "35579867c3864d5ea0e73f19cced188e?themeId=65",
-     "thumb": "https://wordwallscreens.azureedge.net/200/35579867c3864d5ea0e73f19cced188e_0"
+     "thumb": "https://wordwallscreens.azureedge.net/200/35579867c3864d5ea0e73f19cced188e_0",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww59698368",
+     "title": "Put the letters in order from RIGHT to LEFT א-ן",
+     "type": "order",
+     "game": "Build the word",
+     "own": {
+      "kind": "anagram",
+      "theme": "meadow",
+      "items": [
+       "אבּבג",
+       "וזחטי",
+       "יכּכך",
+       "למםנן"
+      ]
+     }
     },
     {
      "id": "59698368",
@@ -1609,7 +3500,63 @@
      "type": "order",
      "game": "Anagram",
      "embed": "fa41f40f1ac0498d80a1aca2a64e4f04?themeId=46",
-     "thumb": "https://wordwallscreens.azureedge.net/200/fa41f40f1ac0498d80a1aca2a64e4f04_46"
+     "thumb": "https://wordwallscreens.azureedge.net/200/fa41f40f1ac0498d80a1aca2a64e4f04_46",
+     "hidden": true
+    },
+    {
+     "id": "own-white-3-ww59597547",
+     "title": "Look Alike Match W3",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ב",
+        "b": "ב"
+       },
+       {
+        "a": "כ",
+        "b": "כ"
+       },
+       {
+        "a": "ו",
+        "b": "ו"
+       },
+       {
+        "a": "ז",
+        "b": "ז"
+       },
+       {
+        "a": "ג",
+        "b": "ג"
+       },
+       {
+        "a": "נ",
+        "b": "נ"
+       },
+       {
+        "a": "ד",
+        "b": "ד"
+       },
+       {
+        "a": "ר",
+        "b": "ר"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "ב": "Vet",
+       "כ": "Chaf",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ג": "Gimmel",
+       "נ": "Nun",
+       "ד": "Dalet",
+       "ר": "Reish"
+      }
+     }
     },
     {
      "id": "59597547",
@@ -1618,7 +3565,8 @@
      "game": "Matching pairs",
      "embed": "aead4c43451d4ead90a3aeacdc1ba696?themeId=65",
      "play": "59597/547/303",
-     "thumb": "aead4c43451d4ead90a3aeacdc1ba696_0"
+     "thumb": "aead4c43451d4ead90a3aeacdc1ba696_0",
+     "hidden": true
     }
    ]
   },
@@ -1943,12 +3891,89 @@
      }
     },
     {
+     "id": "own-red-1-ww9895499",
+     "title": "From KAF to SAMECH",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "KAF",
+        "b": "כּ"
+       },
+       {
+        "a": "LAMED",
+        "b": "ל"
+       },
+       {
+        "a": "NUN",
+        "b": "נ"
+       },
+       {
+        "a": "SAMECH",
+        "b": "ס"
+       },
+       {
+        "a": "MEM",
+        "b": "מ"
+       }
+      ]
+     }
+    },
+    {
      "id": "9895499",
      "title": "From KAF to SAMECH",
      "type": "match",
      "game": "Find the match",
      "embed": "52088e1dea6c43418136ebd6cddff0d3?themeId=1",
-     "thumb": "52088e1dea6c43418136ebd6cddff0d3_0"
+     "thumb": "52088e1dea6c43418136ebd6cddff0d3_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww27262077",
+     "title": "Look Alikes",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "פּ",
+        "b": "Pay"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "פ",
+        "b": "Fay"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       }
+      ]
+     }
     },
     {
      "id": "27262077",
@@ -1956,7 +3981,40 @@
      "type": "match",
      "game": "Find the match",
      "embed": "210c753c4d83456da1bcb959ab1a6609?themeId=1",
-     "thumb": "210c753c4d83456da1bcb959ab1a6609_0"
+     "thumb": "210c753c4d83456da1bcb959ab1a6609_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww27327393",
+     "title": "Final Mem Vs. Samech",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "Final Mem",
+        "items": [
+         "ם",
+         "ם",
+         "ם",
+         "ם",
+         "ם"
+        ]
+       },
+       {
+        "name": "Samech",
+        "items": [
+         "ס",
+         "ס",
+         "ס",
+         "ס",
+         "ס"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27327393",
@@ -1964,7 +4022,46 @@
      "type": "sort",
      "game": "Group sort",
      "embed": "7747be90e1fc47978bb5fe2ebe0ae01e?themeId=1",
-     "thumb": "7747be90e1fc47978bb5fe2ebe0ae01e_0"
+     "thumb": "7747be90e1fc47978bb5fe2ebe0ae01e_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww12799768",
+     "title": "Pay Vs Fay",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "ocean",
+      "prompt": "Hit the Moles with the Letter FAY",
+      "groups": [
+       {
+        "name": "Fay",
+        "items": [
+         "פ",
+         "פ",
+         "פ",
+         "פ",
+         "פ",
+         "פ",
+         "פ",
+         "פ",
+         "פ"
+        ]
+       },
+       {
+        "name": "Pay",
+        "items": [
+         "פּ",
+         "פּ",
+         "פּ",
+         "פּ",
+         "פּ",
+         "פּ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "12799768",
@@ -1973,7 +4070,44 @@
      "game": "Whack-a-mole",
      "tip": "Hit the Moles with the Letter FAY.",
      "embed": "a4955f479da746c2ac384a0c1bb8db89?themeId=22",
-     "thumb": "a4955f479da746c2ac384a0c1bb8db89_0"
+     "thumb": "a4955f479da746c2ac384a0c1bb8db89_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww94191324",
+     "title": "Match the Letters R1",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ס",
+        "b": "ס"
+       },
+       {
+        "a": "ע",
+        "b": "ע"
+       },
+       {
+        "a": "פּ",
+        "b": "פּ"
+       },
+       {
+        "a": "פ",
+        "b": "פ"
+       },
+       {
+        "a": "ף",
+        "b": "ף"
+       },
+       {
+        "a": "ם",
+        "b": "ם"
+       }
+      ]
+     }
     },
     {
      "id": "94191324",
@@ -1981,7 +4115,58 @@
      "type": "match",
      "game": "Matching pairs",
      "embed": "b767caa1bcfa434f8a05a91ea12af6c6?themeId=1",
-     "thumb": "b767caa1bcfa434f8a05a91ea12af6c6_1"
+     "thumb": "b767caa1bcfa434f8a05a91ea12af6c6_1",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww29160429",
+     "title": "123 Kriah 01 Page 08",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "ס",
+        "b": "ס"
+       },
+       {
+        "a": "ע",
+        "b": "ע"
+       },
+       {
+        "a": "פּ",
+        "b": "פּ"
+       },
+       {
+        "a": "פ",
+        "b": "פ"
+       },
+       {
+        "a": "ף",
+        "b": "ף"
+       },
+       {
+        "a": "ם",
+        "b": "ם"
+       },
+       {
+        "a": "ן",
+        "b": "ן"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "ס": "Samech",
+       "ע": "Ayin",
+       "פּ": "Pey",
+       "פ": "Fey",
+       "ף": "Final Fey",
+       "ם": "Final Mem",
+       "ן": "Final Nun"
+      }
+     }
     },
     {
      "id": "29160429",
@@ -1990,7 +4175,69 @@
      "game": "Matching pairs",
      "embed": "1d975385b5884dc084a024af0a1a4768?themeId=4",
      "play": "29160/429/707",
-     "thumb": "1d975385b5884dc084a024af0a1a4768_4"
+     "thumb": "1d975385b5884dc084a024af0a1a4768_4",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww38449199",
+     "title": "Alef - Final Fey Review",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "meadow",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף"
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "בּ": "Bet",
+       "ב": "Vet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud",
+       "כּ": "Kaf",
+       "כ": "Chaf",
+       "ל": "Lamed",
+       "מ": "Mem",
+       "ם": "Final Mem",
+       "נ": "Nun",
+       "ן": "Final Nun",
+       "ס": "Samech",
+       "ע": "Ayin",
+       "פּ": "Pey",
+       "פ": "Fey",
+       "ף": "Final Fey"
+      }
+     }
     },
     {
      "id": "38449199",
@@ -1998,7 +4245,45 @@
      "type": "cards",
      "game": "Speaking cards",
      "embed": "e4da48ce47ce41d988eee6689407a6a8?themeId=41",
-     "thumb": "e4da48ce47ce41d988eee6689407a6a8_41"
+     "thumb": "e4da48ce47ce41d988eee6689407a6a8_41",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww94190594",
+     "title": "Hebrew Letter Order Red 1",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "ocean",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף"
+      ]
+     },
+     "tip": "Drag and drop the letters in the correct order"
     },
     {
      "id": "94190594",
@@ -2007,7 +4292,117 @@
      "game": "Rank order",
      "tip": "Drag and drop the letters in the correct order.",
      "embed": "155b870c659d4c1588d6fc3e0f308a40?themeId=1",
-     "thumb": "155b870c659d4c1588d6fc3e0f308a40_1"
+     "thumb": "155b870c659d4c1588d6fc3e0f308a40_1",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww94190811",
+     "title": "Hebrew Letter Match R1",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "Aleph",
+        "b": "א"
+       },
+       {
+        "a": "Bet",
+        "b": "בּ"
+       },
+       {
+        "a": "Vet",
+        "b": "ב"
+       },
+       {
+        "a": "Gimel",
+        "b": "ג"
+       },
+       {
+        "a": "Dalet/Daled",
+        "b": "ד"
+       },
+       {
+        "a": "Hay",
+        "b": "ה"
+       },
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "Kaf",
+        "b": "כּ"
+       },
+       {
+        "a": "Chaf",
+        "b": "כ"
+       },
+       {
+        "a": "Final Chaf",
+        "b": "ך"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       },
+       {
+        "a": "Mem",
+        "b": "מ"
+       },
+       {
+        "a": "Final Mem",
+        "b": "ם"
+       },
+       {
+        "a": "Nun",
+        "b": "נ"
+       },
+       {
+        "a": "Final Nun",
+        "b": "ן"
+       },
+       {
+        "a": "Samach",
+        "b": "ס"
+       },
+       {
+        "a": "Ayin",
+        "b": "ע"
+       },
+       {
+        "a": "Pay",
+        "b": "פּ"
+       },
+       {
+        "a": "Fay",
+        "b": "פ"
+       },
+       {
+        "a": "Final Fay",
+        "b": "ף"
+       }
+      ]
+     },
+     "tip": "Drag and Match the correct letter to the name"
     },
     {
      "id": "94190811",
@@ -2016,7 +4411,101 @@
      "game": "Match up",
      "tip": "Drag and Match the correct letter to the name.",
      "embed": "86a7195850964c4c91db724aace65d85?themeId=2",
-     "thumb": "86a7195850964c4c91db724aace65d85_2"
+     "thumb": "86a7195850964c4c91db724aace65d85_2",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww94191495",
+     "title": "Balloon Pop",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Daled",
+        "b": "ד"
+       },
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       },
+       {
+        "a": "Aleph",
+        "b": "א"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Gimmel",
+        "b": "ג"
+       },
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Ayin",
+        "b": "ע"
+       },
+       {
+        "a": "Chaf Sofit",
+        "b": "ך"
+       },
+       {
+        "a": "Fay Sofit",
+        "b": "ף"
+       },
+       {
+        "a": "Chaf",
+        "b": "כ"
+       },
+       {
+        "a": "Pay",
+        "b": "פּ"
+       },
+       {
+        "a": "Fay",
+        "b": "פ"
+       },
+       {
+        "a": "Vet",
+        "b": "ב"
+       },
+       {
+        "a": "Kaf",
+        "b": "כּ"
+       },
+       {
+        "a": "Hay",
+        "b": "ה"
+       },
+       {
+        "a": "Bet",
+        "b": "בּ"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "samech",
+        "b": "ס"
+       }
+      ]
+     },
+     "tip": "Tap the correct balloon"
     },
     {
      "id": "94191495",
@@ -2025,7 +4514,192 @@
      "game": "Balloon pop",
      "tip": "Tap the correct balloon.",
      "embed": "c89011dd825147ef854fb3dab017f12f?themeId=22",
-     "thumb": "c89011dd825147ef854fb3dab017f12f_0"
+     "thumb": "c89011dd825147ef854fb3dab017f12f_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-1-ww72335846",
+     "title": "א thru ף Cloud Tap",
+     "type": "cards",
+     "game": "Open a box quiz",
+     "own": {
+      "kind": "boxquiz",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "בּ",
+        "answers": [
+         "Bet",
+         "Vet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ב",
+        "answers": [
+         "Vet",
+         "Bet",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ח",
+        "answers": [
+         "Chet",
+         "Chaf",
+         "Tav",
+         "Sav"
+        ]
+       },
+       {
+        "q": "ט",
+        "answers": [
+         "Tet",
+         "Chet",
+         "Mem",
+         "Bet"
+        ]
+       },
+       {
+        "q": "י",
+        "answers": [
+         "Yud",
+         "Nun",
+         "Vav",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "כּ",
+        "answers": [
+         "Kaf",
+         "Bet",
+         "Vet",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ךּ",
+        "answers": [
+         "Final Kaf",
+         "Final Chaf",
+         "Final Nun",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "כ",
+        "answers": [
+         "Chaf",
+         "Vet",
+         "Bet",
+         "Kaf"
+        ]
+       },
+       {
+        "q": "ך",
+        "answers": [
+         "Final Chaf",
+         "Final Nun",
+         "Final Kaf",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "ל",
+        "answers": [
+         "Lamed",
+         "Chaf",
+         "Tzaddik",
+         "Final Chaf"
+        ]
+       },
+       {
+        "q": "מ",
+        "answers": [
+         "Mem",
+         "Tet",
+         "Final Mem",
+         "Samech"
+        ]
+       },
+       {
+        "q": "ם",
+        "answers": [
+         "Final Mem",
+         "Samech",
+         "Mem",
+         "Ayin"
+        ]
+       },
+       {
+        "q": "נ",
+        "answers": [
+         "Nun",
+         "Gimmel",
+         "Vav",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "ן",
+        "answers": [
+         "Final Nun",
+         "Vav",
+         "Zayin",
+         "Final Fay"
+        ]
+       },
+       {
+        "q": "ס",
+        "answers": [
+         "Samech",
+         "Mem",
+         "Final Mem",
+         "Ayin"
+        ]
+       },
+       {
+        "q": "ע",
+        "answers": [
+         "Ayin",
+         "Zayin",
+         "Hey",
+         "Chet"
+        ]
+       },
+       {
+        "q": "פּ",
+        "answers": [
+         "Pay",
+         "Fay",
+         "Ayin",
+         "Hey"
+        ]
+       },
+       {
+        "q": "פ",
+        "answers": [
+         "Fay",
+         "Chaf",
+         "Kaf",
+         "Pay"
+        ]
+       },
+       {
+        "q": "ף",
+        "answers": [
+         "Final Fay",
+         "Final Nun",
+         "Final Chaf",
+         "Final Kaf"
+        ]
+       }
+      ]
+     },
+     "tip": "Tap on the cloud and say the name of letter"
     },
     {
      "id": "72335846",
@@ -2034,7 +4708,8 @@
      "game": "Open the box",
      "tip": "Tap on the cloud and say the name of letter.",
      "embed": "5aed21c0f703438798683cfb070a7949?themeId=46",
-     "thumb": "5aed21c0f703438798683cfb070a7949_46"
+     "thumb": "5aed21c0f703438798683cfb070a7949_46",
+     "hidden": true
     }
    ],
    "2": [
@@ -2383,6 +5058,47 @@
      }
     },
     {
+     "id": "own-red-2-ww94192438",
+     "title": "Hebrew Letter Order R2",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "ocean",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף",
+       "צ",
+       "ץ",
+       "ק",
+       "ר"
+      ]
+     },
+     "tip": "Drag and drop the letter to the correct spot to put them in order"
+    },
+    {
      "id": "94192438",
      "title": "Hebrew Letter Order R2",
      "type": "order",
@@ -2390,7 +5106,46 @@
      "tip": "Drag and drop the letter to the correct spot to put them in order.",
      "embed": "fb688188db694783aaa03b65dd66638f?themeId=1",
      "play": "94192/438/710",
-     "thumb": "fb688188db694783aaa03b65dd66638f_0"
+     "thumb": "fb688188db694783aaa03b65dd66638f_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww27327520",
+     "title": "Ayin Vs. Tzadee",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "desert",
+      "groups": [
+       {
+        "name": "Ayin",
+        "items": [
+         "ע",
+         "ע",
+         "ע",
+         "ע",
+         "ע",
+         "ע",
+         "ע",
+         "ע"
+        ]
+       },
+       {
+        "name": "Tzadee",
+        "items": [
+         "צ",
+         "צ",
+         "צ",
+         "צ",
+         "צ",
+         "צ",
+         "צ",
+         "צ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27327520",
@@ -2399,7 +5154,46 @@
      "game": "Group sort",
      "embed": "b668951ccb2440fca0b764bed9ade551?themeId=1",
      "play": "27327/520/7206",
-     "thumb": "b668951ccb2440fca0b764bed9ade551_0"
+     "thumb": "b668951ccb2440fca0b764bed9ade551_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww27327747",
+     "title": "Daled Vs. Resh",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "space",
+      "groups": [
+       {
+        "name": "Daled",
+        "items": [
+         "ד",
+         "ד",
+         "ד",
+         "ד",
+         "ד",
+         "ד",
+         "ד",
+         "ד"
+        ]
+       },
+       {
+        "name": "Resh",
+        "items": [
+         "ר",
+         "ר",
+         "ר",
+         "ר",
+         "ר",
+         "ר",
+         "ר",
+         "ר"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27327747",
@@ -2408,7 +5202,40 @@
      "game": "Group sort",
      "embed": "3f428e8c413f4ed6818f0a5511e5233d?themeId=1",
      "play": "27327/747/517",
-     "thumb": "3f428e8c413f4ed6818f0a5511e5233d_0"
+     "thumb": "3f428e8c413f4ed6818f0a5511e5233d_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww15310820",
+     "title": "Final Letters Sort",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "Final Letters",
+        "items": [
+         "ך",
+         "ם",
+         "ן",
+         "ף",
+         "ץ"
+        ]
+       },
+       {
+        "name": "Non-Final Letters",
+        "items": [
+         "כ",
+         "מ",
+         "נ",
+         "פ",
+         "צ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "15310820",
@@ -2417,7 +5244,41 @@
      "game": "Group sort",
      "embed": "f221fda8f006416da926e3585327283a?themeId=1",
      "play": "15310/820/328",
-     "thumb": "f221fda8f006416da926e3585327283a_1"
+     "thumb": "f221fda8f006416da926e3585327283a_1",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww32188781",
+     "title": "Sofeet letters review. Drag the letter to match it's final (sofeet) .",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "כ",
+        "b": "ך"
+       },
+       {
+        "a": "מ",
+        "b": "ם"
+       },
+       {
+        "a": "נ",
+        "b": "ן"
+       },
+       {
+        "a": "פ",
+        "b": "ף"
+       },
+       {
+        "a": "צ",
+        "b": "ץ"
+       }
+      ]
+     },
+     "tip": "Drag and drop each letter to it's matching final (Sofeet) letter"
     },
     {
      "id": "32188781",
@@ -2427,7 +5288,40 @@
      "tip": "Drag and drop each letter to its matching final (Sofeet) letter.",
      "embed": "1c92d304dabb49c08b60183a8e7c36cc?themeId=41",
      "play": "32188/781/600",
-     "thumb": "1c92d304dabb49c08b60183a8e7c36cc_41"
+     "thumb": "1c92d304dabb49c08b60183a8e7c36cc_41",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww23634831",
+     "title": "Match the letter to its final form",
+     "type": "match",
+     "game": "Label it",
+     "own": {
+      "kind": "label",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "כ"
+       },
+       {
+        "a": "ם",
+        "b": "מ"
+       },
+       {
+        "a": "ן",
+        "b": "נ"
+       },
+       {
+        "a": "ף",
+        "b": "פ"
+       },
+       {
+        "a": "ץ",
+        "b": "צ"
+       }
+      ]
+     }
     },
     {
      "id": "23634831",
@@ -2435,7 +5329,132 @@
      "type": "match",
      "game": "Labelled diagram",
      "embed": "7cf82bf7d6b04a80ac9dda6767e16656?themeId=1",
-     "thumb": "7cf82bf7d6b04a80ac9dda6767e16656_0"
+     "thumb": "7cf82bf7d6b04a80ac9dda6767e16656_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww4741652",
+     "title": "Aleph through Resh",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "Aleph",
+        "b": "א"
+       },
+       {
+        "a": "Bet",
+        "b": "בּ"
+       },
+       {
+        "a": "Vet",
+        "b": "ב"
+       },
+       {
+        "a": "Gimel",
+        "b": "ג"
+       },
+       {
+        "a": "Dalet",
+        "b": "ד"
+       },
+       {
+        "a": "Hey",
+        "b": "ה"
+       },
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Zayn",
+        "b": "ז"
+       },
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "Kaf",
+        "b": "כּ"
+       },
+       {
+        "a": "Khaf",
+        "b": "כ"
+       },
+       {
+        "a": "Khaf soffit",
+        "b": "ך"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       },
+       {
+        "a": "Mem",
+        "b": "מ"
+       },
+       {
+        "a": "Mem soffit",
+        "b": "ם"
+       },
+       {
+        "a": "Nun",
+        "b": "נ"
+       },
+       {
+        "a": "Nun soffit",
+        "b": "ן"
+       },
+       {
+        "a": "Samech",
+        "b": "ס"
+       },
+       {
+        "a": "Ayn",
+        "b": "ע"
+       },
+       {
+        "a": "Pay",
+        "b": "פּ"
+       },
+       {
+        "a": "Fay",
+        "b": "פ"
+       },
+       {
+        "a": "Fay soffit",
+        "b": "ף"
+       },
+       {
+        "a": "Tsadee",
+        "b": "צ"
+       },
+       {
+        "a": "Tsadee soffit",
+        "b": "ץ"
+       },
+       {
+        "a": "Koof",
+        "b": "ק"
+       },
+       {
+        "a": "Resh",
+        "b": "ר"
+       }
+      ]
+     }
     },
     {
      "id": "4741652",
@@ -2444,7 +5463,100 @@
      "game": "Balloon pop",
      "embed": "166b2c06f6824a0eb126efb26dec05fd?themeId=22",
      "play": "4741/652/798",
-     "thumb": "166b2c06f6824a0eb126efb26dec05fd_0"
+     "thumb": "166b2c06f6824a0eb126efb26dec05fd_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww27667428",
+     "title": "Find the final letters",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "ץ",
+        "b": "Final letters"
+       },
+       {
+        "a": "ם",
+        "b": "Final letters"
+       },
+       {
+        "a": "ך",
+        "b": "Final letters"
+       },
+       {
+        "a": "ן",
+        "b": "Final letters"
+       },
+       {
+        "a": "ף",
+        "b": "Final letters"
+       },
+       {
+        "a": "צ",
+        "b": "Regular letters"
+       },
+       {
+        "a": "מ",
+        "b": "Regular letters"
+       },
+       {
+        "a": "כ",
+        "b": "Regular letters"
+       },
+       {
+        "a": "נ",
+        "b": "Regular letters"
+       },
+       {
+        "a": "פ",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ט",
+        "b": "Regular letters"
+       },
+       {
+        "a": "י",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ג",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ע",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ס",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ב",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ק",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ח",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ז",
+        "b": "Regular letters"
+       },
+       {
+        "a": "ש",
+        "b": "Regular letters"
+       }
+      ]
+     }
     },
     {
      "id": "27667428",
@@ -2453,7 +5565,36 @@
      "game": "True or false",
      "embed": "cfc6d5e5af554257b1bd2174c7f6b314?themeId=1",
      "play": "27667/428/205",
-     "thumb": "cfc6d5e5af554257b1bd2174c7f6b314_0"
+     "thumb": "cfc6d5e5af554257b1bd2174c7f6b314_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww13979841",
+     "title": "From Ayin to Koof only letters",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "Ayin",
+        "b": "ע"
+       },
+       {
+        "a": "Pay",
+        "b": "פּ"
+       },
+       {
+        "a": "Tzadee",
+        "b": "צ"
+       },
+       {
+        "a": "Koof",
+        "b": "ק"
+       }
+      ]
+     }
     },
     {
      "id": "13979841",
@@ -2461,7 +5602,59 @@
      "type": "match",
      "game": "Find the match",
      "embed": "d8563999544f4d89be06be80dd0cb64a?themeId=1",
-     "thumb": "d8563999544f4d89be06be80dd0cb64a_0"
+     "thumb": "d8563999544f4d89be06be80dd0cb64a_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww78507850",
+     "title": "Match אותיות סופיות",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "כ",
+        "b": "ך"
+       },
+       {
+        "a": "מ",
+        "b": "ם"
+       },
+       {
+        "a": "נ",
+        "b": "ן"
+       },
+       {
+        "a": "פ",
+        "b": "ף"
+       },
+       {
+        "a": "צ",
+        "b": "ץ"
+       },
+       {
+        "a": "כּ",
+        "b": "ךּ"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "כ": "Chaf",
+       "ך": "Final Chaf",
+       "מ": "Mem",
+       "ם": "Final Mem",
+       "נ": "Nun",
+       "ן": "Final Nun",
+       "פ": "Fey",
+       "ף": "Final Fey",
+       "צ": "Tzadik",
+       "ץ": "Final Tzadik",
+       "כּ": "Kaf"
+      }
+     },
+     "tip": "Match each letter to its final letter"
     },
     {
      "id": "78507850",
@@ -2470,7 +5663,40 @@
      "game": "Matching pairs",
      "tip": "Match each letter to its final letter.",
      "embed": "ce2f8e1c8f7443ad8cfa1613d101993c?themeId=65",
-     "thumb": "c0eb209434104a949a74e1b073a78031_0"
+     "thumb": "c0eb209434104a949a74e1b073a78031_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww78508023",
+     "title": "התאמת אותיות סופיות",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "ם",
+        "b": "מ"
+       },
+       {
+        "a": "ן",
+        "b": "נ"
+       },
+       {
+        "a": "ך",
+        "b": "כ"
+       },
+       {
+        "a": "ץ",
+        "b": "צ"
+       },
+       {
+        "a": "פ",
+        "b": "ף"
+       }
+      ]
+     }
     },
     {
      "id": "78508023",
@@ -2478,7 +5704,91 @@
      "type": "match",
      "game": "Find the match",
      "embed": "1beb00e73b334b79a9359c656876a7e3?themeId=46",
-     "thumb": "72a71929f0ed4054b7e2bbd8a0683a34_46"
+     "thumb": "72a71929f0ed4054b7e2bbd8a0683a34_46",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww94193075",
+     "title": "Wheel of letters אותיות סופיות",
+     "type": "cards",
+     "game": "Spin and answer",
+     "own": {
+      "kind": "spinquiz",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "נ",
+        "answers": [
+         "Nun is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "ץ",
+        "answers": [
+         "Final Tzaddik - Tzadik Sofit is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "ף",
+        "answers": [
+         "Final Fay- Fay Sofit is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "פ",
+        "answers": [
+         "Fay is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "מ",
+        "answers": [
+         "Mem is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "כ",
+        "answers": [
+         "Chaf is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "ן",
+        "answers": [
+         "Final Nun - Nun Sofit is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "ך",
+        "answers": [
+         "Final Chaf - Chaf Sofit is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "ם",
+        "answers": [
+         "Final Mem - Mem Sofit is correct",
+         "Incorrect"
+        ]
+       },
+       {
+        "q": "צ",
+        "answers": [
+         "Tzadik is correct",
+         "Incorrect"
+        ]
+       }
+      ]
+     },
+     "tip": "Say the name of the letter - tap and check to see if you got it correct"
     },
     {
      "id": "94193075",
@@ -2487,7 +5797,90 @@
      "game": "Spin the wheel",
      "tip": "Say the name of the letter - tap and check to see if you got it correct.",
      "embed": "ec21e735077343a2a00802021250633a?themeId=1",
-     "thumb": "9e758ddfbd71400298bfb6ca2a9fabc2_0"
+     "thumb": "9e758ddfbd71400298bfb6ca2a9fabc2_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-2-ww94297091",
+     "title": "Flying Fruit choose the correct letter",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "נ",
+        "answers": [
+         "Nun",
+         "Gimmel"
+        ]
+       },
+       {
+        "q": "ץ",
+        "answers": [
+         "Final Tzaddik - Tzadik Sofit is correct",
+         "Final Fey"
+        ]
+       },
+       {
+        "q": "ף",
+        "answers": [
+         "Final Fay- Fay Sofit is correct",
+         "Final Tzaddik"
+        ]
+       },
+       {
+        "q": "פ",
+        "answers": [
+         "Fay is correct",
+         "Pey"
+        ]
+       },
+       {
+        "q": "מ",
+        "answers": [
+         "Mem",
+         "Tet"
+        ]
+       },
+       {
+        "q": "כ",
+        "answers": [
+         "Chaf",
+         "Kaf"
+        ]
+       },
+       {
+        "q": "ן",
+        "answers": [
+         "Final Nun - Nun Sofit is correct",
+         "Vav"
+        ]
+       },
+       {
+        "q": "ך",
+        "answers": [
+         "Final Chaf - Chaf Sofit is correct",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "ם",
+        "answers": [
+         "Final Mem - Mem Sofit is correct",
+         "Samech"
+        ]
+       },
+       {
+        "q": "צ",
+        "answers": [
+         "Tzadik is correct",
+         "Ayin"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "94297091",
@@ -2495,7 +5888,8 @@
      "type": "arcade",
      "game": "Flying fruit",
      "embed": "67a6abeb9dec493eb61a567b9d3ac282?themeId=27",
-     "thumb": "67a6abeb9dec493eb61a567b9d3ac282_0"
+     "thumb": "67a6abeb9dec493eb61a567b9d3ac282_0",
+     "hidden": true
     }
    ],
    "3": [
@@ -3119,6 +6513,41 @@
      }
     },
     {
+     "id": "own-red-3-ww94302110",
+     "title": "Rank order from Yud to Sav R3",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "desert",
+      "items": [
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף",
+       "צ",
+       "ץ",
+       "ק",
+       "ר",
+       "שׁ",
+       "שׂ",
+       "תּ",
+       "ת"
+      ]
+     },
+     "tip": "Drag the letters to the boxes to put them in the correct order"
+    },
+    {
      "id": "94302110",
      "title": "Rank order from Yud to Sav R3",
      "type": "order",
@@ -3126,7 +6555,46 @@
      "tip": "Drag the letters to the boxes to put them in the correct order.",
      "embed": "98d9a1cc929042b28e1ca48f61b42322?themeId=1",
      "play": "94302/110/241",
-     "thumb": "98d9a1cc929042b28e1ca48f61b42322_0"
+     "thumb": "98d9a1cc929042b28e1ca48f61b42322_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww27328280",
+     "title": "Sin Vs. Shin",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "space",
+      "groups": [
+       {
+        "name": "Sin",
+        "items": [
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ"
+        ]
+       },
+       {
+        "name": "Shin",
+        "items": [
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "27328280",
@@ -3135,7 +6603,40 @@
      "game": "Group sort",
      "embed": "e1aecd7d7edd422fb13957d48dd390d8?themeId=1",
      "play": "27328/280/232",
-     "thumb": "e1aecd7d7edd422fb13957d48dd390d8_0"
+     "thumb": "e1aecd7d7edd422fb13957d48dd390d8_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww28185189",
+     "title": "shin and sin sorting",
+     "type": "sort",
+     "game": "Sort the table",
+     "own": {
+      "kind": "categorize",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "Shin 👞",
+        "items": [
+         "שׁ",
+         "שָׁ",
+         "שַׁ",
+         "שׁ",
+         "שַׁ"
+        ]
+       },
+       {
+        "name": "Sin ☀️",
+        "items": [
+         "שׂ",
+         "שָׂ",
+         "שַׂ",
+         "שׂ",
+         "שָׂ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "28185189",
@@ -3144,7 +6645,108 @@
      "game": "Categorize",
      "embed": "adc00e64cc8c401f94fb1b4b339b0ae9?themeId=1",
      "play": "28185/189/296",
-     "thumb": "adc00e64cc8c401f94fb1b4b339b0ae9_0"
+     "thumb": "adc00e64cc8c401f94fb1b4b339b0ae9_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww5939727",
+     "title": "Hebrew Aleph Bet",
+     "type": "match",
+     "game": "Label it",
+     "own": {
+      "kind": "label",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadee"
+       },
+       {
+        "a": "ק",
+        "b": "Koof"
+       },
+       {
+        "a": "ר",
+        "b": "Resh"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       }
+      ]
+     }
     },
     {
      "id": "5939727",
@@ -3153,7 +6755,84 @@
      "game": "Labelled diagram",
      "embed": "2ab93598e07a4d4caba2530b4062cfd9?themeId=41",
      "play": "5939/727/5490",
-     "thumb": "2ab93598e07a4d4caba2530b4062cfd9_41"
+     "thumb": "2ab93598e07a4d4caba2530b4062cfd9_41",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww32068686",
+     "title": "Shin and Sin",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       }
+      ]
+     }
     },
     {
      "id": "32068686",
@@ -3162,7 +6841,49 @@
      "game": "True or false",
      "embed": "c9c098324aba4dbbb69d1f0b97fcdba2?themeId=1",
      "play": "32068/686/789",
-     "thumb": "c9c098324aba4dbbb69d1f0b97fcdba2_0"
+     "thumb": "c9c098324aba4dbbb69d1f0b97fcdba2_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww94304286",
+     "title": "Shin Sin Match",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "שׁ"
+       },
+       {
+        "a": "שׂ",
+        "b": "שׂ"
+       },
+       {
+        "a": "שָׁ",
+        "b": "שָׁ"
+       },
+       {
+        "a": "שָׂ",
+        "b": "שָׂ"
+       },
+       {
+        "a": "שַׁ",
+        "b": "שַׁ"
+       },
+       {
+        "a": "שַׂ",
+        "b": "שַׂ"
+       }
+      ],
+      "speak": true,
+      "speech": {
+       "שׁ": "Shin",
+       "שׂ": "Sin"
+      }
+     }
     },
     {
      "id": "94304286",
@@ -3171,7 +6892,100 @@
      "game": "Matching pairs",
      "embed": "c459b7993fb94c69becb4ac4288e0f69?themeId=23",
      "play": "94304/286/703",
-     "thumb": "23e75e2408ec482897288a0c29ff61d1_46"
+     "thumb": "23e75e2408ec482897288a0c29ff61d1_46",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww6004456",
+     "title": "Alef Bet Match",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "ת",
+        "b": "Tav"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ש",
+        "b": "Shin"
+       },
+       {
+        "a": "ה",
+        "b": "Hay"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ℷ",
+        "b": "Gimel"
+       },
+       {
+        "a": "כּ",
+        "b": "Caf"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "ח",
+        "b": "cHet"
+       },
+       {
+        "a": "ר",
+        "b": "Resh"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "פּ",
+        "b": "Peh"
+       },
+       {
+        "a": "צ",
+        "b": "Tsadee"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "ק",
+        "b": "Kuf"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       }
+      ]
+     }
     },
     {
      "id": "6004456",
@@ -3180,7 +6994,36 @@
      "game": "Find the match",
      "embed": "8ea3c01a594643d2b5f029a5d9fe941a?themeId=46",
      "play": "6004/456/458",
-     "thumb": "8ea3c01a594643d2b5f029a5d9fe941a_46"
+     "thumb": "8ea3c01a594643d2b5f029a5d9fe941a_46",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww29161449",
+     "title": "123 Kriah 01 Page 16",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ר",
+        "b": "ר"
+       },
+       {
+        "a": "שׁ",
+        "b": "שׁ"
+       },
+       {
+        "a": "שׂ",
+        "b": "שׂ"
+       },
+       {
+        "a": "ת",
+        "b": "ת"
+       }
+      ]
+     }
     },
     {
      "id": "29161449",
@@ -3189,7 +7032,141 @@
      "game": "Matching pairs",
      "embed": "4012426970b84d7eaab66722006d148c?themeId=4",
      "play": "29161/449/958",
-     "thumb": "4012426970b84d7eaab66722006d148c_4"
+     "thumb": "4012426970b84d7eaab66722006d148c_4",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww25365076",
+     "title": "Win or Lose: Hebrew letters",
+     "type": "quiz",
+     "game": "Win or lose",
+     "own": {
+      "kind": "winlose",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "Find the Bet?",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ",
+         "כ",
+         "פּ",
+         "א"
+        ]
+       },
+       {
+        "q": "Find the Kaf?",
+        "answers": [
+         "כּ",
+         "בּ",
+         "כ",
+         "פּ",
+         "א",
+         "ב"
+        ]
+       },
+       {
+        "q": "Find the Pey?",
+        "answers": [
+         "פּ",
+         "פ",
+         "כּ",
+         "בּ",
+         "א",
+         "ב"
+        ]
+       },
+       {
+        "q": "Find the Fey?",
+        "answers": [
+         "פ",
+         "פּ",
+         "כ",
+         "ב",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Shin?",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ע",
+         "ט",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Tav?",
+        "answers": [
+         "תּ",
+         "ת",
+         "ח",
+         "ה",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Dalet?",
+        "answers": [
+         "ד",
+         "ר",
+         "ך",
+         "ה",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Mem?",
+        "answers": [
+         "מ",
+         "ט",
+         "ם",
+         "ס",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Tet?",
+        "answers": [
+         "ט",
+         "מ",
+         "ס",
+         "ם",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Gimel?",
+        "answers": [
+         "ג",
+         "נ",
+         "ז",
+         "ו",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Samech?",
+        "answers": [
+         "ס",
+         "ם",
+         "ט",
+         "מ",
+         "א",
+         "בּ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "25365076",
@@ -3198,7 +7175,41 @@
      "game": "Win or lose quiz",
      "embed": "8836ee78b1c8472baffbe7f3b4419c89?themeId=1",
      "play": "25365/076/968",
-     "thumb": "8836ee78b1c8472baffbe7f3b4419c89_0"
+     "thumb": "8836ee78b1c8472baffbe7f3b4419c89_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww59699648",
+     "title": "Find the letter Sin",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "space",
+      "prompt": "Tap the moles that have the letter SIN",
+      "groups": [
+       {
+        "name": "Correct",
+        "items": [
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ"
+        ]
+       },
+       {
+        "name": "Incorrect",
+        "items": [
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "59699648",
@@ -3208,7 +7219,47 @@
      "tip": "Tap the moles that have the letter SIN.",
      "embed": "7f08d601ab164652b6d4765af7b68ff1?themeId=23",
      "play": "59699/648/878",
-     "thumb": "7f08d601ab164652b6d4765af7b68ff1_23b"
+     "thumb": "7f08d601ab164652b6d4765af7b68ff1_23b",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww8506651",
+     "title": "where is Shin?",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "meadow",
+      "prompt": "press only the letter Shin",
+      "groups": [
+       {
+        "name": "Correct",
+        "items": [
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ",
+         "שׁ"
+        ]
+       },
+       {
+        "name": "Incorrect",
+        "items": [
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ",
+         "שׂ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "8506651",
@@ -3217,7 +7268,84 @@
      "game": "Whack-a-mole",
      "tip": "Press only the letter Shin.",
      "embed": "6d81e8641dd74aa68d52267d8759c5b9?themeId=23",
-     "thumb": "6d81e8641dd74aa68d52267d8759c5b9_23b"
+     "thumb": "6d81e8641dd74aa68d52267d8759c5b9_23b",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww38881871",
+     "title": "Sin Vs. Shin",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       }
+      ]
+     }
     },
     {
      "id": "38881871",
@@ -3226,7 +7354,144 @@
      "game": "Balloon pop",
      "embed": "d30bae9c761143d8a9702cad2d48a00b?themeId=22",
      "play": "38881/871/372",
-     "thumb": "d30bae9c761143d8a9702cad2d48a00b_0"
+     "thumb": "d30bae9c761143d8a9702cad2d48a00b_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww3544173",
+     "title": "Hebrew Ballon Pop:Aleph Bet",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Aleph"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "ב",
+        "b": "Vet"
+       },
+       {
+        "a": "ג",
+        "b": "Gimel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vav"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Chet"
+       },
+       {
+        "a": "ט",
+        "b": "Tet"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadee"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadee"
+       },
+       {
+        "a": "ק",
+        "b": "Koof"
+       },
+       {
+        "a": "ר",
+        "b": "Resh"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       }
+      ]
+     }
     },
     {
      "id": "3544173",
@@ -3235,7 +7500,128 @@
      "game": "Balloon pop",
      "embed": "460612cd188849bb907eb0e581ef23d2?themeId=4",
      "play": "3544/173/1963",
-     "thumb": "460612cd188849bb907eb0e581ef23d2_4"
+     "thumb": "460612cd188849bb907eb0e581ef23d2_4",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww12167875",
+     "title": "Aleph Bet Chart",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "Chet",
+        "b": "ח"
+       },
+       {
+        "a": "Tet",
+        "b": "ט"
+       },
+       {
+        "a": "Zayin",
+        "b": "ז"
+       },
+       {
+        "a": "Vav",
+        "b": "ו"
+       },
+       {
+        "a": "Hey",
+        "b": "ה"
+       },
+       {
+        "a": "Dalet",
+        "b": "ד"
+       },
+       {
+        "a": "Gimel",
+        "b": "ג"
+       },
+       {
+        "a": "Bet/Vet",
+        "b": "בּ ב"
+       },
+       {
+        "a": "Aleph",
+        "b": "א"
+       },
+       {
+        "a": "Yud",
+        "b": "י"
+       },
+       {
+        "a": "Samach",
+        "b": "ס"
+       },
+       {
+        "a": "Final Nun",
+        "b": "ן"
+       },
+       {
+        "a": "Nun",
+        "b": "נ"
+       },
+       {
+        "a": "Final Mem",
+        "b": "ם"
+       },
+       {
+        "a": "Mem",
+        "b": "מ"
+       },
+       {
+        "a": "Lamed",
+        "b": "ל"
+       },
+       {
+        "a": "Final Chaf",
+        "b": "ך"
+       },
+       {
+        "a": "Kaf/Chaf",
+        "b": "כּ כ"
+       },
+       {
+        "a": "Tav/Tav",
+        "b": "תּ ת"
+       },
+       {
+        "a": "Shin/Sin",
+        "b": "שׁ שׂ"
+       },
+       {
+        "a": "Resh",
+        "b": "ר"
+       },
+       {
+        "a": "Koof",
+        "b": "ק"
+       },
+       {
+        "a": "Final Tzadi",
+        "b": "ץ"
+       },
+       {
+        "a": "Tzadi",
+        "b": "צ"
+       },
+       {
+        "a": "Final Fey",
+        "b": "ף"
+       },
+       {
+        "a": "Pay/Fey",
+        "b": "פּ פ"
+       },
+       {
+        "a": "Ayin",
+        "b": "ע"
+       }
+      ]
+     }
     },
     {
      "id": "12167875",
@@ -3244,7 +7630,68 @@
      "game": "Balloon pop",
      "embed": "9ea26b15470f4302991ca446d4853554?themeId=22",
      "play": "12167/875/303",
-     "thumb": "9ea26b15470f4302991ca446d4853554_0"
+     "thumb": "9ea26b15470f4302991ca446d4853554_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww2774293",
+     "title": "אותיות כ-ת",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "כ",
+        "b": "כ"
+       },
+       {
+        "a": "ל",
+        "b": "ל"
+       },
+       {
+        "a": "מ",
+        "b": "מ"
+       },
+       {
+        "a": "נ",
+        "b": "נ"
+       },
+       {
+        "a": "ס",
+        "b": "ס"
+       },
+       {
+        "a": "ע",
+        "b": "ע"
+       },
+       {
+        "a": "פ",
+        "b": "פ"
+       },
+       {
+        "a": "צ",
+        "b": "צ"
+       },
+       {
+        "a": "ק",
+        "b": "ק"
+       },
+       {
+        "a": "ר",
+        "b": "ר"
+       },
+       {
+        "a": "ש",
+        "b": "ש"
+       },
+       {
+        "a": "ת",
+        "b": "ת"
+       }
+      ]
+     }
     },
     {
      "id": "2774293",
@@ -3253,7 +7700,92 @@
      "game": "Balloon pop",
      "embed": "42089d9d76cb4389b09ae804179d0e7b?themeId=22",
      "play": "2774/293/888",
-     "thumb": "42089d9d76cb4389b09ae804179d0e7b_0"
+     "thumb": "42089d9d76cb4389b09ae804179d0e7b_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww29629668",
+     "title": "Balloon Pop: Look Alike Hebrew Letters",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "בּ",
+        "b": "Find the Bet?"
+       },
+       {
+        "a": "ב",
+        "b": "Find the Vet?"
+       },
+       {
+        "a": "כ",
+        "b": "Find theChaf?"
+       },
+       {
+        "a": "כּ",
+        "b": "Find the Kaf?"
+       },
+       {
+        "a": "פּ",
+        "b": "Find the Pey?"
+       },
+       {
+        "a": "פ",
+        "b": "Find the Fey?"
+       },
+       {
+        "a": "תּ",
+        "b": "Find the Tav?"
+       },
+       {
+        "a": "ר",
+        "b": "Find the Resh?"
+       },
+       {
+        "a": "ה",
+        "b": "Find the Hey?"
+       },
+       {
+        "a": "תּ",
+        "b": "Find the Tav?"
+       },
+       {
+        "a": "ח",
+        "b": "Find the Chet?"
+       },
+       {
+        "a": "ו",
+        "b": "Find the Vav?"
+       },
+       {
+        "a": "ז",
+        "b": "Find the Zayin?"
+       },
+       {
+        "a": "מ",
+        "b": "Find the Mem?"
+       },
+       {
+        "a": "ם",
+        "b": "Find the Final Mem?"
+       },
+       {
+        "a": "ט",
+        "b": "Find the Tet?"
+       },
+       {
+        "a": "ס",
+        "b": "Find the Samech?"
+       },
+       {
+        "a": "ק",
+        "b": "Find the Koof?"
+       }
+      ]
+     }
     },
     {
      "id": "29629668",
@@ -3262,7 +7794,148 @@
      "game": "Balloon pop",
      "embed": "c05e54cd1d8245ed89962dc8bb6d63b7?themeId=22",
      "play": "29629/668/836",
-     "thumb": "c05e54cd1d8245ed89962dc8bb6d63b7_0"
+     "thumb": "c05e54cd1d8245ed89962dc8bb6d63b7_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww59699899",
+     "title": "Double Sided Letters Aleph-Tav Flash Cards",
+     "type": "cards",
+     "game": "Flip cards",
+     "own": {
+      "kind": "flip",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "ALEF"
+       },
+       {
+        "a": "בּ",
+        "b": "BET"
+       },
+       {
+        "a": "ב",
+        "b": "VET"
+       },
+       {
+        "a": "ג",
+        "b": "GIMMEL"
+       },
+       {
+        "a": "ד",
+        "b": "DALET"
+       },
+       {
+        "a": "ה",
+        "b": "HEY"
+       },
+       {
+        "a": "ו",
+        "b": "VAV"
+       },
+       {
+        "a": "ז",
+        "b": "ZAYIN"
+       },
+       {
+        "a": "ח",
+        "b": "CHET"
+       },
+       {
+        "a": "ט",
+        "b": "TET"
+       },
+       {
+        "a": "י",
+        "b": "YUD"
+       },
+       {
+        "a": "כּ",
+        "b": "KAF"
+       },
+       {
+        "a": "כ",
+        "b": "CHAF"
+       },
+       {
+        "a": "ך",
+        "b": "FINAL CHAF"
+       },
+       {
+        "a": "ל",
+        "b": "LAMED"
+       },
+       {
+        "a": "מ",
+        "b": "MEM"
+       },
+       {
+        "a": "ם",
+        "b": "FINAL MEM"
+       },
+       {
+        "a": "נ",
+        "b": "NUN"
+       },
+       {
+        "a": "ן",
+        "b": "FINAL NUN"
+       },
+       {
+        "a": "ס",
+        "b": "SAMECH"
+       },
+       {
+        "a": "ע",
+        "b": "AYIN"
+       },
+       {
+        "a": "פּ",
+        "b": "PEY"
+       },
+       {
+        "a": "פ",
+        "b": "FEY"
+       },
+       {
+        "a": "ף",
+        "b": "FINAL FEY"
+       },
+       {
+        "a": "צ",
+        "b": "TZADIK"
+       },
+       {
+        "a": "ץ",
+        "b": "FINAL TZADIK"
+       },
+       {
+        "a": "ק",
+        "b": "KUF"
+       },
+       {
+        "a": "ר",
+        "b": "REISH"
+       },
+       {
+        "a": "שׁ",
+        "b": "SHIN"
+       },
+       {
+        "a": "שׂ",
+        "b": "SIN"
+       },
+       {
+        "a": "תּ",
+        "b": "TAV"
+       },
+       {
+        "a": "ת",
+        "b": "TAV"
+       }
+      ]
+     }
     },
     {
      "id": "59699899",
@@ -3271,7 +7944,76 @@
      "game": "Flash cards",
      "embed": "2b678c7a036b4015bf4d299467034cd4?themeId=2",
      "play": "59699/899/709",
-     "thumb": "2b678c7a036b4015bf4d299467034cd4_2"
+     "thumb": "2b678c7a036b4015bf4d299467034cd4_2",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww94305103",
+     "title": "Letter Flash cards with sound",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "space",
+      "items": [
+       "א",
+       "ב",
+       "בּ",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ל",
+       "מ",
+       "נ",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "צ",
+       "ק",
+       "ר",
+       "שׁ",
+       "ֹש",
+       "ת",
+       "תּ"
+      ],
+      "speak": true,
+      "speech": {
+       "א": "Aleph",
+       "ב": "Vet",
+       "בּ": "Bet",
+       "ג": "Gimmel",
+       "ד": "Dalet",
+       "ה": "Hey",
+       "ו": "Vav",
+       "ז": "Zayin",
+       "ח": "Chet",
+       "ט": "Tet",
+       "י": "Yud",
+       "כּ": "Kaf",
+       "כ": "Chaf",
+       "ל": "Lamed",
+       "מ": "Mem",
+       "נ": "Nun",
+       "ס": "Samech",
+       "ע": "Ayin",
+       "פּ": "Pey",
+       "פ": "Fey",
+       "צ": "Tzadik",
+       "ק": "Kuf",
+       "ר": "Reish",
+       "שׁ": "Shin",
+       "ת": "Sav",
+       "תּ": "Tav"
+      }
+     }
     },
     {
      "id": "94305103",
@@ -3280,7 +8022,140 @@
      "game": "Speaking cards",
      "embed": "19eb20aeef1640fd8fc4caf983abe098?themeId=2",
      "play": "94305/103/231",
-     "thumb": "bb65bfd2adba415eba2db79aecd9b74f_2"
+     "thumb": "bb65bfd2adba415eba2db79aecd9b74f_2",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww29591713",
+     "title": "Find the Correct Hebrew Letter",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "Where is the Letter PAY?",
+        "answers": [
+         "פּ",
+         "שׂ",
+         "כּ",
+         "בּ",
+         "פ"
+        ]
+       },
+       {
+        "q": "Where is the Letter AYIN?",
+        "answers": [
+         "ע",
+         "א",
+         "ז",
+         "ה",
+         "ם"
+        ]
+       },
+       {
+        "q": "Where is the Letter TAV?",
+        "answers": [
+         "ת",
+         "ח",
+         "מ",
+         "שׂ",
+         "ג"
+        ]
+       },
+       {
+        "q": "Where is the Letter DALET?",
+        "answers": [
+         "ד",
+         "ך",
+         "ר",
+         "ו",
+         "י"
+        ]
+       },
+       {
+        "q": "Where is the Letter SHIN?",
+        "answers": [
+         "שׁ",
+         "ק",
+         "ס",
+         "ט",
+         "שׂ"
+        ]
+       },
+       {
+        "q": "Where is the Letter TET?",
+        "answers": [
+         "ט",
+         "ת",
+         "מ",
+         "ר",
+         "פ"
+        ]
+       },
+       {
+        "q": "Where is the Letter TZADEE?",
+        "answers": [
+         "צ",
+         "ק",
+         "ץ",
+         "ף",
+         "ל"
+        ]
+       },
+       {
+        "q": "Where is the Letter KUF?",
+        "answers": [
+         "ק",
+         "ע",
+         "נ",
+         "ח",
+         "ב"
+        ]
+       },
+       {
+        "q": "Where is the Letter VET?",
+        "answers": [
+         "ב",
+         "כ",
+         "ר",
+         "ם",
+         "נ"
+        ]
+       },
+       {
+        "q": "Where is the Leter HAY?",
+        "answers": [
+         "ה",
+         "ת",
+         "ח",
+         "מ",
+         "ד"
+        ]
+       },
+       {
+        "q": "Where is the Letter YUD?",
+        "answers": [
+         "י",
+         "ן",
+         "ו",
+         "ז",
+         "א"
+        ]
+       },
+       {
+        "q": "Where is the Letter SAMECH?",
+        "answers": [
+         "ס",
+         "שׂ",
+         "ה",
+         "ם",
+         "ץ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "29591713",
@@ -3289,7 +8164,26 @@
      "game": "Airplane",
      "embed": "567cab4a981742fc9196b3160f59b741?themeId=46",
      "play": "29591/713/498",
-     "thumb": "567cab4a981742fc9196b3160f59b741_0"
+     "thumb": "567cab4a981742fc9196b3160f59b741_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww59698302",
+     "title": "Put the letters in order from RIGHT to LEFT",
+     "type": "order",
+     "game": "Build the word",
+     "own": {
+      "kind": "anagram",
+      "theme": "ocean",
+      "items": [
+       "אבּבגדה",
+       "וזחטי",
+       "כּכלמם",
+       "צקרשׁשׂ",
+       "נןסעפּפף",
+       "שׁשׁתּת"
+      ]
+     }
     },
     {
      "id": "59698302",
@@ -3298,7 +8192,142 @@
      "game": "Anagram",
      "embed": "0352fee4d42e421ba62482513dd994d6?themeId=50",
      "play": "59698/302/294",
-     "thumb": "0352fee4d42e421ba62482513dd994d6_50"
+     "thumb": "0352fee4d42e421ba62482513dd994d6_50",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww94305897",
+     "title": "Find the Hebrew letters Quiz with Sound",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "Find the Bet?",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ",
+         "כ",
+         "פּ",
+         "א"
+        ]
+       },
+       {
+        "q": "Find the Kaf?",
+        "answers": [
+         "כּ",
+         "בּ",
+         "כ",
+         "פּ",
+         "א",
+         "ב"
+        ]
+       },
+       {
+        "q": "Find the Pey?",
+        "answers": [
+         "פּ",
+         "פ",
+         "כּ",
+         "בּ",
+         "א",
+         "ב"
+        ]
+       },
+       {
+        "q": "Find the Fey?",
+        "answers": [
+         "פ",
+         "פּ",
+         "כ",
+         "ב",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Shin?",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ע",
+         "ט",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Tav?",
+        "answers": [
+         "תּ",
+         "ת",
+         "ח",
+         "ה",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Dalet?",
+        "answers": [
+         "ד",
+         "ר",
+         "ך",
+         "ה",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Mem?",
+        "answers": [
+         "מ",
+         "ט",
+         "ם",
+         "ס",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Tet?",
+        "answers": [
+         "ט",
+         "מ",
+         "ס",
+         "ם",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Gimel?",
+        "answers": [
+         "ג",
+         "נ",
+         "ז",
+         "ו",
+         "א",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Find the Samech?",
+        "answers": [
+         "ס",
+         "ם",
+         "ט",
+         "מ",
+         "א",
+         "בּ"
+        ]
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94305897",
@@ -3307,7 +8336,92 @@
      "game": "Quiz",
      "embed": "96380917dd114167ade84ba3bd443382?themeId=2",
      "play": "94305/897/197",
-     "thumb": "96380917dd114167ade84ba3bd443382_2"
+     "thumb": "96380917dd114167ade84ba3bd443382_2",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww59699751",
+     "title": "Hebrew letter Balloon pop",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "בּ",
+        "b": "Find the Bet?"
+       },
+       {
+        "a": "ב",
+        "b": "Find the Vet?"
+       },
+       {
+        "a": "ר",
+        "b": "Find the Resh?"
+       },
+       {
+        "a": "תּ",
+        "b": "Find the Tav?"
+       },
+       {
+        "a": "ה",
+        "b": "Find the Hey?"
+       },
+       {
+        "a": "ק",
+        "b": "Find the Koof?"
+       },
+       {
+        "a": "ל",
+        "b": "Find the Lamed?"
+       },
+       {
+        "a": "מ",
+        "b": "Find the Mem?"
+       },
+       {
+        "a": "שׁ",
+        "b": "Find the Shin?"
+       },
+       {
+        "a": "א",
+        "b": "Find the Aleph?"
+       },
+       {
+        "a": "ו",
+        "b": "Find the Vav?"
+       },
+       {
+        "a": "ד",
+        "b": "Find the Dalet?"
+       },
+       {
+        "a": "כּ",
+        "b": "Find the Kaf?"
+       },
+       {
+        "a": "ע",
+        "b": "Find the Ayin?"
+       },
+       {
+        "a": "נ",
+        "b": "Find the Nun?"
+       },
+       {
+        "a": "ן",
+        "b": "Find the Final Nun?"
+       },
+       {
+        "a": "ח",
+        "b": "Find the Chet?"
+       },
+       {
+        "a": "י",
+        "b": "Find the Yud?"
+       }
+      ]
+     }
     },
     {
      "id": "59699751",
@@ -3316,7 +8430,84 @@
      "game": "Balloon pop",
      "embed": "953d6d79a2b64c089050cdf84c5f882d?themeId=22",
      "play": "59699/751/306",
-     "thumb": "953d6d79a2b64c089050cdf84c5f882d_0"
+     "thumb": "953d6d79a2b64c089050cdf84c5f882d_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww66430453",
+     "title": "Sin Vs. Shin",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       }
+      ]
+     }
     },
     {
      "id": "66430453",
@@ -3325,7 +8516,38 @@
      "game": "True or false",
      "embed": "3186dad5715f4360b2a35784f547ba14?themeId=48",
      "play": "66430/453/205",
-     "thumb": "3186dad5715f4360b2a35784f547ba14_48"
+     "thumb": "3186dad5715f4360b2a35784f547ba14_48",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww85091278",
+     "title": "Shin and Sin",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "ocean",
+      "groups": [
+       {
+        "name": "Sin",
+        "items": [
+         "שִׂמְחָה",
+         "עֶשֶׂר",
+         "שָׂרָה",
+         "יִשְׂרָאֵל"
+        ]
+       },
+       {
+        "name": "Shin",
+        "items": [
+         "שַׁבָּת",
+         "קִדּוּשׁ",
+         "מִשְׁפָּחָה",
+         "שֶׁקֶל"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "85091278",
@@ -3334,7 +8556,44 @@
      "game": "Group sort",
      "embed": "7708b419a72e4df88e547cdffd16e96b?themeId=1",
      "play": "85091/278/864",
-     "thumb": "7708b419a72e4df88e547cdffd16e96b_0"
+     "thumb": "7708b419a72e4df88e547cdffd16e96b_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww9124068",
+     "title": "Shin and Sin Matching game",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "שׁ"
+       },
+       {
+        "a": "שׂ",
+        "b": "שׂ"
+       },
+       {
+        "a": "שָׁ",
+        "b": "שָׁ"
+       },
+       {
+        "a": "שָׂ",
+        "b": "שָׂ"
+       },
+       {
+        "a": "שַׁ",
+        "b": "שַׁ"
+       },
+       {
+        "a": "שַׂ",
+        "b": "שַׂ"
+       }
+      ]
+     }
     },
     {
      "id": "9124068",
@@ -3343,7 +8602,166 @@
      "game": "Matching pairs",
      "embed": "5b854432f1a146dfbd5d3e3dc77e1c98?themeId=66",
      "play": "9124/068/524",
-     "thumb": "5b854432f1a146dfbd5d3e3dc77e1c98_21"
+     "thumb": "5b854432f1a146dfbd5d3e3dc77e1c98_21",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww94307410",
+     "title": "Flying fruit Shin or Sin",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "space",
+      "questions": [
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Sin",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       },
+       {
+        "q": "Find the Shin",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ס",
+         "ע"
+        ]
+       }
+      ],
+      "speak": true
+     },
+     "tip": "Tap on the correct answer. Is it a SSSShhhin ? or a SSSSiiin?"
     },
     {
      "id": "94307410",
@@ -3353,7 +8771,25 @@
      "tip": "Tap on the correct answer. Is it a SSSShhhin? or a SSSSiiin?",
      "embed": "1cb24c5776fd453491aa8157da50f046?themeId=27",
      "play": "94307/410/915",
-     "thumb": "1cb24c5776fd453491aa8157da50f046_0"
+     "thumb": "1cb24c5776fd453491aa8157da50f046_0",
+     "hidden": true
+    },
+    {
+     "id": "own-red-3-ww94308329",
+     "title": "Missing Letter R3",
+     "type": "quiz",
+     "game": "Fill the gaps",
+     "own": {
+      "kind": "gaps",
+      "theme": "meadow",
+      "sentences": [
+       "[א] בּ ב ג ד [ה] ו ז ח ט י [כּ] כ ךְ ל מ ם [נ] ן ס ע פּ פ ף [צ] ץ ק ר שׁ שֹ תּ [ת]",
+       "א בּ [ב] ג ד ה ו [ז] ח ט [י] כּ כ ךְ ל מ [ם] נ [ן] ס ע פּ [פ] ף צ [ץ] ק ר שׁ שֹ תּ [ת]",
+       "א בּ ב ג ד ה ו [ז] [ח] ט י כּ [כ] ךְ ל מ ם נ ן [ס] ע פּ פ ף [צ] ץ ק ר שׁ [שֹ] תּ ת",
+       "א [בּ] [ב] ג ד ה ו ז ח ט י [כּ] [כ] ךְ ל מ ם נ ן ס ע [פּ] [פ] ף צ ץ ק ר [שׁ] [שֹ] תּ ת"
+      ]
+     },
+     "tip": "Drag to fill in the missing letter"
     },
     {
      "id": "94308329",
@@ -3363,7 +8799,8 @@
      "tip": "Drag to fill in the missing letter.",
      "embed": "18330cb69faf420d99293b3a2e69dd8b?themeId=50",
      "play": "94308/329/520",
-     "thumb": "0e85fcda729343d58a0d5083d744cacb_0"
+     "thumb": "0e85fcda729343d58a0d5083d744cacb_0",
+     "hidden": true
     }
    ]
   },
@@ -3619,6 +9056,83 @@
      }
     },
     {
+     "id": "own-orange-1-ww62269918",
+     "title": "Kamatz Whack-a-Mole",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "ocean",
+      "prompt": "Tap the cards with the KUMATZ Vowel",
+      "groups": [
+       {
+        "name": "Correct",
+        "items": [
+         "אָ",
+         "בָּ",
+         "בָ",
+         "גָ",
+         "דָ",
+         "הָ",
+         "וָ",
+         "זָ",
+         "חָ",
+         "טָ",
+         "יָ",
+         "כָּ",
+         "כָ",
+         "לָ",
+         "מָ",
+         "נָ",
+         "סָ",
+         "עָ",
+         "פָּ",
+         "פָ",
+         "צָ",
+         "קָ",
+         "רָ",
+         "שָׁ",
+         "שָׂ",
+         "תָּ",
+         "תָ"
+        ]
+       },
+       {
+        "name": "Incorrect",
+        "items": [
+         "אַ",
+         "בֵּ",
+         "בֶ",
+         "גְ",
+         "דֹ",
+         "הִ",
+         "וֻ",
+         "זַ",
+         "חֵ",
+         "טֶ",
+         "יְ",
+         "כֹּ",
+         "כִ",
+         "לֻ",
+         "מַ",
+         "נֵ",
+         "סֶ",
+         "עְ",
+         "פֹּ",
+         "פִ",
+         "צֻ",
+         "קַ",
+         "רֵ",
+         "שֶׁ",
+         "שְׂ",
+         "תְּ",
+         "תֹ"
+        ]
+       }
+      ]
+     }
+    },
+    {
      "id": "62269918",
      "title": "Kamatz Whack-a-Mole",
      "type": "arcade",
@@ -3626,7 +9140,128 @@
      "tip": "Tap the cards with the KUMATZ Vowel.",
      "embed": "51273b8d55314041b929b99e1bc131be?themeId=1",
      "play": "62269/918/477",
-     "thumb": "51273b8d55314041b929b99e1bc131be_1"
+     "thumb": "51273b8d55314041b929b99e1bc131be_1",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww18981842",
+     "title": "letter plus kamatz",
+     "type": "cards",
+     "game": "Open a box quiz",
+     "own": {
+      "kind": "boxquiz",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "bah",
+        "answers": [
+         "בָּ",
+         "חָ",
+         "לָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Lah",
+        "answers": [
+         "לָ",
+         "מָ",
+         "דָ",
+         "הָ"
+        ]
+       },
+       {
+        "q": "gah",
+        "answers": [
+         "גָ",
+         "נָ",
+         "לָ",
+         "סָ"
+        ]
+       },
+       {
+        "q": "nah",
+        "answers": [
+         "נָ",
+         "גָ",
+         "צָ",
+         "יָ"
+        ]
+       },
+       {
+        "q": "dah",
+        "answers": [
+         "דָ",
+         "כָ",
+         "רָ",
+         "לָ"
+        ]
+       },
+       {
+        "q": "rah",
+        "answers": [
+         "רָ",
+         "עָ",
+         "פָ",
+         "גָ"
+        ]
+       },
+       {
+        "q": "fah",
+        "answers": [
+         "פָ",
+         "גָ",
+         "זָ",
+         "נָ"
+        ]
+       },
+       {
+        "q": "zah",
+        "answers": [
+         "זָ",
+         "סָ",
+         "הָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "mah",
+        "answers": [
+         "מָ",
+         "זָ",
+         "אָ",
+         "לָ"
+        ]
+       },
+       {
+        "q": "aah",
+        "answers": [
+         "אָ",
+         "קָ",
+         "טָ",
+         "וָ"
+        ]
+       },
+       {
+        "q": "yah",
+        "answers": [
+         "יָ",
+         "חָ",
+         "עָ",
+         "גָ"
+        ]
+       },
+       {
+        "q": "shah",
+        "answers": [
+         "שָׁ",
+         "בָ",
+         "הָ",
+         "נָ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "18981842",
@@ -3635,7 +9270,46 @@
      "game": "Open the box",
      "embed": "8e3f172d192b479f91fde3c718cd5d97?themeId=65",
      "play": "18981/842/830",
-     "thumb": "8e3f172d192b479f91fde3c718cd5d97_0"
+     "thumb": "8e3f172d192b479f91fde3c718cd5d97_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww62270115",
+     "title": "Alef Bet Gan 30.4",
+     "type": "cards",
+     "game": "Open a box",
+     "own": {
+      "kind": "openbox",
+      "theme": "space",
+      "items": [
+       "אָ",
+       "בָּ",
+       "בָ",
+       "גָ",
+       "דָ",
+       "הָ",
+       "וָ",
+       "זָ",
+       "חָ",
+       "טָ",
+       "יָ",
+       "כָּ",
+       "כָ",
+       "לָ",
+       "מָ",
+       "נָ",
+       "סָ",
+       "עָ",
+       "פָּ",
+       "פָ",
+       "צָ",
+       "קָ",
+       "רָ",
+       "שָׁ",
+       "תָּ"
+      ]
+     },
+     "tip": "Tap and read the vowel and letter"
     },
     {
      "id": "62270115",
@@ -3645,7 +9319,38 @@
      "tip": "Tap and read the vowel and letter.",
      "embed": "7e55355e43ac4b75ac143d4bac350e7e?themeId=46",
      "play": "62270/115/596",
-     "thumb": "7e55355e43ac4b75ac143d4bac350e7e_46"
+     "thumb": "7e55355e43ac4b75ac143d4bac350e7e_46",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww38552490",
+     "title": "Alef Bet Gan K 18.7",
+     "type": "match",
+     "game": "Watch and remember",
+     "own": {
+      "kind": "watch",
+      "theme": "meadow",
+      "items": [
+       "אָ",
+       "בָּ",
+       "בָ",
+       "גָ",
+       "דָ",
+       "הָ",
+       "וָ",
+       "זָ",
+       "חָ",
+       "טָ",
+       "יָ",
+       "כָּ",
+       "כָ",
+       "לָ",
+       "מָ",
+       "נָ",
+       "סָ",
+       "עָ"
+      ]
+     }
     },
     {
      "id": "38552490",
@@ -3654,7 +9359,174 @@
      "game": "Watch and memorize",
      "embed": "8ca49ded68544d34b2e9ee91d9d71b74?themeId=1",
      "play": "38552/490/541",
-     "thumb": "8ca49ded68544d34b2e9ee91d9d71b74_0"
+     "thumb": "8ca49ded68544d34b2e9ee91d9d71b74_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww6027501",
+     "title": "Lesson 3: Swim into the Hebrew letter",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "Find the \"Bah\" Sound",
+        "answers": [
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"Shah\" Sound",
+        "answers": [
+         "שָׁ",
+         "בָּ",
+         "הָ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"Hah\" Sound",
+        "answers": [
+         "הָ",
+         "בָּ",
+         "שָׁ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"Kah\" Sound",
+        "answers": [
+         "כָּ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"Tah\" Sound",
+        "answers": [
+         "טָ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"T\" Sound",
+        "answers": [
+         "ט",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"B\" Sound",
+        "answers": [
+         "בּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"H\" Sound",
+        "answers": [
+         "ה",
+         "בָּ",
+         "שָׁ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"SH\" Sound",
+        "answers": [
+         "שׁ",
+         "בָּ",
+         "הָ",
+         "כָּ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"K\" Sound",
+        "answers": [
+         "כּ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Find the \"M\" Sound",
+        "answers": [
+         "מ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ"
+        ]
+       },
+       {
+        "q": "Find the \"L\" Sound",
+        "answers": [
+         "ל",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ"
+        ]
+       },
+       {
+        "q": "Find the \"Mah\" Sound",
+        "answers": [
+         "מָ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ"
+        ]
+       },
+       {
+        "q": "Find the \"Lah\" sound",
+        "answers": [
+         "לָ",
+         "בָּ",
+         "שָׁ",
+         "הָ",
+         "כָּ",
+         "טָ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "6027501",
@@ -3663,7 +9535,218 @@
      "game": "Airplane",
      "embed": "a03febabefb3459bbc0499542ddb4a51?themeId=55",
      "play": "6027/501/538",
-     "thumb": "a03febabefb3459bbc0499542ddb4a51_55"
+     "thumb": "a03febabefb3459bbc0499542ddb4a51_55",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww72337792",
+     "title": "Flying Fruit Kumatz O1",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "Kumatz Alef = \"Ah\"",
+        "answers": [
+         "אָ",
+         "מָ",
+         "יָ",
+         "כָ"
+        ]
+       },
+       {
+        "q": "Kumatz Bet = \"Bah\"",
+        "answers": [
+         "בָּ",
+         "סָ",
+         "רָ",
+         "שָׁ"
+        ]
+       },
+       {
+        "q": "Kumatz Vet = \"Vah\"",
+        "answers": [
+         "בָ",
+         "פָ",
+         "רָ",
+         "כָ"
+        ]
+       },
+       {
+        "q": "Kumatz Gimmel = \"Gah\"",
+        "answers": [
+         "גָ",
+         "נָ",
+         "שָׁ",
+         "וָ"
+        ]
+       },
+       {
+        "q": "Kumatz Daled = \"Dah\"",
+        "answers": [
+         "דָ",
+         "בָּ",
+         "חָ",
+         "עָ"
+        ]
+       },
+       {
+        "q": "Kumatz Hay = \"Hah\"",
+        "answers": [
+         "הָ",
+         "תָ",
+         "פָ",
+         "סָ"
+        ]
+       },
+       {
+        "q": "Kumatz Vav = \"Vav\"",
+        "answers": [
+         "וָ",
+         "גָ",
+         "תָ",
+         "עָ"
+        ]
+       },
+       {
+        "q": "Kumatz Zayin = \"Zah\"",
+        "answers": [
+         "זָ",
+         "כָ",
+         "קָ",
+         "תָּ"
+        ]
+       },
+       {
+        "q": "Kumatz Chet = \"Chah\"",
+        "answers": [
+         "חָ",
+         "שָׂ",
+         "לָ",
+         "וָ"
+        ]
+       },
+       {
+        "q": "Kumatz Tet = \"Tah\"",
+        "answers": [
+         "טָ",
+         "תָ",
+         "זָ",
+         "פָ"
+        ]
+       },
+       {
+        "q": "Kumatz Yud = \"Yah\"",
+        "answers": [
+         "יָ",
+         "סָ",
+         "טָ",
+         "מָ"
+        ]
+       },
+       {
+        "q": "Kumatz Kaf = \"Kah\"",
+        "answers": [
+         "כָּ",
+         "עָ",
+         "פָ",
+         "נָ"
+        ]
+       },
+       {
+        "q": "Kumatz Chaf = \"Chah\"",
+        "answers": [
+         "כָ",
+         "תָּ",
+         "טָ",
+         "סָ"
+        ]
+       },
+       {
+        "q": "Kumatz Lamed = \"Lah\"",
+        "answers": [
+         "לָ",
+         "וָ",
+         "שָׂ",
+         "גָ"
+        ]
+       },
+       {
+        "q": "Kumatz Mem = \"Mah\"",
+        "answers": [
+         "מָ",
+         "טָ",
+         "כָ",
+         "תָ"
+        ]
+       },
+       {
+        "q": "Kumatz Nun = \"Nah\"",
+        "answers": [
+         "נָ",
+         "טָ",
+         "שָׂ",
+         "בָּ"
+        ]
+       },
+       {
+        "q": "Kumatz Samech = \"Sah\"",
+        "answers": [
+         "סָ",
+         "לָ",
+         "נָ",
+         "עָ"
+        ]
+       },
+       {
+        "q": "Kumatz Ayin = \"Ah\"",
+        "answers": [
+         "עָ",
+         "אָ",
+         "כָ",
+         "תָּ"
+        ]
+       },
+       {
+        "q": "Kumatz Pay = \"Pah\"",
+        "answers": [
+         "פָּ",
+         "כָּ",
+         "הָ",
+         "בָ"
+        ]
+       },
+       {
+        "q": "Kumatz Fay = \"Fah\"",
+        "answers": [
+         "פָ",
+         "קָ",
+         "דָ",
+         "טָ"
+        ]
+       },
+       {
+        "q": "Kumatz Final Chaf = \"Chah\"",
+        "answers": [
+         "ךָ",
+         "בָ",
+         "תָ",
+         "פָ"
+        ]
+       },
+       {
+        "q": "Kumatz Tzaddik = \"Tzah\"",
+        "answers": [
+         "צָ",
+         "כָּ",
+         "מָ",
+         "אָ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "72337792",
@@ -3672,7 +9755,109 @@
      "game": "Flying fruit",
      "embed": "a19d30ad976940d291120306b767ee94?themeId=27",
      "play": "72337/792/349",
-     "thumb": "a19d30ad976940d291120306b767ee94_0"
+     "thumb": "a19d30ad976940d291120306b767ee94_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww72337664",
+     "title": "Drag and Drop Kumatz",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Kumatz Alef = \"Ah\""
+       },
+       {
+        "a": "בָּ",
+        "b": "Kumatz Bet = \"Bah\""
+       },
+       {
+        "a": "בָ",
+        "b": "Kumatz Vet = \"Vah\""
+       },
+       {
+        "a": "גָ",
+        "b": "Kumatz Gimmel = \"Gah\""
+       },
+       {
+        "a": "דָ",
+        "b": "Kumatz Daled = \"Dah\""
+       },
+       {
+        "a": "הָ",
+        "b": "Kumatz Hay = \"Hah\""
+       },
+       {
+        "a": "וָ",
+        "b": "Kumatz Vav = \"Vav\""
+       },
+       {
+        "a": "זָ",
+        "b": "Kumatz Zayin = \"Zah\""
+       },
+       {
+        "a": "חָ",
+        "b": "Kumatz Chet = \"Chah\""
+       },
+       {
+        "a": "טָ",
+        "b": "Kumatz Tet = \"Tah\""
+       },
+       {
+        "a": "יָ",
+        "b": "Kumatz Yud = \"Yah\""
+       },
+       {
+        "a": "כָּ",
+        "b": "Kumatz Kaf = \"Kah\""
+       },
+       {
+        "a": "כָ",
+        "b": "Kumatz Chaf = \"Chah\""
+       },
+       {
+        "a": "לָ",
+        "b": "Kumatz Lamed = \"Lah\""
+       },
+       {
+        "a": "מָ",
+        "b": "Kumatz Mem = \"Mah\""
+       },
+       {
+        "a": "נָ",
+        "b": "Kumatz Nun = \"Nah\""
+       },
+       {
+        "a": "סָ",
+        "b": "Kumatz Samech = \"Sah\""
+       },
+       {
+        "a": "עָ",
+        "b": "Kumatz Ayin = \"Ah\""
+       },
+       {
+        "a": "פָּ",
+        "b": "Kumatz Pay = \"Pah\""
+       },
+       {
+        "a": "פָ",
+        "b": "Kumatz Fay = \"Fah\""
+       },
+       {
+        "a": "ךָ",
+        "b": "Kumatz Final Chaf = \"Chah\""
+       },
+       {
+        "a": "צָ",
+        "b": "Kumatz Tzaddik = \"Tzah\""
+       }
+      ]
+     },
+     "tip": "Drag and drop to the correct answer"
     },
     {
      "id": "72337664",
@@ -3682,7 +9867,73 @@
      "tip": "Drag and drop to the correct answer.",
      "embed": "a78b091f1d234740914a27e32e15e3d6?themeId=2",
      "play": "72337/664/969",
-     "thumb": "a78b091f1d234740914a27e32e15e3d6_2"
+     "thumb": "a78b091f1d234740914a27e32e15e3d6_2",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww94309859",
+     "title": "Match the Word to its correct sound Closed Syllables O1",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "גָר",
+        "b": "Gar"
+       },
+       {
+        "a": "שָׁד",
+        "b": "Shad"
+       },
+       {
+        "a": "פָּר",
+        "b": "Par"
+       },
+       {
+        "a": "אָד",
+        "b": "Ad"
+       },
+       {
+        "a": "פָּז",
+        "b": "Paz"
+       },
+       {
+        "a": "בָּג",
+        "b": "Bag"
+       },
+       {
+        "a": "שָׁג",
+        "b": "Shag"
+       },
+       {
+        "a": "לָג",
+        "b": "Lag"
+       },
+       {
+        "a": "שָׁם",
+        "b": "Sham"
+       },
+       {
+        "a": "דָּן",
+        "b": "Dan"
+       },
+       {
+        "a": "דָּם",
+        "b": "Dam"
+       },
+       {
+        "a": "שָׂק",
+        "b": "Sack"
+       },
+       {
+        "a": "שָׂשׂ",
+        "b": "Sas"
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94309859",
@@ -3691,7 +9942,66 @@
      "game": "Matching pairs",
      "embed": "15be636d145143009d3e61663050a87f?themeId=21",
      "play": "94309/859/562",
-     "thumb": "15be636d145143009d3e61663050a87f_54"
+     "thumb": "15be636d145143009d3e61663050a87f_54",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww94310389",
+     "title": "Catch the Answer Open Syllables O1",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "Lah",
+        "answers": [
+         "לָהּ",
+         "גָע",
+         "רָע",
+         "נָא"
+        ]
+       },
+       {
+        "q": "Vah",
+        "answers": [
+         "בָהּ",
+         "נָא",
+         "לָהּ",
+         "בָּא"
+        ]
+       },
+       {
+        "q": "Rah",
+        "answers": [
+         "רָע",
+         "גָע",
+         "בָּא",
+         "נָא"
+        ]
+       },
+       {
+        "q": "Bah",
+        "answers": [
+         "בָּא",
+         "נָא",
+         "לָהּ",
+         "רָע"
+        ]
+       },
+       {
+        "q": "Nah",
+        "answers": [
+         "נָא",
+         "גָע",
+         "בָּא",
+         "רָּע"
+        ]
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94310389",
@@ -3700,7 +10010,39 @@
      "game": "Flying fruit",
      "embed": "afbee68c60a14d5e9506ae4856e0fe73?themeId=55",
      "play": "94310/389/220",
-     "thumb": "afbee68c60a14d5e9506ae4856e0fe73_55"
+     "thumb": "afbee68c60a14d5e9506ae4856e0fe73_55",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww26271863",
+     "title": "Kamatz Reading",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "desert",
+      "items": [
+       "יׇ",
+       "דׇ",
+       "טׇ",
+       "גׇ",
+       "חׇ",
+       "זׇ",
+       "וׇ",
+       "שׇׁ",
+       "שׇׂ",
+       "תׇּ",
+       "תׇ",
+       "אׇ",
+       "רׇ",
+       "הׇ",
+       "בׇ",
+       "מׇ",
+       "לׇ",
+       "ם",
+       "בׇּ"
+      ]
+     }
     },
     {
      "id": "26271863",
@@ -3709,7 +10051,80 @@
      "game": "Spin the wheel",
      "embed": "56adb3588709408aa39a07878ead6100?themeId=1",
      "play": "26271/863/310",
-     "thumb": "56adb3588709408aa39a07878ead6100_0"
+     "thumb": "56adb3588709408aa39a07878ead6100_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww94338637",
+     "title": "shin-bet-tav match up!",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "sh",
+        "b": "שׁ"
+       },
+       {
+        "a": "sha",
+        "b": "שָׁ"
+       },
+       {
+        "a": "b",
+        "b": "בּ"
+       },
+       {
+        "a": "ba",
+        "b": "בָּ"
+       },
+       {
+        "a": "t",
+        "b": "ת"
+       },
+       {
+        "a": "ta",
+        "b": "תָ"
+       },
+       {
+        "a": "tot",
+        "b": "תָת"
+       },
+       {
+        "a": "shot",
+        "b": "שָׁת"
+       },
+       {
+        "a": "bot",
+        "b": "בָּת"
+       },
+       {
+        "a": "shosh",
+        "b": "שָׁש"
+       },
+       {
+        "a": "bosh",
+        "b": "בָּשׁ"
+       },
+       {
+        "a": "tosh",
+        "b": "תָשׁ"
+       },
+       {
+        "a": "bob",
+        "b": "בָּבּ"
+       },
+       {
+        "a": "tobb",
+        "b": "תָבּ"
+       },
+       {
+        "a": "shobb",
+        "b": "שָׁבּ"
+       }
+      ]
+     }
     },
     {
      "id": "94338637",
@@ -3718,7 +10133,157 @@
      "game": "Match up",
      "embed": "ab3b91ef809b48a4b5dba7d390d5f6a8?themeId=1",
      "play": "94338/637/773",
-     "thumb": "8a3d7ff7ec4c43738fd85ceeb03d2418_0"
+     "thumb": "8a3d7ff7ec4c43738fd85ceeb03d2418_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww94341936",
+     "title": "CATCH THE WORD- MULTI OPEN SYLLABLES",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "RAAH",
+        "answers": [
+         "רָאָה",
+         "רָגַע",
+         "רָהַב",
+         "רַבָּה"
+        ]
+       },
+       {
+        "q": "TZAVAH",
+        "answers": [
+         "צָבָא",
+         "צָרָה",
+         "צִוָּה",
+         "צִיָּה"
+        ]
+       },
+       {
+        "q": "HAYAH",
+        "answers": [
+         "הָיָה",
+         "הֵנָּה",
+         "הִכָּה",
+         "הָבָה"
+        ]
+       },
+       {
+        "q": "VANAH",
+        "answers": [
+         "בָנָה",
+         "בָזָה",
+         "בָּרָד",
+         "נָחָשׁ"
+        ]
+       },
+       {
+        "q": "KARAH",
+        "answers": [
+         "קָרָא",
+         "קָשָׁה",
+         "רָאָה",
+         "בָנָה"
+        ]
+       },
+       {
+        "q": "LARAH",
+        "answers": [
+         "לָרָע",
+         "לָעָם",
+         "רָאָה",
+         "לָמָה"
+        ]
+       },
+       {
+        "q": "VAZAH",
+        "answers": [
+         "בָזָה",
+         "בִּזַּר",
+         "בָּרָד",
+         "בָנָה"
+        ]
+       },
+       {
+        "q": "MATAH",
+        "answers": [
+         "מָטָה",
+         "מוּזָר",
+         "מַטֵּה",
+         "מָלָךְ"
+        ]
+       },
+       {
+        "q": "FANAH",
+        "answers": [
+         "פָנָה",
+         "פְּנֵה",
+         "פָּנָה",
+         "פֶלֶא"
+        ]
+       },
+       {
+        "q": "ANAH",
+        "answers": [
+         "אָנָה",
+         "אָתָּה",
+         "אָלָה",
+         "נָאוָה"
+        ]
+       },
+       {
+        "q": "TZARAH",
+        "answers": [
+         "צָרָה",
+         "צֹנֶה",
+         "צָבָא",
+         "צִלָּהּ"
+        ]
+       },
+       {
+        "q": "Natah",
+        "answers": [
+         "נָטָע",
+         "נָקָם",
+         "בָנָה",
+         "אָנָה"
+        ]
+       },
+       {
+        "q": "Atah",
+        "answers": [
+         "אָתָּה",
+         "אָלָה",
+         "אָבַד",
+         "אָמַר"
+        ],
+        "right": 2
+       },
+       {
+        "q": "Padah",
+        "answers": [
+         "פָּדָה",
+         "פָנָה",
+         "פָרָה",
+         "פְּדֵה"
+        ]
+       },
+       {
+        "q": "Lamah",
+        "answers": [
+         "לָמָּה",
+         "לַבֵּן",
+         "לָּנוּ",
+         "עָלָה"
+        ]
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94341936",
@@ -3727,7 +10292,156 @@
      "game": "Flying fruit",
      "embed": "00b358d666d0400d8194e112367fb10e?themeId=1",
      "play": "94341/936/226",
-     "thumb": "82cfaf79be354c67a4ae8373f877502a_1"
+     "thumb": "82cfaf79be354c67a4ae8373f877502a_1",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-1-ww94342421",
+     "title": "CATCH THE WORD O1- MULTI CLOSED SYLLABLES",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "ATAD",
+        "answers": [
+         "אָטָד",
+         "עֶרֶשׂ",
+         "עָמַד",
+         "עָלָה"
+        ]
+       },
+       {
+        "q": "VAKAR",
+        "answers": [
+         "בָקָר",
+         "בָּרָד",
+         "בָזָה",
+         "דָּבָר"
+        ]
+       },
+       {
+        "q": "BARAD",
+        "answers": [
+         "בָּרָד",
+         "הֵנָּה",
+         "בָּרָק",
+         "הָבָה"
+        ]
+       },
+       {
+        "q": "BARAK",
+        "answers": [
+         "בָּרָק",
+         "בָזָה",
+         "בָּרָד",
+         "נָחָשׁ"
+        ]
+       },
+       {
+        "q": "BASHAN",
+        "answers": [
+         "בָּשָׁן",
+         "בָשָׂר",
+         "בְּדָם",
+         "בָשָׁן"
+        ]
+       },
+       {
+        "q": "DAVAR",
+        "answers": [
+         "דָּבָר",
+         "דָמָם",
+         "הָדָר",
+         "דִּבֶּר"
+        ]
+       },
+       {
+        "q": "DAMAM",
+        "answers": [
+         "דָמָם",
+         "בְּדָם",
+         "דָּבָר",
+         "דָּמָה"
+        ]
+       },
+       {
+        "q": "HADAR",
+        "answers": [
+         "הָדָר",
+         "הָבָה",
+         "הָהָר",
+         "הָאֵר"
+        ]
+       },
+       {
+        "q": "HAHAR",
+        "answers": [
+         "הָהָר",
+         "הָאֵר",
+         "הָדָר",
+         "הָבָה"
+        ]
+       },
+       {
+        "q": "CHACHAM",
+        "answers": [
+         "חָכָם",
+         "חָמַד",
+         "חָדָשׁ",
+         "חָמָס"
+        ]
+       },
+       {
+        "q": "KANAF",
+        "answers": [
+         "כָּנָף",
+         "צֹנֶה",
+         "כָּפַף",
+         "צִלָּהּ"
+        ]
+       },
+       {
+        "q": "LAAM",
+        "answers": [
+         "לָעָם",
+         "לָהֶם",
+         "לָעַד",
+         "לְעָם"
+        ]
+       },
+       {
+        "q": "NATAN",
+        "answers": [
+         "נָתָן",
+         "נָהָר",
+         "עָנָן",
+         "נָקָם"
+        ]
+       },
+       {
+        "q": "MATAR",
+        "answers": [
+         "מָטָר",
+         "טָמַן",
+         "מָטָה",
+         "עָשָׂר"
+        ]
+       },
+       {
+        "q": "ASAR",
+        "answers": [
+         "עָשָׂר",
+         "עָנָן",
+         "עָשָׂה",
+         "עָלָה"
+        ]
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94342421",
@@ -3736,7 +10450,8 @@
      "game": "Flying fruit",
      "embed": "8a5f978c85f44aef89049e467cd0b6b6?themeId=46",
      "play": "94342/421/844",
-     "thumb": "8a5f978c85f44aef89049e467cd0b6b6_46"
+     "thumb": "8a5f978c85f44aef89049e467cd0b6b6_46",
+     "hidden": true
     }
    ],
    "2": [
@@ -4234,13 +10949,205 @@
      }
     },
     {
+     "id": "own-orange-2-ww94381851",
+     "title": "Kumatz Patach Wheel O2",
+     "type": "cards",
+     "game": "Spin and answer",
+     "own": {
+      "kind": "spinquiz",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "אָ",
+        "answers": [
+         "Kamatz Alef \"Ah\"",
+         "Patach Alef \"Ah\""
+        ]
+       },
+       {
+        "q": "יָ",
+        "answers": [
+         "Kamatz Yud \"Yah\"",
+         "Patach Yud \"Yah\""
+        ]
+       },
+       {
+        "q": "גָ",
+        "answers": [
+         "Kamatz Gimmel \"Gah\"",
+         "Patach Gimmel \"Gah\""
+        ]
+       },
+       {
+        "q": "דָ",
+        "answers": [
+         "Kamatz Daled \"Dah\"",
+         "Patach Daled \"Dah\""
+        ]
+       },
+       {
+        "q": "יַ",
+        "answers": [
+         "Patach Yud \"Yah\"",
+         "Kamatz Yud \"Yah\""
+        ]
+       },
+       {
+        "q": "וָ",
+        "answers": [
+         "Kamatz Vav \"Vah\"",
+         "Patach Vav \"Vah\"",
+         "Kamatz Vet \"Vah",
+         "Patach Vet \"Vah\""
+        ]
+       },
+       {
+        "q": "זָ",
+        "answers": [
+         "Kamatz Zayin \"Zah\"",
+         "Patach Zayin \"Zah\"",
+         "Kamatz Vav \"Vah\"",
+         "Patach Vav \"vah\""
+        ]
+       },
+       {
+        "q": "טָ",
+        "answers": [
+         "Kamatz Tet \"Tah\"",
+         "Patach Tet \"Tah\"",
+         "Kamatz Tav \"Tah\"",
+         "Patach Tav \"Tah\""
+        ]
+       },
+       {
+        "q": "כָ",
+        "answers": [
+         "Kamatz Chaf \"Chah\"",
+         "Patach Chaf \"Chah\"",
+         "Kamatz Chet \"Chah\"",
+         "Patach Chet \"Chah\""
+        ]
+       },
+       {
+        "q": "יָ",
+        "answers": [
+         "Kamatz Yud \"Yah\"",
+         "Patach Yud \"Yah\""
+        ]
+       },
+       {
+        "q": "בָּ",
+        "answers": [
+         "Kamatz Bet \"Bah\"",
+         "Kamatz Vet \"Vah\"",
+         "Patach Vet \"Vah\"",
+         "Patach Bet \"Bah\""
+        ]
+       },
+       {
+        "q": "גַ",
+        "answers": [
+         "Patach Gimmel \"Gah\"",
+         "Kamatz Gimmel \"Gah\""
+        ]
+       },
+       {
+        "q": "דַ",
+        "answers": [
+         "Patach Daled \"Dah\"",
+         "Kamatz Daled \"Dah\""
+        ]
+       },
+       {
+        "q": "וַ",
+        "answers": [
+         "Patach Vav \"Vah\"",
+         "Kamatz Vet \"Vah\"",
+         "Patach Vet \"Vah\"",
+         "Kamatz Vav \"Vah"
+        ]
+       },
+       {
+        "q": "יַ",
+        "answers": [
+         "Patach Yud \"Yah\"",
+         "Kamatz Yud \"Yah\""
+        ]
+       },
+       {
+        "q": "כָּ",
+        "answers": [
+         "Kamatz Kaf \"Kah\"",
+         "Patach Kaf \"Kah\"",
+         "Kamatz Kuf \"Kah\"",
+         "Patach Kuf \"Kah\""
+        ]
+       },
+       {
+        "q": "כַ",
+        "answers": [
+         "Patach Chaf \"Chah\"",
+         "Kamatz Chet \"Chah\"",
+         "Patach Chet \"Chah\"",
+         "Kamatz Chaf \"Chah\""
+        ]
+       },
+       {
+        "q": "כַּ",
+        "answers": [
+         "Patach Kaf \"Kah\"",
+         "Kamatz Kaf \"Kah\"",
+         "Kamatz Kuf \"Kah\"",
+         "Patach Kuf \"Kah\""
+        ]
+       },
+       {
+        "q": "לָ",
+        "answers": [
+         "Kamatz Lamed \"Lah\"",
+         "Patach Lamed \"Lah\""
+        ]
+       },
+       {
+        "q": "לַ",
+        "answers": [
+         "Patach Lamed \"Lah\"",
+         "Kamatz Lamed \"Lah\""
+        ]
+       }
+      ]
+     }
+    },
+    {
      "id": "94381851",
      "title": "Kumatz Patach Wheel O2",
      "type": "cards",
      "game": "Spin the wheel",
      "embed": "480ad9cafd394645b2c23ccbcf337e2f?themeId=52",
      "play": "94381/851/411",
-     "thumb": "480ad9cafd394645b2c23ccbcf337e2f_0"
+     "thumb": "480ad9cafd394645b2c23ccbcf337e2f_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww28339377",
+     "title": "Alef Bet Gan 16.5",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "space",
+      "items": [
+       "אַ",
+       "בַּ",
+       "גַ",
+       "דַ",
+       "הַ",
+       "וַ",
+       "זַ",
+       "חַ",
+       "טַ"
+      ]
+     }
     },
     {
      "id": "28339377",
@@ -4249,7 +11156,30 @@
      "game": "Spin the wheel",
      "embed": "5f77455105cd42f7a4cdfc54dfa02165?themeId=1",
      "play": "28339/377/329",
-     "thumb": "5f77455105cd42f7a4cdfc54dfa02165_0"
+     "thumb": "5f77455105cd42f7a4cdfc54dfa02165_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww9864550",
+     "title": "קמץ פתח-קריאת צרופים 2",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "meadow",
+      "items": [
+       "מַ",
+       "צָ",
+       "חַ",
+       "רַ",
+       "עָ",
+       "שָׁ",
+       "אָ",
+       "לַ",
+       "נָ",
+       "סַ"
+      ]
+     }
     },
     {
      "id": "9864550",
@@ -4258,7 +11188,54 @@
      "game": "Spin the wheel",
      "embed": "54badd3c9aa54cf696d172011cc51e24?themeId=1",
      "play": "9864/550/661",
-     "thumb": "54badd3c9aa54cf696d172011cc51e24_0"
+     "thumb": "54badd3c9aa54cf696d172011cc51e24_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww94349304",
+     "title": "Closed Multi Syllable Mixed O2",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "ocean",
+      "items": [
+       "הָיָה",
+       "חַיָל",
+       "עָנָן",
+       "רַעַל",
+       "פָּרָה",
+       "קָשָר",
+       "חַיָט",
+       "זָהָב",
+       "גַנָן",
+       "אָמַר",
+       "בָּמָה",
+       "נָחָש",
+       "חָזָק",
+       "זָקָן",
+       "בָּדַק",
+       "תַחַת",
+       "רַהַב",
+       "יַחַד",
+       "אַחַר",
+       "טַעַם",
+       "עֲדַת",
+       "נַעַר",
+       "אַחַת",
+       "פַחַד",
+       "תַּעַן",
+       "בַּלַע",
+       "נַחַל",
+       "לַחַץ",
+       "בַּעֲצַת",
+       "דַעַת",
+       "הַשַּׁחַר",
+       "תַּעַן",
+       "שַׁחַת",
+       "רַעַם"
+      ]
+     }
     },
     {
      "id": "94349304",
@@ -4267,7 +11244,30 @@
      "game": "Speaking cards",
      "embed": "04279e6815d343efabf345970ba79373?themeId=42",
      "play": "94349/304/833",
-     "thumb": "6f8312025cf74800ad29e0d3c0c3a955_0"
+     "thumb": "6f8312025cf74800ad29e0d3c0c3a955_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww9769123",
+     "title": "פתח וקמץ קריאת צרופים 1",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "desert",
+      "items": [
+       "גַ",
+       "רָ",
+       "אָ",
+       "לַ",
+       "שָׁ",
+       "מַ",
+       "הָ",
+       "חָ",
+       "בָּ",
+       "פָּ"
+      ]
+     }
     },
     {
      "id": "9769123",
@@ -4276,7 +11276,38 @@
      "game": "Speaking cards",
      "embed": "7dd6dfa4fefd4926ac464f6f94d7cc16?themeId=48",
      "play": "9769/123/206",
-     "thumb": "7dd6dfa4fefd4926ac464f6f94d7cc16_48"
+     "thumb": "7dd6dfa4fefd4926ac464f6f94d7cc16_48",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww52227625",
+     "title": "Alef Bet Gan P 18.41 with shound",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "space",
+      "items": [
+       "אַ",
+       "בַּ",
+       "בַ",
+       "גַ",
+       "דַ",
+       "הַ",
+       "וַ",
+       "זַ",
+       "חַ",
+       "טַ",
+       "יַ",
+       "כַּ",
+       "כַ",
+       "לַ",
+       "מַ",
+       "נַ",
+       "סַ"
+      ],
+      "speak": true
+     }
     },
     {
      "id": "52227625",
@@ -4285,7 +11316,52 @@
      "game": "Speaking cards",
      "embed": "c0a0eb1635604f3ab5836d49bacfa26d?themeId=48",
      "play": "52227/625/942",
-     "thumb": "c0a0eb1635604f3ab5836d49bacfa26d_48"
+     "thumb": "c0a0eb1635604f3ab5836d49bacfa26d_48",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww27258529",
+     "title": "Alef Bet Gan 13.3",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "אַ",
+        "b": "אַ"
+       },
+       {
+        "a": "בַּ",
+        "b": "בַּ"
+       },
+       {
+        "a": "גַ",
+        "b": "גַ"
+       },
+       {
+        "a": "דַ",
+        "b": "דַ"
+       },
+       {
+        "a": "הַ",
+        "b": "הַ"
+       },
+       {
+        "a": "וַ",
+        "b": "וַ"
+       },
+       {
+        "a": "זַ",
+        "b": "זַ"
+       },
+       {
+        "a": "חַ",
+        "b": "חַ"
+       }
+      ]
+     }
     },
     {
      "id": "27258529",
@@ -4294,7 +11370,219 @@
      "game": "Matching pairs",
      "embed": "045a485259274b89b1dd493e701f92dc?themeId=22",
      "play": "27258/529/414",
-     "thumb": "045a485259274b89b1dd493e701f92dc_22"
+     "thumb": "045a485259274b89b1dd493e701f92dc_22",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww62271232",
+     "title": "Can you read short sounds in Hebrew with Kamatz and Patach ending with Final letters?",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "pon",
+        "answers": [
+         "פַּן",
+         "נַץ",
+         "רַץ",
+         "דַף"
+        ]
+       },
+       {
+        "q": "mon",
+        "answers": [
+         "מָן",
+         "יַם",
+         "רַץ",
+         "פַּךּ"
+        ]
+       },
+       {
+        "q": "fon",
+        "answers": [
+         "פָן",
+         "סָךּ",
+         "נַץ",
+         "פַּך"
+        ]
+       },
+       {
+        "q": "von",
+        "answers": [
+         "בָן",
+         "סָם",
+         "פָן",
+         "רַךּ"
+        ]
+       },
+       {
+        "q": "lom",
+        "answers": [
+         "לַם",
+         "רַץ",
+         "חַם",
+         "יַם"
+        ]
+       },
+       {
+        "q": "som",
+        "answers": [
+         "סָם",
+         "עַם",
+         "נַך",
+         "רַץ"
+        ]
+       },
+       {
+        "q": "ahm",
+        "answers": [
+         "עַם",
+         "יַם",
+         "דַף",
+         "פַּךּ"
+        ]
+       },
+       {
+        "q": "cham",
+        "answers": [
+         "חַם",
+         "מָן",
+         "בָן",
+         "רַךּ"
+        ]
+       },
+       {
+        "q": "pach",
+        "answers": [
+         "פַּך",
+         "רַץ",
+         "חַם",
+         "תַף"
+        ]
+       },
+       {
+        "q": "pak",
+        "answers": [
+         "פַּךּ",
+         "חַם",
+         "טַן",
+         "מָן"
+        ]
+       },
+       {
+        "q": "rak",
+        "answers": [
+         "רַךּ",
+         "עַם",
+         "יַם",
+         "פַּן"
+        ]
+       },
+       {
+        "q": "laf",
+        "answers": [
+         "לַף",
+         "עַם",
+         "סָךּ",
+         "מָץ"
+        ]
+       },
+       {
+        "q": "taf",
+        "answers": [
+         "תַף",
+         "נַך",
+         "נַץ",
+         "פָן"
+        ]
+       },
+       {
+        "q": "daf",
+        "answers": [
+         "דַף",
+         "עַם",
+         "רַך",
+         "טַן"
+        ]
+       },
+       {
+        "q": "yam",
+        "answers": [
+         "יַם",
+         "פָן",
+         "לַף",
+         "לַם"
+        ]
+       },
+       {
+        "q": "rach",
+        "answers": [
+         "רַך",
+         "חַם",
+         "לַף",
+         "תַף"
+        ]
+       },
+       {
+        "q": "natz",
+        "answers": [
+         "נַץ",
+         "מָן",
+         "סָם",
+         "רַך"
+        ]
+       },
+       {
+        "q": "ratz",
+        "answers": [
+         "רַץ",
+         "פַּן",
+         "בָן",
+         "עַם"
+        ]
+       },
+       {
+        "q": "matz",
+        "answers": [
+         "מָץ",
+         "סָם",
+         "פַּךּ",
+         "דַף"
+        ]
+       },
+       {
+        "q": "tan",
+        "answers": [
+         "טַן",
+         "עַם",
+         "חַם",
+         "נַך"
+        ]
+       },
+       {
+        "q": "nach",
+        "answers": [
+         "נַך",
+         "יַם",
+         "עַם",
+         "חַם"
+        ]
+       },
+       {
+        "q": "sak",
+        "answers": [
+         "סָךּ",
+         "לַף",
+         "רַך",
+         "רַץ"
+        ]
+       }
+      ]
+     },
+     "tip": "Choose the correct matching Hebrew sound."
     },
     {
      "id": "62271232",
@@ -4304,7 +11592,44 @@
      "tip": "Choose the correct matching Hebrew sound.",
      "embed": "e4e523c590784a4eadd9e01a2286a2f7?themeId=1",
      "play": "62271/232/872",
-     "thumb": "e4e523c590784a4eadd9e01a2286a2f7_0"
+     "thumb": "e4e523c590784a4eadd9e01a2286a2f7_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww37659225",
+     "title": "משחק זיכרון אותיות ראשונות בפתח",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "אַ",
+        "b": "אַ"
+       },
+       {
+        "a": "בַּ",
+        "b": "בַּ"
+       },
+       {
+        "a": "בַ",
+        "b": "בַ"
+       },
+       {
+        "a": "גַ",
+        "b": "גַ"
+       },
+       {
+        "a": "דַ",
+        "b": "דַ"
+       },
+       {
+        "a": "הַ",
+        "b": "הַ"
+       }
+      ]
+     }
     },
     {
      "id": "37659225",
@@ -4313,7 +11638,80 @@
      "game": "Matching pairs",
      "embed": "cc7f809459f6473abe83893933575cda?themeId=65",
      "play": "37659/225/782",
-     "thumb": "cc7f809459f6473abe83893933575cda_0"
+     "thumb": "cc7f809459f6473abe83893933575cda_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww72335526",
+     "title": "Kumatz Patach Match It",
+     "type": "match",
+     "game": "Match it",
+     "own": {
+      "kind": "match",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "shin"
+       },
+       {
+        "a": "שָׁ",
+        "b": "sha"
+       },
+       {
+        "a": "בּ",
+        "b": "Bet"
+       },
+       {
+        "a": "בַּ",
+        "b": "Bah"
+       },
+       {
+        "a": "בָּשׁ",
+        "b": "bash"
+       },
+       {
+        "a": "שַׁבָּ",
+        "b": "shaba"
+       },
+       {
+        "a": "בָּבּ",
+        "b": "ba-b"
+       },
+       {
+        "a": "שַׁשׁ",
+        "b": "shash"
+       },
+       {
+        "a": "שָׁבּ",
+        "b": "shab"
+       },
+       {
+        "a": "שָׁשַׁ",
+        "b": "shasha"
+       },
+       {
+        "a": "שׂ",
+        "b": "sin"
+       },
+       {
+        "a": "בַּשׂ",
+        "b": "Bas"
+       },
+       {
+        "a": "שַׂבּ",
+        "b": "Sab"
+       },
+       {
+        "a": "שַׂבָּ",
+        "b": "Saba"
+       },
+       {
+        "a": "בַּשָׁ",
+        "b": "Basha"
+       }
+      ]
+     }
     },
     {
      "id": "72335526",
@@ -4322,7 +11720,43 @@
      "game": "Match up",
      "embed": "e02646641e58457e996236c24481e8b5?themeId=1",
      "play": "72335/526/410",
-     "thumb": "e02646641e58457e996236c24481e8b5_1"
+     "thumb": "e02646641e58457e996236c24481e8b5_1",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww72338975",
+     "title": "פתח קמץ drag and drop Game",
+     "type": "sort",
+     "game": "Fast sort",
+     "own": {
+      "kind": "speedsort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "KAMATZ",
+        "items": [
+         "אָ",
+         "כָ",
+         "פָ",
+         "צָ",
+         "לָ",
+         "בָ",
+         "טָ",
+         "זָ",
+         "מָ",
+         "תָ"
+        ]
+       },
+       {
+        "name": "PATACH",
+        "items": [
+         "רַ",
+         "אַ",
+         "יַ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "72338975",
@@ -4331,7 +11765,160 @@
      "game": "Speed sorting",
      "embed": "b0b2b2c44af346afae4d8b9b09eb7cb6?themeId=1",
      "play": "72338/975/290",
-     "thumb": "b0b2b2c44af346afae4d8b9b09eb7cb6_0"
+     "thumb": "b0b2b2c44af346afae4d8b9b09eb7cb6_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww62271598",
+     "title": "Hebrew kamatz and patach",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "ocean",
+      "statements": [
+       {
+        "a": "בַּד",
+        "b": "bahd",
+        "right": true
+       },
+       {
+        "a": "יָם",
+        "b": "yahm",
+        "right": true
+       },
+       {
+        "a": "צָן",
+        "b": "tzahn",
+        "right": true
+       },
+       {
+        "a": "סָץ",
+        "b": "sahtz",
+        "right": true
+       },
+       {
+        "a": "עַל",
+        "b": "ahl",
+        "right": true
+       },
+       {
+        "a": "חַג",
+        "b": "chag",
+        "right": true
+       },
+       {
+        "a": "מָן",
+        "b": "mahn",
+        "right": true
+       },
+       {
+        "a": "גַּג",
+        "b": "gahg",
+        "right": true
+       },
+       {
+        "a": "גַּם",
+        "b": "gahm",
+        "right": true
+       },
+       {
+        "a": "צָף",
+        "b": "tzahf",
+        "right": true
+       },
+       {
+        "a": "חַלָּה",
+        "b": "challah",
+        "right": true
+       },
+       {
+        "a": "שַׁבָּת",
+        "b": "shabbat",
+        "right": true
+       },
+       {
+        "a": "מַצָּה",
+        "b": "matza",
+        "right": true
+       },
+       {
+        "a": "אָדָם",
+        "b": "Adam",
+        "right": true
+       },
+       {
+        "a": "בַּד",
+        "b": "vad",
+        "right": false
+       },
+       {
+        "a": "יָם",
+        "b": "hat",
+        "right": false
+       },
+       {
+        "a": "צָן",
+        "b": "ant",
+        "right": false
+       },
+       {
+        "a": "סָץ",
+        "b": "mat",
+        "right": false
+       },
+       {
+        "a": "עַל",
+        "b": "fat",
+        "right": false
+       },
+       {
+        "a": "חַג",
+        "b": "chan",
+        "right": false
+       },
+       {
+        "a": "מָן",
+        "b": "lad",
+        "right": false
+       },
+       {
+        "a": "גַּג",
+        "b": "vav",
+        "right": false
+       },
+       {
+        "a": "גַּם",
+        "b": "nap",
+        "right": false
+       },
+       {
+        "a": "צָף",
+        "b": "chat",
+        "right": false
+       },
+       {
+        "a": "חַלָּה",
+        "b": "happy",
+        "right": false
+       },
+       {
+        "a": "שַׁבָּת",
+        "b": "strawberry",
+        "right": false
+       },
+       {
+        "a": "מַצָּה",
+        "b": "money",
+        "right": false
+       },
+       {
+        "a": "אָדָם",
+        "b": "Eve",
+        "right": false
+       }
+      ]
+     }
     },
     {
      "id": "62271598",
@@ -4340,7 +11927,48 @@
      "game": "True or false",
      "embed": "dc4fe30a0946448390fbc1f6b83363c6?themeId=2",
      "play": "62271/598/618",
-     "thumb": "dc4fe30a0946448390fbc1f6b83363c6_2"
+     "thumb": "dc4fe30a0946448390fbc1f6b83363c6_2",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww24103276",
+     "title": "Read א-ח with Kamatz, Patach",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "הַ הָ",
+        "b": "Hah"
+       },
+       {
+        "a": "גָ גַ",
+        "b": "Gah"
+       },
+       {
+        "a": "אָ אַ",
+        "b": "Aah"
+       },
+       {
+        "a": "בָּ בַּ",
+        "b": "Bah"
+       },
+       {
+        "a": "דָ דַ",
+        "b": "Dah"
+       },
+       {
+        "a": "וַ וָ",
+        "b": "Vah"
+       },
+       {
+        "a": "זַ זָ",
+        "b": "Zah"
+       }
+      ]
+     }
     },
     {
      "id": "24103276",
@@ -4349,7 +11977,90 @@
      "game": "Find the match",
      "embed": "eba90ce2a04c484bb2e99f5829ed4470?themeId=1",
      "play": "24103/276/706",
-     "thumb": "eba90ce2a04c484bb2e99f5829ed4470_0"
+     "thumb": "eba90ce2a04c484bb2e99f5829ed4470_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww94350205",
+     "title": "Find It",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "space",
+      "questions": [
+       {
+        "q": "Find \"Bah\"",
+        "answers": [
+         "בָּ",
+         "בַּ",
+         "שָׁ",
+         "תָּ",
+         "טָ",
+         "בַ"
+        ],
+        "right": 2
+       },
+       {
+        "q": "Find \"Shah\"",
+        "answers": [
+         "שָׁ",
+         "שַׁ",
+         "בָּ",
+         "תָּ",
+         "טָ",
+         "בַ"
+        ],
+        "right": 2
+       },
+       {
+        "q": "Find \"Tah\"",
+        "answers": [
+         "תָּ",
+         "תַּ",
+         "בָּ",
+         "שָׁ",
+         "טָ",
+         "בַ"
+        ],
+        "right": 2
+       },
+       {
+        "q": "Find the LETTER THAT STARTS WITH a \"T\" Sound",
+        "answers": [
+         "ט",
+         "תּ",
+         "בָּ",
+         "שָׁ",
+         "תָּ",
+         "טָ"
+        ],
+        "right": 2
+       },
+       {
+        "q": "Find the LETTER THAT STARTS WITH a \"B\" Sound",
+        "answers": [
+         "בּ",
+         "בָּ",
+         "שָׁ",
+         "תָּ",
+         "טָ",
+         "בַ"
+        ]
+       },
+       {
+        "q": "Find \"SH\"",
+        "answers": [
+         "שׁ",
+         "בָּ",
+         "שָׁ",
+         "תָּ",
+         "טָ",
+         "בַ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "94350205",
@@ -4358,7 +12069,77 @@
      "game": "Airplane",
      "embed": "d1ccbdc73f26487aa9170388d53d7627?themeId=23",
      "play": "94350/205/187",
-     "thumb": "1d0ec4699b5f43a3993a2e8991e67661_23b"
+     "thumb": "1d0ec4699b5f43a3993a2e8991e67661_23b",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww94392735",
+     "title": "Open Syllables Kamatz Patach",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "בָּקַע",
+        "b": "Bakah"
+       },
+       {
+        "a": "מַה",
+        "b": "Mah"
+       },
+       {
+        "a": "כַּמָּה",
+        "b": "Kamah"
+       },
+       {
+        "a": "מַשָּׂא",
+        "b": "Masah"
+       },
+       {
+        "a": "שַׁתָּה",
+        "b": "Shatah"
+       },
+       {
+        "a": "הַזָרַע",
+        "b": "Hazarah"
+       },
+       {
+        "a": "אַתָּה",
+        "b": "Atah"
+       },
+       {
+        "a": "הַסָלַע",
+        "b": "Hasalah"
+       },
+       {
+        "a": "בַּלַע",
+        "b": "Balah"
+       },
+       {
+        "a": "גָבַהּ",
+        "b": "Gavah"
+       },
+       {
+        "a": "שָׁמַע",
+        "b": "Shamah"
+       },
+       {
+        "a": "הַבָּא",
+        "b": "Habah"
+       },
+       {
+        "a": "חַדָה",
+        "b": "Chadah"
+       },
+       {
+        "a": "בָּצַע",
+        "b": "Batzah"
+       }
+      ],
+      "speak": true
+     }
     },
     {
      "id": "94392735",
@@ -4367,7 +12148,85 @@
      "game": "Matching pairs",
      "embed": "b0c85361d2c14cf9b13d62d7137e95f7?themeId=21",
      "play": "94392/735/978",
-     "thumb": "b0c85361d2c14cf9b13d62d7137e95f7_0"
+     "thumb": "b0c85361d2c14cf9b13d62d7137e95f7_0",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww94394474",
+     "title": "Find the Patach",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "ocean",
+      "prompt": "Tap the letters that only have the Patach vowel",
+      "groups": [
+       {
+        "name": "Correct",
+        "items": [
+         "אַ",
+         "בַּ",
+         "בַ",
+         "גַ",
+         "דַ",
+         "הַ",
+         "וַ",
+         "זַ",
+         "חַ",
+         "טַ",
+         "יַ",
+         "כַּ",
+         "כַ",
+         "לַ",
+         "מַ",
+         "נַ",
+         "סַ",
+         "עַ",
+         "פַּ",
+         "פַ",
+         "צַ",
+         "קַ",
+         "רַ",
+         "שַׁ",
+         "שַׂ",
+         "תַּ",
+         "תַ"
+        ]
+       },
+       {
+        "name": "Incorrect",
+        "items": [
+         "אָ",
+         "בֵּ",
+         "בֶ",
+         "גָ",
+         "דֹ",
+         "הִ",
+         "וָ",
+         "זָ",
+         "חֵ",
+         "טָ",
+         "יְ",
+         "כֹּ",
+         "כָ",
+         "לֻ",
+         "מֻ",
+         "נִ",
+         "סָ",
+         "עְ",
+         "פֶּ",
+         "פָ",
+         "צָ",
+         "קָ",
+         "רָ",
+         "שֶׁ",
+         "שְׂ",
+         "תִּ",
+         "תָ"
+        ]
+       }
+      ]
+     }
     },
     {
      "id": "94394474",
@@ -4377,7 +12236,35 @@
      "tip": "Tap the letters that only have the Patach vowel.",
      "embed": "dfc2cba6d9124073b66ba1bc8b70e5a4?themeId=22",
      "play": "94394/474/721",
-     "thumb": "dfc2cba6d9124073b66ba1bc8b70e5a4_22"
+     "thumb": "dfc2cba6d9124073b66ba1bc8b70e5a4_22",
+     "hidden": true
+    },
+    {
+     "id": "own-orange-2-ww94393866",
+     "title": "Closed & Open Syllables Kamatz Patach",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "desert",
+      "items": [
+       "יַבָּשָׁה",
+       "חַדָשָׁה",
+       "סַכָּנָה",
+       "חַזָרָה",
+       "חַנָיָה",
+       "מַאַכָל",
+       "בָּנָנָה",
+       "הַצָגָה",
+       "בָּטָטָה",
+       "הַסָעָה",
+       "רַעַשָן",
+       "טַבַּעַת",
+       "קַבָּלָה",
+       "מַתָּנָה",
+       "אָנָנָס"
+      ]
+     }
     },
     {
      "id": "94393866",
@@ -4385,7 +12272,8 @@
      "type": "cards",
      "game": "Speaking cards",
      "embed": "cf227b65218f42f8a233130e47a544f9?themeId=42",
-     "thumb": "cf227b65218f42f8a233130e47a544f9_0"
+     "thumb": "cf227b65218f42f8a233130e47a544f9_0",
+     "hidden": true
     }
    ],
    "3": []

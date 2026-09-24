@@ -928,6 +928,11 @@
 }
 .og-deck.empty { opacity: .25; cursor: default; }
 .og-dealt { animation: og-deal .4s cubic-bezier(.3, 1.3, .5, 1) both; }
+.og-qcard { min-height: 24cqh; min-width: 40cqw; font-size: 5cqw; }
+.og-qcard .og-heb { font-size: 1.8em; }
+.og-pop-answers { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 12cqh; gap: 1.6cqh 1.6cqw; width: 70cqw; }
+.og-pop-answers .og-answer { justify-content: center; font-size: 3.6cqw; }
+.og-pop-answers .og-answer.short span { font-size: 6.4cqw; }
 @keyframes og-deal { from { transform: translateX(-20cqw) rotate(-10deg) scale(.7); opacity: 0; } to { transform: none; opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {

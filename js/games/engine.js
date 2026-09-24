@@ -71,6 +71,25 @@ const gameSound = (() => {
   };
 })();
 
+// ---- reading aloud: the computer's own voice (no sound files) --------------------
+//
+// A game with own.speak reads things out: api.say(text). own.speech can give what
+// to say for a text (like "Bet" for בּ). Hebrew is read with a Hebrew voice
+// when the computer has one.
+const gameVoice = (() => {
+  function say(text, lang) {
+    try {
+      if (!text || !window.speechSynthesis || gameSound.muted()) return;
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(String(text));
+      u.lang = lang || (/[\u0590-\u05FF]/.test(text) ? "he-IL" : "en-US");
+      u.rate = 0.9;
+      speechSynthesis.speak(u);
+    } catch { /* no voice available */ }
+  }
+  return { say };
+})();
+
 const OG_ICONS = {
   sound: '<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>',
   mute: '<path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6"/><path d="m17 9 6 6"/>',
@@ -170,6 +189,8 @@ function playOwnGame(stage, g, opts) {
         dotsEl.insertAdjacentHTML("beforeend", `<i class="${ok ? "ok" : "no"}"></i>`);
       },
       round(n, total, key = "gameRound") { roundEl.textContent = total > 1 ? strip(opts.t(key, { n, total })) : ""; },
+      // Read a text out loud, when this game reads aloud.
+      say(text) { if (own.speak && text) gameVoice.say((own.speech || {})[text] || text); },
       // A line shown on the end screen, like points won.
       note(html) { note = html; },
       t: opts.t,
@@ -385,6 +406,21 @@ function revealQuestions(api, questions) {
           <span class="og-tile-face small" style="--c:${api.color(i)}" dir="auto">${api.esc(q.answers[0])}</span></li>`).join("")}
       </ul>`;
   });
+}
+
+// Rounds for "find the right one" games (Fruit catch, Fly the plane): what to
+// find, the right answers, and all the answers. From pairs (find a by its b) or
+// from questions. A question's first `right` answers are right (default 1).
+function findRounds(content, api) {
+  const qs = goodQuestions(content);
+  if (qs.length) {
+    revealQuestions(api, qs);
+    return api.shuffle(qs).map(q => ({ prompt: q.q, right: q.answers.slice(0, q.right || 1), options: q.answers }));
+  }
+  const pairs = goodPairs(content);
+  if (pairs.length < 2) return [];
+  revealPairs(api, pairs);
+  return api.shuffle(pairs).map(p => ({ prompt: p.b, right: [p.a], options: pairs.map(x => x.a) }));
 }
 
 // Pairs with both sides filled in.

@@ -5,6 +5,9 @@
 //   openbox  Open a box: tap a numbered box to open it.       Content: { items: [] }
 //   flip     Flip cards: a card at a time, tap to flip it.    Content: { pairs: [{ a: front, b: back }] }
 //   deal     Pick a card: deal cards from a deck, one by one. Content: { items: [] }
+// And two with questions, which do have a score (like Wordwall's quiz versions):
+//   spinquiz Spin and answer: the wheel picks a question.    Content: { questions: [] }
+//   boxquiz  Open a box quiz: each box holds a question.      Content: { questions: [] }
 
 function cardItems(content) {
   return [...(content.items || []), ...goodPairs(content).map(p => p.a)].filter(Boolean);
@@ -19,12 +22,36 @@ function bigCard(api, text, color, buttons) {
     </div>`;
 }
 
-registerKind("spin", {
-  label: "Spin it",
-  noScore: true,
-  play(body, content, api) {
-    let items = api.shuffle(cardItems(content)).slice(0, 16);
-    if (items.length < 2) { emptyGame(body); return; }
+// A question in the big card: tap an answer. done() runs after it shows right or wrong.
+function questionPop(api, holder, q, color, done) {
+  const answers = api.shuffle(q.answers.map((text, i) => ({ text, right: i < (q.right || 1) })));
+  holder.innerHTML = `
+    <div class="og-pop">
+      <div class="og-bigcard og-qcard og-in" style="--c:${color}"><span dir="auto">${bigHebrew(api.esc(q.q))}</span></div>
+      <div class="og-pop-answers">
+        ${answers.map((a, i) => `<button class="og-answer${/^[\u0590-\u05FF\uFB1D-\uFB4F\s]{1,6}$/.test(a.text) ? " short" : ""}" type="button" data-n="${i}" style="--c:${QUIZ_COLORS[i % QUIZ_COLORS.length]}"><span dir="auto">${api.esc(a.text)}</span></button>`).join("")}
+      </div>
+    </div>`;
+  api.say(q.q);
+  const btns = [...holder.querySelectorAll(".og-answer")];
+  btns.forEach((b, i) => b.addEventListener("click", () => {
+    const ok = answers[i].right;
+    api.mark(ok);
+    ok ? api.sound.good() : api.sound.bad();
+    btns.forEach((x, k) => { x.disabled = true; x.classList.add(answers[k].right ? "is-right" : k === i ? "is-wrong" : "is-dim"); });
+    api.later(done, ok ? 900 : 1600);
+  }));
+}
+
+registerKind("spin", { label: "Spin it", noScore: true, play: (body, content, api) => spinGame(body, content, api, false) });
+registerKind("spinquiz", { label: "Spin and answer", play: (body, content, api) => spinGame(body, content, api, true) });
+
+function spinGame(body, content, api, quiz) {
+  {
+    const questions = quiz ? api.shuffle(goodQuestions(content)).slice(0, 16) : null;
+    let items = quiz ? questions.map(q => q.q) : api.shuffle(cardItems(content)).slice(0, 16);
+    if (items.length < (quiz ? 1 : 2)) { emptyGame(body); return; }
+    if (quiz) revealQuestions(api, questions);
     let turn = 0;
     let spinning = false;
 
@@ -52,12 +79,12 @@ registerKind("spin", {
           <div class="og-spin-side">
             <button class="og-btn og-go og-big" type="button" data-spin>${api.t("gameSpin")}</button>
             <span class="og-speed-left">${api.t("gameCardsLeft", { n: items.length })}</span>
-            <button class="og-btn" type="button" data-done>${api.t("gameDone")}</button>
+            ${quiz ? "" : `<button class="og-btn" type="button" data-done>${api.t("gameDone")}</button>`}
           </div>
           <div data-result></div>
         </div>`;
       body.querySelector("[data-spin]").addEventListener("click", spin);
-      body.querySelector("[data-done]").addEventListener("click", () => api.finish());
+      body.querySelector("[data-done]")?.addEventListener("click", () => api.finish());
     }
 
     function spin() {
@@ -75,8 +102,19 @@ registerKind("spin", {
       api.sound.pop();
       api.later(() => {
         spinning = false;
-        api.sound.good();
         const res = body.querySelector("[data-result]");
+        if (quiz) {
+          // Answer it, then it comes off the wheel.
+          questionPop(api, res, questions[pick], api.color(pick), () => {
+            items.splice(pick, 1);
+            questions.splice(pick, 1);
+            if (!items.length) { api.finish(); return; }
+            draw();
+          });
+          return;
+        }
+        api.sound.good();
+        api.say(items[pick]);
         res.innerHTML = bigCard(api, items[pick], api.color(pick),
           `<button class="og-btn og-go" type="button" data-again>${api.t("gameSpin")}</button>
            <button class="og-btn" type="button" data-out>${api.t("gameRemove")}</button>`);
@@ -89,15 +127,18 @@ registerKind("spin", {
       }, 4100);
     }
     draw();
-  },
-});
+  }
+}
 
-registerKind("openbox", {
-  label: "Open a box",
-  noScore: true,
-  play(body, content, api) {
-    const items = api.shuffle(cardItems(content)).slice(0, 24);
+registerKind("openbox", { label: "Open a box", noScore: true, play: (body, content, api) => boxGame(body, content, api, false) });
+registerKind("boxquiz", { label: "Open a box quiz", play: (body, content, api) => boxGame(body, content, api, true) });
+
+function boxGame(body, content, api, quiz) {
+  {
+    const questions = quiz ? api.shuffle(goodQuestions(content)).slice(0, 24) : null;
+    const items = quiz ? questions.map(q => q.q) : api.shuffle(cardItems(content)).slice(0, 24);
     if (!items.length) { emptyGame(body); return; }
+    if (quiz) revealQuestions(api, questions);
     const open = new Set();
     const cols = items.length <= 6 ? 3 : items.length <= 12 ? 4 : items.length <= 20 ? 5 : 6;
     body.innerHTML = `
@@ -116,9 +157,15 @@ registerKind("openbox", {
     body.querySelectorAll("[data-i]").forEach(b => b.addEventListener("click", () => {
       const i = Number(b.dataset.i);
       b.classList.add("opened");
+      if (quiz && open.has(i)) return;
       open.add(i);
       api.sound.pop();
       const last = open.size === items.length;
+      if (quiz) {
+        questionPop(api, res, questions[i], api.color(i), () => { res.innerHTML = ""; if (last) api.finish(); });
+        return;
+      }
+      api.say(items[i]);
       res.innerHTML = bigCard(api, items[i], api.color(i),
         `<button class="og-btn og-go" type="button" data-close>${api.t(last ? "gameDone" : "gameNext").replace(/<[^>]*>/g, "")}</button>`);
       res.querySelector("[data-close]").addEventListener("click", () => {
@@ -126,8 +173,8 @@ registerKind("openbox", {
         if (last) api.finish();
       });
     }));
-  },
-});
+  }
+}
 
 registerKind("flip", {
   label: "Flip cards",
@@ -156,7 +203,8 @@ registerKind("flip", {
             <button class="og-btn og-go" type="button" data-next>${at + 1 < cards.length ? "→" : api.t("gameDone")}</button>
           </div>
         </div>`;
-      body.querySelector("[data-card]").addEventListener("click", e => { e.currentTarget.classList.toggle("up"); api.sound.pop(); });
+      api.say(c.a);
+      body.querySelector("[data-card]").addEventListener("click", e => { e.currentTarget.classList.toggle("up"); api.sound.pop(); api.say(e.currentTarget.classList.contains("up") ? (c.b || c.a) : c.a); });
       body.querySelector("[data-prev]").addEventListener("click", () => { if (at) { at--; show(); } });
       body.querySelector("[data-next]").addEventListener("click", () => { if (at + 1 < cards.length) { at++; show(); } else api.finish(); });
       body.querySelector("[data-shuffle]").addEventListener("click", () => { cards = api.shuffle(cards); at = 0; show(); });
@@ -189,6 +237,7 @@ registerKind("deal", {
       spot.innerHTML = `<div class="og-bigcard og-dealt" style="--c:${api.color(dealt)}"><span dir="auto">${api.esc(text)}</span></div>`;
       dealt++;
       api.sound.pop();
+      api.say(text);
       body.querySelector("[data-left]").textContent = api.t("gameCardsLeft", { n: deck.length - dealt }).replace(/<[^>]*>/g, "");
       if (dealt >= deck.length) { btn.textContent = api.t("gameDone").replace(/<[^>]*>/g, ""); body.querySelector("[data-deck]").classList.add("empty"); }
     }

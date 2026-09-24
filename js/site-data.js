@@ -80,6 +80,8 @@ const OWN_TEMPLATES = {
   "Open a box": { group: "cards", own: "openbox", noScore: true },
   "Flip cards": { group: "cards", own: "flip", noScore: true },
   "Pick a card": { group: "cards", own: "deal", noScore: true },
+  "Spin and answer": { group: "cards", own: "spinquiz" },
+  "Open a box quiz": { group: "cards", own: "boxquiz" },
 };
 const OWN_HOWTO = {
   "Match it": "Drag each tile to its match. Then press Submit.",
@@ -105,6 +107,8 @@ const OWN_HOWTO = {
   "Open a box": "Tap a box. Read what's inside.",
   "Flip cards": "Read the card. Tap it to flip it.",
   "Pick a card": "Press Next card. Read it out loud.",
+  "Spin and answer": "Press Spin. Then tap the right answer.",
+  "Open a box quiz": "Tap a box. Then tap the right answer.",
 };
 
 function withDefaults(data) {
