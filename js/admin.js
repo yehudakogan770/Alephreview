@@ -540,7 +540,7 @@ function ownKinds() {
 function ownSample(o) {
   const all = [...(o.pairs || []).map(p => p.a), ...(o.questions || []).map(q => q.answers[0]),
     ...(o.groups || []).flatMap(g => g.items), ...(o.items || [])];
-  return all.find(x => x && x.length <= 4) || (o.kind || "").slice(0, 1).toUpperCase();
+  return all.find(x => x && x.length <= 4 && /[\u0590-\u05FF]/.test(x)) || all.find(x => x && x.length <= 4) || (o.kind || "").slice(0, 1).toUpperCase();
 }
 
 function ownCount(g) {
@@ -630,7 +630,7 @@ const CONTENT_EDITORS = {
   pairs: pairsEd("Each pair becomes two cards, face down. Students flip two at a time to find the pairs. More than 6 are split into rounds.", "Card", "Its match"),
   find: uniqueEd("Students see the right side and tap the tile with the left side. More than 8 are split into rounds.", "Tile to find", "What students see"),
   truefalse: pairsEd("Students see a pair and say if it's right. Sometimes the site mixes up a pair on purpose. The right side can repeat, like Kamatz and Patach.", "Tile", "Its match"),
-  quiz: quizEd("Each question has one right answer and up to 5 wrong ones. The answers are mixed up for students."),
+  quiz: quizEd("Each question has a right answer (or a few, with commas) and wrong ones: up to 6 answers in all. The answers are mixed up for students."),
   gameshow: quizEd("Like a quiz, with a clock for each question and 2 helps: 50 : 50 and Second try."),
   winlose: quizEd("Like a quiz, but students pick how many points to play for before each question."),
   sort: groupsEd("2 to 4 groups. Students drag each tile into its group. A wrong drop bounces back.", 4),
@@ -1144,7 +1144,7 @@ async function loadHomeworkData() {
 function homeworkTab() {
   refreshHomework();
   return `
-    <p class="tab-help">Give a class homework: pick games and a due date. Students sign in with Google and see only their homework. For scores, paste a Wordwall assignment link for each game (on Wordwall: <b>Set assignment</b>).</p>
+    <p class="tab-help">Give a class homework: pick games made on this site, a passing score and a due date. Students sign in with Google and see only their homework. A game counts as done when the student passes it.</p>
     <section class="panel wide-panel">
       <div class="panel-head"><h3>Homework</h3><button class="btn btn-primary small" data-hw-new>+ New homework</button></div>
       <div id="hw-list"><p class="muted">Loading…</p></div>
