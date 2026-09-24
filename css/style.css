@@ -699,7 +699,7 @@ a.tile:active { scale: .94; }
 }
 .player-main {
   flex: 0 1 auto;
-  width: min(100%, calc((100vh - 330px) * 4 / 3));
+  width: min(100%, calc((100vh - 240px) * 4 / 3));
   min-width: min(100%, 420px);
 }
 
@@ -750,7 +750,7 @@ a.tile:active { scale: .94; }
   .player-layout { flex-direction: column; align-items: stretch; }
   .how-to { flex: none; }
   .how-to ol { grid-template-columns: repeat(3, 1fr); gap: 12px 20px; }
-  .player-main { margin: 0 auto; width: min(100%, calc((100vh - 470px) * 4 / 3)); }
+  .player-main { margin: 0 auto; width: min(100%, calc((100vh - 380px) * 4 / 3)); }
 }
 @media (max-width: 640px) {
   .how-to ol { grid-template-columns: 1fr; }
@@ -777,7 +777,7 @@ a.tile:active { scale: .94; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 .player-mid { display: flex; align-items: center; gap: 10px; }
 .counter { margin-right: 4px; color: var(--muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
@@ -949,3 +949,12 @@ a.tile:active { scale: .94; }
 }
 .admin-link:hover { border-color: var(--text); color: var(--text); }
 .admin-link .icon { width: 14px; height: 14px; }
+
+/* Game pages: wider page and a compact title row, so the game can be bigger. */
+body.playing #app { max-width: 1640px; padding-top: 12px; }
+body.playing .site-header .header-inner { max-width: 1640px; }
+body.playing .crumbs { margin-bottom: 8px; }
+body.playing .player-head { align-items: center; margin-bottom: 12px; }
+body.playing .player-title { flex-direction: row; align-items: center; gap: 12px; }
+body.playing .player-title h1 { font-size: clamp(20px, 2.2vw, 26px); }
+body.playing .player-head .btn { min-height: 38px; padding: 7px 16px; }
