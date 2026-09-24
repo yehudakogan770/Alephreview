@@ -717,6 +717,7 @@ function bindContentEditor(form, getKind) {
 function openMake(stripe, where) {
   const g = where ? where.game : null;
   const kinds = ownKinds().filter(k => CONTENT_EDITORS[k.kind]);
+  if (!kinds.length) { toast("Game types didn't load. Please reload the page.", "bad"); return; }
   const kindName = g ? g.game : kinds[0].name;
   let kind = (draft.templates[kindName] || {}).own || kinds[0].kind;
   const dlg = $("#dlg-game");
@@ -1475,6 +1476,24 @@ window.addEventListener("beforeunload", e => {
 
 // ---- start ----------------------------------------------------------------------------------
 
+// A draft saved before some ready-made games existed (ids like own-red-2-sort)
+// gets them added, in the same place as on the live site, so publishing it
+// doesn't remove them.
+function addNewReadyMade(d, live) {
+  const have = new Set();
+  for (const b of Object.values(d.games || {})) for (const l of Object.values(b)) for (const g of l) have.add(g.id);
+  for (const [belt, stripes] of Object.entries(live.games || {})) {
+    for (const [s, list] of Object.entries(stripes)) {
+      d.games[belt] = d.games[belt] || {};
+      const into = d.games[belt][s] = d.games[belt][s] || [];
+      list.forEach((g, i) => {
+        if (!have.has(g.id) && g.id.startsWith(`own-${belt}-${s}`)) into.splice(Math.min(i, into.length), 0, g);
+      });
+    }
+  }
+  return d;
+}
+
 async function openEditor() {
   gate("Loading…");
   let live;
@@ -1491,7 +1510,7 @@ async function openEditor() {
   if (saved && saved !== published) {
     try {
       const old = JSON.parse(saved);
-      if (confirm("You have changes that weren't published yet. Keep working on them?\n\nOK keeps them. Cancel starts from the live site.")) draft = old;
+      if (confirm("You have changes that weren't published yet. Keep working on them?\n\nOK keeps them. Cancel starts from the live site.")) draft = addNewReadyMade(withDefaults(old), live);
     } catch { /* ignore a broken draft */ }
   }
   document.body.classList.remove("locked");
