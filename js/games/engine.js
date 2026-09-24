@@ -332,7 +332,8 @@ function ogIcon(name) {
 //   t(key, vars)  site text as HTML
 //   howTo         what to do, shown on the start screen
 //   pass          passing percent, or null when there's no pass mark
-//   onFinish(result)  { right, total, percent, passed, seconds }
+//   onFinish(result)  { right, total, percent, passed, seconds }; games with no score
+//                     send { passed: true, done: true } when played to the end
 //   next          { label, href } for the button after the game, or null
 //   tune          which background tune (a number), or leave out to pick by the game id
 // }
@@ -398,7 +399,7 @@ function playOwnGame(stage, g, opts) {
           <span class="og-kind">${ogEsc(g.game || kind.label)}</span>
           <h2 class="og-title" dir="auto">${ogEsc(g.title)}</h2>
           ${opts.howTo ? `<p class="og-lead">${ogEsc(opts.howTo)}</p>` : ""}
-          ${opts.pass ? `<p class="og-passmark">${opts.t("gamePassMark", { pass: opts.pass })}</p>` : ""}
+          ${opts.pass && !kind.noScore ? `<p class="og-passmark">${opts.t("gamePassMark", { pass: opts.pass })}</p>` : ""}
           <button class="og-btn og-go og-big" type="button" data-start>${ogIcon("play")} ${opts.t("gameStart")}</button>
         </div>
       </div>`;
@@ -464,6 +465,8 @@ function playOwnGame(stage, g, opts) {
   // Games with no score (cards, wheels): just "All done".
   function doneScreen() {
     gameSound.done();
+    // Homework: a game with no score is done once it's played to the end.
+    if (opts.onFinish) opts.onFinish({ right: 0, total: 0, percent: null, passed: true, seconds, done: true });
     roundEl.textContent = "";
     body.innerHTML = `
       <div class="og-screen">

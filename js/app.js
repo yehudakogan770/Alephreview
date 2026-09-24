@@ -548,7 +548,7 @@ function findAnyGame(id) {
   if (found && !found.g.own) {
     for (const b of BELTS) for (const s of STRIPES) {
       const g = ((SITE.games[b.key] || {})[s] || []).find(x => x.own && x.id.endsWith(`-ww${id}`));
-      if (g && !((SITE.templates || {})[g.game] || {}).noScore) return { g, b, s };
+      if (g) return { g, b, s };
     }
   }
   return found;
@@ -722,7 +722,7 @@ async function saveScore(hwId, gameId, u, result) {
   try { const d = await fsMod.getDoc(ref); prev = (d.exists() && d.data().items && d.data().items[gameId]) || {}; } catch { /* first try */ }
   await fsMod.setDoc(ref, {
     hw: hwId, email, name: u.displayName || "",
-    items: { [gameId]: {
+    items: { [gameId]: result.done ? { tries: fsMod.increment(1), passed: true, done: true } : {
       tries: fsMod.increment(1),
       last: result.percent,
       best: Math.max(prev.best || 0, result.percent),

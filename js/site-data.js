@@ -59,7 +59,7 @@ const TEXT_DEFAULTS = {
 };
 
 // Game types made on this site (js/games/*.js).
-// noScore: games with no right or wrong (cards, wheels). They can't be homework.
+// noScore: games with no right or wrong (cards, wheels). As homework, they're done when played to the end.
 const OWN_TEMPLATES = {
   "Match it": { group: "match", own: "match" },
   "Flip and match": { group: "match", own: "pairs" },

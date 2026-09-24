@@ -650,12 +650,12 @@ const CONTENT_EDITORS = {
   whack: uniqueEd("Each pair: the tile that pops up, and the word students look for. Up to 6 words.", "Pops up", "Word to find", 2),
   plane: uniqueEd("Each pair: what's in the cloud, and the word students look for.", "In the cloud", "Word to find", 2),
   watch: { shape: "list", help: "Tiles to remember. Students see 4, then find them among others. Use at least 8.", cols: [["Tile", "א"]], min: 4 },
-  spin: { shape: "list", help: "What's on the wheel (up to 16). No score, so it can't be homework.", cols: [["On the wheel", "בָּ"]], min: 2 },
-  openbox: { shape: "list", help: "What's in the boxes (up to 24). No score, so it can't be homework.", cols: [["In a box", "בָּ"]], min: 2 },
-  flip: pairsEd("Each card: the front, and the back (shown when it's flipped). No score, so it can't be homework.", "Front", "Back", 1),
+  spin: { shape: "list", help: "What's on the wheel (up to 16). No score: as homework, it's done when played to the end.", cols: [["On the wheel", "בָּ"]], min: 2 },
+  openbox: { shape: "list", help: "What's in the boxes (up to 24). No score: as homework, it's done when played to the end.", cols: [["In a box", "בָּ"]], min: 2 },
+  flip: pairsEd("Each card: the front, and the back (shown when it's flipped). No score: as homework, it's done when played to the end.", "Front", "Back", 1),
   spinquiz: quizEd("Each question goes on the wheel (up to 16). Students spin, then answer it."),
   boxquiz: quizEd("Each question goes in a box (up to 24). Students open a box, then answer it."),
-  deal: { shape: "list", help: "The cards in the deck. No score, so it can't be homework.", cols: [["Card", "שָׁם"]], min: 2 },
+  deal: { shape: "list", help: "The cards in the deck. No score: as homework, it's done when played to the end.", cols: [["Card", "שָׁם"]], min: 2 },
   label: pairsEd("Each row: a big part on the board (like a letter) and its label. Keep them in order: they show right to left. Up to 6 a round.", "Big part", "Label", 2),
 };
 
@@ -1140,7 +1140,7 @@ function gameById(id) {
   const found = all.find(x => x.g.id === id);
   // A Wordwall game in old homework is played as its copy made here (see findAnyGame in app.js).
   if (found && !found.g.own) {
-    const copy = all.find(x => x.g.own && x.g.id.endsWith(`-ww${id}`) && !(draft.templates[x.g.game] || {}).noScore);
+    const copy = all.find(x => x.g.own && x.g.id.endsWith(`-ww${id}`));
     if (copy) return copy;
   }
   return found;
@@ -1323,7 +1323,7 @@ function openHomework(id) {
   const drawResults = () => {
     const q = search.value.trim().toLowerCase();
     const chosen = new Set(items.map(x => x.game));
-    const all = allGamesFlat().filter(x => x.g.own && !x.g.hidden && !chosen.has(x.g.id) && !(draft.templates[x.g.game] || {}).noScore);
+    const all = allGamesFlat().filter(x => x.g.own && !x.g.hidden && !chosen.has(x.g.id));
     const hits = q ? all.filter(x => x.g.title.toLowerCase().includes(q) || `${x.b.name} ${x.s}`.toLowerCase().includes(q) || (x.g.game || "").toLowerCase().includes(q)) : all;
     resultsEl.innerHTML = hits.slice(0, 12).map(x => `
       <li><button type="button" data-pick="${esc(x.g.id)}">
@@ -1404,6 +1404,7 @@ async function openResults(id) {
     const p = prog(st, it);
     if (!p) return `<td class="no">—</td>`;
     const tries = p.tries ? ` · ${p.tries} ${p.tries === 1 ? "try" : "tries"}` : "";
+    if (p.passed && p.best === undefined) return `<td class="yes">✓ Done<small>${tries} · ${minutes(p.seconds)}</small></td>`;
     if (p.passed) return `<td class="yes">✓ ${p.best}%<small>${tries} · ${minutes(p.seconds)}</small></td>`;
     if (p.best !== undefined) return `<td class="fail">✗ ${p.best}%<small>${tries} · ${minutes(p.seconds)}</small></td>`;
     return `<td class="opened">Opened<small> · ${minutes(p.seconds)}</small></td>`;
@@ -1421,7 +1422,7 @@ async function openResults(id) {
           <td><b>${doneCount(st)}/${items.length}</b></td></tr>`).join("")}</tbody>
       </table>
     </div>
-    <p class="hint">✓ passed, with their best score. ✗ played but not passed yet. A game counts as done only when it's passed.</p>
+    <p class="hint">✓ passed, with their best score (card games: ✓ Done when played to the end). ✗ played but not passed yet. A game counts as done only when it's passed.</p>
     <div class="dlg-actions">
       <span class="spacer"></span>
       <button class="btn btn-primary" value="ok">Close</button>
