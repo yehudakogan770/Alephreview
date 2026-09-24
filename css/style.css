@@ -914,3 +914,38 @@ a.tile:active { scale: .94; }
 @keyframes fall {
   to { transform: translate(var(--drift), 105vh) rotate(var(--spin)); }
 }
+
+/* ---- admin preview + optional home parts ---- */
+
+.hero.no-art { grid-template-columns: 1fr; }
+
+.preview-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #f5b301;
+  color: #1b2437;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Small admin sign-in button in the header */
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.admin-link:hover { border-color: var(--text); color: var(--text); }
+.admin-link .icon { width: 14px; height: 14px; }

@@ -3,6 +3,10 @@
 //   #/red               one belt, its three stripes
 //   #/red/2             the games for Red belt, Stripe 2
 //   #/red/2/play/123    play one game inside the site
+//
+// All words, settings and games come from the site data (js/site-data.js),
+// which the admin page (admin.html) edits. Add ?preview to the address to see the admin's
+// unsaved draft instead.
 
 const BELTS = [
   { key: "white",  name: "White",  color: "#f1f1ee", ink: "#1b2437", line: "#6b7280" },
@@ -64,8 +68,23 @@ function plural(n, word) {
   return `${n} ${word}${n === 1 ? "" : "s"}`;
 }
 
+let SITE = null;
+let PREVIEW = false;
+
+// A piece of site text. {name} fills in a value; **word** makes it bold.
+function T(key, vars = {}) {
+  const raw = (SITE.text && SITE.text[key]) || "";
+  return esc(raw.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m)))
+    .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+}
+
+// The same text with no formatting, for places like tooltips.
+function plainT(key, vars = {}) {
+  return ((SITE.text && SITE.text[key]) || "").replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m)).replace(/\*\*/g, "");
+}
+
 function gamesFor(beltKey, stripe) {
-  return (((GAMES[beltKey] || {})[stripe]) || []).filter(g => !g.hidden);
+  return (((SITE.games[beltKey] || {})[stripe]) || []).filter(g => !g.hidden);
 }
 
 function beltGames(beltKey) {
@@ -93,7 +112,7 @@ function gameUrl(g) {
 }
 
 function typeLabel(g) {
-  return g.game || (GAME_TYPES[g.type] || { label: "Game" }).label;
+  return g.game || (SITE.groups[g.type] || { label: "Game" }).label;
 }
 
 function played() { return new Set(store.get("played", [])); }
@@ -176,14 +195,14 @@ function homeView() {
   const doneTotal = countPlayed(every, done);
   const up = nextUp(done);
   const cta = up
-    ? `<a class="btn btn-primary btn-lg" href="#/${up.b.key}/${up.s}">${icon("play")} ${doneTotal ? "Keep going" : "Start playing"}</a>`
+    ? `<a class="btn btn-primary btn-lg" href="#/${up.b.key}/${up.s}">${icon("play")} ${doneTotal ? T("continueButton") : T("startButton")}</a>`
     : "";
 
   const tiles = HERO_TILES.map(([letter, key], i) => {
     const b = BELTS.find(x => x.key === key);
     return beltGames(b.key).length
       ? `<a class="tile" href="#/${b.key}" style="${beltStyle(b)};--i:${i}" title="${b.name} Belt" aria-label="${b.name} Belt">${letter}</a>`
-      : `<span class="tile soon" style="${beltStyle(b)};--i:${i}" title="${b.name} Belt: coming soon" aria-label="${b.name} Belt, coming soon">${letter}</span>`;
+      : `<span class="tile soon" style="${beltStyle(b)};--i:${i}" title="${b.name} Belt: ${esc(plainT("comingSoon"))}" aria-label="${b.name} Belt, ${esc(plainT("comingSoon"))}">${letter}</span>`;
   }).join("");
 
   const cards = BELTS.map((b, i) => {
@@ -202,44 +221,46 @@ function homeView() {
           </span>
           ${n
             ? `<span class="belt-progress">${progressBar(p, n, `${b.name} Belt progress`)}<span class="belt-foot"><span class="progress-label">${cheer(p, n)}</span>${stars(b.key, done)}</span></span>`
-            : `<span class="tag">${icon("clock")} Coming soon</span>`}
+            : `<span class="tag">${icon("clock")} ${T("comingSoon")}</span>`}
         ${n ? "</a>" : "</div>"}
       </li>`;
   }).join("");
 
+  const home = SITE.home || {};
   return `
-    <section class="hero">
+    <section class="hero${home.showTiles === false ? " no-art" : ""}">
       <div class="hero-copy">
-        <p class="eyebrow">Hebrew reading games</p>
-        <h1>Hebrew reading, one belt at a time.</h1>
-        <p class="lede">Play the games in a stripe to earn a star. Get 3 stars to move up a belt.</p>
+        ${SITE.text.eyebrow ? `<p class="eyebrow">${T("eyebrow")}</p>` : ""}
+        <h1>${T("headline")}</h1>
+        ${SITE.text.lede ? `<p class="lede">${T("lede")}</p>` : ""}
         <div class="hero-actions">
           ${cta}
-          ${up ? `<span class="hero-next">${doneTotal ? "Next up" : "Start with"}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
+          ${up ? `<span class="hero-next">${doneTotal ? T("nextUp") : T("startWith")}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
         </div>
+        ${home.showStats === false ? "" : `
         <dl class="stats">
-          <div><dt>Games to play</dt><dd>${every.length}</dd></div>
-          <div><dt>Games played</dt><dd>${doneTotal}</dd></div>
-          <div class="stat-stars"><dt>Stars earned</dt><dd>${icon("star")} ${starCount(done)}</dd></div>
-        </dl>
+          <div><dt>${T("statGames")}</dt><dd>${every.length}</dd></div>
+          <div><dt>${T("statPlayed")}</dt><dd>${doneTotal}</dd></div>
+          <div class="stat-stars"><dt>${T("statStars")}</dt><dd>${icon("star")} ${starCount(done)}</dd></div>
+        </dl>`}
       </div>
-      <nav class="hero-art" aria-label="Belts">${tiles}</nav>
+      ${home.showTiles === false ? "" : `<nav class="hero-art" aria-label="Belts">${tiles}</nav>`}
     </section>
 
     <section class="section" id="belts">
       <div class="section-head">
-        <h2>Choose your belt</h2>
-        <p>Start with White. Work up to Black.</p>
+        <h2>${T("beltsTitle")}</h2>
+        ${SITE.text.beltsSubtitle ? `<p>${T("beltsSubtitle")}</p>` : ""}
       </div>
       <ol class="belt-grid">${cards}</ol>
     </section>`;
 }
 
 function typeSummary(list) {
-  return Object.keys(GAME_TYPES)
+  return Object.keys(SITE.groups)
     .map(k => [k, list.filter(g => g.type === k).length])
     .filter(([, n]) => n)
-    .map(([k, n]) => `<span class="mini-pill ${typeClass(k)}" title="${esc(GAME_TYPES[k].label)}">${icon(k)} ${n}</span>`)
+    .map(([k, n]) => `<span class="mini-pill ${typeClass(k)}" title="${esc(SITE.groups[k].label)}">${icon(k)} ${n}</span>`)
     .join("");
 }
 
@@ -281,24 +302,24 @@ function beltView(b) {
             <span class="stripe-foot">
               <span class="progress-label">${cheer(p, n)}</span>
               <span class="go">${p === n ? "Play again" : p ? "Continue" : "Start"} ${icon("right")}</span>
-            </span>` : `<span class="tag">${icon("clock")} Coming soon</span>`}
+            </span>` : `<span class="tag">${icon("clock")} ${T("comingSoon")}</span>`}
         ${n ? "</a>" : "</div>"}
       </li>`;
   }).join("");
 
   const prev = BELTS[idx - 1], next = BELTS[idx + 1];
   const got = STRIPES.filter(s => stripeDone(b.key, s, done)).length;
-  const sub = all.length ? `${plural(all.length, "game")} · ${got} of 3 stars` : "Coming soon.";
+  const sub = all.length ? `${plural(all.length, "game")} · ${got} of 3 stars` : T("comingSoon");
   return `
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`]])}
     ${pageHead(b, `${b.name} Belt`, sub)}
-    <div class="section-head"><h2>Choose a stripe</h2></div>
+    <div class="section-head"><h2>${T("stripesTitle")}</h2></div>
     <ol class="stripe-grid">${stripeCards}</ol>
     <nav class="pager">
       ${prev ? `<a class="btn btn-ghost" href="#/${prev.key}">${icon("left")} ${prev.name} Belt</a>` : "<span></span>"}
       ${!next ? "<span></span>" : beltGames(next.key).length
         ? `<a class="btn btn-ghost" href="#/${next.key}">${next.name} Belt ${icon("right")}</a>`
-        : `<span class="btn btn-ghost" aria-disabled="true">${icon("clock")} ${next.name} Belt coming soon</span>`}
+        : `<span class="btn btn-ghost" aria-disabled="true">${icon("clock")} ${next.name} Belt: ${T("comingSoon")}</span>`}
     </nav>`;
 }
 
@@ -328,25 +349,25 @@ function stripeView(b, stripe) {
   const view = store.get("view", "all");
   const filter = store.get("filter", "all");
 
-  const types = Object.keys(GAME_TYPES).filter(k => list.some(g => g.type === k));
+  const types = Object.keys(SITE.groups).filter(k => list.some(g => g.type === k));
   const active = types.includes(filter) ? filter : "all";
   const p = countPlayed(list, done);
 
   let body;
   if (!list.length) {
-    body = `<div class="empty-note">${icon("clock", "icon icon-lg")}<p>Coming soon.</p></div>`;
+    body = `<div class="empty-note">${icon("clock", "icon icon-lg")}<p>${T("comingSoon")}</p></div>`;
   } else if (view === "type") {
     body = types.map(k => {
       const group = list.filter(g => g.type === k);
       return `
         <section class="type-group">
-          <h2><span class="type-dot ${typeClass(k)}">${icon(k)}</span> ${esc(GAME_TYPES[k].label)} <span class="count">${group.length}</span></h2>
+          <h2><span class="type-dot ${typeClass(k)}">${icon(k)}</span> ${esc(SITE.groups[k].label)} <span class="count">${group.length}</span></h2>
           <ul class="game-grid">${group.map(g => gameCard(g, done, b, stripe)).join("")}</ul>
         </section>`;
     }).join("");
   } else {
     const chips = ["all", ...types].map(k => {
-      const label = k === "all" ? "All" : esc(GAME_TYPES[k].label);
+      const label = k === "all" ? "All" : esc(SITE.groups[k].label);
       const n = k === "all" ? list.length : list.filter(g => g.type === k).length;
       return `<button class="chip${k === "all" ? "" : " " + typeClass(k)}" data-filter="${k}" aria-pressed="${k === active}">${icon(k)} ${label} <span class="count">${n}</span></button>`;
     }).join("");
@@ -359,7 +380,7 @@ function stripeView(b, stripe) {
   const stripeTabs = STRIPES.map(s =>
     s === stripe || gamesFor(b.key, s).length
       ? `<a class="seg" href="#/${b.key}/${s}"${s === stripe ? ' aria-current="page"' : ""}>Stripe ${s}</a>`
-      : `<span class="seg" aria-disabled="true" title="Coming soon">Stripe ${s}</span>`).join("");
+      : `<span class="seg" aria-disabled="true" title="${esc(plainT("comingSoon"))}">Stripe ${s}</span>`).join("");
 
   const headExtra = list.length
     ? `<div class="head-progress">${progressBar(p, list.length, "Stripe progress")}<span>${p === list.length ? `${icon("star")} Star earned` : `${p} of ${list.length} played`}</span></div>`
@@ -367,7 +388,7 @@ function stripeView(b, stripe) {
 
   return `
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`, `#/${b.key}`], [`Stripe ${stripe}`]])}
-    ${pageHead(b, `${b.name} Belt · Stripe ${stripe}`, list.length ? plural(list.length, "game") : "Coming soon", headExtra)}
+    ${pageHead(b, `${b.name} Belt · Stripe ${stripe}`, list.length ? plural(list.length, "game") : T("comingSoon"), headExtra)}
     <div class="toolbar">
       <nav class="segmented" aria-label="Stripes">${stripeTabs}</nav>
       ${list.length ? `
@@ -379,43 +400,17 @@ function stripeView(b, stripe) {
     ${body}`;
 }
 
-// What to do in each kind of Wordwall game. Kids read this, so keep it short and simple.
-const HOW_TO = {
-  "Matching pairs": "Flip two cards. Find the ones that match.",
-  "Match up": "Drag each one to its match.",
-  "Find the match": "Tap the one that matches.",
-  "Group sort": "Drag each one into the right group.",
-  "Rank order": "Drag them into the right order.",
-  "Balloon pop": "Pop the balloon to drop it on its match.",
-  "Flying fruit": "Tap the right answer as it flies by.",
-  "Whack-a-mole": "Tap the moles with the right answer.",
-  "Open the box": "Tap a box. Read what is inside out loud.",
-  "Spin the wheel": "Spin the wheel. Read it out loud.",
-  "Speaking cards": "Tap to get a card. Read it out loud.",
-  "True or false": "Is it right? Tap True or False.",
-  "Quiz": "Tap the right answer.",
-  "Gameshow quiz": "Tap the right answer. Be quick!",
-  "Win or lose quiz": "Pick your points. Then tap the right answer.",
-  "Airplane": "Fly into the right answers. Miss the wrong ones.",
-  "Labelled diagram": "Drag each word to its spot.",
-  "Anagram": "Drag the letters into the right order.",
-  "Watch and memorize": "Watch closely. Then pick what you saw.",
-  "Speed sorting": "Put each one in the right group. Be quick!",
-  "Flash cards": "Say the answer. Then flip the card.",
-  "Complete the sentence": "Drag each word into the right blank.",
-  "Categorize": "Drag each one into the right group.",
-};
-
 function howToPlay(g, next) {
-  const how = HOW_TO[g.game];
+  // What to do in each kind of game comes from the admin's How to play list.
+  const how = (SITE.howTo || {})[g.game];
   const steps = [
-    "Press <b>Start</b>.",
-    `${how ? esc(how) : "Do what the game says."}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
-    next ? "Done? Press <b>Next game</b>." : "Done? Press <b>Stripe done</b>.",
-  ];
+    T("step1"),
+    `${how ? esc(how) : T("step2Fallback")}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
+    next ? T("step3Next") : T("step3Last"),
+  ].filter(x => x);
   return `
     <aside class="how-to">
-      <h2>${icon(g.type)} How to play</h2>
+      <h2>${icon(g.type)} ${T("howToTitle")}</h2>
       <ol>${steps.map(x => `<li>${x}</li>`).join("")}</ol>
     </aside>`;
 }
@@ -479,7 +474,7 @@ function maybeCelebrate(b, stripe) {
   const toast = document.createElement("div");
   toast.className = "toast";
   toast.setAttribute("role", "status");
-  toast.innerHTML = `<span class="toast-star">${icon("star")}</span><span><b>Stripe ${stripe} done</b><br>You got a ${b.name} Belt star.</span>`;
+  toast.innerHTML = `<span class="toast-star">${icon("star")}</span><span><b>${T("stripeDoneTitle", { stripe, belt: b.name })}</b><br>${T("stripeDoneText", { stripe, belt: b.name })}</span>`;
   document.body.append(toast);
   setTimeout(() => toast.classList.add("out"), 4200);
   setTimeout(() => toast.remove(), 4800);
@@ -548,5 +543,29 @@ app.addEventListener("click", e => {
   if (game) { markPlayed(game.dataset.id); game.classList.add("played"); }
 });
 
-window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
-render();
+// ---- start -------------------------------------------------------------------
+
+async function loadSite() {
+  PREVIEW = new URLSearchParams(location.search).has("preview");
+  if (PREVIEW) {
+    const draft = store.get("admin-draft", null);
+    if (draft) return draft;
+  }
+  return fetchSiteData();
+}
+
+loadSite().then(data => {
+  SITE = data;
+  document.querySelector(".footer-inner > span:last-child").innerHTML = T("footer");
+  if (PREVIEW) {
+    const bar = document.createElement("div");
+    bar.className = "preview-bar";
+    bar.innerHTML = `${icon("out")} Preview of unsaved changes. Students don't see this yet.`;
+    document.body.prepend(bar);
+  }
+  window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+  render();
+}).catch(err => {
+  console.error(err);
+  app.innerHTML = `<div class="empty-note"><p>The games didn't load. Please refresh the page.</p></div>`;
+});

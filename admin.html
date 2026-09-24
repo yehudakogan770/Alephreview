@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — Aleph Review</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=17">
+  <link rel="stylesheet" href="css/admin.css?v=17">
+</head>
+<body class="admin locked">
+  <!-- Nothing else on this page shows until an admin signs in. -->
+  <section class="gate" id="gate">
+    <div class="gate-card">
+      <img src="img/favicon.svg" alt="" width="56" height="56">
+      <h1>Aleph Review Admin</h1>
+      <p id="gate-msg">Checking…</p>
+      <button class="btn btn-primary btn-lg" id="gate-signin" type="button" hidden>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M21.35 11.1h-9.18v2.97h5.28c-.23 1.4-1.66 4.1-5.28 4.1-3.18 0-5.77-2.63-5.77-5.87s2.59-5.87 5.77-5.87c1.81 0 3.02.77 3.72 1.43l2.53-2.44C16.8 3.9 14.73 3 12.17 3 7.12 3 3 7.12 3 12.3s4.12 9.3 9.17 9.3c5.29 0 8.8-3.72 8.8-8.96 0-.6-.07-1.06-.15-1.54z"/></svg>
+        Sign in with Google
+      </button>
+      <button class="link-btn" id="gate-signout" type="button" hidden>Use a different account</button>
+      <p class="gate-back"><a href="./">Back to the games</a></p>
+    </div>
+  </section>
+
+  <header class="admin-bar">
+    <a class="brand" href="./" target="_blank" rel="noopener" title="Open the site">
+      <img class="brand-mark" src="img/favicon.svg" alt="" width="32" height="32">
+      <span class="brand-text">Aleph Review <small>Admin</small></span>
+    </a>
+    <span class="status" id="status"></span>
+    <div class="admin-actions">
+      <button class="btn btn-ghost" id="btn-preview" type="button">Preview</button>
+      <button class="btn btn-ghost" id="btn-discard" type="button">Undo all changes</button>
+      <button class="btn btn-primary" id="btn-save" type="button">Save &amp; publish</button>
+      <button class="link-btn" id="btn-account" type="button"></button>
+    </div>
+  </header>
+
+  <nav class="admin-tabs" role="tablist">
+    <button role="tab" data-tab="games" aria-selected="true">Games</button>
+    <button role="tab" data-tab="words">Words on the site</button>
+    <button role="tab" data-tab="howto">How to play</button>
+    <button role="tab" data-tab="home">Home page</button>
+  </nav>
+
+  <main id="admin" class="admin-main"></main>
+
+  <!-- Edit one game -->
+  <dialog id="dlg-game" class="admin-dialog"></dialog>
+  <!-- Add a game -->
+  <dialog id="dlg-add" class="admin-dialog"></dialog>
+
+  <div class="admin-toast" id="toast" role="status" hidden></div>
+
+  <script src="js/firebase-config.js?v=17"></script>
+  <script src="js/site-data.js?v=17"></script>
+  <script src="js/admin.js?v=17"></script>
+</body>
+</html>
