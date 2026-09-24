@@ -21,7 +21,7 @@
   "step3Last": "Done? Press **Stripe done**.",
   "stripeDoneTitle": "Stripe {stripe} done",
   "stripeDoneText": "You got a {belt} Belt star.",
-  "footer": "Games created by Ganeinu Academy."
+  "footer": "© Games created by Ganeinu Academy."
  },
  "home": {
   "showTiles": true,
