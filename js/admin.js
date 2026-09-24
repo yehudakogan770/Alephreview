@@ -50,6 +50,7 @@ const TEXT_FIELDS = [
     ["step2Fallback", "Step 2, when the game type has no How to play text"],
     ["step3Next", "Step 3, when there are more games"],
     ["step3Last", "Step 3, on the last game of a stripe"],
+    ["step3Homework", "Step 3, on the last game of a homework"],
   ]],
   ["When a stripe is done", [
     ["stripeDoneTitle", "Title. {stripe} becomes the stripe number."],

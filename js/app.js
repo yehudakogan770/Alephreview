@@ -417,13 +417,13 @@ function stripeView(b, stripe) {
     ${body}`;
 }
 
-function howToPlay(g, next) {
+function howToPlay(g, next, lastStep = "step3Last") {
   // What to do in each kind of game comes from the admin's How to play list.
   const how = (SITE.howTo || {})[g.game];
   const steps = [
     T("step1"),
     `${how ? esc(how) : T("step2Fallback")}${g.tip ? `<span class="tip" dir="auto">${esc(g.tip)}</span>` : ""}`,
-    next ? T("step3Next") : T("step3Last"),
+    next ? T("step3Next") : T(lastStep),
   ].filter(x => x);
   return `
     <aside class="how-to">
@@ -690,7 +690,7 @@ async function homeworkPlayView(hwId, gameId) {
       <div class="player-main">
         <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
       </div>
-      ${howToPlay(g, next)}
+      ${howToPlay(g, next, "step3Homework")}
     </div>`;
   track(hw.id, it.game, u);
   if (g.own) {
