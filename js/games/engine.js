@@ -43,6 +43,8 @@ function clock(sec) {
 
 let ogCtx = null;
 function ogAudio() {
+  // On iPhones and iPads, play even when the silent switch is on.
+  try { if (!ogCtx && navigator.audioSession) navigator.audioSession.type = "playback"; } catch { /* older browser */ }
   ogCtx = ogCtx || new (window.AudioContext || window.webkitAudioContext)();
   if (ogCtx.state === "suspended") ogCtx.resume();
   return ogCtx;
@@ -146,6 +148,7 @@ const GAME_INSTRUMENTS = {
 };
 
 const gameMusic = (() => {
+  const LOUD = 2; // how loud the music is overall
   const NAMES = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
   const midi = name => { const m = /^([A-G])(#?)(\d)$/.exec(name); return 12 * (+m[3] + 1) + NAMES[m[1]] + (m[2] ? 1 : 0); };
   const hz = n => 440 * Math.pow(2, (n - 69) / 12);
@@ -233,7 +236,7 @@ const gameMusic = (() => {
     const eighth = 30 / song.bpm;
     // Quieter while a word is read aloud; silent while the page is hidden.
     const talking = window.speechSynthesis && speechSynthesis.speaking;
-    out.gain.setTargetAtTime(document.hidden ? 0 : talking ? 0.25 : 1, ctx.currentTime, 0.08);
+    out.gain.setTargetAtTime(document.hidden ? 0 : talking ? LOUD / 4 : LOUD, ctx.currentTime, 0.08);
     if (document.hidden) { next = ctx.currentTime + 0.1; return; }
     if (next < ctx.currentTime) next = ctx.currentTime + 0.05;
     while (next < ctx.currentTime + 0.3) {
@@ -259,7 +262,7 @@ const gameMusic = (() => {
       const ctx = ogAudio();
       song = build(theme);
       out = ctx.createGain();
-      out.gain.value = 1;
+      out.gain.value = LOUD;
       out.connect(ctx.destination);
       tonal = ctx.createBiquadFilter();
       tonal.type = "lowpass";
