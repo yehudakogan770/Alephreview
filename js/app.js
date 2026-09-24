@@ -824,7 +824,7 @@ async function loadSite() {
 
 loadSite().then(data => {
   SITE = data;
-  document.querySelector(".footer-inner > span:last-child").innerHTML = T("footer");
+  document.querySelector("[data-footer]").innerHTML = T("footer");
   const hwLink = document.querySelector(".homework-link");
   if (cloudReady()) { hwLink.querySelector("span").innerHTML = T("homeworkButton"); hwLink.hidden = false; }
   if (PREVIEW) {
