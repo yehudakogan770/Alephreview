@@ -610,6 +610,7 @@ const SHAPES = {
 // One editor per kind: which shape, the column names, and how many rows.
 const pairsEd = (help, a, b, min = 3) => ({ shape: "pairs", help, cols: [[a, "א"], [b, "Alef"]], min, pasteHint: "א = Alef" });
 const quizEd = help => ({ shape: "quiz", help, cols: [["Question", "Which one is Beis?"], ["Right answer", "בּ"], ["Wrong answers, with commas", "ב, כ, פ"]], min: 2, pasteHint: "Which one is Beis? | בּ | ב, כ, פ" });
+const groupsEd = (help, max) => ({ shape: "groups", help, cols: [["Group", "Beis"], ["What goes in it, with commas", "בּ, בָּ, בַּ"]], min: 2, max, pasteHint: "Beis | בּ, בָּ, בַּ\nVeis | ב, בָ, בַ" });
 const CONTENT_EDITORS = {
   match: pairsEd("Each pair: a colorful tile the student drags, and the word it goes next to. Like א and Alef. More than 6 are split into rounds.", "Tile (dragged)", "Goes next to"),
   pairs: pairsEd("Each pair becomes two cards, face down. Students flip two at a time to find the pairs. More than 6 are split into rounds.", "Card", "Its match"),
@@ -618,6 +619,13 @@ const CONTENT_EDITORS = {
   quiz: quizEd("Each question has one right answer and up to 5 wrong ones. The answers are mixed up for students."),
   gameshow: quizEd("Like a quiz, with a clock for each question and 2 helps: 50 : 50 and Second try."),
   winlose: quizEd("Like a quiz, but students pick how many points to play for before each question."),
+  sort: groupsEd("2 to 4 groups. Students drag each tile into its group. A wrong drop bounces back.", 4),
+  speedsort: groupsEd("2 groups. Tiles come one at a time and students pick a side, fast.", 2),
+  categorize: groupsEd("2 to 4 groups, shown as columns. Students fill them, then press Submit.", 4),
+  order: { shape: "list", help: "Type them in the right order, first to last. Students see them mixed up. More than 8 are split into rounds.", cols: [["In order, first to last", "א"]], min: 3 },
+  anagram: { shape: "list", help: "One word on each row. Students see its letters mixed up and put them in order. Letters keep their vowels.", cols: [["Word", "שָׁלוֹם"]], min: 1 },
+  gaps: { shape: "sentences", help: "Put [ ] around each missing part, like: א ב [ג] ד. Students drag the missing parts into the gaps.", cols: [["Line, with [ ] around the missing parts", "א בּ [ג] ד [ה]"]], min: 1 },
+  label: pairsEd("Each row: a big part on the board (like a letter) and its label. Keep them in order: they show right to left. Up to 6 a round.", "Big part", "Label", 2),
 };
 
 function contentEditorHtml(kind, content) {
@@ -664,7 +672,8 @@ function readContent(form, kind) {
   const rows = [...form.querySelectorAll(".content-row")]
     .map(r => [...r.querySelectorAll("[data-col]")].map(i => i.value.trim()))
     .filter(r => r.some(Boolean));
-  if (rows.length < (ed.min || 1)) return { error: `Add at least ${ed.min || 1} rows.` };
+  const min = ed.min || 1;
+  if (rows.length < min) return { error: `Add at least ${min} ${min === 1 ? "row" : "rows"}.` };
   if (ed.max && rows.length > ed.max) return { error: `Use at most ${ed.max} rows.` };
   const res = SHAPES[ed.shape].fromRows(rows, ed);
   if (res.content) res.content.kind = kind;
