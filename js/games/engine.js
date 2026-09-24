@@ -77,31 +77,72 @@ const gameSound = (() => {
   };
 })();
 
-// ---- background music: a soft tune for each theme, played while a game runs -------
+// ---- background music: a bouncy tune for each game, played while it runs ----------
 //
 // Each song is 8 bars of eighth notes. "-" holds the note before, "." is a rest.
-// One chord per bar gives the bass and a quiet arpeggio.
+// One chord per bar gives the bass and the chords; the groove adds a light drum beat.
+// All of it is made here with Web Audio: no sound files.
 const GAME_SONGS = {
-  meadow: { bpm: 112, wave: "triangle", vol: 0.05,
-    chords: "C G Am F C G F C",
-    tune: `E5 - G5 - A5 G5 E5 - | D5 - . B4 D5 - G5 - | C5 - E5 - A5 - G5 E5 | F5 - E5 - D5 - C5 - |
-           E5 G5 C6 - B5 - G5 - | A5 - G5 - D5 - . . | F5 - A5 - G5 F5 E5 D5 | C5 - - - . . . .` },
-  desert: { bpm: 100, wave: "triangle", vol: 0.05,
+  meadow: { bpm: 126, lead: "marimba", groove: "bounce",
+    chords: "C Am F G C Am F G",
+    tune: `G4 C5 E5 G5 - E5 C5 D5 | E5 - C5 A4 - C5 E5 - | F5 E5 D5 C5 - A4 C5 - | D5 - B4 G4 - A4 B4 - |
+           C5 E5 G5 C6 - G5 E5 G5 | A5 - G5 E5 - C5 E5 - | F5 - A5 G5 F5 E5 D5 - | D5 E5 D5 B4 G4 - . .` },
+  desert: { bpm: 112, lead: "pluck", groove: "desert",
     chords: "Am Am G G F F E E",
     tune: `A4 - C5 - E5 - D5 C5 | B4 - A4 - . . E4 - | G4 - B4 - D5 - C5 B4 | A4 - G4 - . . . . |
            A4 - C5 - F5 - E5 D5 | C5 - A4 - . . C5 - | B4 - G#4 - B4 - D5 - | E5 - - - . . . .` },
-  ocean: { bpm: 88, wave: "sine", vol: 0.06,
+  ocean: { bpm: 100, lead: "marimba", groove: "calm",
     chords: "F Dm A# C F Dm A# C",
     tune: `A4 - - C5 F5 - - . | E5 - D5 - A4 - - . | D5 - - F5 A#5 - A5 G5 | G5 - - - . . . . |
            C6 - A5 - F5 - - . | F5 - E5 - D5 - A4 - | A#4 - D5 - G5 - F5 E5 | E5 - - - G5 - - -` },
-  space: { bpm: 80, wave: "sine", vol: 0.06,
+  space: { bpm: 96, lead: "bell", groove: "calm",
     chords: "Dm A# F C Dm A# Gm A",
     tune: `D5 - - - A5 - - - | F5 - - - D5 - - - | C5 - - - F5 - A5 - | G5 - - - - - . . |
            D5 - F5 - A5 - D6 - | C6 - A#5 - F5 - - - | G5 - A#5 - D6 - C6 A#5 | A5 - - - C#5 - - -` },
-  classic: { bpm: 116, wave: "square", vol: 0.022,
+  sunny: { bpm: 120, lead: "pluck", groove: "pop",
+    chords: "D A Bm G D A G A",
+    tune: `F#5 - A5 - D6 - A5 F#5 | E5 - C#5 - E5 A5 - . | D5 F#5 B5 - A5 F#5 D5 - | B4 D5 G5 - F#5 E5 D5 - |
+           A4 D5 F#5 - A5 - F#5 D5 | C#5 E5 A5 - G5 - E5 C#5 | D5 - G5 F#5 E5 - D5 B4 | C#5 - E5 - A4 - . .` },
+  hop: { bpm: 128, lead: "marimba", groove: "bounce",
+    chords: "F C Dm A# F C A# C",
+    tune: `C5 F5 A5 F5 C5 - F5 - | E5 G5 C6 - G5 E5 C5 - | D5 F5 A5 - F5 D5 A4 - | A#4 D5 F5 - D5 - A#4 - |
+           A5 - C6 A5 F5 - A5 - | G5 - E5 G5 C6 - G5 - | F5 - D5 F5 A#5 - A5 G5 | G5 - E5 - C5 - . .` },
+  starlight: { bpm: 104, lead: "bell", groove: "calm",
+    chords: "Em C G D Em C D B",
+    tune: `E5 - G5 - B5 - - - | C6 - B5 - G5 - - - | D5 - G5 - B5 - A5 G5 | F#5 - - - A5 - - - |
+           B5 - A5 - G5 - E5 - | E5 - G5 - C6 - - - | A5 - F#5 - D5 - F#5 A5 | D#5 - - - F#5 - - -` },
+  robot: { bpm: 136, lead: "chip", groove: "bounce",
+    chords: "Am F C G Am F G E",
+    tune: `A4 A5 E5 A4 C5 - E5 - | F4 F5 C5 F4 A4 - C5 - | E5 G5 C6 G5 E5 - C5 - | D5 - B4 - G4 - B4 D5 |
+           E5 - A5 - C6 - B5 A5 | C6 - A5 - F5 - A5 - | B5 - G5 - D5 - G5 B5 | G#5 - E5 - B4 - . .` },
+  picnic: { bpm: 118, lead: "pluck", groove: "pop",
+    chords: "G D Em C G D C D",
+    tune: `D5 - G5 - B5 A5 G5 - | F#5 - A5 - D5 - . . | E5 G5 B5 - G5 - E5 - | C5 E5 G5 - E5 D5 C5 - |
+           B4 - D5 G5 - D5 B4 - | A4 - D5 F#5 - A5 F#5 - | E5 - G5 - C6 - B5 A5 | A5 - F#5 - D5 - . .` },
+  classic: { bpm: 132, lead: "chip", groove: "bounce",
     chords: "G Em C D G C D G",
     tune: `G4 B4 D5 B4 G5 - D5 - | E5 - G5 - B4 - . . | C5 E5 G5 E5 C6 - G5 - | F#5 - A5 - D5 - . . |
            B5 - A5 - G5 - D5 - | E5 - G5 - C6 - B5 A5 | A5 - F#5 - D5 - E5 F#5 | G5 - - - . . . .` },
+};
+
+// Drums per bar (x = hit), bass as [step, notes above the root, length], and
+// short off-beat chords (stabs) or a soft arpeggio.
+const GAME_GROOVES = {
+  bounce: { kick: "x...x...", snare: "..x...x.", hat: "xxxxxxxx", bass: [[0, 0, 1], [2, 12, 1], [4, 7, 1], [6, 12, 1]], stabs: [1, 3, 5, 7] },
+  desert: { kick: "x..x..x.", snare: "....x...", hat: ".x.x.x.x", bass: [[0, 0, 2], [3, 0, 1], [6, 7, 2]], stabs: [2, 5] },
+  pop: { kick: "x..x.x..", snare: "..x...x.", hat: "x.x.x.x.", bass: [[0, 0, 2], [3, 0, 1], [5, 7, 1], [6, 12, 2]], stabs: [2, 6] },
+  calm: { kick: "x.......", snare: "", hat: "..x...x.", bass: [[0, 0, 3], [4, 7, 3]], arp: true },
+};
+
+// Instruments: [wave, [[pitch times, loudness], ...], how long it rings in seconds, loudness].
+const GAME_INSTRUMENTS = {
+  marimba: ["sine", [[1, 1], [4, 0.22]], 0.45, 0.1],
+  bell: ["sine", [[1, 1], [2.76, 0.3], [5.4, 0.08]], 1.1, 0.07],
+  pluck: ["triangle", [[1, 1], [2, 0.2]], 0.35, 0.09],
+  chip: ["square", [[1, 1]], 0.22, 0.03],
+  bass: ["triangle", [[1, 1], [2, 0.15]], 0.3, 0.1],
+  stab: ["triangle", [[1, 1]], 0.14, 0.022],
+  arp: ["sine", [[1, 1]], 0.5, 0.028],
 };
 
 const gameMusic = (() => {
@@ -109,48 +150,82 @@ const gameMusic = (() => {
   const midi = name => { const m = /^([A-G])(#?)(\d)$/.exec(name); return 12 * (+m[3] + 1) + NAMES[m[1]] + (m[2] ? 1 : 0); };
   const hz = n => 440 * Math.pow(2, (n - 69) / 12);
   const songs = {};
-  // Turn a song into notes: { step, note, len, wave, vol }.
+  // Turn a song into a list of sounds for each eighth: { inst, note } or { drum }.
   function build(name) {
     if (songs[name]) return songs[name];
-    const s = GAME_SONGS[name] || GAME_SONGS.meadow;
-    const notes = [];
+    const s = GAME_SONGS[name];
+    const groove = GAME_GROOVES[s.groove];
     const tokens = s.tune.replace(/\|/g, " ").trim().split(/\s+/);
+    const steps = tokens.map(() => []);
+    const add = (at, sound) => steps[at % steps.length].push(sound);
     tokens.forEach((tok, i) => {
       if (tok === "-" || tok === ".") return;
       let len = 1;
       while (tokens[i + len] === "-") len++;
-      notes.push({ step: i, note: midi(tok), len, wave: s.wave, vol: s.vol });
+      add(i, { inst: s.lead, note: midi(tok), len });
     });
     s.chords.split(/\s+/).forEach((c, bar) => {
       const m = /^([A-G]#?)(m?)$/.exec(c);
       const root = midi(m[1].length > 1 ? m[1][0] + "#3" : m[1] + "3");
-      const third = root + (m[2] ? 3 : 4);
+      const chord = [root + 12, root + 12 + (m[2] ? 3 : 4), root + 19];
       const at = bar * 8;
-      notes.push({ step: at, note: root - 12, len: 3, wave: "triangle", vol: 0.07 });
-      notes.push({ step: at + 4, note: root - 12, len: 2, wave: "triangle", vol: 0.06 });
-      notes.push({ step: at + 6, note: root - 5, len: 2, wave: "triangle", vol: 0.05 });
-      [root + 12, third + 12, root + 19, third + 12].forEach((n, k) =>
-        notes.push({ step: at + 1 + k * 2, note: n, len: 1, wave: "sine", vol: 0.022 }));
+      groove.bass.forEach(([st, up, len]) => add(at + st, { inst: "bass", note: root - 12 + up, len }));
+      (groove.stabs || []).forEach(st => chord.forEach(n => add(at + st, { inst: "stab", note: n, len: 1 })));
+      if (groove.arp) [0, 1, 2, 1].forEach((k, j) => add(at + 1 + j * 2, { inst: "arp", note: chord[k], len: 1 }));
+      for (const drum of ["kick", "snare", "hat"]) [...groove[drum]].forEach((x, st) => { if (x === "x") add(at + st, { drum }); });
     });
-    return (songs[name] = { bpm: s.bpm, steps: tokens.length, notes });
+    return (songs[name] = { bpm: s.bpm, steps });
   }
 
   const off = () => { try { return localStorage.getItem("og-music") === "0"; } catch { return false; } };
-  let song = null, theme = "meadow", alive = null, timer = null, out = null, step = 0, next = 0;
+  let song = null, theme = "meadow", alive = null, timer = null, out = null, tonal = null, noise = null, step = 0, next = 0;
 
-  function play(ctx, n, t, eighth) {
-    const osc = ctx.createOscillator();
+  function tone(ctx, s, t, eighth) {
+    const [wave, parts, ring, vol] = GAME_INSTRUMENTS[s.inst];
+    const decay = s.inst === "bass" || s.inst === "chip" ? Math.min(ring, s.len * eighth * 0.9) + 0.05 : ring;
+    for (const [mul, amp] of parts) {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = wave;
+      osc.frequency.setValueAtTime(hz(s.note) * mul, t);
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.linearRampToValueAtTime(vol * amp, t + 0.006);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + decay);
+      osc.connect(gain).connect(tonal);
+      osc.start(t);
+      osc.stop(t + decay + 0.05);
+    }
+  }
+  function drum(ctx, name, t) {
     const gain = ctx.createGain();
-    const end = t + n.len * eighth * 0.92;
-    osc.type = n.wave;
-    osc.frequency.setValueAtTime(hz(n.note), t);
-    gain.gain.setValueAtTime(0.0001, t);
-    gain.gain.exponentialRampToValueAtTime(n.vol, t + 0.02);
-    gain.gain.setValueAtTime(n.vol, Math.max(t + 0.02, end - 0.08));
-    gain.gain.exponentialRampToValueAtTime(0.0001, end);
-    osc.connect(gain).connect(out);
-    osc.start(t);
-    osc.stop(end + 0.05);
+    gain.connect(out);
+    if (name === "kick") {
+      const osc = ctx.createOscillator();
+      osc.frequency.setValueAtTime(140, t);
+      osc.frequency.exponentialRampToValueAtTime(45, t + 0.12);
+      gain.gain.setValueAtTime(0.16, t);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.2);
+      osc.connect(gain);
+      osc.start(t);
+      osc.stop(t + 0.25);
+      return;
+    }
+    if (!noise) {
+      noise = ctx.createBuffer(1, ctx.sampleRate / 2, ctx.sampleRate);
+      const d = noise.getChannelData(0);
+      for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    }
+    const src = ctx.createBufferSource();
+    const filter = ctx.createBiquadFilter();
+    src.buffer = noise;
+    const hat = name === "hat";
+    filter.type = hat ? "highpass" : "bandpass";
+    filter.frequency.value = hat ? 7000 : 1800;
+    gain.gain.setValueAtTime(hat ? 0.02 : 0.05, t);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + (hat ? 0.04 : 0.14));
+    src.connect(filter).connect(gain);
+    src.start(t);
+    src.stop(t + 0.2);
   }
   function tick() {
     if (!alive || !alive()) { stop(); return; }
@@ -162,8 +237,8 @@ const gameMusic = (() => {
     if (document.hidden) { next = ctx.currentTime + 0.1; return; }
     if (next < ctx.currentTime) next = ctx.currentTime + 0.05;
     while (next < ctx.currentTime + 0.3) {
-      for (const n of song.notes) if (n.step === step) play(ctx, n, next, eighth);
-      step = (step + 1) % song.steps;
+      for (const s of song.steps[step]) s.drum ? drum(ctx, s.drum, next) : tone(ctx, s, next, eighth);
+      step = (step + 1) % song.steps.length;
       next += eighth;
     }
   }
@@ -183,12 +258,13 @@ const gameMusic = (() => {
     try {
       const ctx = ogAudio();
       song = build(theme);
-      const soft = ctx.createBiquadFilter();
-      soft.type = "lowpass";
-      soft.frequency.value = 2400;
       out = ctx.createGain();
       out.gain.value = 1;
-      out.connect(soft).connect(ctx.destination);
+      out.connect(ctx.destination);
+      tonal = ctx.createBiquadFilter();
+      tonal.type = "lowpass";
+      tonal.frequency.value = 3200;
+      tonal.connect(out);
       step = 0;
       next = ctx.currentTime + 0.1;
       tick();
@@ -197,7 +273,18 @@ const gameMusic = (() => {
   }
   return {
     // Plays until isAlive() turns false (the game ends, restarts or is left).
-    start(name, isAlive) { theme = name || "meadow"; alive = isAlive; begin(); },
+    // Each game gets its own tune from the list, the same one every time.
+    // key is a number (the game's place in its stripe, so games next to each
+    // other sound different) or the game's id.
+    start(key, isAlive) {
+      const names = Object.keys(GAME_SONGS);
+      let h = 0;
+      if (typeof key === "number") h = key;
+      else for (const ch of String(key)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+      theme = names[h % names.length];
+      alive = isAlive;
+      begin();
+    },
     // After a sound or music button: start or stop to match.
     refresh() { if (off() || gameSound.muted()) stop(); else if (!timer) begin(); },
     off,
@@ -244,6 +331,7 @@ function ogIcon(name) {
 //   pass          passing percent, or null when there's no pass mark
 //   onFinish(result)  { right, total, percent, passed, seconds }
 //   next          { label, href } for the button after the game, or null
+//   tune          which background tune (a number), or leave out to pick by the game id
 // }
 function playOwnGame(stage, g, opts) {
   const own = g.own || {};
@@ -366,7 +454,7 @@ function playOwnGame(stage, g, opts) {
       const box = stage.getBoundingClientRect();
       if (box.top < 0 || box.bottom > window.innerHeight) stage.scrollIntoView({ behavior: "smooth", block: box.height > window.innerHeight ? "start" : "center" });
     }
-    gameMusic.start(own.theme, alive);
+    gameMusic.start(opts.tune ?? g.id, alive);
     kind.play(body, own, api);
   }
 
