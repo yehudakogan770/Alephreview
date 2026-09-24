@@ -41,6 +41,7 @@ registerKind("match", {
 
       dragOrTap(root, (tile, target) => {
         api.sound.pop();
+        api.say(set[tile.dataset.tile].a);
         if (target.dataset.target === "bank") { bank.append(tile); return; }
         const current = target.querySelector("[data-tile]");
         if (current === tile) return;

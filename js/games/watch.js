@@ -34,6 +34,7 @@ registerKind("watch", {
       function flash() {
         if (k >= seen.length) { api.later(pick, 400); return; }
         face.textContent = seen[k];
+        api.say(seen[k]);
         tile.style.setProperty("--c", api.color(k + r));
         tile.classList.remove("og-in"); void tile.offsetWidth; tile.classList.add("og-in");
         tile.style.visibility = "visible";

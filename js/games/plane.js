@@ -1,7 +1,8 @@
 // Fly the plane (like Wordwall's Airplane): clouds with tiles fly toward the
 // plane. The word at the top says which one to fly into. Move the plane up and
 // down with the mouse, a finger, or the arrow keys.
-// Content: { kind: "plane", theme, pairs: [{ a: in the cloud, b: to find }, …] }.
+// Content: { kind: "plane", theme, pairs: [{ a: in the cloud, b: to find }, …] },
+//   or questions (see findRounds in engine.js).
 // Each word counts once: right if the first cloud hit is the right one.
 
 const PLANE_X = 16;              // where the plane flies, % from the left
@@ -11,10 +12,8 @@ const CLOUD_SPEED = 15;          // % of the width per second
 registerKind("plane", {
   label: "Fly the plane",
   play(body, content, api) {
-    const pairs = goodPairs(content);
-    if (pairs.length < 2) { emptyGame(body); return; }
-    revealPairs(api, pairs);
-    const order = api.shuffle(pairs);
+    const order = findRounds(content, api);
+    if (!order.length) { emptyGame(body); return; }
     let at = 0;
 
     body.innerHTML = `
@@ -39,21 +38,24 @@ registerKind("plane", {
 
     function show() {
       api.round(at + 1, order.length, "gameQuestion");
-      prompt.textContent = order[at].b;
+      prompt.textContent = order[at].prompt;
+      api.say(order[at].prompt);
       prompt.classList.remove("og-in"); void prompt.offsetWidth; prompt.classList.add("og-in");
       marked = false;
       resolved = false;
       // One wave: the right cloud and two others, in mixed-up lanes.
-      const others = api.shuffle(pairs.filter(x => x !== order[at])).slice(0, 2);
-      const wave = api.shuffle([order[at], ...others]);
+      const r = order[at];
+      const right = r.right[Math.floor(Math.random() * r.right.length)];
+      const others = api.shuffle(r.options.filter(x => !r.right.includes(x))).slice(0, 2);
+      const wave = api.shuffle([right, ...others]);
       clouds.forEach(c => c.el.remove());
-      clouds = wave.map((p, k) => {
+      clouds = wave.map((text, k) => {
         const el = document.createElement("div");
         el.className = "og-cloud";
-        el.innerHTML = `<span class="og-cloud-text" dir="auto">${api.esc(p.a)}</span>`;
+        el.innerHTML = `<span class="og-cloud-text" dir="auto">${api.esc(text)}</span>`;
         el.style.top = `${PLANE_LANES[k]}%`;
         arena.append(el);
-        return { el, p, x: 112 + k * 4, y: PLANE_LANES[k], hit: false };
+        return { el, text, x: 112 + k * 4, y: PLANE_LANES[k], hit: false };
       });
     }
 
@@ -95,7 +97,7 @@ registerKind("plane", {
         c.el.style.left = `${c.x}%`;
         if (!resolved && Math.abs(c.x - PLANE_X - 4) < 6 && Math.abs(c.y - y) < 10) {
           c.hit = true;
-          const ok = c.p === order[at];
+          const ok = order[at].right.includes(c.text);
           mark(ok);
           c.el.classList.add(ok ? "right" : "wrong");
           ok ? api.sound.good() : api.sound.bad();

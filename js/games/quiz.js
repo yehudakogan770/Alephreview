@@ -18,7 +18,7 @@ const bigHebrew = html => html.replace(/[\u0590-\u05FF\uFB1D-\uFB4F]+(?:\s+[\u05
 // Draws one question. onPick(index, ok) is called when an answer is tapped;
 // it returns true to lock the board (false lets the student try again).
 function quizBoard(el, api, q, { onPick, extra = "" }) {
-  const answers = api.shuffle(q.answers.map((text, i) => ({ text, right: i === 0 })));
+  const answers = api.shuffle(q.answers.map((text, i) => ({ text, right: i < (q.right || 1) })));
   el.innerHTML = `
     <div class="og-quiz">
       <div class="og-question og-in" dir="auto">${bigHebrew(api.esc(q.q))}</div>
@@ -32,6 +32,7 @@ function quizBoard(el, api, q, { onPick, extra = "" }) {
       </div>
     </div>`;
   const btns = [...el.querySelectorAll(".og-answer")];
+  api.say(q.q);
   let locked = false;
   const board = {
     answers,

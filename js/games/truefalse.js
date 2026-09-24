@@ -2,19 +2,24 @@
 // together. Is that the right match? Press Yes or No (or the arrow keys).
 // Content: { kind: "truefalse", theme, pairs: [{ a, b }, …] }.
 // About half the time the word is swapped for another pair's word.
+// Or fixed statements: { statements: [{ a, b, right: true/false }, …] }.
 
 registerKind("truefalse", {
   label: "Right or wrong",
   play(body, content, api) {
-    const pairs = goodPairs(content);
-    if (pairs.length < 2) { emptyGame(body); return; }
+    // Fixed statements (content.statements: [{ a, b, right }]) or pairs the site mixes up.
+    const fixed = (content.statements || []).filter(x => x && x.a && x.b);
+    const pairs = fixed.length ? fixed.filter(x => x.right) : goodPairs(content);
+    if (!fixed.length && pairs.length < 2) { emptyGame(body); return; }
     revealPairs(api, pairs);
     // Words can repeat (like "Kamatz"), so a mixed-up pair must show a different word.
-    const items = api.shuffle(pairs).map(p => {
-      const others = [...new Set(pairs.map(x => x.b))].filter(b => b !== p.b);
-      if (!others.length || Math.random() < 0.5) return { p, shown: p.b, right: true };
-      return { p, shown: api.shuffle(others)[0], right: false };
-    });
+    const items = fixed.length
+      ? api.shuffle(fixed).map(x => ({ p: x, shown: x.b, right: !!x.right }))
+      : api.shuffle(pairs).map(p => {
+        const others = [...new Set(pairs.map(x => x.b))].filter(b => b !== p.b);
+        if (!others.length || Math.random() < 0.5) return { p, shown: p.b, right: true };
+        return { p, shown: api.shuffle(others)[0], right: false };
+      });
     let at = 0;
     let busy = false;
 
@@ -43,6 +48,7 @@ registerKind("truefalse", {
       card.querySelector("[data-a]").textContent = it.p.a;
       card.querySelector("[data-b]").textContent = it.shown;
       fix.textContent = "";
+      api.say(it.p.a);
       busy = false;
     }
 
@@ -55,7 +61,7 @@ registerKind("truefalse", {
       ok ? api.sound.good() : api.sound.bad();
       card.classList.add(ok ? "right" : "wrongrow");
       // When the pair shown was mixed up, show the real match.
-      if (!it.right) fix.textContent = `${it.p.a} = ${it.p.b}`;
+      if (!it.right && !content.statements) fix.textContent = `${it.p.a} = ${it.p.b}`;
       api.later(() => {
         at++;
         if (at < items.length) show();

@@ -37,6 +37,7 @@ registerKind("pairs", {
       els.forEach((el, k) => el.addEventListener("click", () => {
         if (busy || el.classList.contains("up")) return;
         api.sound.pop();
+        api.say(cards[k].text);
         el.classList.add("up");
         open.push(k);
         if (open.length < 2) return;
