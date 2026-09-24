@@ -539,11 +539,19 @@ function stopTracking() {
 }
 
 function findAnyGame(id) {
+  let found = null;
   for (const b of BELTS) for (const s of STRIPES) {
     const g = ((SITE.games[b.key] || {})[s] || []).find(x => x.id === id);
-    if (g) return { g, b, s };
+    if (g && !found) found = { g, b, s };
   }
-  return null;
+  // Old homework may point to a Wordwall game: play the copy made here instead, so it gets a score.
+  if (found && !found.g.own) {
+    for (const b of BELTS) for (const s of STRIPES) {
+      const g = ((SITE.games[b.key] || {})[s] || []).find(x => x.own && x.id.endsWith(`-ww${id}`));
+      if (g && !((SITE.templates || {})[g.game] || {}).noScore) return { g, b, s };
+    }
+  }
+  return found;
 }
 
 function firstName(u) {
