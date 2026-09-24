@@ -680,7 +680,7 @@ async function homeworkPlayView(hwId, gameId) {
           <span class="counter">Game ${i + 1} of ${items.length}</span>
           ${src || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
         </div>
-        ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("left")} <span>${T("homeworkBack")}</span></a>`}
+        ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<span class="btn btn-ghost" aria-disabled="true"><span>Next game</span> ${icon("right")}</span>`}
       </div>
       <a class="btn btn-ghost" href="#/homework">${icon("left")} ${T("homeworkBack")}</a>
     </div>
