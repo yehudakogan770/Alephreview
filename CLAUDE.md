@@ -17,7 +17,7 @@ Plain HTML/CSS/JS, no build step, hosted on GitHub Pages from `main`.
 - All words, settings and games are site data, not code: `data/site.json` is the starting copy; once Firebase is set up, the live copy is the Firestore document `site/content`, edited on `admin.html`.
 - To change content, prefer telling the owner how to do it on the admin page. If you change `data/site.json` after Firebase is live, the site won't show it (the Firestore copy wins) unless it's published from the admin page.
 - Any new text students see goes in `text` in the site data (editable on the admin page), not hard-coded in `js/app.js`.
-- The admin page stays locked until an admin signs in with Google. The admin list lives only in the Firestore security rules (Firebase console), never in the repository.
+- The admin page stays locked until an admin signs in with Google. Full admins are listed only in the Firestore security rules (Firebase console), never in the repository. Sub-admins are Firestore documents `editors/{email}`, managed by full admins on the Admins tab; they can do everything except manage admins.
 
 ## Rules for this site
 

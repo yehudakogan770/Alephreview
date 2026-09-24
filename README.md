@@ -19,6 +19,7 @@ Click the small **Admin** button at the top right of the site (or go to `admin.h
 | **Words on the site** | Change any words students see. Put `**` around a word to make it bold. |
 | **How to play** | The step 2 text for each kind of Wordwall game. |
 | **Home page** | Show or hide the letter tiles and the numbers row. |
+| **Admins** | Full admins only: add or remove sub-admins. Sub-admins can do everything else. |
 
 Use **Preview** to see your changes before students do, then **Save & publish**. Changes go live right away; students see them the next time they load a page.
 
@@ -35,32 +36,37 @@ The admin page uses Google's Firebase for sign-in and to store published changes
 1. Go to <https://console.firebase.google.com>, click **Create a project**, name it (like `aleph-review`), and finish. Google Analytics isn't needed.
 2. **Sign-in:** Build → **Authentication** → **Get started** → **Google** → turn on **Enable**, pick a support email, **Save**. Then open **Settings** → **Authorized domains** → **Add domain** → `yehudakogan770.github.io`.
 3. **Storage:** Build → **Firestore Database** → **Create database** → choose a location → **Start in production mode**.
-4. **Who can edit:** in Firestore, open **Rules**, replace everything with the rules below, put in the Google accounts that should be admins, and click **Publish**.
+4. **Who can edit:** in Firestore, open **Rules**, replace everything with the rules below, put in the Google accounts of the **full admins**, and click **Publish**.
 
    ```
    rules_version = '2';
    service cloud.firestore {
      match /databases/{database}/documents {
-       function isAdmin() {
-         return request.auth != null
-           && request.auth.token.email_verified == true
-           && request.auth.token.email in [
-             'admin-one@gmail.com',
-             'admin-two@gmail.com'
-           ];
+       function signedIn() {
+         return request.auth != null && request.auth.token.email_verified == true;
        }
-       match /site/content {
-         allow read: if true;
-         allow write: if isAdmin();
+       // Full admins: can do everything, including adding sub-admins.
+       function isFullAdmin() {
+         return signedIn() && request.auth.token.email in [
+           'admin-one@gmail.com',
+           'admin-two@gmail.com'
+         ];
        }
-       match /admin/check {
-         allow read: if isAdmin();
+       // Sub-admins: added on the admin page's Admins tab.
+       function isSubAdmin() {
+         return signedIn() && exists(/databases/$(database)/documents/editors/$(request.auth.token.email));
        }
+       function isAdmin() { return isFullAdmin() || isSubAdmin(); }
+
+       match /site/content { allow read: if true; allow write: if isAdmin(); }
+       match /admin/check  { allow read: if isAdmin(); }
+       match /admin/owner  { allow read: if isFullAdmin(); }
+       match /editors/{email} { allow read: if isAdmin(); allow write: if isFullAdmin(); }
      }
    }
    ```
 
-   To add or remove an admin later, edit this list and click **Publish** again.
+   To change the full admins later, edit this list and click **Publish** again. Sub-admins are added and removed on the admin page.
 5. **Connect the site:** click the gear → **Project settings** → **Your apps** → the web icon **`</>`** → name it `Aleph Review` → **Register app**. Copy the `firebaseConfig` values into `js/firebase-config.js`, replacing `null`:
 
    ```js

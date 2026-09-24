@@ -2,8 +2,11 @@
 //
 // Edits the site data (all words, settings and games) and publishes it to
 // Firebase. The page stays locked until an admin signs in with Google.
-// Firebase's security rules hold the list of admin accounts: only they can
-// read admin/check and write site/content (see README.md).
+// Two kinds of admin (see the security rules in README.md):
+//  - full admins, listed in the Firebase rules: can do everything, including
+//    adding and removing sub-admins on the Admins tab;
+//  - sub-admins, stored in Firestore under editors/{email}: can do everything
+//    except manage admins.
 
 const FIREBASE_VERSION = "12.3.0";
 
@@ -64,6 +67,7 @@ const TEXT_FIELDS = [
 let draft = null;      // the site data being edited
 let published = "";    // JSON of the last published version, to spot changes
 let user = null;       // the signed-in Google account
+let isFullAdmin = false; // full admins can add and remove sub-admins
 let fb = null;         // Firebase, loaded when first needed
 let tab = "games";
 let beltKey = "white";
@@ -172,6 +176,18 @@ async function isAdmin() {
   }
 }
 
+// Only full admins may read admin/owner.
+async function checkFullAdmin() {
+  const { db, fsMod } = await firebase();
+  try {
+    await fsMod.getDoc(fsMod.doc(db, "admin", "owner"));
+    return true;
+  } catch (err) {
+    if (err.code === "permission-denied") return false;
+    throw err;
+  }
+}
+
 async function onAuth(u) {
   user = u;
   if (!u) {
@@ -187,6 +203,9 @@ async function onAuth(u) {
     return;
   }
   if (!ok) { gate(`${u.email} isn't an admin for this site.`, { signOut: true }); return; }
+  isFullAdmin = await checkFullAdmin().catch(() => false);
+  document.querySelector('.admin-tabs [data-tab="admins"]').hidden = !isFullAdmin;
+  if (!isFullAdmin && tab === "admins") tab = "games";
   await openEditor();
 }
 
@@ -632,11 +651,96 @@ function homeTab() {
     </section>`;
 }
 
+// ---- Admins tab (full admins only) --------------------------------------------------------
+
+function adminsTab() {
+  loadSubAdmins();
+  return `
+    <p class="tab-help">Sub-admins can do everything on this page: edit games and words, and publish. They can't add or remove admins.</p>
+    <section class="panel">
+      <h3>Add a sub-admin</h3>
+      <form class="add-admin" id="add-admin">
+        <label class="field grow"><span>Their Google email</span>
+          <input type="email" name="email" placeholder="name@gmail.com" required autocomplete="off"></label>
+        <button class="btn btn-primary" type="submit">Add</button>
+      </form>
+      <p class="form-error" id="admin-error" hidden></p>
+    </section>
+    <section class="panel">
+      <h3>Sub-admins</h3>
+      <ul class="admin-list" id="sub-admins"><li class="muted">Loading…</li></ul>
+    </section>
+    <section class="panel">
+      <h3>Full admins</h3>
+      <p class="muted">Full admins can also add and remove sub-admins. You're one of them. The list of full admins is kept in the Firebase security rules, so changing it is done there.</p>
+    </section>`;
+}
+
+async function loadSubAdmins() {
+  const { db, fsMod } = await firebase();
+  let items;
+  try {
+    const snap = await fsMod.getDocs(fsMod.collection(db, "editors"));
+    items = snap.docs.map(d => ({ email: d.id, ...d.data() })).sort((a, b) => a.email.localeCompare(b.email));
+  } catch {
+    const el = $("#sub-admins");
+    if (el) el.innerHTML = `<li class="muted">Couldn't load the list. Reload the page to try again.</li>`;
+    return;
+  }
+  const el = $("#sub-admins");
+  if (!el) return;
+  el.innerHTML = items.length ? items.map(a => `
+    <li>
+      <span class="admin-email">${esc(a.email)}</span>
+      <span class="muted">${a.addedBy ? `Added by ${esc(a.addedBy)}` : ""}</span>
+      <button class="btn btn-danger small" data-remove-admin="${esc(a.email)}" type="button">Remove</button>
+    </li>`).join("") : `<li class="muted">No sub-admins yet.</li>`;
+}
+
+async function addSubAdmin(email) {
+  const errEl = $("#admin-error");
+  errEl.hidden = true;
+  email = email.trim().toLowerCase();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { errEl.textContent = "That doesn't look like an email address."; errEl.hidden = false; return false; }
+  if (email === user.email.toLowerCase()) { errEl.textContent = "You're already a full admin."; errEl.hidden = false; return false; }
+  try {
+    const { db, fsMod } = await firebase();
+    await fsMod.setDoc(fsMod.doc(db, "editors", email), { addedBy: user.email, addedAt: fsMod.serverTimestamp() });
+  } catch (err) {
+    errEl.textContent = err.code === "permission-denied" ? "Only full admins can add sub-admins." : "Couldn't add them. Try again.";
+    errEl.hidden = false;
+    return false;
+  }
+  toast(`${email} is now a sub-admin. They can sign in with Google.`, "good");
+  loadSubAdmins();
+  return true;
+}
+
+async function removeSubAdmin(email) {
+  if (!confirm(`Remove ${email} as a sub-admin? They won't be able to edit the site anymore.`)) return;
+  try {
+    const { db, fsMod } = await firebase();
+    await fsMod.deleteDoc(fsMod.doc(db, "editors", email));
+  } catch {
+    toast("Couldn't remove them. Try again.", "bad");
+    return;
+  }
+  toast(`Removed ${email}.`);
+  loadSubAdmins();
+}
+
+main.addEventListener("submit", async e => {
+  if (e.target.id !== "add-admin") return;
+  e.preventDefault();
+  if (await addSubAdmin(e.target.elements.email.value)) e.target.reset();
+});
+
 // ---- page -------------------------------------------------------------------------------
 
 function render() {
   document.querySelectorAll(".admin-tabs [data-tab]").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
-  main.innerHTML = { games: gamesTab, words: wordsTab, howto: howToTab, home: homeTab }[tab]();
+  if (tab === "admins" && !isFullAdmin) tab = "games";
+  main.innerHTML = { games: gamesTab, words: wordsTab, howto: howToTab, home: homeTab, admins: adminsTab }[tab]();
   if (tab === "words") TEXT_FIELDS.forEach(([, f]) => f.forEach(([k]) => updateCount(k)));
   showStatus();
 }
@@ -648,6 +752,8 @@ main.addEventListener("click", e => {
   if (edit) { openEdit(edit.dataset.edit); return; }
   const add = e.target.closest("[data-add]");
   if (add) { openAdd(Number(add.dataset.add)); return; }
+  const remove = e.target.closest("[data-remove-admin]");
+  if (remove) { removeSubAdmin(remove.dataset.removeAdmin); return; }
   const row = e.target.closest(".row");
   if (row && !e.target.closest("button")) openEdit(list(beltKey, Number(row.dataset.stripe))[Number(row.dataset.index)].id);
 });
