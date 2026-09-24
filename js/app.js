@@ -69,6 +69,7 @@ function plural(n, word) {
 }
 
 let SITE = null;
+let afterRender = null;   // set by a view that needs to run code once it's on the page
 let PREVIEW = false;
 
 // A piece of site text. {name} fills in a value; **word** makes it bold.
@@ -323,9 +324,16 @@ function beltView(b) {
     </nav>`;
 }
 
+// A picture for games made on this site: a few of its items.
+function ownThumb(g) {
+  const o = g.own || {};
+  const items = (o.pairs || []).map(p => p.a).concat(o.items || []).filter(Boolean).slice(0, 3);
+  return `<span class="own-thumb t-${esc(g.type)}" dir="auto">${items.map(x => `<b>${esc(x)}</b>`).join("")}</span>`;
+}
+
 function gameCard(g, done, b, stripe) {
-  const inSite = !!g.embed;
-  const thumb = g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : "";
+  const inSite = !!g.embed || !!g.own;
+  const thumb = g.own ? ownThumb(g) : g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : "";
   return `
     <li>
       <a class="game-card${done.has(g.id) ? " played" : ""}" ${inSite ? `href="${playHref(b, stripe, g)}"` : `href="${gameUrl(g)}" target="_blank" rel="noopener"`} data-id="${esc(g.id)}">
@@ -423,9 +431,17 @@ function playerView(b, stripe, id) {
   markPlayed(g.id);
 
   const prev = list[i - 1], next = list[i + 1];
-  const stage = g.embed
+  const stage = g.own ? "" : g.embed
     ? `<iframe src="${esc(embedUrl(g))}" title="${esc(g.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe>`
     : `<div class="empty-note">${icon("out", "icon icon-lg")}<p>This game can't play here. <a href="${gameUrl(g)}" target="_blank" rel="noopener">Open it on Wordwall</a>.</p></div>`;
+  if (g.own) {
+    afterRender = () => playOwnGame(document.getElementById("player"), g, {
+      t: T,
+      howTo: (SITE.howTo || {})[g.game],
+      pass: null,
+      next: next ? { label: plainT("gameNext"), href: playHref(b, stripe, next) } : null,
+    });
+  }
 
   return `
     ${crumbs([["All belts", "#/"], [`${b.name} Belt`, `#/${b.key}`], [`Stripe ${stripe}`, `#/${b.key}/${stripe}`], [g.title]])}
@@ -438,15 +454,15 @@ function playerView(b, stripe, id) {
     </div>
     <div class="player-layout">
     <div class="player-main">
-    <div class="player" id="player">${stage}</div>
+    <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
     <div class="player-bar">
       ${prev
         ? `<a class="btn btn-ghost" href="${playHref(b, stripe, prev)}">${icon("left")} <span>Previous</span></a>`
         : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
       <div class="player-mid">
         <span class="counter">Game ${i + 1} of ${list.length}</span>
-        ${g.embed ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
-        <a class="icon-btn" href="${gameUrl(g)}" target="_blank" rel="noopener" title="Open on Wordwall" aria-label="Open on Wordwall">${icon("out")}</a>
+        ${g.embed || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
+        ${g.own ? "" : `<a class="icon-btn" href="${gameUrl(g)}" target="_blank" rel="noopener" title="Open on Wordwall" aria-label="Open on Wordwall">${icon("out")}</a>`}
       </div>
       ${next
         ? `<a class="btn btn-primary" href="${playHref(b, stripe, next)}"><span>Next game</span> ${icon("right")}</a>`
@@ -539,6 +555,12 @@ function homeworkShell(inner) {
     </section>`;
 }
 
+// A homework game is done only once it's passed. Wordwall games can't report
+// a score, so they never count as done.
+function itemDone(g, p) {
+  return !!(g && g.own && p && p.passed);
+}
+
 async function loadMyHomework(u) {
   const { db, fsMod } = await cloud();
   const email = u.email.toLowerCase();
@@ -572,16 +594,21 @@ async function homeworkView() {
 
   const cards = list.map(hw => {
     const items = (hw.items || []).map(it => ({ it, found: findAnyGame(it.game) })).filter(x => x.found);
-    const done = items.filter(x => hw.progress[x.it.game]).length;
+    const done = items.filter(x => itemDone(x.found.g, hw.progress[x.it.game])).length;
     const rows = items.map(({ it, found }) => {
       const g = found.g;
-      const ok = !!hw.progress[it.game];
+      const p = hw.progress[it.game];
+      const ok = itemDone(g, p);
+      const state = ok ? `${icon("check")} ${T("homeworkDone")}`
+        : p && p.best !== undefined ? `${p.best}% · ${T("gameTryAgain")}`
+        : p && !g.own ? T("homeworkPlayed")
+        : icon("play");
       return `
         <li>
           <a class="hw-game${ok ? " done" : ""}" href="#/homework/${esc(hw.id)}/${esc(it.game)}">
             <span class="hw-thumb">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
             <span class="hw-name" dir="auto">${esc(g.title)}</span>
-            <span class="hw-state">${ok ? `${icon("check")} ${T("homeworkDone")}` : icon("play")}</span>
+            <span class="hw-state">${state}</span>
           </a>
         </li>`;
     }).join("");
@@ -592,7 +619,7 @@ async function homeworkView() {
           <span class="hw-due">${dueText(hw.due)}</span>
         </header>
         ${progressBar(done, items.length, "Homework progress")}
-        <span class="progress-label">${cheer(done, items.length)}</span>
+        <span class="progress-label">${items.some(x => hw.progress[x.it.game]) && done < items.length ? `${done} of ${items.length} passed` : cheer(done, items.length)}</span>
         <ul class="hw-games">${rows}</ul>
       </article>`;
   }).join("");
@@ -621,8 +648,8 @@ async function homeworkPlayView(hwId, gameId) {
   const it = items[i];
   const { g } = findAnyGame(it.game);
   const prev = items[i - 1], next = items[i + 1];
-  const src = it.assign || (g.embed ? embedUrl(g) : "");
-  const stage = src
+  const src = g.own ? "" : it.assign || (g.embed ? embedUrl(g) : "");
+  const stage = g.own ? "" : src
     ? `<iframe src="${esc(src)}" title="${esc(g.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe>`
     : `<div class="empty-note">${icon("out", "icon icon-lg")}<p><a href="${gameUrl(g)}" target="_blank" rel="noopener">Open the game</a></p></div>`;
   const href = x => `#/homework/${esc(hw.id)}/${esc(x.game)}`;
@@ -641,19 +668,47 @@ async function homeworkPlayView(hwId, gameId) {
     ${it.assign ? `<p class="hw-name-hint">${T("homeworkTypeName", { name: esc(firstName(u)) })}</p>` : ""}
     <div class="player-layout">
       <div class="player-main">
-        <div class="player" id="player">${stage}</div>
+        <div class="player${g.own ? " own" : ""}" id="player">${stage}</div>
         <div class="player-bar">
           ${prev ? `<a class="btn btn-ghost" href="${href(prev)}">${icon("left")} <span>Previous</span></a>` : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
           <div class="player-mid">
             <span class="counter">Game ${i + 1} of ${items.length}</span>
-            ${src ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
+            ${src || g.own ? `<button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>` : ""}
           </div>
-          ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("check")} <span>${T("homeworkDone")}</span></a>`}
+          ${next ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>` : `<a class="btn btn-primary" href="#/homework">${icon("left")} <span>${T("homeworkBack")}</span></a>`}
         </div>
       </div>
       ${howToPlay(g, next)}
     </div>`;
   track(hw.id, it.game, u);
+  if (g.own) {
+    const pass = Number(hw.pass) || 80;
+    playOwnGame(document.getElementById("player"), g, {
+      t: T,
+      howTo: (SITE.howTo || {})[g.game],
+      pass,
+      next: next ? { label: plainT("gameNext"), href: href(next) } : { label: plainT("homeworkBack"), href: "#/homework" },
+      onFinish: result => saveScore(hw.id, it.game, u, result),
+    });
+  }
+}
+
+// Keep the best score, count the tries, and remember if the game was passed.
+async function saveScore(hwId, gameId, u, result) {
+  const email = u.email.toLowerCase();
+  const { db, fsMod } = await cloud();
+  const ref = fsMod.doc(db, "progress", `${hwId}__${email}`);
+  let prev = {};
+  try { const d = await fsMod.getDoc(ref); prev = (d.exists() && d.data().items && d.data().items[gameId]) || {}; } catch { /* first try */ }
+  await fsMod.setDoc(ref, {
+    hw: hwId, email, name: u.displayName || "",
+    items: { [gameId]: {
+      tries: fsMod.increment(1),
+      last: result.percent,
+      best: Math.max(prev.best || 0, result.percent),
+      passed: !!(prev.passed || result.passed),
+    } },
+  }, { merge: true }).catch(() => {});
 }
 
 // Save that the game was opened, then add the time while the page is showing.
@@ -694,7 +749,11 @@ function render() {
 
   if (!beltKey) app.innerHTML = homeView();
   else if (belt && !stripeStr) app.innerHTML = beltView(belt);
-  else if (belt && STRIPES.includes(stripe) && action === "play") app.innerHTML = playerView(belt, stripe, gameId);
+  else if (belt && STRIPES.includes(stripe) && action === "play") {
+    afterRender = null;
+    app.innerHTML = playerView(belt, stripe, gameId);
+    if (afterRender) { afterRender(); afterRender = null; }
+  }
   else if (belt && STRIPES.includes(stripe) && !action) { app.innerHTML = stripeView(belt, stripe); maybeCelebrate(belt, stripe); }
   else app.innerHTML = notFoundView();
 

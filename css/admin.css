@@ -305,3 +305,36 @@ body.locked .admin-bar, body.locked .admin-tabs, body.locked .admin-main, body.l
 /* Bulk import */
 .import-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
 .file-btn { cursor: pointer; }
+
+/* Games made on this site */
+.col-actions { display: flex; gap: 6px; }
+.pairs-editor { display: grid; gap: 8px; margin-bottom: 10px; }
+.pairs-head, .pair-row { display: grid; grid-template-columns: 1fr 24px 1fr 32px; align-items: center; gap: 8px; }
+.pairs-head span { color: var(--muted); font-size: 13px; font-weight: 600; }
+.pair-row input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  font: 500 17px/1.3 var(--font-body);
+}
+.pair-row .eq { color: var(--muted); text-align: center; font-weight: 700; }
+.pairs-tools { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.paste-many { flex: 1; min-width: 240px; }
+.paste-many summary { padding: 6px 0; color: var(--muted); font-size: 14px; cursor: pointer; }
+.paste-many textarea {
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 9px;
+  font: 400 15px/1.4 var(--font-body);
+}
+.pct { display: inline-flex; align-items: center; gap: 6px; }
+.pct input { width: 90px; }
+.hw-picked .warn { display: block; color: #b35c00; font-size: 13px; }
+.hw-table.results td.fail { color: #b35c00; font-weight: 600; white-space: nowrap; }
+.hw-table.results td.opened { color: var(--muted); white-space: nowrap; }
+.hw-table.results td small { display: block; color: var(--muted); font-weight: 500; }

@@ -13,10 +13,29 @@ const TEXT_DEFAULTS = {
   homeworkDone: "Done",
   homeworkTypeName: "Type your name: **{name}**",
   homeworkBack: "Back to my homework",
+  homeworkPlayed: "Played",
+  gameStart: "Start",
+  gameRound: "Round {n} of {total}",
+  gameScore: "{right} of {total} right",
+  gamePassMark: "Get {pass}% to pass.",
+  gamePassed: "Passed",
+  gameNotPassed: "You need {pass}% to pass. Try again.",
+  gameTryAgain: "Try again",
+  gameNext: "Next game",
+};
+
+// Game types made on this site (js/games/*.js).
+const OWN_TEMPLATES = {
+  "Match it": { group: "match", own: "match" },
+};
+const OWN_HOWTO = {
+  "Match it": "Drag each answer to its match.",
 };
 
 function withDefaults(data) {
   data.text = { ...TEXT_DEFAULTS, ...(data.text || {}) };
+  data.templates = { ...OWN_TEMPLATES, ...(data.templates || {}) };
+  data.howTo = { ...OWN_HOWTO, ...(data.howTo || {}) };
   return data;
 }
 

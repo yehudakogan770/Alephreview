@@ -257,7 +257,7 @@ function findGame(id) {
 
 function thumbUrl(thumb) { return /^https?:/.test(thumb) ? thumb : THUMB_BASE + thumb; }
 
-function templateNames() { return Object.keys(draft.templates).sort((a, b) => a.localeCompare(b)); }
+function templateNames() { return Object.keys(draft.templates).filter(n => !draft.templates[n].own).sort((a, b) => a.localeCompare(b)); }
 
 function setTemplate(g, name) {
   g.game = name;
@@ -295,7 +295,7 @@ function gamesTab() {
         <span class="row-thumb">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
         <span class="row-text">
           <span class="row-title" dir="auto">${esc(g.title)}</span>
-          <span class="row-meta">${esc(g.game || "No game type")}${g.tip ? " · has instruction" : ""}${g.embed ? "" : " · opens on Wordwall"}</span>
+          <span class="row-meta">${g.own ? `Made here · ${esc(g.game)} · ${ownCount(g)}` : `${esc(g.game || "No game type")}${g.tip ? " · has instruction" : ""}${g.embed ? "" : " · opens on Wordwall"}`}</span>
         </span>
         ${g.hidden ? `<span class="badge">Hidden</span>` : ""}
         <button class="icon-btn small" data-edit="${esc(g.id)}" title="Edit" aria-label="Edit ${esc(g.title)}">✎</button>
@@ -304,7 +304,10 @@ function gamesTab() {
       <section class="stripe-col">
         <header>
           <h3>Stripe ${s} <span class="n">${games.length}</span></h3>
-          <button class="btn btn-ghost small" data-add="${s}">+ Add game</button>
+          <span class="col-actions">
+            <button class="btn btn-primary small" data-make="${s}" title="Make a game on this site. It can check passing for homework.">+ Make a game</button>
+            <button class="btn btn-ghost small" data-add="${s}" title="Add a game from Wordwall">+ Add game</button>
+          </span>
         </header>
         <ul class="rows" data-stripe="${s}">
           ${rows || `<li class="empty">No games yet. Drag a game here or add one.</li>`}
@@ -407,6 +410,7 @@ function openEdit(id) {
   const where = findGame(id);
   if (!where) return;
   const g = where.game;
+  if (g.own) { openMake(where.stripe, where); return; }
   const dlg = $("#dlg-game");
   dlg.innerHTML = `
     <form method="dialog" class="dlg-body">
@@ -477,6 +481,182 @@ function openEdit(id) {
     }
     dlg.close();
     render();
+  });
+  dlg.showModal();
+}
+
+// ---- games made on this site -------------------------------------------------------
+//
+// Each kind has a content editor. The game itself is in js/games/<kind>.js.
+
+function ownKinds() {
+  return Object.entries(draft.templates).filter(([, t]) => t.own).map(([name, t]) => ({ name, kind: t.own }));
+}
+
+function ownCount(g) {
+  const o = g.own || {};
+  if (o.pairs) return `${o.pairs.length} pairs`;
+  if (o.items) return `${o.items.length} items`;
+  return "";
+}
+
+// Read "a = b" pairs from pasted lines (also tab, " - " or comma between them).
+function parsePairs(text) {
+  return String(text).split(/\n+/).map(line => {
+    const m = line.split(/\s*(?:=|\t| - |,|→)\s*/);
+    return m.length >= 2 ? { a: m[0].trim(), b: m.slice(1).join(" ").trim() } : null;
+  }).filter(p => p && p.a && p.b);
+}
+
+const CONTENT_EDITORS = {
+  match: {
+    help: "Each pair: what the student sees, and its match. Like א and Aleph. Use at least 3 pairs. More than 6 are split into rounds.",
+    html(content) {
+      const pairs = (content && content.pairs && content.pairs.length) ? content.pairs : [{ a: "", b: "" }, { a: "", b: "" }, { a: "", b: "" }];
+      return `
+        <div class="pairs-editor" data-pairs>
+          <div class="pairs-head"><span>Shows</span><span></span><span>Match</span><span></span></div>
+          ${pairs.map(p => pairRow(p)).join("")}
+        </div>
+        <div class="pairs-tools">
+          <button class="btn btn-ghost small" type="button" data-add-pair>+ Add a pair</button>
+          <details class="paste-many">
+            <summary>Paste many at once</summary>
+            <textarea rows="5" data-paste dir="auto" placeholder="א = Aleph&#10;בּ = Bet&#10;ב = Vet"></textarea>
+            <button class="btn btn-ghost small" type="button" data-apply-paste>Add these pairs</button>
+          </details>
+        </div>`;
+    },
+    read(form) {
+      const pairs = [...form.querySelectorAll(".pair-row")].map(r => ({
+        a: r.querySelector("[data-pa]").value.trim(),
+        b: r.querySelector("[data-pb]").value.trim(),
+      })).filter(p => p.a || p.b);
+      if (pairs.some(p => !p.a || !p.b)) return { error: "Every pair needs both sides filled in." };
+      if (pairs.length < 3) return { error: "Add at least 3 pairs." };
+      const seen = new Set();
+      for (const p of pairs) {
+        if (seen.has(p.b)) return { error: `"${p.b}" is used twice as a match. Each match must be different.` };
+        seen.add(p.b);
+      }
+      return { content: { kind: "match", pairs } };
+    },
+  },
+};
+
+function pairRow(p = { a: "", b: "" }) {
+  return `
+    <div class="pair-row">
+      <input data-pa value="${esc(p.a)}" dir="auto" placeholder="א">
+      <span class="eq">=</span>
+      <input data-pb value="${esc(p.b)}" dir="auto" placeholder="Aleph">
+      <button class="icon-btn small" type="button" data-del-pair title="Remove">✕</button>
+    </div>`;
+}
+
+// Wire up the buttons inside a content editor.
+function bindContentEditor(form) {
+  form.addEventListener("click", e => {
+    if (e.target.closest("[data-add-pair]")) {
+      form.querySelector("[data-pairs]").insertAdjacentHTML("beforeend", pairRow());
+      form.querySelector(".pair-row:last-child [data-pa]").focus();
+    }
+    const del = e.target.closest("[data-del-pair]");
+    if (del) del.closest(".pair-row").remove();
+    if (e.target.closest("[data-apply-paste]")) {
+      const box = form.querySelector("[data-paste]");
+      const found = parsePairs(box.value);
+      if (!found.length) { toast("No pairs found. Put = between the two sides, one pair per line.", "bad"); return; }
+      form.querySelectorAll(".pair-row").forEach(r => {
+        if (!r.querySelector("[data-pa]").value.trim() && !r.querySelector("[data-pb]").value.trim()) r.remove();
+      });
+      form.querySelector("[data-pairs]").insertAdjacentHTML("beforeend", found.map(pairRow).join(""));
+      box.value = "";
+      toast(`Added ${found.length} pairs.`);
+    }
+  });
+}
+
+// Make a new game, or edit one made here. `where` is set when editing.
+function openMake(stripe, where) {
+  const g = where ? where.game : null;
+  const kinds = ownKinds();
+  const kindName = g ? g.game : kinds[0].name;
+  const kind = (draft.templates[kindName] || {}).own || kinds[0].kind;
+  const dlg = $("#dlg-game");
+  dlg.innerHTML = `
+    <form method="dialog" class="dlg-body">
+      <h2>${g ? "Edit game" : "Make a game"}</h2>
+      <div class="field-row">
+        <label class="field grow"><span>Name</span><input name="title" value="${esc(g ? g.title : "")}" dir="auto" placeholder="Letters א to ו" required></label>
+        <label class="field"><span>Game type</span><select name="kind"${g ? " disabled" : ""}>${kinds.map(k => `<option value="${esc(k.name)}"${k.name === kindName ? " selected" : ""}>${esc(k.name)}</option>`).join("")}</select></label>
+      </div>
+      <p class="hint" data-kind-help>${esc(CONTENT_EDITORS[kind].help)}</p>
+      <div data-content>${CONTENT_EDITORS[kind].html(g && g.own)}</div>
+      <label class="field"><span>Instruction for this game (optional)</span>
+        <textarea name="tip" rows="2" dir="auto" placeholder="Like: Match each letter to its name.">${esc(g && g.tip || "")}</textarea></label>
+      <div class="field-row">
+        <label class="field"><span>Belt</span><select name="belt">${beltOptions(where ? where.belt : beltKey)}</select></label>
+        <label class="field"><span>Stripe</span><select name="stripe">${stripeOptions(where ? where.stripe : stripe)}</select></label>
+      </div>
+      ${g ? `<label class="opt"><input type="checkbox" name="hidden"${g.hidden ? " checked" : ""}> Hide this game from students</label>` : ""}
+      <p class="form-error" hidden></p>
+      <div class="dlg-actions">
+        ${g ? `<button class="btn btn-danger" data-act="delete" type="button">Delete game</button>` : ""}
+        <span class="spacer"></span>
+        <button class="btn btn-ghost" value="cancel" formnovalidate>Cancel</button>
+        <button class="btn btn-ghost" data-act="try" type="button">Save and try it</button>
+        <button class="btn btn-primary" data-act="save" type="button">${g ? "Save" : "Add game"}</button>
+      </div>
+    </form>`;
+  const f = dlg.querySelector("form");
+  bindContentEditor(f);
+  const fail = msg => { const el = f.querySelector(".form-error"); el.textContent = msg; el.hidden = false; };
+
+  function save() {
+    const title = f.elements.title.value.trim();
+    if (!title) { fail("Give the game a name."); return null; }
+    const res = CONTENT_EDITORS[kind].read(f);
+    if (res.error) { fail(res.error); return null; }
+    const tip = f.elements.tip.value.trim();
+    const belt = f.elements.belt.value, s = Number(f.elements.stripe.value);
+    let game = g;
+    if (!game) {
+      game = { id: `own-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, title };
+      setTemplate(game, f.elements.kind.value);
+      list(belt, s).push(game);
+    }
+    game.title = title;
+    game.own = res.content;
+    if (tip) game.tip = tip; else delete game.tip;
+    if (g) {
+      if (f.elements.hidden.checked) game.hidden = true; else delete game.hidden;
+      if (belt !== where.belt || s !== where.stripe) moveGame(where, { belt, stripe: s }, list(belt, s).length);
+    }
+    changed();
+    beltKey = belt;
+    dlg.close();
+    render();
+    return { game, belt, stripe: s };
+  }
+
+  f.querySelector('[data-act="save"]').addEventListener("click", () => {
+    const r = save();
+    if (r) toast(g ? `Saved "${r.game.title}".` : `Made "${r.game.title}". Press Save & publish when you're ready.`, "good");
+  });
+  f.querySelector('[data-act="try"]').addEventListener("click", () => {
+    const r = save();
+    if (!r) return;
+    local.set("admin-draft", JSON.stringify(draft));
+    window.open(`./?preview#/${r.belt}/${r.stripe}/play/${encodeURIComponent(r.game.id)}`, "aleph-preview");
+  });
+  f.querySelector('[data-act="delete"]')?.addEventListener("click", () => {
+    if (!confirm(`Delete "${g.title}"? To keep it but not show it, use "Hide this game" instead.`)) return;
+    list(where.belt, where.stripe).splice(where.index, 1);
+    changed();
+    dlg.close();
+    render();
+    toast(`Deleted "${g.title}".`);
   });
   dlg.showModal();
 }
@@ -893,7 +1073,7 @@ function openClass(id) {
 
 function openHomework(id) {
   if (!hwData.classes.length) { toast("Make a class first.", "bad"); return; }
-  const h = hwData.homework.find(x => x.id === id) || { title: "", classId: hwData.classes[0].id, due: "", items: [] };
+  const h = hwData.homework.find(x => x.id === id) || { title: "", classId: hwData.classes[0].id, due: "", pass: 80, items: [] };
   let items = (h.items || []).map(x => ({ ...x }));
 
   const f = hwDialog(`
@@ -902,8 +1082,10 @@ function openHomework(id) {
     <div class="field-row">
       <label class="field"><span>Class</span><select name="classId">${hwData.classes.map(c => `<option value="${esc(c.id)}"${c.id === h.classId ? " selected" : ""}>${esc(c.name)}</option>`).join("")}</select></label>
       <label class="field"><span>Due</span><input type="date" name="due" value="${esc(h.due || "")}"></label>
+      <label class="field"><span>Passing score</span><span class="pct"><input type="number" name="pass" min="1" max="100" value="${esc(h.pass || 80)}"> %</span></label>
     </div>
     <div class="field"><span>Games</span>
+      <small>Only games made on this site can check the score. A game is done when the student passes it.</small>
       <ol class="hw-picked" data-picked></ol>
       <div class="hw-pick-row">
         <input type="search" data-search placeholder="Find a game to add…" autocomplete="off">
@@ -933,16 +1115,16 @@ function openHomework(id) {
             <button class="icon-btn small" type="button" data-up="${i}" title="Move up"${i ? "" : " disabled"}>↑</button>
             <button class="icon-btn small" type="button" data-remove="${i}" title="Remove">✕</button>
           </div>
-          <input class="assign" data-assign="${i}" value="${esc(it.assign || "")}" placeholder="Wordwall assignment link for scores (optional): https://wordwall.net/play/…">
+          ${found && !found.g.own ? `<small class="warn">This Wordwall game can't check passing. Swap it for a game made here.</small>` : ""}
         </li>`;
-    }).join("") : `<li class="muted">No games yet. Find one below.</li>`;
+    }).join("") : `<li class="muted">No games yet. Find one below.${allGamesFlat().some(x => x.g.own) ? "" : " First make one on the Games tab: + Make a game."}</li>`;
   };
 
   const drawResults = () => {
     const q = search.value.trim().toLowerCase();
     const chosen = new Set(items.map(x => x.game));
-    const all = allGamesFlat().filter(x => !x.g.hidden && !chosen.has(x.g.id));
-    const hits = q ? all.filter(x => x.g.title.toLowerCase().includes(q) || `${x.b.name} ${x.s}`.toLowerCase().includes(q) || (x.g.game || "").toLowerCase().includes(q)) : [];
+    const all = allGamesFlat().filter(x => x.g.own && !x.g.hidden && !chosen.has(x.g.id));
+    const hits = q ? all.filter(x => x.g.title.toLowerCase().includes(q) || `${x.b.name} ${x.s}`.toLowerCase().includes(q) || (x.g.game || "").toLowerCase().includes(q)) : all;
     resultsEl.innerHTML = hits.slice(0, 12).map(x => `
       <li><button type="button" data-pick="${esc(x.g.id)}">
         <span dir="auto">${esc(x.g.title)}</span><span class="muted">${x.b.name} Belt, Stripe ${x.s} · ${esc(x.g.game || "")}</span>
@@ -950,18 +1132,15 @@ function openHomework(id) {
   };
 
   drawPicked();
+  drawResults();
   search.addEventListener("input", drawResults);
   f.addEventListener("click", e => {
     const pick = e.target.closest("[data-pick]");
-    if (pick) { items.push({ game: pick.dataset.pick, assign: "" }); drawPicked(); drawResults(); search.focus(); return; }
+    if (pick) { items.push({ game: pick.dataset.pick }); drawPicked(); drawResults(); search.focus(); return; }
     const rm = e.target.closest("[data-remove]");
     if (rm) { items.splice(Number(rm.dataset.remove), 1); drawPicked(); drawResults(); return; }
     const up = e.target.closest("[data-up]");
     if (up) { const i = Number(up.dataset.up); [items[i - 1], items[i]] = [items[i], items[i - 1]]; drawPicked(); }
-  });
-  f.addEventListener("input", e => {
-    const a = e.target.closest("[data-assign]");
-    if (a) items[Number(a.dataset.assign)].assign = a.value.trim();
   });
 
   f.querySelector('[data-act="save"]').addEventListener("click", async () => {
@@ -969,12 +1148,13 @@ function openHomework(id) {
     const cls = hwData.classes.find(c => c.id === f.elements.classId.value);
     if (!title) return formError(f, "Give the homework a title.");
     if (!items.length) return formError(f, "Add at least one game.");
-    const bad = items.find(it => it.assign && !/^https:\/\/wordwall\.net\/play\/\d+\/\d+\/\d+/.test(it.assign));
-    if (bad) return formError(f, "An assignment link doesn't look right. It should start with https://wordwall.net/play/");
+    const pass = Math.round(Number(f.elements.pass.value));
+    if (!(pass >= 1 && pass <= 100)) return formError(f, "Passing score must be from 1 to 100.");
     const data = {
       title, classId: cls.id, className: cls.name, students: cls.students || [],
       due: f.elements.due.value || "",
-      items: items.map(it => (it.assign ? { game: it.game, assign: it.assign } : { game: it.game })),
+      pass,
+      items: items.map(it => ({ game: it.game })),
       updatedBy: user.email,
     };
     try {
@@ -1017,27 +1197,32 @@ async function openResults(id) {
 
   const items = h.items || [];
   const students = h.students || [];
-  const doneCount = st => items.filter(it => rows[st] && rows[st].items && rows[st].items[it.game]).length;
+  const pass = Number(h.pass) || 80;
+  const prog = (st, it) => rows[st] && rows[st].items && rows[st].items[it.game];
+  const doneCount = st => items.filter(it => { const p = prog(st, it); return p && p.passed; }).length;
   const cell = (st, it) => {
-    const p = rows[st] && rows[st].items && rows[st].items[it.game];
-    return p ? `<td class="yes">✓ <small>${minutes(p.seconds)}</small></td>` : `<td class="no">—</td>`;
+    const p = prog(st, it);
+    if (!p) return `<td class="no">—</td>`;
+    const tries = p.tries ? ` · ${p.tries} ${p.tries === 1 ? "try" : "tries"}` : "";
+    if (p.passed) return `<td class="yes">✓ ${p.best}%<small>${tries} · ${minutes(p.seconds)}</small></td>`;
+    if (p.best !== undefined) return `<td class="fail">✗ ${p.best}%<small>${tries} · ${minutes(p.seconds)}</small></td>`;
+    return `<td class="opened">Opened<small> · ${minutes(p.seconds)}</small></td>`;
   };
   const finished = students.filter(st => doneCount(st) === items.length).length;
   f.innerHTML = `
     <h2 dir="auto">${esc(h.title)}</h2>
-    <p class="muted">${esc(h.className || "")}${h.due ? ` · Due ${esc(h.due)}` : ""} · ${finished} of ${students.length} students opened every game</p>
+    <p class="muted">${esc(h.className || "")}${h.due ? ` · Due ${esc(h.due)}` : ""} · Pass: ${pass}% · ${finished} of ${students.length} students passed every game</p>
     <div class="results-wrap">
       <table class="hw-table results">
-        <thead><tr><th>Student</th>${items.map(it => { const x = gameById(it.game); return `<th dir="auto">${esc(x ? x.g.title : "?")}${it.assign ? " <small>(scores on Wordwall)</small>" : ""}</th>`; }).join("")}<th>Done</th></tr></thead>
+        <thead><tr><th>Student</th>${items.map(it => { const x = gameById(it.game); return `<th dir="auto">${esc(x ? x.g.title : "?")}</th>`; }).join("")}<th>Passed</th></tr></thead>
         <tbody>${students.map(st => `
           <tr><td><b>${esc((rows[st] && rows[st].name) || st)}</b>${rows[st] && rows[st].name ? `<br><small class="muted">${esc(st)}</small>` : ""}</td>
           ${items.map(it => cell(st, it)).join("")}
           <td><b>${doneCount(st)}/${items.length}</b></td></tr>`).join("")}</tbody>
       </table>
     </div>
-    <p class="hint">✓ means the student opened the game, with the time they spent. For scores, open your Wordwall results. Students type their name there.</p>
+    <p class="hint">✓ passed, with their best score. ✗ played but not passed yet. A game counts as done only when it's passed.</p>
     <div class="dlg-actions">
-      ${items.some(it => it.assign) ? `<a class="btn btn-ghost" href="https://wordwall.net/myresults" target="_blank" rel="noopener">Wordwall scores</a>` : ""}
       <span class="spacer"></span>
       <button class="btn btn-primary" value="ok">Close</button>
     </div>`;
@@ -1085,6 +1270,8 @@ main.addEventListener("click", e => {
   if (chip) { beltKey = chip.dataset.belt; render(); return; }
   const edit = e.target.closest("[data-edit]");
   if (edit) { openEdit(edit.dataset.edit); return; }
+  const make = e.target.closest("[data-make]");
+  if (make) { openMake(Number(make.dataset.make)); return; }
   const add = e.target.closest("[data-add]");
   if (add) { openAdd(Number(add.dataset.add)); return; }
   if (e.target.closest("[data-hw-new]")) { openHomework(); return; }
