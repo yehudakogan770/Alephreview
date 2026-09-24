@@ -39,6 +39,13 @@ Pick a game type, a theme (Meadow, Desert, Ocean, Space or Classic), and type th
 | **Pick the answer** | Quiz | Questions: `question \| right answer \| wrong, wrong` |
 | **Game show** | Gameshow quiz | Questions, with a clock and two helps |
 | **Win or lose** | Win or lose quiz | Questions, with points to play for |
+| **Sort it** | Group sort | Groups: `group name \| item, item, item` (2 to 4 groups) |
+| **Fast sort** | Speed sorting | 2 groups; tiles come one at a time |
+| **Sort the table** | Categorize | Groups, shown as columns, checked with Submit |
+| **Put in order** | Rank order | A list, typed in the right order |
+| **Build the word** | Anagram | Words; letters keep their vowels |
+| **Fill the gaps** | Complete the sentence | Lines with `[ ]` around the missing parts |
+| **Label it** | Labelled diagram | Pairs: a big part on a board and its label |
 
 More than a round's worth is split into even rounds.
 

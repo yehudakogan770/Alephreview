@@ -266,7 +266,8 @@ function playOwnGame(stage, g, opts) {
 // Tiles: elements with [data-tile]; targets: elements with [data-target].
 // Tap a tile then a target, or drag the tile onto a target.
 // onDrop(tile, target) is called when a tile lands on a target.
-function dragOrTap(root, onDrop) {
+// With onTap(tile), a tap calls it instead of picking the tile up.
+function dragOrTap(root, onDrop, onTap) {
   let selected = null;
   let drag = null;
 
@@ -279,6 +280,7 @@ function dragOrTap(root, onDrop) {
   root.addEventListener("click", e => {
     if (drag && drag.moved) return;
     const tile = e.target.closest("[data-tile]");
+    if (tile && onTap) { if (!tile.disabled && !root.classList.contains("locked")) onTap(tile); return; }
     if (tile && !tile.disabled && !root.classList.contains("locked")) {
       // Tapping a tile while another is picked, inside a target: drop onto that target.
       const holder = tile.closest("[data-target]");

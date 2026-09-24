@@ -64,6 +64,13 @@ const OWN_TEMPLATES = {
   "Pick the answer": { group: "quiz", own: "quiz" },
   "Game show": { group: "quiz", own: "gameshow" },
   "Win or lose": { group: "quiz", own: "winlose" },
+  "Sort it": { group: "sort", own: "sort" },
+  "Fast sort": { group: "sort", own: "speedsort" },
+  "Sort the table": { group: "sort", own: "categorize" },
+  "Put in order": { group: "order", own: "order" },
+  "Build the word": { group: "order", own: "anagram" },
+  "Fill the gaps": { group: "quiz", own: "gaps" },
+  "Label it": { group: "match", own: "label" },
 };
 const OWN_HOWTO = {
   "Match it": "Drag each tile to its match. Then press Submit.",
@@ -73,6 +80,13 @@ const OWN_HOWTO = {
   "Pick the answer": "Read the question. Tap the right answer.",
   "Game show": "Tap the right answer before time runs out. Each help works once.",
   "Win or lose": "Pick your points. Then tap the answer. Right wins the points. Wrong loses them.",
+  "Sort it": "Drag each tile into its group.",
+  "Fast sort": "Tap the side each tile goes to. You can use the arrow keys too.",
+  "Sort the table": "Drag each tile into its column. Then press Submit.",
+  "Put in order": "Drag them into order, from the top. Then press Submit.",
+  "Build the word": "Tap the letters in order.",
+  "Fill the gaps": "Drag each tile into its gap. Then press Submit.",
+  "Label it": "Drag each label to its place. Then press Submit.",
 };
 
 function withDefaults(data) {

@@ -418,6 +418,61 @@
      }
     },
     {
+     "id": "own-white-1-order",
+     "title": "Put in order: א to ו",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "desert",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו"
+      ]
+     }
+    },
+    {
+     "id": "own-white-1-label",
+     "title": "Label it: א to ה",
+     "type": "match",
+     "game": "Label it",
+     "own": {
+      "kind": "label",
+      "theme": "classic",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       }
+      ]
+     }
+    },
+    {
      "id": "32232123",
      "title": "Bet Vs. Vet",
      "type": "quiz",
@@ -667,6 +722,79 @@
         "a": "י",
         "b": "Yud"
        }
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-sort",
+     "title": "Sort it: first or second half",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "א–ה",
+        "items": [
+         "א",
+         "בּ",
+         "ב",
+         "ג",
+         "ד",
+         "ה"
+        ]
+       },
+       {
+        "name": "ו–י",
+        "items": [
+         "ו",
+         "ז",
+         "ח",
+         "ט",
+         "י"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-order",
+     "title": "Put in order: א to י",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "ocean",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י"
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-gaps",
+     "title": "Missing letter: א to י",
+     "type": "quiz",
+     "game": "Fill the gaps",
+     "own": {
+      "kind": "gaps",
+      "theme": "space",
+      "sentences": [
+       "א בּ ב [ג] ד",
+       "ד ה [ו] ז",
+       "ז [ח] ט י",
+       "[א] בּ ב ג",
+       "ה ו ז ח [ט] י"
       ]
      }
     },
@@ -1004,6 +1132,76 @@
      }
     },
     {
+     "id": "own-white-3-speedsort",
+     "title": "Fast sort: dot or no dot",
+     "type": "sort",
+     "game": "Fast sort",
+     "own": {
+      "kind": "speedsort",
+      "theme": "space",
+      "groups": [
+       {
+        "name": "Dot",
+        "items": [
+         "בּ",
+         "כּ",
+         "בּ",
+         "כּ",
+         "בּ",
+         "כּ"
+        ]
+       },
+       {
+        "name": "No dot",
+        "items": [
+         "ב",
+         "כ",
+         "ב",
+         "כ",
+         "ב",
+         "כ"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-order",
+     "title": "Put in order: כ to ן",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "meadow",
+      "items": [
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן"
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-anagram",
+     "title": "Build it: letters in order",
+     "type": "order",
+     "game": "Build the word",
+     "own": {
+      "kind": "anagram",
+      "theme": "ocean",
+      "items": [
+       "אבגד",
+       "הוזח",
+       "טיכל",
+       "למנס"
+      ]
+     }
+    },
+    {
      "id": "28882522",
      "title": "123 Kriah 01 Page 07",
      "type": "match",
@@ -1256,6 +1454,85 @@
          "ץ",
          "מ"
         ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-categorize",
+     "title": "Sort the table: dot or no dot",
+     "type": "sort",
+     "game": "Sort the table",
+     "own": {
+      "kind": "categorize",
+      "theme": "ocean",
+      "groups": [
+       {
+        "name": "Dot",
+        "items": [
+         "בּ",
+         "כּ",
+         "פּ",
+         "תּ"
+        ]
+       },
+       {
+        "name": "No dot",
+        "items": [
+         "ב",
+         "כ",
+         "פ",
+         "ת"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-order",
+     "title": "Put in order: ס to ף",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "space",
+      "items": [
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף"
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-label",
+     "title": "Label it: ס to ף",
+     "type": "match",
+     "game": "Label it",
+     "own": {
+      "kind": "label",
+      "theme": "classic",
+      "pairs": [
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
        }
       ]
      }
@@ -1588,6 +1865,70 @@
          "ז",
          "ך"
         ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-speedsort",
+     "title": "Fast sort: final or not",
+     "type": "sort",
+     "game": "Fast sort",
+     "own": {
+      "kind": "speedsort",
+      "theme": "meadow",
+      "groups": [
+       {
+        "name": "Final",
+        "items": [
+         "ך",
+         "ם",
+         "ן",
+         "ף",
+         "ץ"
+        ]
+       },
+       {
+        "name": "Not final",
+        "items": [
+         "כ",
+         "מ",
+         "נ",
+         "פ",
+         "צ"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-label",
+     "title": "Label it: final letters",
+     "type": "match",
+     "game": "Label it",
+     "own": {
+      "kind": "label",
+      "theme": "classic",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
        }
       ]
      }
@@ -1994,6 +2335,89 @@
      }
     },
     {
+     "id": "own-red-3-sort",
+     "title": "Sort it: Shin or Sin",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "desert",
+      "groups": [
+       {
+        "name": "Shin",
+        "items": [
+         "שׁ",
+         "שָׁ",
+         "שַׁ",
+         "שָׁם",
+         "שַׁבָּת"
+        ]
+       },
+       {
+        "name": "Sin",
+        "items": [
+         "שׂ",
+         "שָׂ",
+         "שַׂ",
+         "שָׂם",
+         "שַׂר"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-order",
+     "title": "Put in order: ק to ת",
+     "type": "order",
+     "game": "Put in order",
+     "own": {
+      "kind": "order",
+      "theme": "desert",
+      "items": [
+       "ק",
+       "ר",
+       "שׁ",
+       "שׂ",
+       "תּ",
+       "ת"
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-anagram",
+     "title": "Build it: letters in order",
+     "type": "order",
+     "game": "Build the word",
+     "own": {
+      "kind": "anagram",
+      "theme": "meadow",
+      "items": [
+       "סעפצ",
+       "צקרש",
+       "רשת",
+       "אבגדה"
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-gaps",
+     "title": "Missing letter: ל to ת",
+     "type": "quiz",
+     "game": "Fill the gaps",
+     "own": {
+      "kind": "gaps",
+      "theme": "ocean",
+      "sentences": [
+       "ל מ [נ] ס",
+       "ס [ע] פּ פ",
+       "צ [ק] ר",
+       "ר שׁ [שׂ] תּ ת",
+       "מ נ ס ע [פּ]"
+      ]
+     }
+    },
+    {
      "id": "94302110",
      "title": "Rank order from Yud to Sav R3",
      "type": "order",
@@ -2329,6 +2753,56 @@
         "a": "חָ",
         "b": "Ches Kamatz"
        }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-1-speedsort",
+     "title": "Fast sort: Kamatz or no vowel",
+     "type": "sort",
+     "game": "Fast sort",
+     "own": {
+      "kind": "speedsort",
+      "theme": "desert",
+      "groups": [
+       {
+        "name": "Kamatz",
+        "items": [
+         "אָ",
+         "בָּ",
+         "גָ",
+         "דָ",
+         "הָ",
+         "זָ"
+        ]
+       },
+       {
+        "name": "No vowel",
+        "items": [
+         "א",
+         "בּ",
+         "ג",
+         "ד",
+         "ה",
+         "ז"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-1-gaps",
+     "title": "Missing letter with Kamatz",
+     "type": "quiz",
+     "game": "Fill the gaps",
+     "own": {
+      "kind": "gaps",
+      "theme": "meadow",
+      "sentences": [
+       "אָ בָּ [בָ] גָ",
+       "דָ [הָ] וָ",
+       "זָ חָ [טָ] יָ",
+       "[אָ] בָּ בָ"
       ]
      }
     },
@@ -2695,6 +3169,97 @@
          "כָּ"
         ]
        }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-sort",
+     "title": "Sort it: Kamatz or Patach",
+     "type": "sort",
+     "game": "Sort it",
+     "own": {
+      "kind": "sort",
+      "theme": "ocean",
+      "groups": [
+       {
+        "name": "Kamatz",
+        "items": [
+         "בָּ",
+         "גָ",
+         "דָ",
+         "מָ",
+         "לָ",
+         "שָׁ"
+        ]
+       },
+       {
+        "name": "Patach",
+        "items": [
+         "בַּ",
+         "הַ",
+         "רַ",
+         "נַ",
+         "תַ",
+         "קַ"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-categorize",
+     "title": "Sort the table: vowels",
+     "type": "sort",
+     "game": "Sort the table",
+     "own": {
+      "kind": "categorize",
+      "theme": "space",
+      "groups": [
+       {
+        "name": "Kamatz",
+        "items": [
+         "אָ",
+         "לָ",
+         "מָ",
+         "שָׁ"
+        ]
+       },
+       {
+        "name": "Patach",
+        "items": [
+         "אַ",
+         "לַ",
+         "מַ",
+         "שַׁ"
+        ]
+       },
+       {
+        "name": "No vowel",
+        "items": [
+         "א",
+         "ל",
+         "מ",
+         "שׁ"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-anagram",
+     "title": "Build the word",
+     "type": "order",
+     "game": "Build the word",
+     "own": {
+      "kind": "anagram",
+      "theme": "desert",
+      "items": [
+       "אַבָּא",
+       "יָד",
+       "דָּג",
+       "גַּן",
+       "חַם",
+       "בַּת"
       ]
      }
     },
