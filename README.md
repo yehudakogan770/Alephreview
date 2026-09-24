@@ -46,12 +46,23 @@ Pick a game type, a theme (Meadow, Desert, Ocean, Space or Classic), and type th
 | **Build the word** | Anagram | Words; letters keep their vowels |
 | **Fill the gaps** | Complete the sentence | Lines with `[ ]` around the missing parts |
 | **Label it** | Labelled diagram | Pairs: a big part on a board and its label |
+| **Pop the balloons** | Balloon pop | Pairs: the tile on the balloon, the word on its cart |
+| **Fruit catch** | Flying fruit | Pairs: what's on the fruit, the word to find |
+| **Whack it** | Whack-a-mole | Pairs: the tile that pops up, the word to find |
+| **Fly the plane** | Airplane | Pairs: what's in the cloud, the word to find |
+| **Watch and remember** | Watch and memorize | Tiles to remember (at least 8) |
+| **Spin it** * | Spin the wheel | What's on the wheel |
+| **Open a box** * | Open the box | What's in the boxes |
+| **Flip cards** * | Flash cards | Front and back of each card |
+| **Pick a card** * | Speaking cards | The cards in the deck |
+
+\* No score (for reading out loud), so these can't be homework.
 
 More than a round's worth is split into even rounds.
 
 - **Save and try it** opens the game so you can play it before publishing.
 
-Ready-made games of each type are already at the top of the White, Red and Orange stripes. More game types are coming, each with ready-made games.
+Ready-made games of each type are already at the top of the White, Red and Orange stripes.
 
 ### Homework
 

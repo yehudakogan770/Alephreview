@@ -71,6 +71,15 @@ const OWN_TEMPLATES = {
   "Build the word": { group: "order", own: "anagram" },
   "Fill the gaps": { group: "quiz", own: "gaps" },
   "Label it": { group: "match", own: "label" },
+  "Pop the balloons": { group: "arcade", own: "balloon" },
+  "Fruit catch": { group: "arcade", own: "fruit" },
+  "Whack it": { group: "arcade", own: "whack" },
+  "Fly the plane": { group: "arcade", own: "plane" },
+  "Watch and remember": { group: "match", own: "watch" },
+  "Spin it": { group: "cards", own: "spin", noScore: true },
+  "Open a box": { group: "cards", own: "openbox", noScore: true },
+  "Flip cards": { group: "cards", own: "flip", noScore: true },
+  "Pick a card": { group: "cards", own: "deal", noScore: true },
 };
 const OWN_HOWTO = {
   "Match it": "Drag each tile to its match. Then press Submit.",
@@ -87,11 +96,21 @@ const OWN_HOWTO = {
   "Build the word": "Tap the letters in order.",
   "Fill the gaps": "Drag each tile into its gap. Then press Submit.",
   "Label it": "Drag each label to its place. Then press Submit.",
+  "Pop the balloons": "Pop the balloon when its tile is over the right cart. Click, tap or press Space.",
+  "Fruit catch": "Read the word at the top. Tap the fruit with its tile.",
+  "Whack it": "Read the word at the top. Hit its tile when it pops up. Leave the others.",
+  "Fly the plane": "Read the word at the top. Move the plane up or down into its cloud.",
+  "Watch and remember": "Watch the tiles. Then tap the ones you saw.",
+  "Spin it": "Press Spin. Read what it lands on.",
+  "Open a box": "Tap a box. Read what's inside.",
+  "Flip cards": "Read the card. Tap it to flip it.",
+  "Pick a card": "Press Next card. Read it out loud.",
 };
 
 function withDefaults(data) {
   data.text = { ...TEXT_DEFAULTS, ...(data.text || {}) };
-  data.templates = { ...OWN_TEMPLATES, ...(data.templates || {}) };
+  // Game types made here always use the settings in this file.
+  data.templates = { ...(data.templates || {}), ...OWN_TEMPLATES };
   data.howTo = { ...OWN_HOWTO, ...(data.howTo || {}) };
   return data;
 }
