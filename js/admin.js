@@ -66,6 +66,46 @@ const TEXT_FIELDS = [
     ["homeworkTypeName", "Reminder above a scored game. {name} becomes the student's first name."],
     ["homeworkBack", "Back button on a homework game"],
   ]],
+  ["Games made here (what students see)", [
+    ["gameStart", "Start button"],
+    ["gameRound", "Round number. {n} and {total} become numbers."],
+    ["gameQuestion", "Question number. {n} and {total} become numbers."],
+    ["gameScore", "Score. {right} and {total} become numbers."],
+    ["gamePassMark", "Pass mark on the start screen. {pass} becomes the percent."],
+    ["gamePassed", "When the pass mark is reached"],
+    ["gameNotPassed", "When it isn't. {pass} becomes the percent."],
+    ["gameTryAgain", "Try again button"],
+    ["gameNext", "Next game button"],
+    ["gameSubmit", "Submit button"],
+    ["gameSubmitAnyway", "When boxes are still empty"],
+    ["gameCheck", "Check button"],
+    ["gameDone", "Done button"],
+    ["gameNextRound", "Next round button"],
+    ["gameSeeScore", "Button after the last round"],
+    ["gameShowAnswers", "Show answers button"],
+    ["gameAnswers", "Title over the answers"],
+    ["gameAllDone", "End of a game with no score (cards, wheels)"],
+    ["gamePlayAgain", "Play again button"],
+    ["gameFind", "Before the thing to find"],
+    ["gameIsIt", "Question in Right or wrong"],
+    ["gameTrue", "Yes button"],
+    ["gameFalse", "No button"],
+    ["gameTimeUp", "When the clock runs out"],
+    ["gamePoints", "Points. {points} becomes a number."],
+    ["gamePickPoints", "Win or lose: before picking points"],
+    ["gameHalf", "Game show help: take away 2 wrong answers"],
+    ["gameSecondTry", "Game show help: another try"],
+    ["gameGoesIn", "Sorting: question over each item"],
+    ["gameWatch", "Watch and remember: first step"],
+    ["gamePickSeen", "Watch and remember: second step"],
+    ["gameSpin", "Spin button"],
+    ["gameOpen", "Open a box: what to do"],
+    ["gameFlip", "Flip cards: what to do"],
+    ["gameDeal", "Pick a card: next card button"],
+    ["gameShuffle", "Shuffle button"],
+    ["gameRemove", "Take a card or slice out"],
+    ["gameCardsLeft", "Cards left. {n} becomes a number."],
+  ]],
   ["Bottom of every page", [
     ["footer", "Footer"],
   ]],
@@ -292,7 +332,7 @@ function gamesTab() {
     const rows = games.map((g, i) => `
       <li class="row${g.hidden ? " is-hidden" : ""}" draggable="true" data-stripe="${s}" data-index="${i}">
         <span class="handle" title="Drag to move" aria-hidden="true">⋮⋮</span>
-        <span class="row-thumb">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>
+        <span class="row-thumb${g.own ? " own" : ""}">${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : g.own ? `<b dir="auto">${esc(ownSample(g.own))}</b>` : ""}</span>
         <span class="row-text">
           <span class="row-title" dir="auto">${esc(g.title)}</span>
           <span class="row-meta">${g.own ? `Made here · ${esc(g.game)} · ${ownCount(g)}` : `${esc(g.game || "No game type")}${g.tip ? " · has instruction" : ""}${g.embed ? "" : " · opens on Wordwall"}`}</span>
@@ -496,86 +536,161 @@ function ownKinds() {
   return Object.entries(draft.templates).filter(([, t]) => t.own).map(([name, t]) => ({ name, kind: t.own }));
 }
 
+// A short bit of a game made here, shown as its picture in the list.
+function ownSample(o) {
+  const all = [...(o.pairs || []).map(p => p.a), ...(o.questions || []).map(q => q.answers[0]),
+    ...(o.groups || []).flatMap(g => g.items), ...(o.items || [])];
+  return all.find(x => x && x.length <= 4) || (o.kind || "").slice(0, 1).toUpperCase();
+}
+
 function ownCount(g) {
   const o = g.own || {};
-  if (o.pairs) return `${o.pairs.length} pairs`;
-  if (o.items) return `${o.items.length} items`;
+  const n = (x, one, many) => `${x} ${x === 1 ? one : many}`;
+  if (o.pairs) return n(o.pairs.length, "pair", "pairs");
+  if (o.questions) return n(o.questions.length, "question", "questions");
+  if (o.groups) return n(o.groups.length, "group", "groups");
+  if (o.sentences) return n(o.sentences.length, "line", "lines");
+  if (o.items) return n(o.items.length, "item", "items");
   return "";
 }
 
-// Read "a = b" pairs from pasted lines (also tab, " - " or comma between them).
-function parsePairs(text) {
-  return String(text).split(/\n+/).map(line => {
-    const m = line.split(/\s*(?:=|\t| - |,|→)\s*/);
-    return m.length >= 2 ? { a: m[0].trim(), b: m.slice(1).join(" ").trim() } : null;
-  }).filter(p => p && p.a && p.b);
-}
-
-const CONTENT_EDITORS = {
-  match: {
-    help: "Each pair: a colorful tile the student drags, and the word it goes next to. Like א and Aleph. Use at least 3 pairs. More than 6 are split into rounds.",
-    html(content) {
-      const pairs = (content && content.pairs && content.pairs.length) ? content.pairs : [{ a: "", b: "" }, { a: "", b: "" }, { a: "", b: "" }];
-      return `
-        <div class="pairs-editor" data-pairs>
-          <div class="pairs-head"><span>Tile (dragged)</span><span></span><span>Goes next to</span><span></span></div>
-          ${pairs.map(p => pairRow(p)).join("")}
-        </div>
-        <div class="pairs-tools">
-          <button class="btn btn-ghost small" type="button" data-add-pair>+ Add a pair</button>
-          <details class="paste-many">
-            <summary>Paste many at once</summary>
-            <textarea rows="5" data-paste dir="auto" placeholder="א = Aleph&#10;בּ = Bet&#10;ב = Vet"></textarea>
-            <button class="btn btn-ghost small" type="button" data-apply-paste>Add these pairs</button>
-          </details>
-        </div>`;
-    },
-    read(form) {
-      const pairs = [...form.querySelectorAll(".pair-row")].map(r => ({
-        a: r.querySelector("[data-pa]").value.trim(),
-        b: r.querySelector("[data-pb]").value.trim(),
-      })).filter(p => p.a || p.b);
-      if (pairs.some(p => !p.a || !p.b)) return { error: "Every pair needs both sides filled in." };
-      if (pairs.length < 3) return { error: "Add at least 3 pairs." };
+// Content comes in a few shapes. Each shape is edited as rows with a few
+// columns, and can be pasted in many at once (one row per line).
+const split = v => String(v || "").split(",").map(x => x.trim()).filter(Boolean);
+const SHAPES = {
+  // { pairs: [{ a, b }] }
+  pairs: {
+    toRows: c => (c.pairs || []).map(p => [p.a, p.b]),
+    fromRows(rows, ed) {
+      if (rows.some(r => !r[0] || !r[1])) return { error: "Every row needs both sides filled in." };
       const seen = new Set();
-      for (const p of pairs) {
-        if (seen.has(p.b)) return { error: `"${p.b}" is used twice. Each word must be different.` };
-        seen.add(p.b);
+      for (const [a, b] of rows) {
+        if (seen.has("a" + a)) return { error: `"${a}" is used twice. Each one must be different.` };
+        if (seen.has("b" + b) && !ed.repeatB) return { error: `"${b}" is used twice. Each one must be different.` };
+        seen.add("a" + a); seen.add("b" + b);
       }
-      return { content: { kind: "match", pairs } };
+      return { content: { pairs: rows.map(([a, b]) => ({ a, b })) } };
+    },
+  },
+  // { questions: [{ q, answers: [right, wrong, …] }] }
+  quiz: {
+    toRows: c => (c.questions || []).map(q => [q.q, q.answers[0], q.answers.slice(1).join(", ")]),
+    fromRows(rows) {
+      for (const [q, right, wrong] of rows) {
+        if (!q || !right) return { error: "Every question needs the question and the right answer." };
+        if (!split(wrong).length) return { error: `"${q}" needs at least one wrong answer.` };
+      }
+      return { content: { questions: rows.map(([q, right, wrong]) => ({ q, answers: [right, ...split(wrong).slice(0, 5)] })) } };
+    },
+  },
+  // { groups: [{ name, items: [] }] }
+  groups: {
+    toRows: c => (c.groups || []).map(g => [g.name, g.items.join(", ")]),
+    fromRows(rows) {
+      if (rows.some(r => !r[0] || !split(r[1]).length)) return { error: "Every group needs a name and at least one item." };
+      return { content: { groups: rows.map(([name, items]) => ({ name, items: split(items) })) } };
+    },
+  },
+  // { items: [] }
+  list: {
+    toRows: c => (c.items || []).map(x => [x]),
+    fromRows: rows => ({ content: { items: rows.map(r => r[0]) } }),
+  },
+  // { sentences: ["א ב [ג] ד"] }  [ ] marks the missing parts
+  sentences: {
+    toRows: c => (c.sentences || []).map(x => [x]),
+    fromRows(rows) {
+      const bad = rows.find(r => !/\[[^\]]+\]/.test(r[0]));
+      if (bad) return { error: `Put [ ] around the missing part in: ${bad[0]}` };
+      return { content: { sentences: rows.map(r => r[0]) } };
     },
   },
 };
 
-function pairRow(p = { a: "", b: "" }) {
+// One editor per kind: which shape, the column names, and how many rows.
+const pairsEd = (help, a, b, min = 3) => ({ shape: "pairs", help, cols: [[a, "א"], [b, "Alef"]], min, pasteHint: "א = Alef" });
+const quizEd = help => ({ shape: "quiz", help, cols: [["Question", "Which one is Beis?"], ["Right answer", "בּ"], ["Wrong answers, with commas", "ב, כ, פ"]], min: 2, pasteHint: "Which one is Beis? | בּ | ב, כ, פ" });
+const CONTENT_EDITORS = {
+  match: pairsEd("Each pair: a colorful tile the student drags, and the word it goes next to. Like א and Alef. More than 6 are split into rounds.", "Tile (dragged)", "Goes next to"),
+  pairs: pairsEd("Each pair becomes two cards, face down. Students flip two at a time to find the pairs. More than 6 are split into rounds.", "Card", "Its match"),
+  find: pairsEd("Students see the right side and tap the tile with the left side. More than 8 are split into rounds.", "Tile to find", "What students see"),
+  truefalse: { ...pairsEd("Students see a pair and say if it's right. Sometimes the site mixes up a pair on purpose. The right side can repeat, like Kamatz and Patach.", "Tile", "Its match"), repeatB: true },
+  quiz: quizEd("Each question has one right answer and up to 5 wrong ones. The answers are mixed up for students."),
+  gameshow: quizEd("Like a quiz, with a clock for each question and 2 helps: 50 : 50 and Second try."),
+  winlose: quizEd("Like a quiz, but students pick how many points to play for before each question."),
+};
+
+function contentEditorHtml(kind, content) {
+  const ed = CONTENT_EDITORS[kind];
+  const rows = content && SHAPES[ed.shape].toRows(content);
+  const list = rows && rows.length ? rows : [...Array(ed.min || 1)].map(() => ed.cols.map(() => ""));
   return `
-    <div class="pair-row">
-      <input data-pa value="${esc(p.a)}" dir="auto" placeholder="א">
-      <span class="eq">=</span>
-      <input data-pb value="${esc(p.b)}" dir="auto" placeholder="Aleph">
-      <button class="icon-btn small" type="button" data-del-pair title="Remove">✕</button>
+    <div class="rows-editor" data-rows style="--cols:${ed.cols.length}">
+      <div class="rows-head">${ed.cols.map(([label]) => `<span>${esc(label)}</span>`).join("")}<span></span></div>
+      ${list.map(r => contentRow(ed, r)).join("")}
+    </div>
+    <div class="pairs-tools">
+      <button class="btn btn-ghost small" type="button" data-add-row>+ Add a row</button>
+      <details class="paste-many">
+        <summary>Paste many at once</summary>
+        <textarea rows="5" data-paste dir="auto" placeholder="${esc(ed.pasteHint || ed.cols.map(c => c[1]).join(" | "))}"></textarea>
+        <button class="btn btn-ghost small" type="button" data-apply-paste>Add these</button>
+      </details>
     </div>`;
 }
 
+function contentRow(ed, r = []) {
+  return `
+    <div class="content-row">
+      ${ed.cols.map(([, ph], i) => `<input data-col="${i}" value="${esc(r[i] || "")}" dir="auto" placeholder="${esc(ph)}">`).join("")}
+      <button class="icon-btn small" type="button" data-del-row title="Remove">✕</button>
+    </div>`;
+}
+
+// Pasted lines: columns split by | or a tab (two columns can also use =).
+function parseRows(text, ed) {
+  const n = ed.cols.length;
+  return String(text).split(/\n+/).map(line => line.trim()).filter(Boolean).map(line => {
+    if (n === 1) return [line];
+    let parts = line.split(/\s*(?:\||\t)\s*/);
+    if (parts.length < 2 && n === 2) parts = line.split(/\s*(?:=| - |→|,)\s*/);
+    if (parts.length < 2) return null;
+    return [...parts.slice(0, n - 1), parts.slice(n - 1).join(n === 2 ? " " : ", ")].map(x => x.trim());
+  }).filter(Boolean);
+}
+
+function readContent(form, kind) {
+  const ed = CONTENT_EDITORS[kind];
+  const rows = [...form.querySelectorAll(".content-row")]
+    .map(r => [...r.querySelectorAll("[data-col]")].map(i => i.value.trim()))
+    .filter(r => r.some(Boolean));
+  if (rows.length < (ed.min || 1)) return { error: `Add at least ${ed.min || 1} rows.` };
+  if (ed.max && rows.length > ed.max) return { error: `Use at most ${ed.max} rows.` };
+  const res = SHAPES[ed.shape].fromRows(rows, ed);
+  if (res.content) res.content.kind = kind;
+  return res;
+}
+
 // Wire up the buttons inside a content editor.
-function bindContentEditor(form) {
+function bindContentEditor(form, getKind) {
   form.addEventListener("click", e => {
-    if (e.target.closest("[data-add-pair]")) {
-      form.querySelector("[data-pairs]").insertAdjacentHTML("beforeend", pairRow());
-      form.querySelector(".pair-row:last-child [data-pa]").focus();
+    const ed = CONTENT_EDITORS[getKind()];
+    if (e.target.closest("[data-add-row]")) {
+      form.querySelector("[data-rows]").insertAdjacentHTML("beforeend", contentRow(ed));
+      form.querySelector(".content-row:last-child [data-col]").focus();
     }
-    const del = e.target.closest("[data-del-pair]");
-    if (del) del.closest(".pair-row").remove();
+    const del = e.target.closest("[data-del-row]");
+    if (del) del.closest(".content-row").remove();
     if (e.target.closest("[data-apply-paste]")) {
       const box = form.querySelector("[data-paste]");
-      const found = parsePairs(box.value);
-      if (!found.length) { toast("No pairs found. Put = between the two sides, one pair per line.", "bad"); return; }
-      form.querySelectorAll(".pair-row").forEach(r => {
-        if (!r.querySelector("[data-pa]").value.trim() && !r.querySelector("[data-pb]").value.trim()) r.remove();
+      const found = parseRows(box.value, ed);
+      if (!found.length) { toast(ed.cols.length > 1 ? "Nothing found. Put | between the parts, one row per line." : "Nothing found. Put one on each line.", "bad"); return; }
+      form.querySelectorAll(".content-row").forEach(r => {
+        if (![...r.querySelectorAll("[data-col]")].some(i => i.value.trim())) r.remove();
       });
-      form.querySelector("[data-pairs]").insertAdjacentHTML("beforeend", found.map(pairRow).join(""));
+      form.querySelector("[data-rows]").insertAdjacentHTML("beforeend", found.map(r => contentRow(ed, r)).join(""));
       box.value = "";
-      toast(`Added ${found.length} pairs.`);
+      toast(`Added ${found.length}.`);
     }
   });
 }
@@ -583,9 +698,9 @@ function bindContentEditor(form) {
 // Make a new game, or edit one made here. `where` is set when editing.
 function openMake(stripe, where) {
   const g = where ? where.game : null;
-  const kinds = ownKinds();
+  const kinds = ownKinds().filter(k => CONTENT_EDITORS[k.kind]);
   const kindName = g ? g.game : kinds[0].name;
-  const kind = (draft.templates[kindName] || {}).own || kinds[0].kind;
+  let kind = (draft.templates[kindName] || {}).own || kinds[0].kind;
   const dlg = $("#dlg-game");
   dlg.innerHTML = `
     <form method="dialog" class="dlg-body">
@@ -599,7 +714,7 @@ function openMake(stripe, where) {
         <div class="theme-pick">${GAME_THEMES.map(([k, name]) => `
           <label class="theme-opt theme-${k}"><input type="radio" name="theme" value="${k}"${k === ((g && g.own && g.own.theme) || "meadow") ? " checked" : ""}><span>${name}</span></label>`).join("")}
         </div></div>
-      <div data-content>${CONTENT_EDITORS[kind].html(g && g.own)}</div>
+      <div data-content>${contentEditorHtml(kind, g && g.own)}</div>
       <label class="field"><span>Instruction for this game (optional)</span>
         <textarea name="tip" rows="2" dir="auto" placeholder="Like: Match each letter to its name.">${esc(g && g.tip || "")}</textarea></label>
       <div class="field-row">
@@ -617,13 +732,22 @@ function openMake(stripe, where) {
       </div>
     </form>`;
   const f = dlg.querySelector("form");
-  bindContentEditor(f);
+  bindContentEditor(f, () => kind);
+  f.elements.kind.addEventListener("change", () => {
+    const next = draft.templates[f.elements.kind.value].own;
+    // Keep what was typed when the new type uses the same kind of content.
+    const same = CONTENT_EDITORS[next].shape === CONTENT_EDITORS[kind].shape;
+    const kept = same ? readContent(f, kind).content : null;
+    kind = next;
+    f.querySelector("[data-kind-help]").textContent = CONTENT_EDITORS[kind].help;
+    f.querySelector("[data-content]").innerHTML = contentEditorHtml(kind, kept);
+  });
   const fail = msg => { const el = f.querySelector(".form-error"); el.textContent = msg; el.hidden = false; };
 
   function save() {
     const title = f.elements.title.value.trim();
     if (!title) { fail("Give the game a name."); return null; }
-    const res = CONTENT_EDITORS[kind].read(f);
+    const res = readContent(f, kind);
     if (res.error) { fail(res.error); return null; }
     const tip = f.elements.tip.value.trim();
     const belt = f.elements.belt.value, s = Number(f.elements.stripe.value);
@@ -1130,7 +1254,7 @@ function openHomework(id) {
   const drawResults = () => {
     const q = search.value.trim().toLowerCase();
     const chosen = new Set(items.map(x => x.game));
-    const all = allGamesFlat().filter(x => x.g.own && !x.g.hidden && !chosen.has(x.g.id));
+    const all = allGamesFlat().filter(x => x.g.own && !x.g.hidden && !chosen.has(x.g.id) && !(draft.templates[x.g.game] || {}).noScore);
     const hits = q ? all.filter(x => x.g.title.toLowerCase().includes(q) || `${x.b.name} ${x.s}`.toLowerCase().includes(q) || (x.g.game || "").toLowerCase().includes(q)) : all;
     resultsEl.innerHTML = hits.slice(0, 12).map(x => `
       <li><button type="button" data-pick="${esc(x.g.id)}">

@@ -210,6 +210,214 @@
      }
     },
     {
+     "id": "own-white-1-pairs",
+     "title": "Flip and match: א to ו",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-1-quiz",
+     "title": "Beis or Veis?",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "Which one is Beis?",
+        "answers": [
+         "בּ",
+         "ב",
+         "כּ",
+         "כ"
+        ]
+       },
+       {
+        "q": "Which one is Veis?",
+        "answers": [
+         "ב",
+         "בּ",
+         "כ",
+         "פ"
+        ]
+       },
+       {
+        "q": "Which one is Alef?",
+        "answers": [
+         "א",
+         "ע",
+         "ט",
+         "ג"
+        ]
+       },
+       {
+        "q": "Which one is Gimmel?",
+        "answers": [
+         "ג",
+         "נ",
+         "ז",
+         "ב"
+        ]
+       },
+       {
+        "q": "Which one is Dalet?",
+        "answers": [
+         "ד",
+         "ר",
+         "ך",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which one is Hey?",
+        "answers": [
+         "ה",
+         "ח",
+         "ת",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which one is Vov?",
+        "answers": [
+         "ו",
+         "ז",
+         "ן",
+         "י"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-1-gameshow",
+     "title": "Game show: א to ו",
+     "type": "quiz",
+     "game": "Game show",
+     "own": {
+      "kind": "gameshow",
+      "theme": "space",
+      "questions": [
+       {
+        "q": "What is this letter?  א",
+        "answers": [
+         "Alef",
+         "Ayin",
+         "Tes",
+         "Vov"
+        ]
+       },
+       {
+        "q": "What is this letter?  בּ",
+        "answers": [
+         "Beis",
+         "Veis",
+         "Kaf",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "What is this letter?  ב",
+        "answers": [
+         "Veis",
+         "Beis",
+         "Chaf",
+         "Fey"
+        ]
+       },
+       {
+        "q": "What is this letter?  ג",
+        "answers": [
+         "Gimmel",
+         "Nun",
+         "Zayin",
+         "Dalet"
+        ]
+       },
+       {
+        "q": "What is this letter?  ד",
+        "answers": [
+         "Dalet",
+         "Reish",
+         "Final Chaf",
+         "Vov"
+        ]
+       },
+       {
+        "q": "What is this letter?  ה",
+        "answers": [
+         "Hey",
+         "Ches",
+         "Sav",
+         "Gimmel"
+        ]
+       },
+       {
+        "q": "What is this letter?  ו",
+        "answers": [
+         "Vov",
+         "Zayin",
+         "Final Nun",
+         "Yud"
+        ]
+       },
+       {
+        "q": "Which one is Gimmel?",
+        "answers": [
+         "ג",
+         "נ",
+         "ז",
+         "ד"
+        ]
+       },
+       {
+        "q": "Which one is Hey?",
+        "answers": [
+         "ה",
+         "ח",
+         "ת",
+         "בּ"
+        ]
+       }
+      ]
+     }
+    },
+    {
      "id": "32232123",
      "title": "Bet Vs. Vet",
      "type": "quiz",
@@ -363,6 +571,106 @@
      }
     },
     {
+     "id": "own-white-2-find",
+     "title": "Find it: א to י",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-truefalse",
+     "title": "Right or wrong: Hey and Ches",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ת",
+        "b": "Sav"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
+    },
+    {
      "id": "72336687",
      "title": "א thru ך Cloud Tap",
      "type": "cards",
@@ -485,6 +793,212 @@
        {
         "a": "ן",
         "b": "Final Nun"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-pairs",
+     "title": "Flip and match: look-alikes",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-find",
+     "title": "Find it: כ to ן",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-gameshow",
+     "title": "Game show: א to ן",
+     "type": "quiz",
+     "game": "Game show",
+     "own": {
+      "kind": "gameshow",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "What is this letter?  כּ",
+        "answers": [
+         "Kaf",
+         "Beis",
+         "Chaf",
+         "Yud"
+        ]
+       },
+       {
+        "q": "What is this letter?  כ",
+        "answers": [
+         "Chaf",
+         "Veis",
+         "Kaf",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "What is this letter?  ך",
+        "answers": [
+         "Final Chaf",
+         "Dalet",
+         "Reish",
+         "Final Nun"
+        ]
+       },
+       {
+        "q": "What is this letter?  ל",
+        "answers": [
+         "Lamed",
+         "Final Chaf",
+         "Vov",
+         "Mem"
+        ]
+       },
+       {
+        "q": "What is this letter?  מ",
+        "answers": [
+         "Mem",
+         "Tes",
+         "Final Mem",
+         "Samech"
+        ]
+       },
+       {
+        "q": "What is this letter?  ם",
+        "answers": [
+         "Final Mem",
+         "Samech",
+         "Mem",
+         "Yud"
+        ]
+       },
+       {
+        "q": "What is this letter?  נ",
+        "answers": [
+         "Nun",
+         "Gimmel",
+         "Chaf",
+         "Final Mem"
+        ]
+       },
+       {
+        "q": "What is this letter?  ן",
+        "answers": [
+         "Final Nun",
+         "Vov",
+         "Zayin",
+         "Final Chaf"
+        ]
+       },
+       {
+        "q": "Which one is Final Chaf?",
+        "answers": [
+         "ך",
+         "ד",
+         "ר",
+         "ן"
+        ]
+       },
+       {
+        "q": "Which one is Final Nun?",
+        "answers": [
+         "ן",
+         "ו",
+         "ז",
+         "ך"
+        ]
        }
       ]
      }
@@ -623,6 +1137,125 @@
        {
         "a": "ם",
         "b": "Final Mem"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-find",
+     "title": "Find it: ס to ף",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-gameshow",
+     "title": "Game show: ס to ף",
+     "type": "quiz",
+     "game": "Game show",
+     "own": {
+      "kind": "gameshow",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "What is this letter?  ס",
+        "answers": [
+         "Samech",
+         "Final Mem",
+         "Tes",
+         "Gimmel"
+        ]
+       },
+       {
+        "q": "What is this letter?  ע",
+        "answers": [
+         "Ayin",
+         "Tzadik",
+         "Tes",
+         "Chaf"
+        ]
+       },
+       {
+        "q": "What is this letter?  פּ",
+        "answers": [
+         "Pey",
+         "Fey",
+         "Kaf",
+         "Final Chaf"
+        ]
+       },
+       {
+        "q": "What is this letter?  פ",
+        "answers": [
+         "Fey",
+         "Pey",
+         "Chaf",
+         "Final Mem"
+        ]
+       },
+       {
+        "q": "What is this letter?  ף",
+        "answers": [
+         "Final Fey",
+         "Final Chaf",
+         "Final Tzadik",
+         "Ches"
+        ]
+       },
+       {
+        "q": "Which one is Ayin?",
+        "answers": [
+         "ע",
+         "צ",
+         "ט",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which one is Final Fey?",
+        "answers": [
+         "ף",
+         "ך",
+         "ץ",
+         "מ"
+        ]
        }
       ]
      }
@@ -767,6 +1400,194 @@
        {
         "a": "ד",
         "b": "Dalet"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-find",
+     "title": "Find the final letters",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadik"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-truefalse",
+     "title": "Right or wrong: final letters",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadik"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-winlose",
+     "title": "Win or lose: look-alikes",
+     "type": "quiz",
+     "game": "Win or lose",
+     "own": {
+      "kind": "winlose",
+      "theme": "desert",
+      "questions": [
+       {
+        "q": "Which one is Dalet?",
+        "answers": [
+         "ד",
+         "ר",
+         "ך",
+         "ג"
+        ]
+       },
+       {
+        "q": "Which one is Reish?",
+        "answers": [
+         "ר",
+         "ד",
+         "ך",
+         "ס"
+        ]
+       },
+       {
+        "q": "Which one is Final Chaf?",
+        "answers": [
+         "ך",
+         "ד",
+         "ר",
+         "ן"
+        ]
+       },
+       {
+        "q": "Which one is Ayin?",
+        "answers": [
+         "ע",
+         "צ",
+         "ט",
+         "נ"
+        ]
+       },
+       {
+        "q": "Which one is Tzadik?",
+        "answers": [
+         "צ",
+         "ע",
+         "ץ",
+         "ד"
+        ]
+       },
+       {
+        "q": "Which one is Final Tzadik?",
+        "answers": [
+         "ץ",
+         "צ",
+         "ף",
+         "שׂ"
+        ]
+       },
+       {
+        "q": "Which one is Final Fey?",
+        "answers": [
+         "ף",
+         "ך",
+         "ץ",
+         "כּ"
+        ]
+       },
+       {
+        "q": "Which one is Final Nun?",
+        "answers": [
+         "ן",
+         "ו",
+         "ז",
+         "ך"
+        ]
        }
       ]
      }
@@ -920,6 +1741,254 @@
        {
         "a": "ט",
         "b": "Tes"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-pairs",
+     "title": "Flip and match: Shin and Sin",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שָׁ",
+        "b": "Shin Kamatz"
+       },
+       {
+        "a": "שָׂ",
+        "b": "Sin Kamatz"
+       },
+       {
+        "a": "שַׁ",
+        "b": "Shin Patach"
+       },
+       {
+        "a": "שַׂ",
+        "b": "Sin Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-truefalse",
+     "title": "Right or wrong: Shin and Sin",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       },
+       {
+        "a": "ת",
+        "b": "Sav"
+       },
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "ק",
+        "b": "Kuf"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-quiz",
+     "title": "Find the letter: ר to ת",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "ocean",
+      "questions": [
+       {
+        "q": "Which one is Reish?",
+        "answers": [
+         "ר",
+         "ד",
+         "ך",
+         "שׂ"
+        ]
+       },
+       {
+        "q": "Which one is Shin?",
+        "answers": [
+         "שׁ",
+         "שׂ",
+         "ע",
+         "ת"
+        ]
+       },
+       {
+        "q": "Which one is Sin?",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ע",
+         "תּ"
+        ]
+       },
+       {
+        "q": "Which one is Tav?",
+        "answers": [
+         "תּ",
+         "ת",
+         "ח",
+         "ר"
+        ]
+       },
+       {
+        "q": "Which one is Sav?",
+        "answers": [
+         "ת",
+         "תּ",
+         "ח",
+         "ה"
+        ]
+       },
+       {
+        "q": "Which one is Tes?",
+        "answers": [
+         "ט",
+         "מ",
+         "ס",
+         "ה"
+        ]
+       },
+       {
+        "q": "Which one is Ayin?",
+        "answers": [
+         "ע",
+         "צ",
+         "ט",
+         "ה"
+        ]
+       },
+       {
+        "q": "Which one is Ches?",
+        "answers": [
+         "ח",
+         "ה",
+         "ת",
+         "שׂ"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-winlose",
+     "title": "Win or lose: ק to ת",
+     "type": "quiz",
+     "game": "Win or lose",
+     "own": {
+      "kind": "winlose",
+      "theme": "meadow",
+      "questions": [
+       {
+        "q": "What is this letter?  ק",
+        "answers": [
+         "Kuf",
+         "Hey",
+         "Reish",
+         "Vov"
+        ]
+       },
+       {
+        "q": "What is this letter?  ר",
+        "answers": [
+         "Reish",
+         "Dalet",
+         "Final Chaf",
+         "Hey"
+        ]
+       },
+       {
+        "q": "What is this letter?  שׁ",
+        "answers": [
+         "Shin",
+         "Sin",
+         "Ayin",
+         "Kuf"
+        ]
+       },
+       {
+        "q": "What is this letter?  שׂ",
+        "answers": [
+         "Sin",
+         "Shin",
+         "Ayin",
+         "Samech"
+        ]
+       },
+       {
+        "q": "What is this letter?  תּ",
+        "answers": [
+         "Tav",
+         "Sav",
+         "Ches",
+         "Final Tzadik"
+        ]
+       },
+       {
+        "q": "What is this letter?  ת",
+        "answers": [
+         "Sav",
+         "Tav",
+         "Ches",
+         "Hey"
+        ]
+       },
+       {
+        "q": "Which one is Sin?",
+        "answers": [
+         "שׂ",
+         "שׁ",
+         "ע",
+         "בּ"
+        ]
+       },
+       {
+        "q": "Which one is Kuf?",
+        "answers": [
+         "ק",
+         "ה",
+         "ר",
+         "כ"
+        ]
        }
       ]
      }
@@ -1220,6 +2289,50 @@
      }
     },
     {
+     "id": "own-orange-1-find",
+     "title": "Find it: letters with Kamatz",
+     "type": "match",
+     "game": "Find it",
+     "own": {
+      "kind": "find",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Alef Kamatz"
+       },
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "בָ",
+        "b": "Veis Kamatz"
+       },
+       {
+        "a": "גָ",
+        "b": "Gimmel Kamatz"
+       },
+       {
+        "a": "דָ",
+        "b": "Dalet Kamatz"
+       },
+       {
+        "a": "הָ",
+        "b": "Hey Kamatz"
+       },
+       {
+        "a": "זָ",
+        "b": "Zayin Kamatz"
+       },
+       {
+        "a": "חָ",
+        "b": "Ches Kamatz"
+       }
+      ]
+     }
+    },
+    {
      "id": "62269918",
      "title": "Kamatz Whack-a-Mole",
      "type": "arcade",
@@ -1381,6 +2494,206 @@
        {
         "a": "שַׁ",
         "b": "Shin Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-pairs",
+     "title": "Flip and match: Kamatz and Patach",
+     "type": "match",
+     "game": "Flip and match",
+     "own": {
+      "kind": "pairs",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Alef Kamatz"
+       },
+       {
+        "a": "אַ",
+        "b": "Alef Patach"
+       },
+       {
+        "a": "דָ",
+        "b": "Dalet Kamatz"
+       },
+       {
+        "a": "דַ",
+        "b": "Dalet Patach"
+       },
+       {
+        "a": "הָ",
+        "b": "Hey Kamatz"
+       },
+       {
+        "a": "הַ",
+        "b": "Hey Patach"
+       },
+       {
+        "a": "לָ",
+        "b": "Lamed Kamatz"
+       },
+       {
+        "a": "לַ",
+        "b": "Lamed Patach"
+       },
+       {
+        "a": "נָ",
+        "b": "Nun Kamatz"
+       },
+       {
+        "a": "נַ",
+        "b": "Nun Patach"
+       },
+       {
+        "a": "רָ",
+        "b": "Reish Kamatz"
+       },
+       {
+        "a": "רַ",
+        "b": "Reish Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-truefalse",
+     "title": "Right or wrong: Kamatz or Patach",
+     "type": "quiz",
+     "game": "Right or wrong",
+     "own": {
+      "kind": "truefalse",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "בָּ",
+        "b": "Kamatz"
+       },
+       {
+        "a": "מַ",
+        "b": "Patach"
+       },
+       {
+        "a": "גָ",
+        "b": "Kamatz"
+       },
+       {
+        "a": "לַ",
+        "b": "Patach"
+       },
+       {
+        "a": "שָׁ",
+        "b": "Kamatz"
+       },
+       {
+        "a": "תַ",
+        "b": "Patach"
+       },
+       {
+        "a": "דַ",
+        "b": "Patach"
+       },
+       {
+        "a": "רָ",
+        "b": "Kamatz"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-quiz",
+     "title": "Which has a Kamatz?",
+     "type": "quiz",
+     "game": "Pick the answer",
+     "own": {
+      "kind": "quiz",
+      "theme": "space",
+      "questions": [
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "בָּ",
+         "בַּ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "מָ",
+         "מַ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "לָ",
+         "לַ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "שָׁ",
+         "שַׁ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "גָ",
+         "גַ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "תָ",
+         "תַ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "דָ",
+         "דַ"
+        ]
+       },
+       {
+        "q": "Which one has a Kamatz?",
+        "answers": [
+         "נָ",
+         "נַ"
+        ]
+       },
+       {
+        "q": "Which one has a Patach?",
+        "answers": [
+         "הַ",
+         "הָ"
+        ]
+       },
+       {
+        "q": "Which one has a Patach?",
+        "answers": [
+         "רַ",
+         "רָ"
+        ]
+       },
+       {
+        "q": "Which one has a Patach?",
+        "answers": [
+         "זַ",
+         "זָ"
+        ]
+       },
+       {
+        "q": "Which one has a Patach?",
+        "answers": [
+         "כַּ",
+         "כָּ"
+        ]
        }
       ]
      }

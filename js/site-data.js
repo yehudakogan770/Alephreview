@@ -28,14 +28,51 @@ const TEXT_DEFAULTS = {
   gameSeeScore: "See my score",
   gameShowAnswers: "Show answers",
   gameAnswers: "Answers",
+  gameQuestion: "Question {n} of {total}",
+  gameAllDone: "All done",
+  gamePlayAgain: "Play again",
+  gameFind: "Find:",
+  gameTrue: "Yes",
+  gameFalse: "No",
+  gameIsIt: "Is this right?",
+  gameTimeUp: "Time's up",
+  gameCheck: "Check",
+  gameDone: "Done",
+  gamePoints: "{points} points",
+  gamePickPoints: "Pick your points",
+  gameHalf: "50 : 50",
+  gameSecondTry: "Second try",
+  gameGoesIn: "Where does it go?",
+  gameWatch: "Watch and remember.",
+  gamePickSeen: "Tap the ones you saw.",
+  gameSpin: "Spin",
+  gameOpen: "Tap a box to open it.",
+  gameFlip: "Tap the card to flip it.",
+  gameDeal: "Next card",
+  gameShuffle: "Shuffle",
+  gameRemove: "Take it out",
+  gameCardsLeft: "{n} left",
 };
 
 // Game types made on this site (js/games/*.js).
+// noScore: games with no right or wrong (cards, wheels). They can't be homework.
 const OWN_TEMPLATES = {
   "Match it": { group: "match", own: "match" },
+  "Flip and match": { group: "match", own: "pairs" },
+  "Find it": { group: "match", own: "find" },
+  "Right or wrong": { group: "quiz", own: "truefalse" },
+  "Pick the answer": { group: "quiz", own: "quiz" },
+  "Game show": { group: "quiz", own: "gameshow" },
+  "Win or lose": { group: "quiz", own: "winlose" },
 };
 const OWN_HOWTO = {
   "Match it": "Drag each tile to its match. Then press Submit.",
+  "Flip and match": "Flip two cards. Find each pair.",
+  "Find it": "Read the word at the top. Tap its tile.",
+  "Right or wrong": "Is it a match? Press Yes or No.",
+  "Pick the answer": "Read the question. Tap the right answer.",
+  "Game show": "Tap the right answer before time runs out. Each help works once.",
+  "Win or lose": "Pick your points. Then tap the answer. Right wins the points. Wrong loses them.",
 };
 
 function withDefaults(data) {

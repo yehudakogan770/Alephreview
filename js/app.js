@@ -327,7 +327,13 @@ function beltView(b) {
 // A picture for games made on this site: a few of its items.
 function ownThumb(g) {
   const o = g.own || {};
-  const items = (o.pairs || []).map(p => p.a).concat(o.items || []).filter(Boolean).slice(0, 3);
+  const items = [
+    ...(o.pairs || []).map(p => p.a),
+    ...(o.questions || []).map(q => q.answers[0]),
+    ...(o.groups || []).flatMap(g => g.items.slice(0, 2)),
+    ...(o.items || []),
+    ...(o.sentences || []).map(x => (x.match(/\[([^\]]+)\]/) || [])[1]),
+  ].filter(x => x && x.length <= 4).slice(0, 3);
   return `<span class="own-thumb t-${esc(g.type)}" dir="auto">${items.map(x => `<b>${esc(x)}</b>`).join("")}</span>`;
 }
 

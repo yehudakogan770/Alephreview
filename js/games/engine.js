@@ -98,6 +98,7 @@ function playOwnGame(stage, g, opts) {
   let timer = null;
   let seconds = 0;
   let reveal = null;
+  let note = "";
 
   stage.innerHTML = `
     <div class="og" data-kind="${ogEsc(own.kind)}" data-theme="${ogEsc(own.theme || "meadow")}">
@@ -153,9 +154,14 @@ function playOwnGame(stage, g, opts) {
     body.querySelector("[data-start]").addEventListener("click", begin);
   }
 
+  let run = 0;
+
   function begin() {
     let marks = [];
+    const me = ++run;
+    const alive = () => me === run && stage.isConnected;
     reveal = null;
+    note = "";
     dotsEl.innerHTML = "";
     const api = {
       // Called for each question: true if it was right.
@@ -163,7 +169,9 @@ function playOwnGame(stage, g, opts) {
         marks.push(ok);
         dotsEl.insertAdjacentHTML("beforeend", `<i class="${ok ? "ok" : "no"}"></i>`);
       },
-      round(n, total) { roundEl.textContent = total > 1 ? strip(opts.t("gameRound", { n, total })) : ""; },
+      round(n, total, key = "gameRound") { roundEl.textContent = total > 1 ? strip(opts.t(key, { n, total })) : ""; },
+      // A line shown on the end screen, like points won.
+      note(html) { note = html; },
       t: opts.t,
       sound: gameSound,
       shuffle,
@@ -172,11 +180,44 @@ function playOwnGame(stage, g, opts) {
       color: i => TILE_COLORS[i % TILE_COLORS.length],
       // Lets the end screen offer "Show answers".
       onReveal(fn) { reveal = fn; },
-      finish() { stopTimer(); endScreen(marks); },
+      finish() { if (!alive()) return; run++; stopTimer(); kind.noScore ? doneScreen() : endScreen(marks); },
+      // Timers and animation that stop by themselves when the game is left or restarted.
+      alive,
+      later(fn, ms) { setTimeout(() => { if (alive()) fn(); }, ms); },
+      frame(fn) {
+        let last = performance.now();
+        const step = now => {
+          if (!alive()) return;
+          const dt = Math.min(0.05, (now - last) / 1000);
+          last = now;
+          if (fn(dt) !== false) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      },
+      // How many answers were right so far, and how many in all.
+      tally() { return { right: marks.filter(Boolean).length, total: marks.length }; },
     };
     body.innerHTML = "";
     startTimer();
     kind.play(body, own, api);
+  }
+
+  // Games with no score (cards, wheels): just "All done".
+  function doneScreen() {
+    gameSound.done();
+    roundEl.textContent = "";
+    body.innerHTML = `
+      <div class="og-screen">
+        <div class="og-panel og-end">
+          <p class="og-title">${opts.t("gameAllDone")}</p>
+          <p class="og-time">${ogIcon("clock")} ${clock(seconds)}</p>
+          <div class="og-actions">
+            <button class="og-btn${opts.next ? "" : " og-go"}" type="button" data-again>${opts.t("gamePlayAgain")}</button>
+            ${opts.next ? `<a class="og-btn og-go" href="${ogEsc(opts.next.href)}">${ogEsc(opts.next.label)} →</a>` : ""}
+          </div>
+        </div>
+      </div>`;
+    body.querySelector("[data-again]").addEventListener("click", begin);
   }
 
   function endScreen(marks) {
@@ -194,6 +235,7 @@ function playOwnGame(stage, g, opts) {
             <span>${opts.t("gameScore", { right, total })}</span>
           </div>
           <p class="og-time">${ogIcon("clock")} ${clock(seconds)}</p>
+          ${note ? `<p class="og-note">${note}</p>` : ""}
           ${opts.pass ? (passed
             ? `<p class="og-result pass">✓ ${opts.t("gamePassed")}</p>`
             : `<p class="og-result fail">${opts.t("gameNotPassed", { pass: opts.pass })}</p>`) : ""}
@@ -315,4 +357,45 @@ function flashWrong(...els) {
     el.classList.add("wrong");
     setTimeout(() => el.classList.remove("wrong"), 600);
   });
+}
+
+// "Show answers" for games built on pairs: every tile next to its match.
+function revealPairs(api, pairs) {
+  api.onReveal(el => {
+    el.innerHTML = `
+      <h3 class="og-answers-title">${api.t("gameAnswers")}</h3>
+      <ul class="og-answer-list">
+        ${pairs.map((p, i) => `
+          <li><span class="og-tile-face small" style="--c:${api.color(i)}" dir="auto">${api.esc(p.a)}</span>
+          <span class="og-answer-word" dir="auto">${api.esc(p.b)}</span></li>`).join("")}
+      </ul>`;
+  });
+}
+
+// "Show answers" for quiz games: each question and its right answer.
+function revealQuestions(api, questions) {
+  api.onReveal(el => {
+    el.innerHTML = `
+      <h3 class="og-answers-title">${api.t("gameAnswers")}</h3>
+      <ul class="og-answer-list one">
+        ${questions.map((q, i) => `
+          <li><span class="og-answer-q" dir="auto">${api.esc(q.q)}</span>
+          <span class="og-tile-face small" style="--c:${api.color(i)}" dir="auto">${api.esc(q.answers[0])}</span></li>`).join("")}
+      </ul>`;
+  });
+}
+
+// Pairs with both sides filled in.
+function goodPairs(content) {
+  return (content.pairs || []).filter(p => p && p.a && p.b);
+}
+
+// Questions with a right answer and at least one wrong one.
+function goodQuestions(content) {
+  return (content.questions || []).filter(q => q && q.q && q.answers && q.answers.length > 1 && q.answers[0]);
+}
+
+// Shown when a game has nothing in it yet.
+function emptyGame(body) {
+  body.innerHTML = `<div class="og-screen"><div class="og-panel"><p class="og-lead">This game is empty.</p></div></div>`;
 }
