@@ -473,6 +473,86 @@
      }
     },
     {
+     "id": "own-white-1-balloon",
+     "title": "Pop the balloons: א to ו",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-1-flip",
+     "title": "Flip cards: א to ו",
+     "type": "cards",
+     "game": "Flip cards",
+     "own": {
+      "kind": "flip",
+      "theme": "classic",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       }
+      ]
+     }
+    },
+    {
      "id": "32232123",
      "title": "Bet Vs. Vet",
      "type": "quiz",
@@ -795,6 +875,141 @@
        "ז [ח] ט י",
        "[א] בּ ב ג",
        "ה ו ז ח [ט] י"
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-fruit",
+     "title": "Fruit catch: א to י",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-plane",
+     "title": "Fly the plane: א to י",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-2-openbox",
+     "title": "Open a box: א to י",
+     "type": "cards",
+     "game": "Open a box",
+     "own": {
+      "kind": "openbox",
+      "theme": "desert",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י"
       ]
      }
     },
@@ -1202,6 +1417,112 @@
      }
     },
     {
+     "id": "own-white-3-balloon",
+     "title": "Pop the balloons: כ to ן",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-watch",
+     "title": "Watch and remember: letters",
+     "type": "match",
+     "game": "Watch and remember",
+     "own": {
+      "kind": "watch",
+      "theme": "space",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן"
+      ]
+     }
+    },
+    {
+     "id": "own-white-3-spin",
+     "title": "Spin it: read the letter",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "classic",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן"
+      ]
+     }
+    },
+    {
      "id": "28882522",
      "title": "123 Kriah 01 Page 07",
      "type": "match",
@@ -1534,6 +1855,90 @@
         "a": "ף",
         "b": "Final Fey"
        }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-whack",
+     "title": "Whack it: Pey and Fey",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-1-deal",
+     "title": "Pick a card: read it",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "space",
+      "items": [
+       "א",
+       "בּ",
+       "ב",
+       "ג",
+       "ד",
+       "ה",
+       "ו",
+       "ז",
+       "ח",
+       "ט",
+       "י",
+       "כּ",
+       "כ",
+       "ך",
+       "ל",
+       "מ",
+       "ם",
+       "נ",
+       "ן",
+       "ס",
+       "ע",
+       "פּ",
+       "פ",
+       "ף",
+       "צ",
+       "ץ",
+       "ק",
+       "ר",
+       "שׁ",
+       "שׂ",
+       "תּ",
+       "ת"
       ]
      }
     },
@@ -1929,6 +2334,50 @@
        {
         "a": "ץ",
         "b": "Final Tzadik"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-2-fruit",
+     "title": "Fruit catch: final letters",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
        }
       ]
      }
@@ -2418,6 +2867,258 @@
      }
     },
     {
+     "id": "own-red-3-balloon",
+     "title": "Pop the balloons: Shin and Sin",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שָׁ",
+        "b": "Shin Kamatz"
+       },
+       {
+        "a": "שָׂ",
+        "b": "Sin Kamatz"
+       },
+       {
+        "a": "שַׁ",
+        "b": "Shin Patach"
+       },
+       {
+        "a": "שַׂ",
+        "b": "Sin Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-whack",
+     "title": "Whack it: Shin and Sin",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "desert",
+      "pairs": [
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "שָׁ",
+        "b": "Shin Kamatz"
+       },
+       {
+        "a": "שָׂ",
+        "b": "Sin Kamatz"
+       },
+       {
+        "a": "שַׁ",
+        "b": "Shin Patach"
+       },
+       {
+        "a": "שַׂ",
+        "b": "Sin Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-plane",
+     "title": "Fly the plane: ר to ת",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "meadow",
+      "pairs": [
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       },
+       {
+        "a": "ת",
+        "b": "Sav"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-red-3-flip",
+     "title": "Flip cards: all the letters",
+     "type": "cards",
+     "game": "Flip cards",
+     "own": {
+      "kind": "flip",
+      "theme": "classic",
+      "pairs": [
+       {
+        "a": "א",
+        "b": "Alef"
+       },
+       {
+        "a": "בּ",
+        "b": "Beis"
+       },
+       {
+        "a": "ב",
+        "b": "Veis"
+       },
+       {
+        "a": "ג",
+        "b": "Gimmel"
+       },
+       {
+        "a": "ד",
+        "b": "Dalet"
+       },
+       {
+        "a": "ה",
+        "b": "Hey"
+       },
+       {
+        "a": "ו",
+        "b": "Vov"
+       },
+       {
+        "a": "ז",
+        "b": "Zayin"
+       },
+       {
+        "a": "ח",
+        "b": "Ches"
+       },
+       {
+        "a": "ט",
+        "b": "Tes"
+       },
+       {
+        "a": "י",
+        "b": "Yud"
+       },
+       {
+        "a": "כּ",
+        "b": "Kaf"
+       },
+       {
+        "a": "כ",
+        "b": "Chaf"
+       },
+       {
+        "a": "ך",
+        "b": "Final Chaf"
+       },
+       {
+        "a": "ל",
+        "b": "Lamed"
+       },
+       {
+        "a": "מ",
+        "b": "Mem"
+       },
+       {
+        "a": "ם",
+        "b": "Final Mem"
+       },
+       {
+        "a": "נ",
+        "b": "Nun"
+       },
+       {
+        "a": "ן",
+        "b": "Final Nun"
+       },
+       {
+        "a": "ס",
+        "b": "Samech"
+       },
+       {
+        "a": "ע",
+        "b": "Ayin"
+       },
+       {
+        "a": "פּ",
+        "b": "Pey"
+       },
+       {
+        "a": "פ",
+        "b": "Fey"
+       },
+       {
+        "a": "ף",
+        "b": "Final Fey"
+       },
+       {
+        "a": "צ",
+        "b": "Tzadik"
+       },
+       {
+        "a": "ץ",
+        "b": "Final Tzadik"
+       },
+       {
+        "a": "ק",
+        "b": "Kuf"
+       },
+       {
+        "a": "ר",
+        "b": "Reish"
+       },
+       {
+        "a": "שׁ",
+        "b": "Shin"
+       },
+       {
+        "a": "שׂ",
+        "b": "Sin"
+       },
+       {
+        "a": "תּ",
+        "b": "Tav"
+       },
+       {
+        "a": "ת",
+        "b": "Sav"
+       }
+      ]
+     }
+    },
+    {
      "id": "94302110",
      "title": "Rank order from Yud to Sav R3",
      "type": "order",
@@ -2803,6 +3504,117 @@
        "דָ [הָ] וָ",
        "זָ חָ [טָ] יָ",
        "[אָ] בָּ בָ"
+      ]
+     }
+    },
+    {
+     "id": "own-orange-1-balloon",
+     "title": "Pop the balloons: Kamatz",
+     "type": "arcade",
+     "game": "Pop the balloons",
+     "own": {
+      "kind": "balloon",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Alef Kamatz"
+       },
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "גָ",
+        "b": "Gimmel Kamatz"
+       },
+       {
+        "a": "דָ",
+        "b": "Dalet Kamatz"
+       },
+       {
+        "a": "הָ",
+        "b": "Hey Kamatz"
+       },
+       {
+        "a": "זָ",
+        "b": "Zayin Kamatz"
+       },
+       {
+        "a": "חָ",
+        "b": "Ches Kamatz"
+       },
+       {
+        "a": "טָ",
+        "b": "Tes Kamatz"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-1-fruit",
+     "title": "Fruit catch: Kamatz",
+     "type": "arcade",
+     "game": "Fruit catch",
+     "own": {
+      "kind": "fruit",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "אָ",
+        "b": "Alef Kamatz"
+       },
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "גָ",
+        "b": "Gimmel Kamatz"
+       },
+       {
+        "a": "דָ",
+        "b": "Dalet Kamatz"
+       },
+       {
+        "a": "הָ",
+        "b": "Hey Kamatz"
+       },
+       {
+        "a": "זָ",
+        "b": "Zayin Kamatz"
+       },
+       {
+        "a": "חָ",
+        "b": "Ches Kamatz"
+       },
+       {
+        "a": "טָ",
+        "b": "Tes Kamatz"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-1-openbox",
+     "title": "Open a box: Kamatz",
+     "type": "cards",
+     "game": "Open a box",
+     "own": {
+      "kind": "openbox",
+      "theme": "ocean",
+      "items": [
+       "אָ",
+       "בָּ",
+       "בָ",
+       "גָ",
+       "דָ",
+       "הָ",
+       "וָ",
+       "זָ",
+       "חָ",
+       "טָ",
+       "יָ"
       ]
      }
     },
@@ -3260,6 +4072,164 @@
        "גַּן",
        "חַם",
        "בַּת"
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-whack",
+     "title": "Whack it: Kamatz and Patach",
+     "type": "arcade",
+     "game": "Whack it",
+     "own": {
+      "kind": "whack",
+      "theme": "ocean",
+      "pairs": [
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "בַּ",
+        "b": "Beis Patach"
+       },
+       {
+        "a": "מָ",
+        "b": "Mem Kamatz"
+       },
+       {
+        "a": "מַ",
+        "b": "Mem Patach"
+       },
+       {
+        "a": "לָ",
+        "b": "Lamed Kamatz"
+       },
+       {
+        "a": "לַ",
+        "b": "Lamed Patach"
+       },
+       {
+        "a": "נָ",
+        "b": "Nun Kamatz"
+       },
+       {
+        "a": "נַ",
+        "b": "Nun Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-plane",
+     "title": "Fly the plane: Kamatz and Patach",
+     "type": "arcade",
+     "game": "Fly the plane",
+     "own": {
+      "kind": "plane",
+      "theme": "space",
+      "pairs": [
+       {
+        "a": "בָּ",
+        "b": "Beis Kamatz"
+       },
+       {
+        "a": "בַּ",
+        "b": "Beis Patach"
+       },
+       {
+        "a": "מָ",
+        "b": "Mem Kamatz"
+       },
+       {
+        "a": "מַ",
+        "b": "Mem Patach"
+       },
+       {
+        "a": "לָ",
+        "b": "Lamed Kamatz"
+       },
+       {
+        "a": "לַ",
+        "b": "Lamed Patach"
+       },
+       {
+        "a": "נָ",
+        "b": "Nun Kamatz"
+       },
+       {
+        "a": "נַ",
+        "b": "Nun Patach"
+       }
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-watch",
+     "title": "Watch and remember: Kamatz and Patach",
+     "type": "match",
+     "game": "Watch and remember",
+     "own": {
+      "kind": "watch",
+      "theme": "meadow",
+      "items": [
+       "בָּ",
+       "בַּ",
+       "מָ",
+       "מַ",
+       "לָ",
+       "לַ",
+       "נָ",
+       "נַ",
+       "גָ",
+       "דָ",
+       "הָ",
+       "רָ"
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-spin",
+     "title": "Spin it: read with Kamatz and Patach",
+     "type": "cards",
+     "game": "Spin it",
+     "own": {
+      "kind": "spin",
+      "theme": "classic",
+      "items": [
+       "בָּ",
+       "גָ",
+       "דָ",
+       "לָ",
+       "מָ",
+       "נָ",
+       "בַּ",
+       "גַ",
+       "דַ",
+       "לַ",
+       "מַ",
+       "נַ"
+      ]
+     }
+    },
+    {
+     "id": "own-orange-2-deal",
+     "title": "Pick a card: read it",
+     "type": "cards",
+     "game": "Pick a card",
+     "own": {
+      "kind": "deal",
+      "theme": "meadow",
+      "items": [
+       "בָּא",
+       "אַבָּא",
+       "גַּן",
+       "דָּג",
+       "יָד",
+       "חַם",
+       "בַּת",
+       "שָׁם",
+       "מָה",
+       "לָמָּה"
       ]
      }
     },

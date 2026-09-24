@@ -625,6 +625,15 @@ const CONTENT_EDITORS = {
   order: { shape: "list", help: "Type them in the right order, first to last. Students see them mixed up. More than 8 are split into rounds.", cols: [["In order, first to last", "א"]], min: 3 },
   anagram: { shape: "list", help: "One word on each row. Students see its letters mixed up and put them in order. Letters keep their vowels.", cols: [["Word", "שָׁלוֹם"]], min: 1 },
   gaps: { shape: "sentences", help: "Put [ ] around each missing part, like: א ב [ג] ד. Students drag the missing parts into the gaps.", cols: [["Line, with [ ] around the missing parts", "א בּ [ג] ד [ה]"]], min: 1 },
+  balloon: pairsEd("Each pair: the tile on the balloon, and the word on its cart. Up to 4 carts a round.", "On the balloon", "On the cart", 2),
+  fruit: pairsEd("Each pair: what's on the fruit, and the word students look for.", "On the fruit", "Word to find", 2),
+  whack: pairsEd("Each pair: the tile that pops up, and the word students look for. Up to 6 words.", "Pops up", "Word to find", 2),
+  plane: pairsEd("Each pair: what's in the cloud, and the word students look for.", "In the cloud", "Word to find", 2),
+  watch: { shape: "list", help: "Tiles to remember. Students see 4, then find them among others. Use at least 8.", cols: [["Tile", "א"]], min: 4 },
+  spin: { shape: "list", help: "What's on the wheel (up to 16). No score, so it can't be homework.", cols: [["On the wheel", "בָּ"]], min: 2 },
+  openbox: { shape: "list", help: "What's in the boxes (up to 24). No score, so it can't be homework.", cols: [["In a box", "בָּ"]], min: 2 },
+  flip: { ...pairsEd("Each card: the front, and the back (shown when it's flipped). No score, so it can't be homework.", "Front", "Back", 1), repeatB: true },
+  deal: { shape: "list", help: "The cards in the deck. No score, so it can't be homework.", cols: [["Card", "שָׁם"]], min: 2 },
   label: pairsEd("Each row: a big part on the board (like a letter) and its label. Keep them in order: they show right to left. Up to 6 a round.", "Big part", "Label", 2),
 };
 
