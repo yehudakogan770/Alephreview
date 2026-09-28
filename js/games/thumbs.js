@@ -174,7 +174,7 @@ const THUMB_ART = {
         <text x="${200 + 80 * Math.cos(am)}" y="${160 + 80 * Math.sin(am)}" font-size="26" class="tt" fill="#fff">${tEsc(s[i % s.length])}</text>`;
     }
     return `<circle cx="200" cy="160" r="124" fill="#fff"/>${out}<circle cx="200" cy="160" r="16" fill="#fff" stroke="#25307a" stroke-width="5"/>
-      <path d="M200 58 186 26a14 14 0 0 1 28 0z" fill="#25307a"/>`;
+      <path d="M30 148h22v-14l26 26-26 26v-14H30z" fill="#f3f4f6" stroke="#8d949e" stroke-width="3" stroke-linejoin="round"/>`;
   },
   openbox(s) {
     const c = C();
@@ -194,7 +194,7 @@ const THUMB_ART = {
   },
   deal(s) {
     const c = C();
-    return [2, 1, 0].map(k => `<rect x="${50 - k * 6}" y="${70 - k * 7}" width="110" height="160" rx="14" fill="#25307a" stroke="#fff" stroke-width="5"/>`).join("") + tTile(200, 60, 150, 190, c[1], s[0], 90);
+    return [2, 1, 0].map(k => `<rect x="${50 - k * 6}" y="${70 - k * 7}" width="110" height="160" rx="14" fill="#2f47d6" stroke="#fff" stroke-width="5"/>`).join("") + `<circle cx="105" cy="150" r="24" fill="#25307a" stroke="#fff" stroke-opacity=".7" stroke-width="4"/><text x="105" y="151" font-size="26" class="tt" fill="#fff">א</text>` + tTile(200, 60, 150, 190, c[1], s[0], 90);
   },
 };
 THUMB_ART.spinquiz = THUMB_ART.spin;
