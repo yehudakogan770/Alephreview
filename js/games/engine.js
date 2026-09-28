@@ -73,6 +73,7 @@ const gameSound = (() => {
     good() { tone(660, 0, 0.12); tone(990, 0.09, 0.18); },
     bad() { tone(200, 0, 0.22, "triangle", 0.2); },
     pop() { tone(420, 0, 0.08, "square", 0.08); },
+    tick() { tone(1100, 0, 0.025, "triangle", 0.05); },
     done() { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.11, 0.25)); },
     muted,
     toggle() { try { localStorage.setItem("og-mute", muted() ? "0" : "1"); } catch { /* ignore */ } return muted(); },
