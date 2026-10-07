@@ -363,3 +363,4 @@ body.locked .admin-bar, body.locked .admin-tabs, body.locked .admin-main, body.l
 .theme-ocean span { background: linear-gradient(#6ec6ff 0 45%, #2aa6e0 45% 85%, #f5d9a0 85%); }
 .theme-space span { background: radial-gradient(circle at 75% 30%, #ffb86b 0 10px, transparent 11px), linear-gradient(135deg, #1a1f5c, #4a2a7a); color: #fff; text-shadow: none; }
 .theme-classic span { background: #fff; }
+.opt[hidden] { display: none; }

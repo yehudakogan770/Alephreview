@@ -236,6 +236,7 @@ function homeView() {
         ${SITE.text.lede ? `<p class="lede">${T("lede")}</p>` : ""}
         <div class="hero-actions">
           ${cta}
+          ${BELTS.some(b => freeBeltGames(b.key).length) ? `<a class="btn btn-ghost btn-lg" href="#/free">${icon("play")} ${T("freeButton")}</a>` : ""}
           ${up ? `<span class="hero-next">${doneTotal ? T("nextUp") : T("startWith")}: <b>${up.b.name} Belt, Stripe ${up.s}</b></span>` : ""}
         </div>
         ${home.showStats === false ? "" : `
@@ -747,6 +748,104 @@ async function track(hwId, gameId, u) {
   }, STEP * 1000);
 }
 
+// ---- free play: every Wordwall game, nothing saved -----------------------------
+
+// Wordwall games students can play here: the shown ones, and the ones hidden
+// because a copy was made on this site.
+function freeGames(beltKey, stripe) {
+  const copied = new Set();
+  for (const g of allGamesAnyState()) { const m = g.own && /-ww(\d+)$/.exec(g.id); if (m) copied.add(m[1]); }
+  return (((SITE.games[beltKey] || {})[stripe]) || []).filter(g => g.embed && (!g.hidden || copied.has(g.id)));
+}
+
+function allGamesAnyState() {
+  return BELTS.flatMap(b => STRIPES.flatMap(s => ((SITE.games[b.key] || {})[s]) || []));
+}
+
+function freeBeltGames(beltKey) {
+  return STRIPES.flatMap(s => freeGames(beltKey, s).map(g => ({ g, s })));
+}
+
+function freeCard(g, b) {
+  return `
+    <li>
+      <a class="game-card" href="#/free/${b.key}/play/${esc(g.id)}">
+        <span class="thumb">
+          <span class="thumb-fallback">${icon(g.type, "icon icon-lg")}</span>
+          ${g.thumb ? `<img src="${esc(thumbUrl(g.thumb))}" alt="" loading="lazy" onerror="this.remove()">` : ""}
+          <span class="play-badge">${icon("play")}</span>
+        </span>
+        <span class="game-body">
+          <span class="game-title" dir="auto">${esc(g.title)}</span>
+          <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
+        </span>
+      </a>
+    </li>`;
+}
+
+function freeView(beltKey) {
+  const belts = BELTS.filter(b => freeBeltGames(b.key).length);
+  if (!belts.length) return notFoundView();
+  const b = belts.find(x => x.key === beltKey) || belts[0];
+  const tabs = belts.map(x =>
+    `<a class="seg" href="#/free/${x.key}"${x === b ? ' aria-current="page"' : ""}>${x.name}</a>`).join("");
+  const body = STRIPES.map(s => {
+    const list = freeGames(b.key, s);
+    return list.length ? `
+      <section class="type-group">
+        <h2>Stripe ${s} <span class="count">${list.length}</span></h2>
+        <ul class="game-grid">${list.map(g => freeCard(g, b)).join("")}</ul>
+      </section>` : "";
+  }).join("");
+  return `
+    ${crumbs([["All belts", "#/"], [plainT("freeTitle")]])}
+    <section class="page-head free-head" style="${beltStyle(b)}">
+      <h1>${T("freeTitle")}</h1>
+      <p class="page-head-sub">${T("freeLede")}</p>
+    </section>
+    <div class="toolbar">
+      <nav class="segmented free-belts" aria-label="Belts">${tabs}</nav>
+    </div>
+    ${body}`;
+}
+
+function freePlayView(beltKey, id) {
+  const b = BELTS.find(x => x.key === beltKey);
+  if (!b) return notFoundView();
+  const list = freeBeltGames(b.key);
+  const i = list.findIndex(x => x.g.id === id);
+  if (i < 0) return notFoundView();
+  const { g, s } = list[i];
+  const prev = list[i - 1], next = list[i + 1];
+  const href = x => `#/free/${b.key}/play/${esc(x.g.id)}`;
+  return `
+    <div class="player-head">
+      <div class="player-title">
+        <span class="type-pill ${typeClass(g.type)}">${icon(g.type)} ${esc(typeLabel(g))}</span>
+        <h1 dir="auto">${esc(g.title)}</h1>
+      </div>
+      <div class="player-bar">
+        ${prev
+          ? `<a class="btn btn-ghost" href="${href(prev)}">${icon("left")} <span>Previous</span></a>`
+          : `<span class="btn btn-ghost" aria-disabled="true">${icon("left")} <span>Previous</span></span>`}
+        <div class="player-mid">
+          <span class="counter">Stripe ${s} · Game ${i + 1} of ${list.length}</span>
+          <button class="icon-btn" data-fullscreen title="Full screen" aria-label="Full screen">${icon("full")}</button>
+        </div>
+        ${next
+          ? `<a class="btn btn-primary" href="${href(next)}"><span>Next game</span> ${icon("right")}</a>`
+          : `<span class="btn btn-ghost" aria-disabled="true"><span>Next game</span> ${icon("right")}</span>`}
+      </div>
+      <a class="btn btn-belt" href="#/free/${b.key}" style="${beltStyle(b)}">${icon("all")} ${T("freeTitle")} · ${b.name} Belt</a>
+    </div>
+    <p class="turn-hint">${T("turnPhone")}</p>
+    <div class="player-layout free-layout">
+      <div class="player-main">
+        <div class="player" id="player"><iframe src="${esc(embedUrl(g))}" title="${esc(g.title)}" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+      </div>
+    </div>`;
+}
+
 // ---- router --------------------------------------------------------------
 
 function render() {
@@ -758,6 +857,13 @@ function render() {
     document.title = `${plainT("homeworkTitle")} — Aleph Review`;
     if (stripeStr && action) homeworkPlayView(stripeStr, action);
     else homeworkView();
+    return;
+  }
+  if (beltKey === "free") {
+    const playingFree = action === "play";
+    document.body.classList.toggle("playing", playingFree);
+    app.innerHTML = playingFree ? freePlayView(stripeStr, gameId) : freeView(stripeStr);
+    document.title = `${plainT("freeTitle")} — Aleph Review`;
     return;
   }
   const belt = BELTS.find(b => b.key === beltKey);
@@ -815,7 +921,8 @@ app.addEventListener("click", e => {
     return;
   }
 
-  const game = e.target.closest(".game-card");
+  // Free play cards have no id: nothing is saved for them.
+  const game = e.target.closest(".game-card[data-id]");
   if (game) { markPlayed(game.dataset.id); game.classList.add("played"); }
 });
 
@@ -833,6 +940,7 @@ async function loadSite() {
 loadSite().then(data => {
   SITE = data;
   document.querySelector("[data-footer]").innerHTML = T("footer");
+  document.querySelector(".free-link").innerHTML = T("freeButton");
   const hwLink = document.querySelector(".homework-link");
   if (cloudReady()) { hwLink.querySelector("span").innerHTML = T("homeworkButton"); hwLink.hidden = false; }
   if (PREVIEW) {

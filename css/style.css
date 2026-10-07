@@ -1,5 +1,22 @@
 /* ---- tokens ---- */
 
+/* Hebrew letters in bold Times New Roman. Computers without it (like Chromebooks)
+   get Frank Ruhl Libre, a free font in the same style. Only Hebrew uses these;
+   English keeps the site fonts. */
+@font-face {
+  font-family: "Hebrew Bold";
+  src: local("Times New Roman Bold"), local("TimesNewRomanPS-BoldMT"), local("Times New Roman");
+  font-weight: 100 900;
+  unicode-range: U+0590-05FF, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: "Hebrew Bold Free";
+  src: url("../fonts/frank-ruhl-libre-700-hebrew.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0307-0308, U+0590-05FF, U+FB1D-FB4F;
+}
+
 :root {
   --bg: #fbf6ec;
   --dot: rgba(120, 90, 40, .06);
@@ -18,9 +35,9 @@
   --shadow-sm: 0 1px 2px rgba(22, 24, 35, .06);
   --shadow: 0 1px 2px rgba(22, 24, 35, .05), 0 6px 20px rgba(22, 24, 35, .06);
   --shadow-lg: 0 2px 6px rgba(22, 24, 35, .06), 0 16px 40px rgba(22, 24, 35, .12);
-  --font-head: "Rubik", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --font-tile: "Fredoka", "Rubik", system-ui, sans-serif;
-  --font-body: "Rubik", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-head: "Hebrew Bold", "Hebrew Bold Free", "Rubik", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-tile: "Hebrew Bold", "Hebrew Bold Free", "Fredoka", "Rubik", system-ui, sans-serif;
+  --font-body: "Hebrew Bold", "Hebrew Bold Free", "Rubik", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1122,3 +1139,7 @@ body.playing .player-main { width: min(100%, calc((100vh - 136px) * 4 / 3)); }
   body.playing .player-main { width: min(100%, calc(100vh * 4 / 3)); margin: 0 auto; }
   body.playing #app { padding-top: 6px; padding-bottom: 12px; }
 }
+
+/* ---- free play ---- */
+.free-head .page-head-sub { max-width: 60ch; }
+.segmented.free-belts { flex-wrap: wrap; }

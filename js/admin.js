@@ -67,6 +67,11 @@ const TEXT_FIELDS = [
     ["homeworkTypeName", "Reminder above a scored game. {name} becomes the student's first name."],
     ["homeworkBack", "Back button on a homework game"],
   ]],
+  ["Free play (Wordwall games, nothing saved)", [
+    ["freeButton", "Free play button (top of the page and home page)"],
+    ["freeTitle", "Free play page title"],
+    ["freeLede", "Free play page text"],
+  ]],
   ["Games made here (what students see)", [
     ["gameStart", "Start button"],
     ["gameSoundButton", "Tip on the sound button"],
@@ -752,6 +757,9 @@ function bindContentEditor(form, getKind) {
 }
 
 // Make a new game, or edit one made here. `where` is set when editing.
+// Game types that never read anything out loud, so they don't get the switch.
+const SILENT_KINDS = new Set(["sort", "speedsort", "categorize", "gaps", "label", "anagram"]);
+
 function openMake(stripe, where) {
   const g = where ? where.game : null;
   const kinds = ownKinds().filter(k => CONTENT_EDITORS[k.kind]);
@@ -772,6 +780,7 @@ function openMake(stripe, where) {
         <div class="theme-pick">${GAME_THEMES.map(([k, name]) => `
           <label class="theme-opt theme-${k}"><input type="radio" name="theme" value="${k}"${k === ((g && g.own && g.own.theme) || "meadow") ? " checked" : ""}><span>${name}</span></label>`).join("")}
         </div></div>
+      <label class="opt" data-speak-opt${SILENT_KINDS.has(kind) ? " hidden" : ""}><input type="checkbox" name="speak"${g && g.own && g.own.speak ? " checked" : ""}> Read the words out loud (the computer's voice). Hebrew needs a computer with a Hebrew voice.</label>
       <div data-content>${contentEditorHtml(kind, g && g.own)}</div>
       <label class="field"><span>Instruction for this game (optional)</span>
         <textarea name="tip" rows="2" dir="auto" placeholder="Like: Match each letter to its name.">${esc(g && g.tip || "")}</textarea></label>
@@ -799,6 +808,7 @@ function openMake(stripe, where) {
     kind = next;
     editingContent = null;
     f.querySelector("[data-kind-help]").textContent = editorOf(kind).help;
+    f.querySelector("[data-speak-opt]").hidden = SILENT_KINDS.has(kind);
     f.querySelector("[data-content]").innerHTML = contentEditorHtml(kind, kept);
   });
   const fail = msg => { const el = f.querySelector(".form-error"); el.textContent = msg; el.hidden = false; };
@@ -817,9 +827,10 @@ function openMake(stripe, where) {
       list(belt, s).push(game);
     }
     game.title = title;
-    // Keep settings the editor doesn't show (reading aloud, the whack instruction).
+    // Keep settings the editor doesn't show (what to say for a text, the whack instruction).
     const keep = {};
-    for (const k of ["speak", "speech", "prompt"]) if (g && g.own && g.own[k] !== undefined && g.own.kind === res.content.kind) keep[k] = g.own[k];
+    for (const k of ["speech", "prompt"]) if (g && g.own && g.own[k] !== undefined && g.own.kind === res.content.kind) keep[k] = g.own[k];
+    if (f.elements.speak.checked && !SILENT_KINDS.has(kind)) keep.speak = true;
     game.own = { ...keep, ...res.content, theme: (f.querySelector("input[name=theme]:checked") || {}).value || "meadow" };
     if (tip) game.tip = tip; else delete game.tip;
     if (g) {
