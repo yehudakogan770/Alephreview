@@ -89,12 +89,19 @@ const GAME_MUSIC = {
   lively: [
     "at-a-farbrengen", "klois-hanefesh", "ki-hinei-kachomer", "bar-yochai", "ascend", "der-rebbe-iz-gezunt",
     "hey-tzoma", "light-of-the-soul", "nigun-rosh-chodesh-kislev", "rachamana", "anim-zemiros", "tatte",
+    "vsomachta", "eimosai", "al-hasela", "uforatzto", "odor-a-maaleh", "nigun-simcha-2", "nigun-simcha-3", "nigun-simcha-4",
+    "hey-tzomo", "wake-up-yidden", "hevel-havolim", "ksivah-vachasimo",
   ],
   calm: [
     "niggun-simcha", "avinu-malkeinu", "echoes-in-the-forest", "ein-od-milvado", "geulah",
     "keili-atah", "nigun-hakhel", "listen-every-jew", "batei-chabad",
+    "vsomachta-2", "rotziso-hashem", "vchol-karnei", "ani-omarti", "atoh-hokail", "bcho-hashem",
+    "yifrach-byomov", "ohaiv-hashem", "didon-notzach", "ashreinu", "shuva-shuva", "nodah-byihuda",
+    "tzatzkes", "harninu", "utzu-eitza", "shimu-rabbotai",
   ],
 };
+// Recordings that are much quieter than the rest get turned up to match.
+const MUSIC_GAIN = { "nigun-simcha-2": 2 };
 // Fast games, with a timer, things to catch or points to win.
 const LIVELY_KINDS = new Set(["balloon", "whack", "fruit", "plane", "speedsort", "gameshow", "winlose", "spinquiz", "boxquiz"]);
 
@@ -114,7 +121,8 @@ const gameMusic = (() => {
     if (document.hidden) { audio.pause(); return; }
     if (audio.paused) audio.play().catch(() => {});
     const talking = window.speechSynthesis && speechSynthesis.speaking;
-    audio.volume = talking ? LOUD / 4 : LOUD;
+    const loud = Math.min(1, LOUD * (MUSIC_GAIN[file] || 1));
+    audio.volume = talking ? loud / 4 : loud;
   }
   function begin() {
     stop();
@@ -125,7 +133,7 @@ const gameMusic = (() => {
       audio.dataset.file = file;
       audio.loop = true;
     }
-    audio.volume = LOUD;
+    audio.volume = Math.min(1, LOUD * (MUSIC_GAIN[file] || 1));
     audio.play().catch(() => {});
     timer = setInterval(watch, 250);
   }
