@@ -1,0 +1,101 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "85091278",
+ "title": "Shin and Sin",
+ "game": "Group sort",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 85091278,
+  "activityGuid": "7708b419a72e4df88e547cdffd16e96b",
+  "activityTitle": "Shin and Sin",
+  "fontStackId": 0,
+  "authorUserId": 2558916,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 2,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 2,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Sin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>שִׂמְחָה</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>עֶשֶׂר</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>שָׂרָה</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>יִשְׂרָאֵל</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Shin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>שַׁבָּת</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>קִדּוּשׁ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>מִשְׁפָּחָה</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>שֶׁקֶל</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

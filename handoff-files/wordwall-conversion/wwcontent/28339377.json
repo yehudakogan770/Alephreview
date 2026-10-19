@@ -1,0 +1,88 @@
+{
+ "belt": "orange",
+ "stripe": "2",
+ "id": "28339377",
+ "title": "Alef Bet Gan 16.5",
+ "game": "Spin the wheel",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 28339377,
+  "activityGuid": "5f77455105cd42f7a4cdfc54dfa02165",
+  "activityTitle": "Alef Bet Gan 16.5",
+  "fontStackId": 0,
+  "authorUserId": 9788342,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 8,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 8,
+  "type": 2,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-0",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-1",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-2",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-3",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-4",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-5",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-6",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-7",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/5f77455105cd42f7a4cdfc54dfa02165-8",
+     "sound": null
+    }
+   ]
+  }
+ }
+}

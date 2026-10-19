@@ -1,0 +1,158 @@
+{
+ "belt": "red",
+ "stripe": "1",
+ "id": "38449199",
+ "title": "Alef - Final Fey Review",
+ "game": "Speaking cards",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 38449199,
+  "activityGuid": "e4da48ce47ce41d988eee6689407a6a8",
+  "activityTitle": "Alef - Final Fey Review",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 70,
+  "themeId": 41,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 70,
+  "type": 2,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-0",
+     "sound": "/tts/en-us-jennyneural/ed4b9c0ec7524297488b9fc12a008a63.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-1",
+     "sound": "/tts/en-us-jennyneural/f8035cbdfb5e7ff75ae619e0415aa55c.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-2",
+     "sound": "/tts/en-us-jennyneural/c96c080c0a3e230168b59267dd7cd706.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-3",
+     "sound": "/tts/en-us-jennyneural/c8be3eced25cbe3e6b9b99e863912bd4.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-4",
+     "sound": "/tts/en-us-jennyneural/9decc679c02628c9afc0ba46fad040f1.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-5",
+     "sound": "/tts/he-il-hilaneural/38e826d2396e63c9671a62636c4de026.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-6",
+     "sound": "/tts/en-us-jennyneural/9fbc953b9e07b61df8e4a411fe201409.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-7",
+     "sound": "/tts/en-us-jennyneural/bbe991a1b594ed7d73b4a0f43c407745.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-8",
+     "sound": "/tts/en-us-jennyneural/1213c62fceeefdeb5bd6ed9620494246.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-9",
+     "sound": "/tts/en-us-jennyneural/6f501dbdbab115f3106664d7ec376d9c.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-10",
+     "sound": "/tts/he-il-hilaneural/2e9d337c7400c25659b827bf244fbc90.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-11",
+     "sound": "/tts/he-il-hilaneural/651ff300230fb42445ca5cb034db30e5.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-12",
+     "sound": "/tts/he-il-hilaneural/d2dd2d9f8e73cb09a937fda7ca45f84a.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-13",
+     "sound": "/tts/he-il-hilaneural/010c37a520f33ebf3b71286b5b686543.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-14",
+     "sound": "/tts/he-il-hilaneural/69cd2e8bf30dd91185685898c226d754.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-15",
+     "sound": "/tts/he-il-hilaneural/c4fa7a8c4afdfd5f04fdc85bd37e6405.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-16",
+     "sound": "/tts/he-il-hilaneural/40d11484cc528256d2e641c832c4ab0c.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-17",
+     "sound": "/tts/en-us-jennyneural/433f62cdc21c2dcf5e62e27d4024ffc9.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-18",
+     "sound": "/tts/en-us-jennyneural/5bc45960fb2067f6b569db892c5056f9.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-19",
+     "sound": "/tts/en-us-jennyneural/b02a45a596bfb86fe2578bde75ff5444.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-20",
+     "sound": "/tts/en-us-jennyneural/24293986327fff39096dd23ea16460ea.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-21",
+     "sound": "/tts/en-us-jennyneural/2fe585b232995699edf68a537f91d31d.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/11749933/e4da48ce47ce41d988eee6689407a6a8-22",
+     "sound": "/tts/en-us-jennyneural/6057f13c496ecf7fd777ceb9e79ae285.mp3"
+    }
+   ]
+  }
+ }
+}

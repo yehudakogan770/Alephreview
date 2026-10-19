@@ -1,0 +1,112 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "59699648",
+ "title": "Find the letter Sin",
+ "game": "Whack-a-mole",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityInstruction": "Tap the moles that have the letter SIN",
+  "activityId": 59699648,
+  "activityGuid": "7f08d601ab164652b6d4765af7b68ff1",
+  "activityTitle": "Find the letter Sin Copy of Find the letter Sin",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": true,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 45,
+  "themeId": 23,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 45,
+  "type": 15,
+  "instruction": "Tap the moles that have the letter SIN",
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Correct</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-4",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Incorrect</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-7",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/11749933/7f08d601ab164652b6d4765af7b68ff1-9",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

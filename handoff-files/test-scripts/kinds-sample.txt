@@ -1,0 +1,153 @@
+own-white-1-ww32232123 | 100% 10 of 10 right | 21s
+own-white-1-ww38791608 | 100% 10 of 10 right | 29s
+own-white-1-ww27259465 | 100% 6 of 6 right | 2s
+  50:50 left 4 answers
+own-white-1-ww35128434 | 100% 14 of 14 right | 29s
+own-white-1-ww5783609 | 100% 6 of 6 right | 2s
+own-white-2-ww72336687 | 100% 9 of 9 right | 20s
+own-white-2-ww28882327 |  | 30s
+  end: All done 0:14 Play again Next game →
+own-white-2-ww8173810 | 100% 5 of 5 right | 4s
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.click: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /opt/pw-browsers/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --ignore-certificate-errors-spki-list=undefined --user-data-dir=/tmp/playwright_chromiumdev_profile-ZeKzp5 --remote-debugging-pipe --no-startup-window
+<launched> pid=2629
+[pid=2629][err] [2629:2643:0924/172114.961026:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=2629][err] [2629:2643:0924/172114.968063:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2643:0924/172114.968221:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=2629][err] [2629:2643:0924/172114.968250:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=2629][err] [2629:2643:0924/172115.002876:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2629:0924/172115.020132:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=2629][err] [2629:2643:0924/172115.020255:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2643:0924/172115.023764:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2643:0924/172115.023809:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2643:0924/172115.023830:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2629:2643:0924/172115.023836:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[pid=2629][err] [2660:2686:0924/172115.024161:ERROR:services/network/public/cpp/spki_hash_set.cc:19] Invalid SPKI: undefined
+[pid=2629][err] [2629:2629:0924/172115.031897:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=2629][err] [2629:2629:0924/172115.034744:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=2629][err] [2660:2686:0924/172115.035159:ERROR:services/network/public/cpp/spki_hash_set.cc:19] Invalid SPKI: undefined
+[pid=2629][err] [2629:2629:0924/172115.035633:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[pid=2629][err] [2629:2643:0924/172115.036045:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=2629][err] [2629:2643:0924/172115.036078:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[pid=2629][err] [2660:2686:0924/172115.037772:ERROR:services/network/public/cpp/spki_hash_set.cc:19] Invalid SPKI: undefined
+[pid=2629][err] [2629:2629:0924/172115.040447:ERROR:dbus/object_proxy.cc:573] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[pid=2629][err] [2660:2686:0924/172115.065784:ERROR:services/network/public/cpp/spki_hash_set.cc:19] Invalid SPKI: undefined
+[pid=2629][err] [2660:2686:0924/172115.150221:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.177143:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.177693:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.178093:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.178455:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.186598:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.188099:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.203169:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.207133:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.208809:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.209074:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.219999:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.220537:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.224470:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.224905:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.225132:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.225499:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.229027:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.238886:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.239088:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.239234:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.239859:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.242930:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.250918:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.256739:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.258276:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.258521:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.259208:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.350421:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172115.382648:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172115.396252:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172115.478407:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172115.504808:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172115.505120:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172116.436656:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172117.303282:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172119.723847:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.019789:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.021374:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.021788:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.022022:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.822079:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172120.993054:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172121.000279:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172121.005357:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172122.200900:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172122.337982:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172122.428430:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172122.428918:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172124.333949:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172124.398907:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172124.402133:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172124.668878:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172127.150051:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172127.494191:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172127.730952:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172128.016554:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172128.822015:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172131.729669:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172131.825591:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172132.598036:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172132.681164:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172137.779543:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172137.940136:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172138.804558:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172138.931876:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172139.178797:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172146.084667:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172147.409862:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172148.579863:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172149.845620:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172150.036198:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172151.933826:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172203.251195:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172203.774841:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172203.942747:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172205.247205:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172208.444640:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172211.958156:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172225.818916:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172226.872436:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172227.224230:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172227.415287:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172230.406534:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172242.422936:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172245.929105:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172258.139232:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172258.250790:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172300.637966:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172302.299159:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172305.106737:ERROR:net/socket/ssl_client_socket_impl.cc:902] handshake failed; returned -1, SSL error code 1, net_error -202
+[pid=2629][err] [2660:2686:0924/172307.868426:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172339.519083:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2660:2686:0924/172345.657013:ERROR:net/socket/socket_posix.cc:99] CreatePlatformSocket() failed: Address family not supported by protocol (97)
+[pid=2629][err] [2629:2629:0924/172348.782179:ERROR:content/common/zygote/zygote_communication_linux.cc:293] Failed to send GetTerminationStatus message to zygote
+[pid=2629] <gracefully close start>
+Call log:
+[2m  - waiting for locator('.og-bin[data-target="1"]')[22m
+[2m    - locator resolved to <div class="og-bin" data-target="1">…</div>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+
+    at players.sort (/tmp/claude-0/-home-user-Alephreview/763b7f3b-df54-5398-a077-9a262959d76f/scratchpad/players.js:91:109)
+    at async /tmp/claude-0/-home-user-Alephreview/763b7f3b-df54-5398-a077-9a262959d76f/scratchpad/kinds.js:27:5 {
+  log: [
+    `  - waiting for locator('.og-bin[data-target="1"]')`,
+    '    - locator resolved to <div class="og-bin" data-target="1">…</div>',
+    '  - attempting click action',
+    '    - waiting for element to be visible, enabled and stable'
+  ]
+}
+
+Node.js v22.22.2

@@ -1,0 +1,687 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "6027501",
+ "title": "Lesson 3: Swim into the Hebrew letter",
+ "game": "Airplane",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 6027501,
+  "activityGuid": "a03febabefb3459bbc0499542ddb4a51",
+  "activityTitle": "Lesson 3: Swim into the Hebrew letter",
+  "fontStackId": 0,
+  "authorUserId": 1447896,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 48,
+  "themeId": 55,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 48,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Find the \"Bah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-0",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-2",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-3",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-5",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Shah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-6",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-7",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-8",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-9",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-11",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Hah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-12",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-13",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-14",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-15",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-16",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-17",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Kah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-18",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-19",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-20",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-21",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-22",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-23",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Tah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-24",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-25",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-26",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-27",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-29",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"T\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-30",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-31",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-32",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-33",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-34",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-35",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"B\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-36",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-38",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-39",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-40",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-41",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"H\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-42",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-43",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-44",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-46",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-47",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"SH\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-48",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-49",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-50",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-51",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-52",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-53",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"K\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-54",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-55",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-56",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-57",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-58",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-59",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"M\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-60",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-61",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-62",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-63",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-64",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-65",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"L\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-66",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-67",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-68",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-69",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-70",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-71",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Mah\" Sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-72",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-73",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-74",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-75",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-76",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-77",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the \"Lah\" sound</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-78",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-79",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-80",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-81",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-82",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/a03febabefb3459bbc0499542ddb4a51-83",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

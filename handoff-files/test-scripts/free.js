@@ -1,0 +1,23 @@
+const { chromium } = require('playwright');
+(async () => {
+  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const p = await b.newPage({ viewport: { width: 1280, height: 800 } });
+  const errs = []; p.on('pageerror', e => errs.push(e.message));
+  await p.route('https://firestore.googleapis.com/**', r => r.abort());
+  await p.route('https://wordwall.net/**', r => r.fulfill({ body: '<body style="background:#222;color:#fff;font:40px sans-serif">Wordwall game here</body>', contentType: 'text/html' }));
+  await p.goto('http://localhost:8784/'); await p.waitForTimeout(1200);
+  await p.screenshot({ path: __dirname + '/free-home.png', clip: { x: 0, y: 0, width: 1280, height: 560 } });
+  await p.click('.free-link'); await p.waitForTimeout(800);
+  await p.screenshot({ path: __dirname + '/free-list.png' });
+  console.log('cards', await p.$$eval('.game-card', a => a.length));
+  await p.click('.free-belts a:nth-child(3)'); await p.waitForTimeout(500);
+  console.log('orange cards', await p.$$eval('.game-card', a => a.length), await p.$eval('h1', e => e.textContent));
+  await p.click('.game-card >> nth=0'); await p.waitForTimeout(1200);
+  await p.screenshot({ path: __dirname + '/free-play.png' });
+  console.log('iframe', await p.$eval('#player iframe', e => e.src));
+  console.log('played stored', await p.evaluate(() => localStorage.getItem('aleph-played') || Object.keys(localStorage)));
+  await p.click('.player-bar .btn-primary'); await p.waitForTimeout(600);
+  console.log('next ->', p.url());
+  console.log('errors', errs);
+  await b.close();
+})();

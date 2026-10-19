@@ -1,0 +1,111 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "15310820",
+ "title": "Final Letters Sort",
+ "game": "Group sort",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 15310820,
+  "activityGuid": "f221fda8f006416da926e3585327283a",
+  "activityTitle": "Final Letters Sort",
+  "fontStackId": 0,
+  "authorUserId": 3772723,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 2,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 2,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Final Letters</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-4",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Non-Final Letters</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-7",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3772723/f221fda8f006416da926e3585327283a-9",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

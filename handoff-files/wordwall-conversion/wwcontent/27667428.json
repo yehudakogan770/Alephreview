@@ -1,0 +1,161 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "27667428",
+ "title": "Find the final letters",
+ "game": "True or false",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27667428,
+  "activityGuid": "cfc6d5e5af554257b1bd2174c7f6b314",
+  "activityTitle": "Find the final letters",
+  "fontStackId": 0,
+  "authorUserId": 2914077,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 35,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 35,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Final letters</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>ץ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ם</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ך</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ן</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ף</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Regular letters</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>צ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>מ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>כ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>נ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>פ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ט</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>י</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ג</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ס</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ב</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ק</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ח</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ז</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>ש</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,15 @@
+own-white-1 | 100% 7 of 7 right | 2s
+own-white-1-pairs | 100% 7 of 7 right | 6s
+own-white-1-quiz | 100% 7 of 7 right | 15s
+  50:50 left 2 answers
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForTimeout: Target page, context or browser has been closed
+    at Object.quiz (/tmp/claude-0/-home-user-Alephreview/763b7f3b-df54-5398-a077-9a262959d76f/scratchpad/players.js:69:15)
+    at async /tmp/claude-0/-home-user-Alephreview/763b7f3b-df54-5398-a077-9a262959d76f/scratchpad/kinds.js:27:5 {
+  log: []
+}
+
+Node.js v22.22.2

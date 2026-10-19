@@ -1,0 +1,139 @@
+{
+ "belt": "white",
+ "stripe": "2",
+ "id": "59697708",
+ "title": "Balloon Pop Edited",
+ "game": "Balloon pop",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 59697708,
+  "activityGuid": "492505ede9ca4af3a3169966dc7311de",
+  "activityTitle": "Balloon Pop Edited Copy of ד,ו,ז,ח,ככך,ל",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 71,
+  "themeId": 22,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 71,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>ד</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ד DALET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ו</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ו VAV</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ח</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ח CHET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ז</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ז ZAYIN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>כ</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>כ CHAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ך</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ך FINAL CHAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>כּ</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>כּ KAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ה</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ה HEY</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

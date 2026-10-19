@@ -1,0 +1,223 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "94338637",
+ "title": "shin-bet-tav match up!",
+ "game": "Match up",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 94338637,
+  "activityGuid": "ab3b91ef809b48a4b5dba7d390d5f6a8",
+  "activityTitle": "shin-bet-tav match up! O1 Copy of ",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 3,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 3,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>sh</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>שׁ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>sha</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>שָׁ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>b</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ba</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בָּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>t</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ת</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ta</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>תָ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>tot</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>תָת</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>shot</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>שָׁת</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>bot</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בָּת</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>shosh</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>שָׁש</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>bosh</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בָּשׁ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>tosh</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>תָשׁ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>bob</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בָּבּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>tobb</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>תָבּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>shobb</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>שָׁבּ</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

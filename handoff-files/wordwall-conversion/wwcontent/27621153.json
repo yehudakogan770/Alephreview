@@ -1,0 +1,63 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "27621153",
+ "title": "Alef Bet Gan 04.11",
+ "game": "Rank order",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27621153,
+  "activityGuid": "80a1048c60da4e6c874af91eeca5059d",
+  "activityTitle": "Alef Bet Gan 04.11",
+  "fontStackId": 0,
+  "authorUserId": 9788342,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 50,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 50,
+  "type": 4,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/9788342/80a1048c60da4e6c874af91eeca5059d-0",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/80a1048c60da4e6c874af91eeca5059d-1",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/80a1048c60da4e6c874af91eeca5059d-2",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/80a1048c60da4e6c874af91eeca5059d-3",
+     "sound": null
+    }
+   ]
+  }
+ }
+}

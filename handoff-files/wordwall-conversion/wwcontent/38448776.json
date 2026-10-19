@@ -1,0 +1,127 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "38448776",
+ "title": "Alef - Vav Match",
+ "game": "Match up",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 38448776,
+  "activityGuid": "7b6e48a11d364c30aaa558b370d43692",
+  "activityTitle": "Alef - Vav Match",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 3,
+  "themeId": 46,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 3,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-0",
+      "sound": "/tts/en-us-jennyneural/ed4b9c0ec7524297488b9fc12a008a63.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-1",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-2",
+      "sound": "/tts/en-us-jennyneural/f8035cbdfb5e7ff75ae619e0415aa55c.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-3",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-4",
+      "sound": "/tts/en-us-jennyneural/bbe991a1b594ed7d73b4a0f43c407745.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-5",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-6",
+      "sound": "/tts/en-us-jennyneural/6057f13c496ecf7fd777ceb9e79ae285.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-7",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-8",
+      "sound": "/tts/en-us-jennyneural/6f501dbdbab115f3106664d7ec376d9c.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-9",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-10",
+      "sound": "/tts/en-us-jennyneural/2fe585b232995699edf68a537f91d31d.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-11",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-12",
+      "sound": "/tts/en-us-jennyneural/c96c080c0a3e230168b59267dd7cd706.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/7b6e48a11d364c30aaa558b370d43692-13",
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

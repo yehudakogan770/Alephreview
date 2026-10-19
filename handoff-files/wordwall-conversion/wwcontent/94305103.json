@@ -1,0 +1,178 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "94305103",
+ "title": "Letter Flash cards with sound",
+ "game": "Speaking cards",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 94305103,
+  "activityGuid": "19eb20aeef1640fd8fc4caf983abe098",
+  "activityTitle": "Letter Flash cards with sound R3 Copy of בדיקת צלילי אותיות",
+  "fontStackId": 2,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 70,
+  "themeId": 2,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 70,
+  "type": 2,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "<n>א</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/cf25b7167063abb97caa13cbbc7e0e53.mp3"
+    },
+    {
+     "text": "<n>ב</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/2fe585b232995699edf68a537f91d31d.mp3"
+    },
+    {
+     "text": "<n>בּ </n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/5b7acdd2724fa1fadc8c5ba0d76f088f.mp3"
+    },
+    {
+     "text": "<n>ג</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/1706961869f3c5dfb751656a3a40761a.mp3"
+    },
+    {
+     "text": "<n>ד</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/ce2247edee31657454a4c061aa3d8226.mp3"
+    },
+    {
+     "text": "<n>ה</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/6057f13c496ecf7fd777ceb9e79ae285.mp3"
+    },
+    {
+     "text": "<n>ו</n>",
+     "image": null,
+     "sound": "/tts/it-it-elsaneural/c96c080c0a3e230168b59267dd7cd706.mp3"
+    },
+    {
+     "text": "<n>ז</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/1d20c2fed2c124d624db360bf181e9b8.mp3"
+    },
+    {
+     "text": "<n>ח</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/651ff300230fb42445ca5cb034db30e5.mp3"
+    },
+    {
+     "text": "<n>ט</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/2e9d337c7400c25659b827bf244fbc90.mp3"
+    },
+    {
+     "text": "<n>י</n>",
+     "image": null,
+     "sound": "/tts/en-ie-emilyneural/080fb9f743333c31bfc1d4b59903f7ea.mp3"
+    },
+    {
+     "text": "<n>כּ </n>",
+     "image": null,
+     "sound": "/tts/en-ie-emilyneural/52716ae05d0d217bd73c06952bc40c85.mp3"
+    },
+    {
+     "text": "<n>כ</n>",
+     "image": null,
+     "sound": "/tts/sv-se-sofieneural/830280fbaa2af4945331ee04f7d0e908.mp3"
+    },
+    {
+     "text": "<n>ל</n>",
+     "image": null,
+     "sound": "/tts/sv-se-sofieneural/4cb2455d428d600ac7151270a620c137.mp3"
+    },
+    {
+     "text": "<n>מ</n>",
+     "image": null,
+     "sound": "/tts/sv-se-sofieneural/afc4fc7e48a0710a1dc94ef3e8bc5764.mp3"
+    },
+    {
+     "text": "<n>נ</n>",
+     "image": null,
+     "sound": "/tts/sv-se-sofieneural/0fd7a44fdd13ad881b07c0446d857a1a.mp3"
+    },
+    {
+     "text": "<n>ס</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/c4fa7a8c4afdfd5f04fdc85bd37e6405.mp3"
+    },
+    {
+     "text": "<n>ע</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/b4e4a91e4d987578164cecf3e73e8613.mp3"
+    },
+    {
+     "text": "<n>פּ</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/b02a45a596bfb86fe2578bde75ff5444.mp3"
+    },
+    {
+     "text": "<n>פ</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/5bc45960fb2067f6b569db892c5056f9.mp3"
+    },
+    {
+     "text": "<n>צ</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/6dd2d3d253a0756af9cd5af9f3440315.mp3"
+    },
+    {
+     "text": "<n>ק</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/ca73b4c9b03556e42c913045c62f5554.mp3"
+    },
+    {
+     "text": "<n>ר</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/a04231f744b93877a367dc76cb80d6e5.mp3"
+    },
+    {
+     "text": "<n>שׁ</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/683293af1c99abccbab545a0cb3d8024.mp3"
+    },
+    {
+     "text": "<n>ֹש</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/7d27e4a7ca7533a3bef4fad10a0c19c7.mp3"
+    },
+    {
+     "text": "<n>ת</n>",
+     "image": null,
+     "sound": "/tts/he-il-hilaneural/d7fd82d187e74e6cfdb68ea5b9165cc2.mp3"
+    },
+    {
+     "text": "<n>תּ</n>",
+     "image": null,
+     "sound": "/tts/en-gb-sonianeural/63a5ff4002168b5cc9cd595d3b2e18cf.mp3"
+    }
+   ]
+  }
+ }
+}

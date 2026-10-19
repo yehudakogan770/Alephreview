@@ -1,0 +1,549 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "25365076",
+ "title": "Win or Lose: Hebrew letters",
+ "game": "Win or lose quiz",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 25365076,
+  "activityGuid": "8836ee78b1c8472baffbe7f3b4419c89",
+  "activityTitle": "Win or Lose: Hebrew letters",
+  "fontStackId": 0,
+  "authorUserId": 1447896,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 78,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 78,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Find the Bet?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-0",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-2",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-3",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-5",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Kaf?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-6",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-7",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-8",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-9",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-11",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Pey?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-12",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-13",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-14",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-15",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-16",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-17",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Fey?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-18",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-19",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-20",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-21",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-22",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-23",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Shin?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-24",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-25",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-26",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-27",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-29",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Tav?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-30",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-31",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-32",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-33",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-34",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-35",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Dalet?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-36",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-38",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-39",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-40",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-41",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Mem?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-42",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-43",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-44",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-46",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-47",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Tet?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-48",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-49",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-50",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-51",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-52",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-53",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Gimel?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-54",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-55",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-56",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-57",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-58",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-59",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Samech?</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-60",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-61",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-62",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-63",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-64",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/1447896/8836ee78b1c8472baffbe7f3b4419c89-65",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,187 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "2774293",
+ "title": "אותיות כ-ת",
+ "game": "Balloon pop",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 2774293,
+  "activityGuid": "42089d9d76cb4389b09ae804179d0e7b",
+  "activityTitle": "אותיות כ-ת",
+  "fontStackId": 0,
+  "authorUserId": 1086451,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 71,
+  "themeId": 22,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 71,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>כ</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-0",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>כ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ל</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-1",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ל</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>מ</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-2",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>מ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>נ</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-3",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>נ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ס</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-4",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ס</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ע</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-5",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ע</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>פ</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-6",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>פ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>צ</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-7",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>צ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ק</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-8",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ק</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ר</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-9",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ר</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ש</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-10",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ש</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>ת</n>",
+      "image": "user/1086451/42089d9d76cb4389b09ae804179d0e7b-11",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ת</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

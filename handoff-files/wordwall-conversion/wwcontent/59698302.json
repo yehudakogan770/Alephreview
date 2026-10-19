@@ -1,0 +1,73 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "59698302",
+ "title": "Put the letters in order from RIGHT to LEFT",
+ "game": "Anagram",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 59698302,
+  "activityGuid": "0352fee4d42e421ba62482513dd994d6",
+  "activityTitle": "Put the letters in order from RIGHT to LEFT Copy of בבקשה לסדר את האותיות לפי הסדר",
+  "fontStackId": 21,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 38,
+  "themeId": 50,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 38,
+  "type": 3,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "<n>אבּבגדה</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>וזחטי</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>כּכלמם</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>צקרשׁשׂ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>נןסעפּפף</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>שׁשׁתּת</n>",
+     "image": null,
+     "sound": null
+    }
+   ]
+  }
+ }
+}

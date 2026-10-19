@@ -1,0 +1,960 @@
+##### orange 1 | 62270115 | Open the box | Alef Bet Gan 30.4 | instr: Tap and read the vowel and letter
+  Say the name of the vowel, letter, and sound[IMG0], Say the name of the vowel, letter, and sound[IMG1], Say the name of the vowel, letter, and sound[IMG2], Say the name of the vowel, letter, and sound[IMG3], Say the name of the vowel, letter, and sound[IMG4], Say the name of the vowel, letter, and sound[IMG5], Say the name of the vowel, letter, and sound[IMG6], Say the name of the vowel, letter, and sound[IMG7], Say the name of the vowel, letter, and sound[IMG8], Say the name of the vowel, letter, and sound[IMG9], Say the name of the vowel, letter, and sound[IMG10], Say the name of the vowel, letter, and sound[IMG11], Say the name of the vowel, letter, and sound[IMG12], Say the name of the vowel, letter, and sound[IMG13], Say the name of the vowel, letter, and sound[IMG14], Say the name of the vowel, letter, and sound[IMG15], Say the name of the vowel, letter, and sound[IMG16], Say the name of the vowel, letter, and sound[IMG17], Say the name of the vowel, letter, and sound[IMG18], Say the name of the vowel, letter, and sound[IMG19], Say the name of the vowel, letter, and sound[IMG20], Say the name of the vowel, letter, and sound[IMG21], Say the name of the vowel, letter, and sound[IMG22], Say the name of the vowel, letter, and sound[IMG23], Say the name of the vowel, letter, and sound[IMG24]
+##### orange 1 | 62269918 | Whack-a-mole | Kamatz Whack-a-Mole | instr: Tap the cards with the KUMATZ Vowel
+  G Correct: אָ, בָּ, בָ, גָ, דָ, הָ, וָ, זָ, חָ, טָ, יָ, כָּ, כָ, לָ, מָ, נָ, סָ, עָ, פָּ, פָ, צָ, קָ, רָ, שָׁ, שָׂ, תָּ, תָ
+  G Incorrect: אַ, בֵּ, בֶ, גְ, דֹ, הִ, וֻ, זַ, חֵ, טֶ, יְ, כֹּ, כִ, לֻ, מַ, נֵ, סֶ, עְ, פֹּ, פִ, צֻ, קַ, רֵ, שֶׁ, שְׂ, תְּ, תֹ
+##### orange 1 | 94341936 | Flying fruit | CATCH THE WORD- MULTI OPEN SYLLABLES | instr: None
+  Q: RAAH[SND]  A: *רָאָה | רָגַע | רָהַב | רַבָּה
+  Q: TZAVAH[SND]  A: *צָבָא | צָרָה | צִוָּה | צִיָּה
+  Q: HAYAH[SND]  A: *הָיָה | הֵנָּה | הִכָּה | הָבָה
+  Q: VANAH[SND]  A: *בָנָה | בָזָה | בָּרָד | נָחָשׁ
+  Q: KARAH[SND]  A: *קָרָא | קָשָׁה | רָאָה | בָנָה
+  Q: LARAH[SND]  A: *לָרָע | לָעָם | רָאָה | לָמָה
+  Q: VAZAH[SND]  A: *בָזָה | בִּזַּר | בָּרָד | בָנָה
+  Q: MATAH[SND]  A: *מָטָה | מוּזָר | מַטֵּה | מָלָךְ
+  Q: FANAH[SND]  A: *פָנָה | פְּנֵה | פָּנָה | פֶלֶא
+  Q: ANAH[SND]  A: *אָנָה | אָתָּה | אָלָה | נָאוָה
+  Q: TZARAH[SND]  A: *צָרָה | צֹנֶה | צָבָא | צִלָּהּ
+  Q: Natah[SND]  A: *נָטָע | נָקָם | בָנָה | אָנָה
+  Q: Atah[SND]  A: *אָתָּה | *אָלָה | אָבַד | אָמַר
+  Q: Padah[SND]  A: *פָּדָה | פָנָה | פָרָה | פְּדֵה
+  Q: Lamah[SND]  A: *לָמָּה | לַבֵּן | לָּנוּ | עָלָה
+##### orange 1 | 94309859 | Matching pairs | Match the Word to its correct sound Closed Syllables O1 | instr: None
+  גָר  =  Gar[SND]
+  שָׁד  =  Shad[SND]
+  פָּר  =  Par[SND]
+  אָד  =  Ad[SND]
+  פָּז  =  Paz[SND]
+  בָּג  =  Bag[SND]
+  שָׁג  =  Shag[SND]
+  לָג  =  Lag[SND]
+  שָׁם  =  Sham[SND]
+  דָּן  =  Dan[SND]
+  דָּם  =  Dam[SND]
+  שָׂק  =  Sack[SND]
+  שָׂשׂ  =  Sas[SND]
+##### orange 1 | 6027501 | Airplane | Lesson 3: Swim into the Hebrew letter | instr: None
+  Q: Find the "Bah" Sound  A: *[IMG0] | [IMG1] | [IMG2] | [IMG3] | [IMG4] | [IMG5]
+  Q: Find the "Shah" Sound  A: [IMG6] | [IMG7] | *[IMG8] | [IMG9] | [IMG10] | [IMG11]
+  Q: Find the "Hah" Sound  A: [IMG12] | [IMG13] | [IMG14] | *[IMG15] | [IMG16] | [IMG17]
+  Q: Find the "Kah" Sound  A: [IMG18] | [IMG19] | [IMG20] | [IMG21] | [IMG22] | *[IMG23]
+  Q: Find the "Tah" Sound  A: [IMG24] | [IMG25] | [IMG26] | [IMG27] | *[IMG28] | [IMG29]
+  Q: Find the "T" Sound  A: [IMG30] | *[IMG31] | [IMG32] | [IMG33] | [IMG34] | [IMG35]
+  Q: Find the "B" Sound  A: [IMG36] | [IMG37] | [IMG38] | [IMG39] | *[IMG40] | [IMG41]
+  Q: Find the "H" Sound  A: *[IMG42] | [IMG43] | [IMG44] | [IMG45] | [IMG46] | [IMG47]
+  Q: Find the "SH" Sound  A: [IMG48] | [IMG49] | [IMG50] | *[IMG51] | [IMG52] | [IMG53]
+  Q: Find the "K" Sound  A: *[IMG54] | [IMG55] | [IMG56] | [IMG57] | [IMG58] | [IMG59]
+  Q: Find the "M" Sound  A: [IMG60] | *[IMG61] | [IMG62] | [IMG63] | [IMG64] | [IMG65]
+  Q: Find the "L" Sound  A: [IMG66] | [IMG67] | [IMG68] | [IMG69] | *[IMG70] | [IMG71]
+  Q: Find the "Mah" Sound  A: [IMG72] | [IMG73] | *[IMG74] | [IMG75] | [IMG76] | [IMG77]
+  Q: Find the "Lah" sound  A: *[IMG78] | [IMG79] | [IMG80] | [IMG81] | [IMG82] | [IMG83]
+##### orange 1 | 38552490 | Watch and memorize | Alef Bet Gan K 18.7 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15], [IMG16], [IMG17]
+##### orange 1 | 26271863 | Spin the wheel | Kamatz Reading | instr: None
+  יׇ, דׇ, טׇ, גׇ, חׇ, זׇ, וׇ, שׇׁ, שׇׂ, תׇּ, תׇ, אׇ, רׇ, הׇ, בׇ, מׇ, לׇ, ם, בׇּ
+##### orange 1 | 94338637 | Match up | shin-bet-tav match up! | instr: None
+  sh  =  שׁ
+  sha  =  שָׁ
+  b  =  בּ
+  ba  =  בָּ
+  t  =  ת
+  ta  =  תָ
+  tot  =  תָת
+  shot  =  שָׁת
+  bot  =  בָּת
+  shosh  =  שָׁש
+  bosh  =  בָּשׁ
+  tosh  =  תָשׁ
+  bob  =  בָּבּ
+  tobb  =  תָבּ
+  shobb  =  שָׁבּ
+##### orange 1 | 72337664 | Match up | Drag and Drop Kumatz | instr: Drag and drop to the correct answer
+  [IMG0]  =  Kumatz Alef  = "Ah"
+  [IMG1]  =  Kumatz Bet = "Bah"
+  [IMG2]  =  Kumatz Vet = "Vah"
+  [IMG3]  =  Kumatz Gimmel = "Gah"
+  [IMG4]  =  Kumatz Daled = "Dah"
+  [IMG5]  =  Kumatz Hay = "Hah"
+  [IMG6]  =  Kumatz Vav = "Vav"
+  [IMG7]  =  Kumatz Zayin = "Zah"
+  [IMG8]  =  Kumatz Chet = "Chah"
+  [IMG9]  =  Kumatz Tet = "Tah"
+  [IMG10]  =  Kumatz Yud = "Yah"
+  [IMG11]  =  Kumatz Kaf = "Kah"
+  [IMG12]  =  Kumatz Chaf = "Chah"
+  [IMG13]  =  Kumatz Lamed = "Lah"
+  [IMG14]  =  Kumatz Mem = "Mah"
+  [IMG15]  =  Kumatz Nun = "Nah"
+  [IMG16]  =  Kumatz Samech = "Sah"
+  [IMG17]  =  Kumatz Ayin = "Ah"
+  [IMG18]  =  Kumatz Pay = "Pah"
+  [IMG19]  =  Kumatz Fay = "Fah"
+  [IMG20]  =  Kumatz Final Chaf = "Chah"
+  [IMG21]  =  Kumatz Tzaddik = "Tzah"
+##### orange 1 | 18981842 | Open the box | letter plus kamatz | instr: None
+  Q: bah  A: *בָּ | חָ | לָ | מָ
+  Q: Lah  A: מָ | דָ | *לָ | הָ
+  Q: gah  A: נָ | לָ | סָ | *גָ
+  Q: nah  A: *נָ | גָ | צָ | יָ
+  Q: dah  A: כָ | רָ | *דָ | לָ
+  Q: rah  A: עָ | פָ | גָ | *רָ
+  Q: fah  A: *פָ | גָ | זָ | נָ
+  Q: zah  A: סָ | הָ | *זָ | מָ
+  Q: mah  A: זָ | אָ | לָ | *מָ
+  Q: aah  A: קָ | *אָ | טָ | וָ
+  Q: yah  A: *יָ | חָ | עָ | גָ
+  Q: shah  A: בָ | הָ | נָ | *שָׁ
+##### orange 1 | 72337792 | Flying fruit | Flying Fruit Kumatz O1 | instr: None
+  Q: Kumatz Alef  = "Ah"  A: *[IMG0] | [IMG1] | [IMG2] | [IMG3]
+  Q: Kumatz Bet = "Bah"  A: [IMG4] | [IMG5] | *[IMG6] | [IMG7]
+  Q: Kumatz Vet = "Vah"  A: *[IMG8] | [IMG9] | [IMG10] | [IMG11]
+  Q: Kumatz Gimmel = "Gah"  A: *[IMG12] | [IMG13] | [IMG14] | [IMG15]
+  Q: Kumatz Daled = "Dah"  A: [IMG16] | [IMG17] | [IMG18] | *[IMG19]
+  Q: Kumatz Hay = "Hah"  A: *[IMG20] | [IMG21] | [IMG22] | [IMG23]
+  Q: Kumatz Vav = "Vav"  A: *[IMG24] | [IMG25] | [IMG26] | [IMG27]
+  Q: Kumatz Zayin = "Zah"  A: [IMG28] | [IMG29] | [IMG30] | *[IMG31]
+  Q: Kumatz Chet = "Chah"  A: [IMG32] | *[IMG33] | [IMG34] | [IMG35]
+  Q: Kumatz Tet = "Tah"  A: *[IMG36] | [IMG37] | [IMG38] | [IMG39]
+  Q: Kumatz Yud = "Yah"  A: [IMG40] | [IMG41] | [IMG42] | *[IMG43]
+  Q: Kumatz Kaf = "Kah"  A: [IMG44] | [IMG45] | [IMG46] | *[IMG47]
+  Q: Kumatz Chaf = "Chah"  A: [IMG48] | [IMG49] | *[IMG50] | [IMG51]
+  Q: Kumatz Lamed = "Lah"  A: [IMG52] | [IMG53] | *[IMG54] | [IMG55]
+  Q: Kumatz Mem = "Mah"  A: *[IMG56] | [IMG57] | [IMG58] | [IMG59]
+  Q: Kumatz Nun = "Nah"  A: *[IMG60] | [IMG61] | [IMG62] | [IMG63]
+  Q: Kumatz Samech = "Sah"  A: [IMG64] | [IMG65] | *[IMG66] | [IMG67]
+  Q: Kumatz Ayin = "Ah"  A: [IMG68] | [IMG69] | *[IMG70] | [IMG71]
+  Q: Kumatz Pay = "Pah"  A: [IMG72] | [IMG73] | *[IMG74] | [IMG75]
+  Q: Kumatz Fay = "Fah"  A: [IMG76] | [IMG77] | *[IMG78] | [IMG79]
+  Q: Kumatz Final Chaf = "Chah"  A: [IMG80] | [IMG81] | *[IMG82] | [IMG83]
+  Q: Kumatz Tzaddik = "Tzah"  A: *[IMG84] | [IMG85] | [IMG86] | [IMG87]
+##### orange 1 | 94310389 | Flying fruit | Catch the Answer Open Syllables O1 | instr: None
+  Q: [SND]  A: *לָהּ | גָע | רָע | נָא
+  Q: [SND]  A: *בָהּ | נָא | לָהּ | בָּא
+  Q: [SND]  A: גָע | בָּא | *רָע | נָא
+  Q: [SND]  A: *בָּא | נָא | לָהּ | רָע
+  Q: [SND]  A: *נָא | גָע | בָּא | רָּע
+##### orange 1 | 94342421 | Flying fruit | CATCH THE WORD O1- MULTI CLOSED SYLLABLES | instr: None
+  Q: ATAD  A: *אָטָד | עֶרֶשׂ | עָמַד | עָלָה
+  Q: VAKAR[SND]  A: *בָקָר | בָּרָד | בָזָה | דָּבָר
+  Q: BARAD[SND]  A: *בָּרָד | הֵנָּה | בָּרָק | הָבָה
+  Q: BARAK[SND]  A: *בָּרָק | בָזָה | בָּרָד | נָחָשׁ
+  Q: BASHAN[SND]  A: *בָּשָׁן | בָשָׂר | בְּדָם | בָשָׁן
+  Q: DAVAR[SND]  A: *דָּבָר | דָמָם | הָדָר | דִּבֶּר
+  Q: DAMAM[SND]  A: *דָמָם | בְּדָם | דָּבָר | דָּמָה
+  Q: HADAR[SND]  A: *הָדָר | הָבָה | הָהָר | הָאֵר
+  Q: HAHAR[SND]  A: *הָהָר | הָאֵר | הָדָר | הָבָה
+  Q: CHACHAM[SND]  A: *חָכָם | חָמַד | חָדָשׁ | חָמָס
+  Q: KANAF[SND]  A: *כָּנָף | צֹנֶה | כָּפַף | צִלָּהּ
+  Q: LAAM[SND]  A: *לָעָם | לָהֶם | לָעַד | לְעָם
+  Q: NATAN[SND]  A: *נָתָן | נָהָר | עָנָן | נָקָם
+  Q: MATAR[SND]  A: *מָטָר | טָמַן | מָטָה | עָשָׂר
+  Q: ASAR[SND]  A: *עָשָׂר | עָנָן | עָשָׂה | עָלָה
+##### orange 2 | 94349304 | Speaking cards | Closed Multi Syllable Mixed O2 | instr: None
+  הָיָה, חַיָל, עָנָן, רַעַל, פָּרָה, קָשָר, חַיָט, זָהָב, גַנָן, אָמַר, בָּמָה, נָחָש, חָזָק, זָקָן, בָּדַק, תַחַת, רַהַב, יַחַד, אַחַר, טַעַם, עֲדַת, נַעַר, אַחַת, פַחַד, תַּעַן, בַּלַע, נַחַל, לַחַץ, בַּעֲצַת, דַעַת, הַשַּׁחַר, תַּעַן, שַׁחַת, רַעַם
+##### orange 2 | 72335526 | Match up | Kumatz Patach Match It | instr: None
+  שׁ  =  shin
+  שָׁ  =  sha
+  בּ  =  Bet
+  בַּ  =  Bah
+  בָּשׁ  =  bash
+  שַׁבָּ  =  shaba
+  בָּבּ  =  ba-b
+  שַׁשׁ  =  shash
+  שָׁבּ  =  shab
+  שָׁשַׁ  =  shasha
+  שׂ  =  sin
+  בַּשׂ  =  Bas
+  שַׂבּ  =  Sab
+  שַׂבָּ  =  Saba
+  בַּשָׁ  =  Basha
+##### orange 2 | 94392735 | Matching pairs | Open Syllables Kamatz Patach | instr: None
+  בָּקַע  =  Bakah[SND]
+  מַה  =  Mah[SND]
+  כַּמָּה  =  Kamah[SND]
+  מַשָּׂא  =  Masah[SND]
+  שַׁתָּה  =  Shatah[SND]
+  הַזָרַע  =  Hazarah[SND]
+  אַתָּה  =  Atah[SND]
+  הַסָלַע  =  Hasalah[SND]
+  בַּלַע  =  Balah[SND]
+  גָבַהּ  =  Gavah[SND]
+  שָׁמַע  =  Shamah[SND]
+  הַבָּא  =  Habah[SND]
+  חַדָה  =  Chadah[SND]
+  בָּצַע  =  Batzah[SND]
+##### orange 2 | 27258529 | Matching pairs | Alef Bet Gan 13.3 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+##### orange 2 | 72338975 | Speed sorting | פתח קמץ drag and drop Game | instr: None
+  G KAMATZ: אָ, כָ, פָ, צָ, לָ, בָ, טָ, זָ, מָ, תָ
+  G PATACH: רַ, אַ, יַ
+##### orange 2 | 37659225 | Matching pairs | משחק זיכרון אותיות ראשונות בפתח | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5]
+##### orange 2 | 62271232 | Quiz | Can you read short sounds in Hebrew with Kamatz and Patach ending with Final letters? | instr: Choose the correct matching Hebrew sound.
+  Q: pon  A: *פַּן | נַץ | רַץ | דַף
+  Q: mon  A: יַם | רַץ | *מָן | פַּךּ
+  Q: fon  A: *פָן | סָךּ | נַץ | פַּך
+  Q: von  A: *בָן | סָם | פָן | רַךּ
+  Q: lom  A: רַץ | חַם | יַם | *לַם
+  Q: som  A: *סָם | עַם | נַך | רַץ
+  Q: ahm  A: *עַם | יַם | דַף | פַּךּ
+  Q: cham  A: מָן | בָן | רַךּ | *חַם
+  Q: pach  A: רַץ | *פַּך | חַם | תַף
+  Q: pak  A: *פַּךּ | חַם | טַן | מָן
+  Q: rak  A: עַם | יַם | פַּן | *רַךּ
+  Q: laf  A: עַם | סָךּ | מָץ | *לַף
+  Q: taf  A: נַך | נַץ | *תַף | פָן
+  Q: daf  A: עַם | רַך | *דַף | טַן
+  Q: yam  A: *יַם | פָן | לַף | לַם
+  Q: rach  A: *רַך | חַם | לַף | תַף
+  Q: natz  A: מָן | סָם | *נַץ | רַך
+  Q: ratz  A: פַּן | בָן | *רַץ | עַם
+  Q: matz  A: סָם | פַּךּ | *מָץ | דַף
+  Q: tan  A: עַם | חַם | *טַן | נַך
+  Q: nach  A: יַם | עַם | *נַך | חַם
+  Q: sak  A: *סָךּ | לַף | רַך | רַץ
+##### orange 2 | 94393866 | Speaking cards | Closed & Open Syllables Kamatz Patach | instr: None
+  יַבָּשָׁה, חַדָשָׁה, סַכָּנָה, חַזָרָה, חַנָיָה, מַאַכָל, בָּנָנָה, הַצָגָה, בָּטָטָה, הַסָעָה, רַעַשָן, טַבַּעַת, קַבָּלָה, מַתָּנָה, אָנָנָס
+##### orange 2 | 9864550 | Spin the wheel | קמץ פתח-קריאת צרופים 2 | instr: None
+  מַ, צָ, חַ, רַ, עָ, שָׁ, אָ, לַ, נָ, סַ
+##### orange 2 | 9769123 | Speaking cards | פתח וקמץ קריאת צרופים 1 | instr: None
+  גַ, רָ, אָ, לַ, שָׁ, מַ, הָ, חָ, בָּ, פָּ
+##### orange 2 | 94350205 | Airplane | Find It | instr: None
+  Q: Find "Bah"  A: *[IMG0] | *[IMG1] | [IMG2] | [IMG3] | [IMG4] | [IMG5]
+  Q: Find "Shah"  A: [IMG6] | [IMG7] | *[IMG8] | *[IMG9] | [IMG10] | [IMG11]
+  Q: Find "Tah"  A: [IMG12] | *[IMG13] | [IMG14] | [IMG15] | *[IMG16] | [IMG17]
+  Q: Find the LETTER THAT STARTS WITH a "T" Sound  A: [IMG18] | *[IMG19] | [IMG20] | [IMG21] | [IMG22] | *[IMG23]
+  Q: Find the LETTER THAT STARTS WITH a "B" Sound  A: [IMG24] | [IMG25] | [IMG26] | [IMG27] | *[IMG28] | [IMG29]
+  Q: Find "SH"  A: [IMG30] | [IMG31] | [IMG32] | *[IMG33] | [IMG34] | [IMG35]
+##### orange 2 | 24103276 | Find the match | Read א-ח with Kamatz, Patach | instr: None
+  Hah  =  הַ הָ
+  Gah  =  גָ  גַ
+  Aah  =  אָ   אַ
+  Bah  =  בָּ   בַּ
+  Dah  =  דָ  דַ
+  Vah  =  וַ  וָ
+  Zah  =  זַ  זָ
+##### orange 2 | 52227625 | Speaking cards | Alef Bet Gan P 18.41 with shound | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND], [IMG8][SND], [IMG9][SND], [IMG10][SND], [IMG11][SND], [IMG12][SND], [IMG13][SND], [IMG14][SND], [IMG15][SND], [IMG16][SND]
+##### orange 2 | 94394474 | Whack-a-mole | Find the Patach | instr: Tap the letters that only have the Patach vowel
+  G Correct: אַ, בַּ, בַ, גַ, דַ, הַ, וַ, זַ, חַ, טַ, יַ, כַּ, כַ, לַ, מַ, נַ, סַ, עַ, פַּ, פַ, צַ, קַ, רַ, שַׁ, שַׂ, תַּ, תַ
+  G Incorrect: אָ, בֵּ, בֶ, גָ, דֹ, הִ, וָ, זָ, חֵ, טָ, יְ, כֹּ, כָ, לֻ, מֻ, נִ, סָ, עְ, פֶּ, פָ, צָ, קָ, רָ, שֶׁ, שְׂ, תִּ, תָ
+##### orange 2 | 62271598 | True or false | Hebrew kamatz and patach | instr: None
+  G Correct: bahd[IMG0], yahm[IMG1], tzahn[IMG2], sahtz[IMG3], ahl[IMG4], chag[IMG5], mahn[IMG6], gahg[IMG7], gahm[IMG8], tzahf[IMG9], challah[IMG10], shabbat[IMG11], matza[IMG12], Adam[IMG13]
+  G Incorrect: vad[IMG14], hat[IMG15], ant[IMG16], mat[IMG17], fat[IMG18], chan[IMG19], lad[IMG20], vav[IMG21], nap[IMG22], chat[IMG23], happy[IMG24], strawberry[IMG25], money[IMG26], Eve[IMG27]
+##### orange 2 | 94381851 | Spin the wheel | Kumatz Patach Wheel O2 | instr: None
+  Q: [IMG0]  A: *Kamatz Alef "Ah" | Patach Alef "Ah"
+  Q: [IMG1]  A: *Kamatz Yud "Yah" | Patach Yud "Yah"
+  Q: [IMG2]  A: *Kamatz Gimmel "Gah" | Patach Gimmel "Gah"
+  Q: [IMG3]  A: *Kamatz Daled "Dah" | Patach Daled "Dah"
+  Q: [IMG4]  A: Kamatz Yud "Yah" | *Patach Yud "Yah"
+  Q: [IMG5]  A: *Kamatz Vav "Vah" | Patach Vav "Vah" | Kamatz Vet "Vah | Patach Vet "Vah"
+  Q: [IMG6]  A: *Kamatz Zayin "Zah" | Patach Zayin "Zah" | Kamatz Vav "Vah" | Patach Vav "vah"
+  Q: [IMG7]  A: *Kamatz Tet "Tah" | Patach Tet "Tah" | Kamatz Tav "Tah" | Patach Tav "Tah"
+  Q: [IMG8]  A: *Kamatz Chaf "Chah" | Patach Chaf "Chah" | Kamatz Chet "Chah" | Patach Chet "Chah"
+  Q: [IMG9]  A: *Kamatz Yud "Yah" | Patach Yud "Yah"
+  Q: [IMG10]  A: Kamatz Vet "Vah" | Patach Vet "Vah" | *Kamatz Bet "Bah" | Patach Bet "Bah"
+  Q: [IMG11]  A: Kamatz Gimmel "Gah" | *Patach Gimmel "Gah"
+  Q: [IMG12]  A: Kamatz Daled "Dah" | *Patach Daled "Dah"
+  Q: [IMG13]  A: Kamatz Vet "Vah" | Patach Vet "Vah" | Kamatz Vav "Vah | *Patach Vav "Vah"
+  Q: [IMG14]  A: Kamatz Yud "Yah" | *Patach Yud "Yah"
+  Q: [IMG15]  A: *Kamatz Kaf "Kah" | Patach Kaf "Kah" | Kamatz Kuf "Kah" | Patach Kuf "Kah"
+  Q: [IMG16]  A: Kamatz Chet "Chah" | Patach Chet "Chah" | Kamatz Chaf "Chah" | *Patach Chaf "Chah"
+  Q: [IMG17]  A: Kamatz Kaf "Kah" | *Patach Kaf "Kah" | Kamatz Kuf "Kah" | Patach Kuf "Kah"
+  Q: [IMG18]  A: *Kamatz Lamed "Lah" | Patach Lamed "Lah"
+  Q: [IMG19]  A: Kamatz Lamed "Lah" | *Patach Lamed "Lah"
+##### orange 2 | 28339377 | Spin the wheel | Alef Bet Gan 16.5 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8]
+##### red 1 | 94191324 | Matching pairs | Match the Letters R1 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5]
+##### red 1 | 27327393 | Group sort | Final Mem Vs. Samech | instr: None
+  G Final Mem: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4]
+  G Samech: [IMG5], [IMG6], [IMG7], [IMG8], [IMG9]
+##### red 1 | 29160429 | Matching pairs | 123 Kriah 01 Page 08 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND]
+##### red 1 | 94190811 | Match up | Hebrew Letter Match R1 | instr: Drag and Match the correct letter to the name
+  Aleph  =  א
+  Bet  =  בּ
+  Vet  =  ב
+  Gimel  =  ג
+  Dalet/Daled  =  ד
+  Hay  =  ה
+  Vav  =  ו
+  Zayin  =  ז
+  Chet  =  ח
+  Tet  =  ט
+  Yud  =  י
+  Kaf  =  כּ
+  Chaf  =  כ
+  Final Chaf  =  ך
+  Lamed  =  ל
+  Mem  =  מ
+  Final Mem  =  ם
+  Nun  =  נ
+  Final Nun  =  ן
+  Samach  =  ס
+  Ayin  =  ע
+  Pay  =  פּ
+  Fay  =  פ
+  Final Fay  =  ף
+##### red 1 | 12799768 | Whack-a-mole | Pay Vs Fay | instr: Hit the Moles with the Letter FAY
+  G Fay: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8]
+  G Pay: [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14]
+##### red 1 | 9895499 | Find the match | From KAF to SAMECH | instr: None
+  [IMG0]  =  KAF
+  [IMG1]  =  LAMED
+  [IMG2]  =  NUN
+  [IMG3]  =  SAMECH
+  [IMG4]  =  MEM
+##### red 1 | 38449199 | Speaking cards | Alef - Final Fey Review | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND], [IMG8][SND], [IMG9][SND], [IMG10][SND], [IMG11][SND], [IMG12][SND], [IMG13][SND], [IMG14][SND], [IMG15][SND], [IMG16][SND], [IMG17][SND], [IMG18][SND], [IMG19][SND], [IMG20][SND], [IMG21][SND], [IMG22][SND]
+##### red 1 | 94191495 | Balloon pop | Balloon Pop | instr: Tap the correct balloon
+  Chet  =  [IMG0]
+  Daled  =  [IMG1]
+  Vav  =  [IMG2]
+  Lamed  =  [IMG3]
+  Aleph  =  [IMG4]
+  Tet  =  [IMG5]
+  Gimmel  =  [IMG6]
+  Zayin  =  [IMG7]
+  Ayin  =  [IMG8]
+  Chaf Sofit  =  [IMG9]
+  Fay Sofit  =  [IMG10]
+  Chaf  =  [IMG11]
+  Pay  =  [IMG12]
+  Fay  =  [IMG13]
+  Vet  =  [IMG14]
+  Kaf  =  [IMG15]
+  Hay  =  [IMG16]
+  Bet  =  [IMG17]
+  Yud  =  [IMG18]
+  samech  =  [IMG19]
+##### red 1 | 94190594 | Rank order | Hebrew Letter Order Red 1 | instr: Drag and drop the letters in the correct order
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15], [IMG16], [IMG17], [IMG18], [IMG19], [IMG20], [IMG21], [IMG22], [IMG23]
+##### red 1 | 72335846 | Open the box | א thru ף Cloud Tap | instr: Tap on the cloud and say the name of letter
+  Q: בּ  A: Vet | *Bet | Kaf | Chaf
+  Q: ב  A: *Vet | Bet | Kaf | Chaf
+  Q: ח  A: *Chet | Chaf | Tav | Sav
+  Q: ט  A: *Tet | Chet | Mem | Bet
+  Q: י  A: *Yud | Nun | Vav | Final Nun
+  Q: כּ  A: Bet | *Kaf | Vet | Chaf
+  Q: ךּ  A: *Final Kaf | Final Chaf | Final Nun | Final Fay
+  Q: כ  A: *Chaf | Vet | Bet | Kaf
+  Q: ך  A: Final Nun | *Final Chaf | Final Kaf | Final Fay
+  Q: ל  A: Chaf | Tzaddik | Final Chaf | *Lamed
+  Q: מ  A: *Mem | Tet | Final Mem | Samech
+  Q: ם  A: *Final Mem | Samech | Mem | Ayin
+  Q: נ  A: *Nun | Gimmel | Vav | Chaf
+  Q: ן  A: *Final Nun | Vav | Zayin | Final Fay
+  Q: ס  A: Mem | Final Mem | *Samech | Ayin
+  Q: ע  A: Zayin | *Ayin | Hey | Chet
+  Q: פּ  A: *Pay | Fay | Ayin | Hey
+  Q: פ  A: Chaf | Kaf | Pay | *Fay
+  Q: ף  A: Final Nun | *Final Fay | Final Chaf | Final Kaf
+##### red 1 | 27262077 | Find the match | Look Alikes | instr: None
+  Pay  =  [IMG0]
+  Veis  =  [IMG1]
+  Kaf  =  [IMG2]
+  Final Fey  =  [IMG3]
+  Final Chaf  =  [IMG4]
+  Chaf  =  [IMG5]
+  Fay  =  [IMG6]
+  Beis  =  [IMG7]
+##### red 2 | 94192438 | Rank order | Hebrew Letter Order R2 | instr: Drag and drop the letter to the correct spot to put them in order
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15], [IMG16], [IMG17], [IMG18], [IMG19], [IMG20], [IMG21], [IMG22], [IMG23], [IMG24], [IMG25], [IMG26], [IMG27]
+##### red 2 | 15310820 | Group sort | Final Letters Sort | instr: None
+  G Final Letters: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4]
+  G Non-Final Letters: [IMG5], [IMG6], [IMG7], [IMG8], [IMG9]
+##### red 2 | 78507850 | Matching pairs | Match אותיות סופיות | instr: Match each letter to its final letter
+  [IMG0][SND]  =  [IMG1][SND]
+  [IMG2][SND]  =  [IMG3][SND]
+  [IMG4][SND]  =  [IMG5][SND]
+  [IMG6][SND]  =  [IMG7][SND]
+  [IMG8][SND]  =  [IMG9][SND]
+  [IMGuser/11749933/37cfd5e2d97b4f669e193426803062b3][SND]  =  [IMGuser/11749933/154aabdd12e945d280eea5a19f7fa2aa][SND]
+##### red 2 | 27327520 | Group sort | Ayin Vs. Tzadee | instr: None
+  G Ayin: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Tzadee: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 2 | 27327747 | Group sort | Daled Vs. Resh | instr: None
+  G Daled: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Resh: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 2 | 94193075 | Spin the wheel | Wheel of letters אותיות סופיות | instr: Say the name of the letter - tap and check to see if you got it correct
+  Q: [IMG0]  A: *Nun is correct | Incorrect
+  Q: [IMG1]  A: *Final Tzaddik - Tzadik Sofit is correct | Incorrect
+  Q: [IMG2]  A: *Final Fay- Fay Sofit is correct | Incorrect
+  Q: [IMG3]  A: *Fay is correct | Incorrect
+  Q: [IMG4]  A: *Mem is correct | Incorrect
+  Q: [IMG5]  A: *Chaf is correct | Incorrect
+  Q: [IMG6]  A: *Final Nun - Nun Sofit is correct | Incorrect
+  Q: [IMG7]  A: *Final Chaf - Chaf Sofit is correct | Incorrect
+  Q: [IMG8]  A: *Final Mem - Mem Sofit is correct | Incorrect
+  Q: [IMG9]  A: *Tzadik is correct | Incorrect
+##### red 2 | 23634831 | Labelled diagram | Match the letter to its final form | instr: None
+  כ@0.20,0.25, מ@0.18,0.40, נ@0.15,0.56, פ@0.19,0.72, צ@0.24,0.88
+  board image: user/3772723/7cf82bf7d6b04a80ac9dda6767e16656-0
+##### red 2 | 78508023 | Find the match | התאמת אותיות סופיות | instr: None
+  מ  =  ם
+  נ  =  ן
+  כ  =  ך
+  צ  =  ץ
+  ף  =  פ
+##### red 2 | 13979841 | Find the match | From Ayin to Koof only letters | instr: None
+  [IMG0]  =  Ayin
+  [IMG1]  =  Pay
+  [IMG2]  =  Tzadee
+  [IMG3]  =  Koof
+##### red 2 | 4741652 | Balloon pop | Aleph through Resh | instr: None
+  Aleph  =  א
+  Bet  =  בּ
+  Vet  =  ב
+  Gimel  =  ג
+  Dalet  =  ד
+  Hey  =  ה
+  Vav  =  ו
+  Zayn  =  ז
+  Chet  =  ח
+  Tet  =  ט
+  Yud  =  י
+  Kaf  =  כּ
+  Khaf  =  כ
+  Khaf soffit  =  ך
+  Lamed  =  ל
+  Mem  =  מ
+  Mem soffit  =  ם
+  Nun  =  נ
+  Nun soffit  =  ן
+  Samech  =  ס
+  Ayn  =  ע
+  Pay  =  פּ
+  Fay  =  פ
+  Fay soffit  =  ף
+  Tsadee  =  צ
+  Tsadee soffit  =  ץ
+  Koof  =  ק
+  Resh  =  ר
+##### red 2 | 32188781 | Match up | Sofeet letters review. Drag the letter to match it's final (sofeet) . | instr: Drag and drop each letter to it's matching final (Sofeet) letter 
+  [IMG0]  =  [IMG1]
+  [IMG2]  =  [IMG3]
+  [IMG4]  =  [IMG5]
+  [IMG6]  =  [IMG7]
+  [IMG8]  =  [IMG9]
+##### red 2 | 27667428 | True or false | Find the final letters | instr: None
+  G Final letters: ץ, ם, ך, ן, ף
+  G Regular letters: צ, מ, כ, נ, פ, ט, י, ג, ע, ס, ב, ק, ח, ז, ש
+##### red 2 | 94297091 | Flying fruit | Flying Fruit choose the correct letter | instr: None
+  Q: [IMG0]  A: *Nun | Gimmel
+  Q: [IMG1]  A: *Final Tzaddik - Tzadik Sofit is correct | Final Fey
+  Q: [IMG2]  A: *Final Fay- Fay Sofit is correct | Final Tzaddik
+  Q: [IMG3]  A: *Fay is correct | Pey
+  Q: [IMG4]  A: *Mem | Tet
+  Q: [IMG5]  A: *Chaf | Kaf
+  Q: [IMG6]  A: *Final Nun - Nun Sofit is correct | Vav
+  Q: [IMG7]  A: *Final Chaf - Chaf Sofit is correct | Final Nun
+  Q: [IMG8]  A: *Final Mem - Mem Sofit is correct | Samech
+  Q: [IMG9]  A: *Tzadik is correct | Ayin
+##### red 3 | 3544173 | Balloon pop | Hebrew Ballon Pop:Aleph Bet | instr: None
+  [IMG0]  =  Aleph
+  [IMG1]  =  Bet
+  [IMG2]  =  Vet
+  [IMG3]  =  Gimel
+  [IMG4]  =  Dalet
+  [IMG5]  =  Hey
+  [IMG6]  =  Vav
+  [IMG7]  =  Zayin
+  [IMG8]  =  Chet
+  [IMG9]  =  Tet
+  [IMG10]  =  Yud
+  [IMG11]  =  Kaf
+  [IMG12]  =  Chaf
+  [IMG13]  =  Final Chaf
+  [IMG14]  =  Lamed
+  [IMG15]  =  Mem
+  [IMG16]  =  Final Mem
+  [IMG17]  =  Nun
+  [IMG18]  =  Final Nun
+  [IMG19]  =  Samech
+  [IMG20]  =  Ayin
+  [IMG21]  =  Pey
+  [IMG22]  =  Fey
+  [IMG23]  =  Final Fey
+  [IMG24]  =  Tzadee
+  [IMG25]  =  Final Tzadee
+  [IMG26]  =  Koof
+  [IMG27]  =  Resh
+  [IMG28]  =  Shin
+  [IMG29]  =  Sin
+  [IMG30]  =  Tav
+##### red 3 | 94308329 | Complete the sentence | Missing Letter R3 | instr: Drag to fill in the missing letter
+  S: [א] בּ ב ג ד [ה] ו ז ח ט י [כּ] כ ךְ ל מ ם [נ] ן ס ע פּ פ ף [צ] ץ ק ר שׁ שֹ תּ [ת]    wrong: []
+  S: א בּ [ב] ג ד ה ו [ז] ח ט [י] כּ כ ךְ ל מ [ם] נ [ן] ס ע פּ [פ] ף צ [ץ] ק ר שׁ שֹ תּ [ת]     wrong: []
+  S: א בּ ב ג ד ה ו [ז] [ח] ט י כּ [כ] ךְ ל מ ם נ ן [ס] ע פּ פ ף [צ] ץ ק ר שׁ [שֹ] תּ ת      wrong: []
+  S: א [בּ] [ב] ג ד ה ו ז ח ט י [כּ] [כ] ךְ ל מ ם נ ן ס ע [פּ] [פ] ף צ ץ ק ר [שׁ] [שֹ] תּ ת      wrong: []
+##### red 3 | 28185189 | Categorize | shin and sin sorting | instr: None
+  listA: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9]
+  listB: Shin 👞, Sin ☀️
+##### red 3 | 94307410 | Flying fruit | Flying fruit Shin or Sin | instr: Tap on the correct answer. Is it a SSSShhhin ? or a SSSSiiin?
+  Q: Find the Sin[SND]  A: [IMG0] | [IMG1] | [IMG2] | *[IMG3]
+  Q: Find the Sin[SND]  A: [IMG4] | [IMG5] | [IMG6] | *[IMG7]
+  Q: Find the Sin[SND]  A: [IMG8] | [IMG9] | *[IMG10] | [IMG11]
+  Q: Find the Sin[SND]  A: [IMG12] | [IMG13] | [IMG14] | *[IMG15]
+  Q: Find the Sin[SND]  A: *[IMG16] | [IMG17] | [IMG18] | [IMG19]
+  Q: Find the Sin[SND]  A: *[IMG20] | [IMG21] | [IMG22] | [IMG23]
+  Q: Find the Sin[SND]  A: [IMG24] | [IMG25] | *[IMG26] | [IMG27]
+  Q: Find the Sin[SND]  A: [IMG28] | [IMG29] | [IMG30] | *[IMG31]
+  Q: Find the Shin[SND]  A: [IMG32] | *[IMG33] | [IMG34] | [IMG35]
+  Q: Find the Shin[SND]  A: [IMG36] | [IMG37] | *[IMG38] | [IMG39]
+  Q: Find the Shin[SND]  A: [IMG40] | [IMG41] | [IMG42] | *[IMG43]
+  Q: Find the Shin[SND]  A: [IMG44] | [IMG45] | [IMG46] | *[IMG47]
+  Q: Find the Shin[SND]  A: [IMG48] | *[IMG49] | [IMG50] | [IMG51]
+  Q: Find the Shin[SND]  A: [IMG52] | [IMG53] | [IMG54] | *[IMG55]
+  Q: Find the Shin[SND]  A: [IMG56] | *[IMG57] | [IMG58] | [IMG59]
+  Q: Find the Shin[SND]  A: *[IMG60] | [IMG61] | [IMG62] | [IMG63]
+##### red 3 | 25365076 | Win or lose quiz | Win or Lose: Hebrew letters | instr: None
+  Q: Find the Bet?  A: *[IMG0] | [IMG1] | [IMG2] | [IMG3] | [IMG4] | [IMG5]
+  Q: Find the Kaf?  A: [IMG6] | [IMG7] | [IMG8] | [IMG9] | *[IMG10] | [IMG11]
+  Q: Find the Pey?  A: [IMG12] | [IMG13] | [IMG14] | [IMG15] | [IMG16] | *[IMG17]
+  Q: Find the Fey?  A: [IMG18] | [IMG19] | [IMG20] | *[IMG21] | [IMG22] | [IMG23]
+  Q: Find the Shin?  A: [IMG24] | *[IMG25] | [IMG26] | [IMG27] | [IMG28] | [IMG29]
+  Q: Find the Tav?  A: [IMG30] | [IMG31] | [IMG32] | [IMG33] | *[IMG34] | [IMG35]
+  Q: Find the Dalet?  A: [IMG36] | *[IMG37] | [IMG38] | [IMG39] | [IMG40] | [IMG41]
+  Q: Find the Mem?  A: [IMG42] | [IMG43] | *[IMG44] | [IMG45] | [IMG46] | [IMG47]
+  Q: Find the Tet?  A: [IMG48] | *[IMG49] | [IMG50] | [IMG51] | [IMG52] | [IMG53]
+  Q: Find the Gimel?  A: [IMG54] | [IMG55] | [IMG56] | [IMG57] | [IMG58] | *[IMG59]
+  Q: Find the Samech?  A: [IMG60] | [IMG61] | [IMG62] | *[IMG63] | [IMG64] | [IMG65]
+##### red 3 | 94305897 | Quiz | Find the Hebrew letters Quiz with Sound | instr: None
+  Q: Find the Bet?[SND]  A: *[IMG0] | [IMG1] | [IMG2] | [IMG3] | [IMG4] | [IMG5]
+  Q: Find the Kaf?[SND]  A: [IMG6] | [IMG7] | [IMG8] | [IMG9] | *[IMG10] | [IMG11]
+  Q: Find the Pey?[SND]  A: [IMG12] | [IMG13] | [IMG14] | [IMG15] | [IMG16] | *[IMG17]
+  Q: Find the Fey?[SND]  A: [IMG18] | [IMG19] | [IMG20] | *[IMG21] | [IMG22] | [IMG23]
+  Q: Find the Shin?[SND]  A: [IMG24] | *[IMG25] | [IMG26] | [IMG27] | [IMG28] | [IMG29]
+  Q: Find the Tav?[SND]  A: [IMG30] | [IMG31] | [IMG32] | [IMG33] | *[IMG34] | [IMG35]
+  Q: Find the Dalet?[SND]  A: [IMG36] | *[IMG37] | [IMG38] | [IMG39] | [IMG40] | [IMG41]
+  Q: Find the Mem?[SND]  A: [IMG42] | [IMG43] | *[IMG44] | [IMG45] | [IMG46] | [IMG47]
+  Q: Find the Tet?[SND]  A: [IMG48] | *[IMG49] | [IMG50] | [IMG51] | [IMG52] | [IMG53]
+  Q: Find the Gimel?[SND]  A: [IMG54] | [IMG55] | [IMG56] | [IMG57] | [IMG58] | *[IMG59]
+  Q: Find the Samech?[SND]  A: [IMG60] | [IMG61] | [IMG62] | *[IMG63] | [IMG64] | [IMG65]
+##### red 3 | 66430453 | True or false | Sin Vs. Shin | instr: None
+  G Sin: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Shin: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 3 | 85091278 | Group sort | Shin and Sin | instr: None
+  G Sin: שִׂמְחָה, עֶשֶׂר, שָׂרָה, יִשְׂרָאֵל
+  G Shin: שַׁבָּת, קִדּוּשׁ, מִשְׁפָּחָה, שֶׁקֶל
+##### red 3 | 9124068 | Matching pairs | Shin and Sin Matching game | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5]
+##### red 3 | 94302110 | Rank order | Rank order from Yud to Sav R3 | instr: Drag the letters to the boxes to put them in the correct order
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15], [IMG16], [IMG17], [IMG18], [IMG19], [IMG20], [IMG21]
+##### red 3 | 59698302 | Anagram | Put the letters in order from RIGHT to LEFT | instr: None
+  אבּבגדה, וזחטי, כּכלמם, צקרשׁשׂ, נןסעפּפף, שׁשׁתּת
+##### red 3 | 32068686 | True or false | Shin and Sin | instr: None
+  G Shin: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Sin: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 3 | 94305103 | Speaking cards | Letter Flash cards with sound | instr: None
+  א[SND], ב[SND], בּ[SND], ג[SND], ד[SND], ה[SND], ו[SND], ז[SND], ח[SND], ט[SND], י[SND], כּ[SND], כ[SND], ל[SND], מ[SND], נ[SND], ס[SND], ע[SND], פּ[SND], פ[SND], צ[SND], ק[SND], ר[SND], שׁ[SND], ֹש[SND], ת[SND], תּ[SND]
+##### red 3 | 29161449 | Matching pairs | 123 Kriah 01 Page 16 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3]
+##### red 3 | 59699751 | Balloon pop | Hebrew letter Balloon pop | instr: None
+  [IMG0]  =  Find the Bet?
+  [IMG1]  =  Find the Vet?
+  [IMG2]  =  Find the Resh?
+  [IMG3]  =  Find the Tav?
+  [IMG4]  =  Find the Hey?
+  [IMG5]  =  Find the Koof?
+  [IMG6]  =  Find the Lamed?
+  [IMG7]  =  Find the Mem?
+  [IMG8]  =  Find the Shin?
+  [IMG9]  =  Find the Aleph?
+  [IMG10]  =  Find the Vav?
+  [IMG11]  =  Find the Dalet?
+  [IMG12]  =  Find the Kaf?
+  [IMG13]  =  Find the Ayin?
+  [IMG14]  =  Find the Nun?
+  [IMG15]  =  Find the Final Nun?
+  [IMG16]  =  Find the Chet?
+  [IMG17]  =  Find the Yud?
+##### red 3 | 59699648 | Whack-a-mole | Find the letter Sin | instr: Tap the moles that have the letter SIN
+  G Correct: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4]
+  G Incorrect: [IMG5], [IMG6], [IMG7], [IMG8], [IMG9]
+##### red 3 | 29629668 | Balloon pop | Balloon Pop: Look Alike Hebrew Letters | instr: None
+  [IMG0]  =  Find the Bet?
+  [IMG1]  =  Find the Vet?
+  [IMG2]  =  Find theChaf?
+  [IMG3]  =  Find the Kaf?
+  [IMG4]  =  Find the Pey?
+  [IMG5]  =  Find the Fey?
+  [IMG6]  =  Find the Tav?
+  [IMG7]  =  Find the Resh?
+  [IMG8]  =  Find the Hey?
+  [IMG9]  =  Find the Tav?
+  [IMG10]  =  Find the Chet?
+  [IMG11]  =  Find the Vav?
+  [IMG12]  =  Find the Zayin?
+  [IMG13]  =  Find the Mem?
+  [IMG14]  =  Find the Final Mem?
+  [IMG15]  =  Find the Tet?
+  [IMG16]  =  Find the Samech?
+  [IMG17]  =  Find the Koof?
+##### red 3 | 12167875 | Balloon pop | Aleph Bet Chart | instr: None
+  Chet  =  ח
+  Tet  =  ט
+  Zayin  =  ז
+  Vav  =  ו
+  Hey  =  ה
+  Dalet  =  ד
+  Gimel  =  ג
+  Bet/Vet  =  בּ ב
+  Aleph  =  א
+  Yud  =  י
+  Samach  =  ס
+  Final Nun  =  ן
+  Nun  =  נ
+  Final Mem  =  ם
+  Mem  =  מ
+  Lamed  =  ל
+  Final Chaf  =  ך
+  Kaf/Chaf  =  כּ כ
+  Tav/Tav  =  תּ ת
+  Shin/Sin  =  שׁ שׂ
+  Resh  =  ר
+  Koof  =  ק
+  Final Tzadi  =  ץ
+  Tzadi  =  צ
+  Final Fey  =  ף
+  Pay/Fey  =  פּ פ
+  Ayin  =  ע
+##### red 3 | 8506651 | Whack-a-mole | where is Shin? | instr: press only the letter Shin
+  G Correct: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Incorrect: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 3 | 5939727 | Labelled diagram | Hebrew Aleph Bet | instr: None
+  Aleph@0.90,0.24, Bet@0.78,0.24, Gimel@0.54,0.25, Dalet@0.43,0.24, Hey@0.29,0.24, Vav@0.18,0.24, Zayin@0.08,0.24, Chet@0.89,0.46, Tet@0.76,0.46, Yud@0.63,0.41, Kaf@0.51,0.46, Lamed@0.10,0.45, Mem@0.91,0.66, Nun@0.70,0.66, Samech@0.53,0.65, Ayin@0.42,0.66, Pey@0.31,0.65, Tzadee@0.92,0.87, Koof@0.69,0.87, Resh@0.57,0.87, Shin@0.43,0.87, Tav@0.19,0.87
+  board image: user/1447896/2ab93598e07a4d4caba2530b4062cfd9-0
+##### red 3 | 38881871 | Balloon pop | Sin Vs. Shin | instr: None
+  [IMG0]  =  Sin
+  [IMG1]  =  Sin
+  [IMG2]  =  Sin
+  [IMG3]  =  Sin
+  [IMG4]  =  Sin
+  [IMG5]  =  Sin
+  [IMG6]  =  Sin
+  [IMG7]  =  Sin
+  [IMG8]  =  Shin
+  [IMG9]  =  Shin
+  [IMG10]  =  Shin
+  [IMG11]  =  Shin
+  [IMG12]  =  Shin
+  [IMG13]  =  Shin
+  [IMG14]  =  Shin
+  [IMG15]  =  Shin
+##### red 3 | 27328280 | Group sort | Sin Vs. Shin | instr: None
+  G Sin: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Shin: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### red 3 | 94304286 | Matching pairs | Shin Sin Match | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND]
+##### red 3 | 2774293 | Balloon pop | אותיות כ-ת | instr: None
+  כ[IMG0]  =  כ
+  ל[IMG1]  =  ל
+  מ[IMG2]  =  מ
+  נ[IMG3]  =  נ
+  ס[IMG4]  =  ס
+  ע[IMG5]  =  ע
+  פ[IMG6]  =  פ
+  צ[IMG7]  =  צ
+  ק[IMG8]  =  ק
+  ר[IMG9]  =  ר
+  ש[IMG10]  =  ש
+  ת[IMG11]  =  ת
+##### red 3 | 59699899 | Flash cards | Double Sided Letters Aleph-Tav Flash Cards | instr: None
+  [IMG0]  =  ALEF
+  [IMG1]  =  BET
+  [IMG2]  =  VET
+  [IMG3]  =  GIMMEL
+  [IMG4]  =  DALET
+  [IMG5]  =  HEY
+  [IMG6]  =  VAV
+  [IMG7]  =  ZAYIN
+  [IMG8]  =  CHET
+  [IMG9]  =  TET
+  [IMG10]  =  YUD
+  [IMG11]  =  KAF
+  [IMG12]  =  CHAF
+  [IMG13]  =  FINAL CHAF
+  [IMG14]  =  LAMED
+  [IMG15]  =  MEM
+  [IMG16]  =  FINAL MEM
+  [IMG17]  =  NUN
+  [IMG18]  =  FINAL NUN
+  [IMG19]  =  SAMECH
+  [IMG20]  =  AYIN
+  [IMG21]  =  PEY
+  [IMG22]  =  FEY
+  [IMG23]  =  FINAL FEY
+  [IMG24]  =  TZADIK
+  [IMG25]  =  FINAL TZADIK
+  [IMG26]  =  KUF
+  [IMG27]  =  REISH
+  [IMG28]  =  SHIN
+  [IMG29]  =  SIN
+  [IMG30]  =  TAV
+  [IMG31]  =  TAV
+##### red 3 | 29591713 | Airplane | Find the Correct Hebrew Letter | instr: None
+  Q: Where is the Letter PAY?  A: שׂ | *פּ | כּ | בּ | פ
+  Q: Where is the Letter AYIN?  A: *ע | א | ז | ה | ם
+  Q: Where is the Letter TAV?  A: ח | מ | שׂ | ג | *ת
+  Q: Where is the Letter DALET?  A: ך | ר | *ד | ו | י
+  Q: Where is the Letter SHIN?  A: ק | *שׁ | ס | ט | שׂ
+  Q: Where is the Letter TET?  A: *ט | ת | מ | ר | פ
+  Q: Where is the Letter TZADEE?  A: ק | ץ | ף | ל | *צ
+  Q: Where is the Letter KUF?  A: ע | נ | *ק | ח | ב
+  Q: Where is the Letter VET?  A: כ | ר | ם | נ | *ב
+  Q: Where is the Leter HAY?  A: *ה | ת | ח | מ | ד
+  Q: Where is the Letter YUD?  A: ן | ו | ז | א | *י
+  Q: Where is the Letter SAMECH?  A: שׂ | ה | *ס | ם | ץ
+##### red 3 | 6004456 | Find the match | Alef Bet Match | instr: None
+  Tav[IMG0]  =  ת‎[IMG1]
+  Bet[IMG2]  =  בּ[IMG3]
+  Shin[IMG4]  =  ש[IMG5]
+  Hay[IMG6]  =  ה[IMG7]
+  Mem[IMG8]  =  מ[IMG9]
+  Gimel[IMG10]  =  ℷ[IMG11]
+  Caf[IMG12]  =  כּ[IMG13]
+  Nun[IMG14]  =  נ[IMG15]
+  Lamed[IMG16]  =  ל[IMG17]
+  cHet[IMG18]  =  ח[IMG19]
+  Resh[IMG20]  =  ר[IMG21]
+  Vov[IMG22]  =  ו[IMG23]
+  Peh[IMG24]  =  פּ[IMG25]
+  Tsadee[IMG26]  =  צ[IMG27]
+  Yud[IMG28]  =  י[IMG29]
+  Kuf[IMG30]  =  ק[IMG31]
+  Zayin[IMG32]  =  ז[IMG33]
+  Ayin[IMG34]  =  ע[IMG35]
+  Samech[IMG36]  =  ס[IMG37]
+  Tet[IMG38]  =  ט[IMG39]
+##### white 1 | 3964427 | Balloon pop | Hebrew Letter Alef-Vav | instr: None
+  [IMG0]  =  Aleph
+  [IMG1]  =  Bet
+  [IMG2]  =  Gimel
+  [IMG3]  =  Dalet
+  [IMG4]  =  Hey
+  [IMG5]  =  Zayin
+  [IMG6]  =  Chet
+  [IMG7]  =  Tet
+  [IMG8]  =  Vav
+  [IMG9]  =  Yud
+##### white 1 | 23872088 | Gameshow quiz | Aleph til vov | instr: None
+  Q: Aleph  A: *[IMG0] | [IMG1] | [IMG2]
+  Q: Bet  A: *[IMG3] | [IMG4] | [IMG5]
+  Q: Bet  A: [IMG6] | *[IMG7] | [IMG8]
+  Q: Vet  A: [IMG9] | *[IMG10] | [IMG11]
+  Q: Vet  A: [IMG12] | [IMG13] | *[IMG14]
+  Q: Bet  A: *[IMG15] | [IMG16] | [IMG17]
+  Q: Daled  A: [IMG18] | [IMG19] | *[IMG20]
+  Q: Hay  A: *[IMG21] | [IMG22] | [IMG23]
+  Q: Daled  A: [IMG24] | [IMG25] | *[IMG26]
+  Q: Aleph  A: [IMG27] | *[IMG28] | [IMG29]
+  Q: Daled  A: [IMG30] | [IMG31] | *[IMG32]
+  Q: Aleph  A: [IMG33] | *[IMG34] | [IMG35]
+  Q: Vov  A: *[IMG36] | [IMG37] | [IMG38]
+  Q: Hay  A: [IMG39] | *[IMG40] | [IMG41]
+  Q: Hay  A: [IMG42] | *[IMG43] | [IMG44]
+  Q: Gimmel  A: [IMG45] | [IMG46] | *[IMG47]
+  Q: vov  A: *[IMG48] | [IMG49] | [IMG50]
+  Q: Gimmel  A: [IMG51] | [IMG52] | *[IMG53]
+##### white 1 | 5783609 | Match up | Hebrew letters (alef- vav) | instr: None
+  [IMG0]  =  alef
+  [IMG1]  =  bet
+  [IMG2]  =  gimmel
+  [IMG3]  =  dalet
+  [IMG4]  =  hay
+  [IMG5]  =  vav
+##### white 1 | 27621153 | Rank order | Alef Bet Gan 04.11 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3]
+##### white 1 | 59697148 | Rank order | Rank order with Sound | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND]
+##### white 1 | 38791608 | Balloon pop | Bet Vs. Vet | instr: None
+  [IMG0]  =  Bet
+  [IMG1]  =  Vet
+  [IMG2]  =  Bet
+  [IMG3]  =  Bet
+  [IMG4]  =  Vet
+  [IMG5]  =  Bet
+  [IMG6]  =  Vet
+  [IMG7]  =  Bet
+  [IMG8]  =  Bet
+  [IMG9]  =  Vet
+##### white 1 | 38448776 | Match up | Alef - Vav Match | instr: None
+  [IMG0][SND]  =  [IMG1]
+  [IMG2][SND]  =  [IMG3]
+  [IMG4][SND]  =  [IMG5]
+  [IMG6][SND]  =  [IMG7]
+  [IMG8][SND]  =  [IMG9]
+  [IMG10][SND]  =  [IMG11]
+  [IMG12][SND]  =  [IMG13]
+##### white 1 | 7947346 | Balloon pop | Hebrew Ballon Pop from Aleph to Hay | instr: None
+  [IMG0]  =  Aleph
+  [IMG1]  =  Bet
+  [IMG2]  =  Gimel
+  [IMG3]  =  Dalet
+  [IMG4]  =  Hey
+##### white 1 | 35128434 | Gameshow quiz | Alef - Vov Gameshow | instr: None
+  Q: Vav  A: [IMG0] | *[IMG1] | [IMG2] | [IMG3] | [IMG4] | [IMG5]
+  Q: Which letter is this?[IMG6]  A: Nun | *Alef | Bet | Vav | Hey | Gimmel
+  Q: Alef  A: *[IMG7] | [IMG8] | [IMG9] | [IMG10] | [IMG11] | [IMG12]
+  Q: Hey  A: [IMG13] | [IMG14] | [IMG15] | [IMG16] | *[IMG17] | [IMG18]
+  Q: Which letter is this?[IMG19]  A: *Vav | Daled | Reish | Nun | Hey | Gimmel
+  Q: Gimmel  A: [IMG20] | [IMG21] | *[IMG22] | [IMG23] | [IMG24] | [IMG25]
+  Q: Which letter is this?[IMG26]  A: Alef | Bet | Gimmel | Daled | *Hey | Vav
+  Q: Daled  A: [IMG27] | [IMG28] | [IMG29] | [IMG30] | *[IMG31] | [IMG32]
+  Q: Which letter is this?[IMG33]  A: Alef | *Vet | Gimmel | Daled | Hey | Vav
+  Q: Vet  A: [IMG34] | *[IMG35] | [IMG36] | [IMG37] | [IMG38] | [IMG39]
+  Q: Which letter is this?[IMG40]  A: Vav | Daled | Reish | Nun | Hey | *Gimmel
+  Q: Bet  A: [IMG41] | [IMG42] | [IMG43] | *[IMG44] | [IMG45] | [IMG46]
+  Q: Which letter is this?[IMG47]  A: Nun | *Daled | Vav | Bet | Hey | Reish
+  Q: Which letter is this?[IMG48]  A: Nun | Alef | *Bet | Vav | Hey | Gimmel
+##### white 1 | 32232123 | Quiz | Bet Vs. Vet | instr: None
+  Q: [IMG0]  A: Vet | *Bet
+  Q: [IMG1]  A: *Vet | Bet
+  Q: [IMG2]  A: *Bet | Vet
+  Q: [IMG3]  A: *Bet | Vet
+  Q: [IMG4]  A: *Vet | Bet
+  Q: [IMG5]  A: Vet | *Bet
+  Q: [IMG6]  A: *Vet | Bet
+  Q: [IMG7]  A: Vet | *Bet
+  Q: [IMG8]  A: Vet | *Bet
+  Q: [IMG9]  A: Bet | *Vet
+##### white 1 | 27259465 | Rank order | Alef Bet Gan 06.7 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5]
+##### white 2 | 28882327 | Spin the wheel | 123 Kriah 01 Page 05 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND], [IMG8][SND], [IMG9][SND], [IMG10][SND]
+##### white 2 | 59697259 | Rank order | Rank order with Sound | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND], [IMG8][SND], [IMG9][SND], [IMG10][SND]
+##### white 2 | 72336687 | Open the box | א thru ך Cloud Tap | instr: Tap on the cloud and say the name of letter
+  Q: בּ  A: Vet | *Bet | Kaf | Chaf
+  Q: ב  A: *Vet | Bet | Kaf | Chaf
+  Q: ח  A: *Chet | Chaf | Tav | Sav
+  Q: ט  A: *Tet | Chet | Mem | Bet
+  Q: י  A: *Yud | Nun | Vav | Final Nun
+  Q: כּ  A: Bet | *Kaf | Vet | Chaf
+  Q: ךּ  A: *Final Kaf | Final Chaf | Final Nun | Final Fay
+  Q: כ  A: *Chaf | Vet | Bet | Kaf
+  Q: ך  A: Final Nun | *Final Chaf | Final Kaf | Final Fay
+##### white 2 | 28882149 | Matching pairs | 123 Kriah 01 page 04 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND]
+##### white 2 | 27327116 | Group sort | Hey Vs. Chet | instr: None
+  G Hey: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Chet: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### white 2 | 59697708 | Balloon pop | Balloon Pop Edited | instr: None
+  ד  =  ד DALET
+  ו  =  ו VAV
+  ח  =  ח CHET
+  ז  =  ז ZAYIN
+  כ  =  כ CHAF
+  ך  =  ך FINAL CHAF
+  כּ  =  כּ KAF
+  ה  =  ה HEY
+##### white 2 | 8173810 | Find the match | From Vav to Yud | instr: None
+  [IMG0]  =  Vav
+  [IMG1]  =  Zayin
+  [IMG2]  =  Chet
+  [IMG3]  =  Tet
+  [IMG4]  =  Yud
+##### white 2 | 3769520 | Match up | from Aleph to Yud | instr: None
+  [IMG0]  =  Aleph
+  [IMG1]  =  Bet
+  [IMG2]  =  Gimmel
+  [IMG3]  =  Dalet
+  [IMG4]  =  Vav
+  [IMG5]  =  Zayin
+  [IMG6]  =  Chet
+  [IMG7]  =  Tet
+  [IMG8]  =  Yud
+  [IMG9]  =  Hay
+##### white 2 | 39044626 | Matching pairs | Alef - Yud Match | instr: None
+  [IMG0][SND]  =  Alef
+  [IMG1][SND]  =  Bet
+  [IMG2][SND]  =  Vet
+  [IMG3][SND]  =  Gimmel
+  [IMG4][SND]  =  Dalet
+  [IMG5][SND]  =  Hey
+  [IMG6][SND]  =  Vav
+  [IMG7][SND]  =  Zayin
+  [IMG8][SND]  =  Chet
+  [IMG9][SND]  =  Tet
+  [IMG10][SND]  =  Yud
+##### white 2 | 27260003 | Rank order | Alef Bet Gan 14.7 | instr: None
+  [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7], [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13]
+##### white 3 | 35128652 | Balloon pop | Alef Bet Alef - Lamed | instr: None
+  Alef  =  א
+  Vet  =  ב
+  Gimel  =  ג
+  Dalet  =  ד
+  Hey  =  ה
+  Vav  =  ו
+  Bet  =  בּ
+  Zayin  =  ז
+  Chet  =  ח
+  Tet  =  ט
+  Yud  =  י
+  Kaf  =  כּ
+  Chaf  =  כ
+  Lamed  =  ל
+  Final Chaf  =  ך
+##### white 3 | 59409436 | Matching pairs | Vov Gimmel Zayin Nun | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND]
+##### white 3 | 59698368 | Anagram | Put the letters in order from RIGHT to LEFT א-ן | instr: None
+  אבּבג, וזחטי, יכּכך, למםנן
+##### white 3 | 38450327 | Matching pairs | Alef - Nun Match | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND], [IMG8][SND], [IMG9][SND], [IMG10][SND], [IMG11][SND], [IMG12][SND], [IMG13][SND], [IMG14][SND], [IMG15][SND], [IMG16][SND], [IMG17][SND]
+##### white 3 | 28882522 | Matching pairs | 123 Kriah 01 Page 07 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND]
+##### white 3 | 59597547 | Matching pairs | Look Alike Match W3 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND], [IMG6][SND], [IMG7][SND]
+##### white 3 | 27326532 | Group sort | Mem Vs. Tet | instr: None
+  G Tet: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Mem: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### white 3 | 27327984 | Group sort | Nun Vs. Gimmel | instr: None
+  G Nun: [IMG0], [IMG1], [IMG2], [IMG3], [IMG4], [IMG5], [IMG6], [IMG7]
+  G Gimmel: [IMG8], [IMG9], [IMG10], [IMG11], [IMG12], [IMG13], [IMG14], [IMG15]
+##### white 3 | 59409628 | Match up | Zayin-Lamed | instr: None
+  Zayin  =  [IMG0]
+  Chet  =  [IMG1]
+  Tet  =  [IMG2]
+  Yud  =  [IMG3]
+  Kaf  =  [IMG4]
+  Chaf  =  [IMG5]
+  Lamed  =  [IMG6]
+##### white 3 | 26346624 | Find the match | Alef-Final Nun | instr: None
+  Alef  =  א
+  Bet  =  בּ
+  Vet  =  ב
+  Gimmel  =  ג
+  Daled  =  ד
+  Hay  =  ה
+  Vav  =  ו
+  Zayin  =  ז
+  Chet  =  ח
+  Tet  =  ט
+  Yud  =  י
+  Kaf  =  כּ
+  Chaf  =  כ
+  Final Chaf  =  ך
+  Lamed  =  ל
+  Mem  =  מ
+  Final Mem  =  ם
+  Nun  =  נ
+  Final Nun  =  ן
+##### white 3 | 72336553 | Open the box | א thru ן Cloud Tap | instr: Tap on the cloud and say the name of letter
+  Q: בּ  A: Vet | *Bet | Kaf | Chaf
+  Q: ב  A: *Vet | Bet | Kaf | Chaf
+  Q: ח  A: *Chet | Chaf | Tav | Sav
+  Q: ט  A: *Tet | Chet | Mem | Bet
+  Q: י  A: *Yud | Nun | Vav | Final Nun
+  Q: כּ  A: Bet | *Kaf | Vet | Chaf
+  Q: ךּ  A: *Final Kaf | Final Chaf | Final Nun | Final Fay
+  Q: כ  A: *Chaf | Vet | Bet | Kaf
+  Q: ך  A: Final Nun | *Final Chaf | Final Kaf | Final Fay
+  Q: ל  A: Chaf | Tzaddik | Final Chaf | *Lamed
+  Q: מ  A: *Mem | Tet | Final Mem | Samech
+  Q: ם  A: *Final Mem | Samech | Mem | Ayin
+  Q: נ  A: *Nun | Gimmel | Vav | Chaf
+  Q: ן  A: *Final Nun | Vav | Zayin | Final Fay
+##### white 3 | 29162023 | Matching pairs | 123 Kriah 01 Page 20 | instr: None
+  [IMG0][SND], [IMG1][SND], [IMG2][SND], [IMG3][SND], [IMG4][SND], [IMG5][SND]

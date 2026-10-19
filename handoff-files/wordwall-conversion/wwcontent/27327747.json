@@ -1,0 +1,141 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "27327747",
+ "title": "Daled Vs. Resh",
+ "game": "Group sort",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27327747,
+  "activityGuid": "3f428e8c413f4ed6818f0a5511e5233d",
+  "activityTitle": "Daled Vs. Resh",
+  "fontStackId": 0,
+  "authorUserId": 7530149,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 2,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 2,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-4",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-7",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Resh</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-9",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-10",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-11",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-12",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-13",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-14",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/3f428e8c413f4ed6818f0a5511e5233d-15",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

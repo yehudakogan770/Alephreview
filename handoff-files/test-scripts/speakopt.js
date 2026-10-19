@@ -1,0 +1,23 @@
+const { chromium } = require('playwright');
+const { browser } = require('./harness');
+(async () => {
+  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const t = await browser(b, { email: 'owner@example.org', displayName: 'Rabbi K' });
+  await t.setViewportSize({ width: 1400, height: 900 });
+  t.on('dialog', d => d.accept());
+  await t.goto('http://localhost:8784/admin.html'); await t.waitForTimeout(2000);
+  await t.click('[data-edit="own-white-1"]'); await t.waitForTimeout(400);
+  console.log('match: switch shown', await t.isVisible('[data-speak-opt]'), 'checked', await t.isChecked('input[name=speak]'));
+  await t.check('input[name=speak]');
+  await t.screenshot({ path: __dirname + '/speakopt.png' });
+  await t.click('#dlg-game [data-act=save]'); await t.waitForTimeout(400);
+  console.log('saved speak', await t.evaluate(() => { for (const st of Object.values(draft.games)) for (const l of Object.values(st)) for (const g of l) if (g.id === 'own-white-1') return g.own.speak; }));
+  await t.click('[data-edit="own-white-1"]'); await t.waitForTimeout(400);
+  await t.uncheck('input[name=speak]'); await t.click('#dlg-game [data-act=save]'); await t.waitForTimeout(400);
+  console.log('after uncheck', await t.evaluate(() => { for (const st of Object.values(draft.games)) for (const l of Object.values(st)) for (const g of l) if (g.id === 'own-white-1') return g.own.speak; }));
+  await t.click('[data-make="1"]'); await t.waitForTimeout(400);
+  await t.selectOption('#dlg-game select[name=kind]', 'Sort it').catch(e => console.log('sel', e.message.slice(0, 80)));
+  console.log('sort: switch shown', await t.isVisible('[data-speak-opt]'));
+  console.log('errors', t.errs);
+  await b.close();
+})();

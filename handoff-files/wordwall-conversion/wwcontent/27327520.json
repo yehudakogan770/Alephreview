@@ -1,0 +1,141 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "27327520",
+ "title": "Ayin Vs. Tzadee",
+ "game": "Group sort",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27327520,
+  "activityGuid": "b668951ccb2440fca0b764bed9ade551",
+  "activityTitle": "Ayin Vs. Tzadee",
+  "fontStackId": 0,
+  "authorUserId": 7530149,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 2,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 2,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Ayin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-4",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-7",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Tzadee</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-9",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-10",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-11",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-12",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-13",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-14",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/b668951ccb2440fca0b764bed9ade551-15",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

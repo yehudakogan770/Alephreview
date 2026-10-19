@@ -1,0 +1,113 @@
+{
+ "belt": "white",
+ "stripe": "2",
+ "id": "27260003",
+ "title": "Alef Bet Gan 14.7",
+ "game": "Rank order",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27260003,
+  "activityGuid": "aaf24e2849104d8dac334179c941eac4",
+  "activityTitle": "Alef Bet Gan 14.7",
+  "fontStackId": 0,
+  "authorUserId": 9788342,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 50,
+  "themeId": 45,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 50,
+  "type": 4,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-0",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-1",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-2",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-3",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-4",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-5",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-6",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-7",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-8",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-9",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-10",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-11",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-12",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/aaf24e2849104d8dac334179c941eac4-13",
+     "sound": null
+    }
+   ]
+  }
+ }
+}

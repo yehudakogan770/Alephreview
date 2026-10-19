@@ -1,0 +1,128 @@
+{
+ "belt": "orange",
+ "stripe": "2",
+ "id": "52227625",
+ "title": "Alef Bet Gan P 18.41 with shound",
+ "game": "Speaking cards",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 52227625,
+  "activityGuid": "c0a0eb1635604f3ab5836d49bacfa26d",
+  "activityTitle": "Alef Bet Gan P 18.41 with shound",
+  "fontStackId": 0,
+  "authorUserId": 9788342,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 70,
+  "themeId": 48,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 70,
+  "type": 2,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-0",
+     "sound": "/tts/he-il-avrineural/d68a9caf75959f0fb921116cd0ec5f76.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-1",
+     "sound": "/tts/he-il-avrineural/bc0c85c5bd5df10872871e2f5c3ab192.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-2",
+     "sound": "/tts/he-il-avrineural/7c9d434ebadc69b9c17f1277e8d52106.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-3",
+     "sound": "/tts/he-il-avrineural/718f33913d51ee906c03c47c663044db.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-4",
+     "sound": "/tts/he-il-avrineural/0ed79a2750f4de74fef80c47c7d833b6.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-5",
+     "sound": "/tts/he-il-avrineural/9b2aa2119d3766dc1fd62eae1a4e21c9.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-6",
+     "sound": "/tts/he-il-avrineural/1668154f20052cdb9f4d5a91c4ed59dd.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-7",
+     "sound": "/tts/he-il-avrineural/e68c4f23ff30ffa0ccc58b7964322d48.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-8",
+     "sound": "/tts/he-il-avrineural/bf37f27632937ad73919e4a43da3d126.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-9",
+     "sound": "/tts/he-il-avrineural/c0b5d247aa97109c82996bafbc338d4d.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-10",
+     "sound": "/tts/he-il-avrineural/aab9c857cf664167fc899d88e0707e88.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-11",
+     "sound": "/tts/he-il-avrineural/3eb38f4bef1dbb95a0bc516402fd0bea.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-12",
+     "sound": "/tts/he-il-avrineural/87d98e0d46ffd66307d1db3c913f2e33.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-13",
+     "sound": "/tts/he-il-avrineural/3ff657bebb936633db958bbc4036faed.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-14",
+     "sound": "/tts/he-il-avrineural/6272a41a9539dbe71e3b5fdfa38c7ed8.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-15",
+     "sound": "/tts/he-il-avrineural/671903cd3ce7adcff6a76cd294d3024e.mp3"
+    },
+    {
+     "text": "",
+     "image": "user/9788342/c0a0eb1635604f3ab5836d49bacfa26d-16",
+     "sound": "/tts/he-il-avrineural/d5a18e20756e9eaf7de7638190112c78.mp3"
+    }
+   ]
+  }
+ }
+}

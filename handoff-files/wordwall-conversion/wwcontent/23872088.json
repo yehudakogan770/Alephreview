@@ -1,0 +1,547 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "23872088",
+ "title": "Aleph til vov",
+ "game": "Gameshow quiz",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 23872088,
+  "activityGuid": "2b26eb32f3bc4d60970efaa1faa05d7d",
+  "activityTitle": "Aleph til vov",
+  "fontStackId": 0,
+  "authorUserId": 8397496,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 69,
+  "themeId": 21,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 69,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Aleph</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-0",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-2",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Bet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-3",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-5",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Bet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-6",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-7",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-8",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Vet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-9",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-11",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Vet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-12",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-13",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-14",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Bet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-15",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-16",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-17",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-18",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-19",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-20",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Hay</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-21",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-22",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-23",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-24",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-25",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-26",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Aleph</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-27",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-29",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-30",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-31",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-32",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Aleph</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-33",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-34",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-35",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Vov</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-36",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-38",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Hay</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-39",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-40",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-41",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Hay</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-42",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-43",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-44",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Gimmel</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-46",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-47",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>vov</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-48",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-49",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-50",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Gimmel</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-51",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-52",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/8397496/2b26eb32f3bc4d60970efaa1faa05d7d-53",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

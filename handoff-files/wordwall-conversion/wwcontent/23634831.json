@@ -1,0 +1,79 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "23634831",
+ "title": "Match the letter to its final form",
+ "game": "Labelled diagram",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 23634831,
+  "activityGuid": "7cf82bf7d6b04a80ac9dda6767e16656",
+  "activityTitle": "Match the letter to its final form",
+  "fontStackId": 0,
+  "authorUserId": 3772723,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 22,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 22,
+  "type": 16,
+  "instruction": null,
+  "content": {
+   "labels": [
+    {
+     "x": 0.20155038759689922,
+     "y": 0.2539432176656151,
+     "text": "<n>כ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.17829457364341086,
+     "y": 0.4022082018927445,
+     "text": "<n>מ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.14728682170542637,
+     "y": 0.5630914826498423,
+     "text": "<n>נ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.1937984496124031,
+     "y": 0.7239747634069401,
+     "text": "<n>פ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.24031007751937986,
+     "y": 0.8753943217665615,
+     "text": "<n>צ</n>",
+     "image": null,
+     "sound": null
+    }
+   ],
+   "image": "user/3772723/7cf82bf7d6b04a80ac9dda6767e16656-0"
+  }
+ }
+}

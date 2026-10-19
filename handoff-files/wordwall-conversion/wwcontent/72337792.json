@@ -1,0 +1,791 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "72337792",
+ "title": "Flying Fruit Kumatz O1",
+ "game": "Flying fruit",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 72337792,
+  "activityGuid": "a19d30ad976940d291120306b767ee94",
+  "activityTitle": "Flying Fruit Kumatz O1 Copy of Alef Bet Gan K 26.4 ",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 82,
+  "themeId": 27,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 82,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Kumatz Alef  = \"</n><b>Ah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-0",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-2",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-3",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Bet = \"</n><b>Bah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-5",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-6",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-7",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Vet = \"</n><b>Vah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-8",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-9",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-11",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Gimmel = \"</n><b>Gah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-12",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-13",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-14",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-15",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Daled = \"</n><b>Dah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-16",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-17",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-18",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-19",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Hay = \"</n><b>Hah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-20",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-21",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-22",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-23",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Vav = \"</n><b>Vav</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-24",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-25",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-26",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-27",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Zayin = \"</n><b>Zah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-29",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-30",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-31",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Chet = \"</n><b>Chah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-32",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-33",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-34",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-35",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Tet = \"</n><b>Tah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-36",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-38",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-39",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Yud = \"</n><b>Yah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-40",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-41",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-42",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-43",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Kaf = \"</n><b>Kah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-44",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-46",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-47",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Chaf = \"</n><b>Chah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-48",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-49",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-50",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-51",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Lamed = \"</n><b>Lah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-52",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-53",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-54",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-55",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Mem = \"</n><b>Mah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-56",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-57",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-58",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-59",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Nun = \"</n><b>Nah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-60",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-61",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-62",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-63",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Samech = \"</n><b>Sah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-64",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-65",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-66",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-67",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Ayin = \"</n><b>Ah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-68",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-69",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-70",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-71",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Pay = \"</n><b>Pah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-72",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-73",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-74",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-75",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Fay = \"</n><b>Fah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-76",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-77",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-78",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-79",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Final Chaf = \"</n><b>Chah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-80",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-81",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-82",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-83",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Kumatz Tzaddik = \"</n><b>Tzah</b><n>\"</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-84",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-85",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-86",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/a19d30ad976940d291120306b767ee94-87",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

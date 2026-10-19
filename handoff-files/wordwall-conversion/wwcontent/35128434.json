@@ -1,0 +1,687 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "35128434",
+ "title": "Alef - Vov Gameshow",
+ "game": "Gameshow quiz",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 35128434,
+  "activityGuid": "7bae12fb59b347b3aac15b20028069f6",
+  "activityTitle": "Alef - Vov Gameshow",
+  "fontStackId": 0,
+  "authorUserId": 12816631,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 69,
+  "themeId": 21,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 69,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Vav</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-0",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-2",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-3",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-5",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-6",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Nun</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Alef</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Alef</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-7",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-8",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-9",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-11",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-12",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Hey</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-13",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-14",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-15",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-16",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-17",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-18",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-19",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Daled</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Reish</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Nun</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Gimmel</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-20",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-21",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-22",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-23",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-24",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-25",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-26",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Alef</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Daled</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-27",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-29",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-30",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-31",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-32",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-33",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Alef</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Daled</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Vet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-34",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-35",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-36",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-38",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-39",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-40",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Daled</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Reish</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Nun</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Bet</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-41",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-42",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-43",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-44",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-46",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-47",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Nun</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Daled</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Reish</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Which letter is this?</n>",
+      "image": "user/12816631/7bae12fb59b347b3aac15b20028069f6-48",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Nun</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Alef</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vav</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Hey</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Gimmel</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

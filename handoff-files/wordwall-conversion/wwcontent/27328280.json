@@ -1,0 +1,141 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "27328280",
+ "title": "Sin Vs. Shin",
+ "game": "Group sort",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27328280,
+  "activityGuid": "e1aecd7d7edd422fb13957d48dd390d8",
+  "activityTitle": "Sin Vs. Shin",
+  "fontStackId": 0,
+  "authorUserId": 7530149,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 2,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 2,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Sin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-4",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-7",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Shin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-9",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-10",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-11",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-12",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-13",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-14",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/7530149/e1aecd7d7edd422fb13957d48dd390d8-15",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

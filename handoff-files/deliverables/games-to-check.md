@@ -1,0 +1,115 @@
+# Games copied from Wordwall: what to check
+
+All 115 Wordwall games were copied with their exact words, questions and answers. Where Wordwall showed a picture of a letter, the letter is now typed in.
+Most pictures could be worked out from the text next to them (a name, a right answer, a group name). The games below had pictures the data could not explain, so part of them is a best guess.
+
+To fix one: Admin page > Games tab > the game > edit (pencil).
+
+- **White Belt, Stripe 1: Alef - Vav Match**
+  - Pictures only: made it each letter א to ו next to its name.
+- **White Belt, Stripe 1: Alef - Vov Gameshow**
+  - Wrong answers were pictures: they're look-alike letters.
+- **White Belt, Stripe 1: Alef Bet Gan 04.11**
+  - Pictures only: the letters are a guess: א בּ ב ג (in alef-bet order).
+- **White Belt, Stripe 1: Alef Bet Gan 06.7**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה (in alef-bet order).
+- **White Belt, Stripe 1: Aleph til vov**
+  - Wrong answers were pictures: they're look-alike letters.
+- **White Belt, Stripe 1: Rank order with Sound**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו (in alef-bet order).
+- **White Belt, Stripe 1: What is the order? Alef - Vav Match**
+  - Pictures: made them the letters א בּ ב ג ד ה ו, each next to its number in alef-bet order.
+- **White Belt, Stripe 2: 123 Kriah 01 Page 05**
+  - Pictures only: the cards are a guess: א בּ ב ג ד ה ו ז ח ט י
+- **White Belt, Stripe 2: 123 Kriah 01 page 04**
+  - Pictures only: the letters are a guess: ו ז ח ט י. Each card has a twin to find.
+- **White Belt, Stripe 2: Alef Bet Gan 14.7**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו ז ח ט י כּ כ ך (in alef-bet order).
+- **White Belt, Stripe 2: Hey Vs. Chet**
+  - Pictures: each one is its group's letter (Hey = ה, Chet = ח).
+- **White Belt, Stripe 2: Rank order with Sound**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו ז ח ט י (in alef-bet order).
+- **White Belt, Stripe 3: 123 Kriah 01 Page 07**
+  - Pictures only: the letters are a guess: כּ כ ך ל מ ם. Each card has a twin to find.
+- **White Belt, Stripe 3: 123 Kriah 01 Page 20**
+  - Pictures only: the letters are a guess: מ ם נ ן ס ל. Each card has a twin to find.
+- **White Belt, Stripe 3: Alef - Nun Match**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו ז ח ט י כּ כ ל מ ם נ ן. Each card has a twin to find.
+- **White Belt, Stripe 3: Look Alike Match W3**
+  - Pictures only: the letters are a guess: ב כ ו ז ג נ ד ר. Each card has a twin to find.
+- **White Belt, Stripe 3: Mem Vs. Tet**
+  - Pictures: each one is its group's letter (Tet = ט, Mem = מ).
+- **White Belt, Stripe 3: Nun Vs. Gimmel**
+  - Pictures: each one is its group's letter (Nun = נ, Gimmel = ג).
+- **White Belt, Stripe 3: Vov Gimmel Zayin Nun**
+  - Pictures only: the letters are a guess: ו ג ז נ. Each card has a twin to find.
+- **Red Belt, Stripe 1: 123 Kriah 01 Page 08**
+  - Pictures only: the letters are a guess: ס ע פּ פ ף ם ן. Each card has a twin to find.
+- **Red Belt, Stripe 1: Alef - Final Fey Review**
+  - Pictures only: the cards are a guess: א בּ ב ג ד ה ו ז ח ט י כּ כ ל מ ם נ ן ס ע פּ פ ף
+- **Red Belt, Stripe 1: Final Mem Vs. Samech**
+  - Pictures: each one is its group's letter (Final Mem = ם, Samech = ס).
+- **Red Belt, Stripe 1: Hebrew Letter Order Red 1**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו ז ח ט י כּ כ ך ל מ ם נ ן ס ע פּ פ ף (in alef-bet order).
+- **Red Belt, Stripe 1: Match the Letters R1**
+  - Pictures only: the letters are a guess: ס ע פּ פ ף ם. Each card has a twin to find.
+- **Red Belt, Stripe 2: Ayin Vs. Tzadee**
+  - Pictures: each one is its group's letter (Ayin = ע, Tzadee = צ).
+- **Red Belt, Stripe 2: Daled Vs. Resh**
+  - Pictures: each one is its group's letter (Daled = ד, Resh = ר).
+- **Red Belt, Stripe 2: Final Letters Sort**
+  - Pictures: Final Letters: ך ם ן ף ץ; Non-Final Letters: כ מ נ פ צ
+- **Red Belt, Stripe 2: Hebrew Letter Order R2**
+  - Pictures only: the letters are a guess: א בּ ב ג ד ה ו ז ח ט י כּ כ ך ל מ ם נ ן ס ע פּ פ ף צ ץ ק ר (in alef-bet order).
+- **Red Belt, Stripe 2: Match the letter to its final form**
+  - The picture: made it the final letters, each labeled with its regular letter.
+- **Red Belt, Stripe 2: Match אותיות סופיות**
+  - Pictures only: made it each letter with its final letter (כ-ך, מ-ם, נ-ן, פ-ף, צ-ץ, כּ-ךּ).
+- **Red Belt, Stripe 2: Sofeet letters review. Drag the letter to match it's final (sofeet) .**
+  - Pictures only: made it each letter next to its final letter (כ-ך, מ-ם, נ-ן, פ-ף, צ-ץ).
+- **Red Belt, Stripe 3: 123 Kriah 01 Page 16**
+  - Pictures only: the letters are a guess: ר שׁ שׂ ת. Each card has a twin to find.
+- **Red Belt, Stripe 3: Find the Hebrew letters Quiz with Sound**
+  - Wrong answers were pictures: they're look-alike letters.
+- **Red Belt, Stripe 3: Find the letter Sin**
+  - Pictures: Correct: שׂ; Incorrect: שׁ
+- **Red Belt, Stripe 3: Rank order from Yud to Sav R3**
+  - Pictures only: the letters are a guess: י כּ כ ך ל מ ם נ ן ס ע פּ פ ף צ ץ ק ר שׁ שׂ תּ ת (in alef-bet order).
+- **Red Belt, Stripe 3: Shin Sin Match**
+  - Pictures only: the letters are a guess: שׁ שׂ שָׁ שָׂ שַׁ שַׂ. Each card has a twin to find.
+- **Red Belt, Stripe 3: Shin and Sin**
+  - Pictures: each one is its group's letter.
+- **Red Belt, Stripe 3: Shin and Sin Matching game**
+  - Pictures only: the letters are a guess: שׁ שׂ שָׁ שָׂ שַׁ שַׂ. Each card has a twin to find.
+- **Red Belt, Stripe 3: Sin Vs. Shin**
+  - Pictures: each one is its group's letter (Sin = שׂ, Shin = שׁ).
+- **Red Belt, Stripe 3: Sin Vs. Shin**
+  - Pictures: each one is its group's letter.
+- **Red Belt, Stripe 3: Win or Lose: Hebrew letters**
+  - Wrong answers were pictures: they're look-alike letters.
+- **Red Belt, Stripe 3: shin and sin sorting**
+  - Pictures only, no answer key in the data: made it Shin letters and Sin letters (with Kamatz and Patach).
+- **Red Belt, Stripe 3: where is Shin?**
+  - Pictures: Correct: שׁ; Incorrect: שׂ
+- **Orange Belt, Stripe 1: Alef Bet Gan 30.4**
+  - Pictures only: the cards are a guess: אָ בָּ בָ גָ דָ הָ וָ זָ חָ טָ יָ כָּ כָ לָ מָ נָ סָ עָ פָּ פָ צָ קָ רָ שָׁ תָּ
+- **Orange Belt, Stripe 1: Alef Bet Gan K 18.7**
+  - Pictures only: the cards are a guess: אָ בָּ בָ גָ דָ הָ וָ זָ חָ טָ יָ כָּ כָ לָ מָ נָ סָ עָ
+- **Orange Belt, Stripe 1: Catch the Answer Open Syllables O1**
+  - Question 1 was only a sound: it now says "Lah".
+  - Question 2 was only a sound: it now says "Vah".
+  - Question 3 was only a sound: it now says "Rah".
+  - Question 4 was only a sound: it now says "Bah".
+  - Question 5 was only a sound: it now says "Nah".
+- **Orange Belt, Stripe 2: Alef Bet Gan 13.3**
+  - Pictures only: the letters are a guess: אַ בַּ גַ דַ הַ וַ זַ חַ. Each card has a twin to find.
+- **Orange Belt, Stripe 2: Alef Bet Gan 16.5**
+  - Pictures only: the cards are a guess: אַ בַּ גַ דַ הַ וַ זַ חַ טַ
+- **Orange Belt, Stripe 2: Alef Bet Gan P 18.41 with shound**
+  - Pictures only: the cards are a guess: אַ בַּ בַ גַ דַ הַ וַ זַ חַ טַ יַ כַּ כַ לַ מַ נַ סַ
+- **Orange Belt, Stripe 2: Hebrew kamatz and patach**
+  - Pictures: the Hebrew words are a guess (each word next to how it's read; wrong ones are misread).
+- **Orange Belt, Stripe 2: משחק זיכרון אותיות ראשונות בפתח**
+  - Pictures only: the letters are a guess: אַ בַּ בַ גַ דַ הַ. Each card has a twin to find.
+
+Sounds: games that had sounds now read aloud with the computer's own voice (turn it off with the sound button in the game).

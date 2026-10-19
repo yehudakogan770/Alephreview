@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aleph Review — Admin Guide</title>
+<style>
+  @page { size: Letter; margin: 16mm 15mm 18mm; }
+  :root { --ink: #1b2437; --muted: #5a6477; --line: #dfe3ea; --accent: #1c64d6; --soft: #f4f6fa; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); font: 10.5pt/1.5 "DejaVu Sans", "Noto Sans", Arial, sans-serif; }
+  h1 { font-size: 28pt; line-height: 1.1; margin: 0 0 8pt; }
+  h2 { font-size: 17pt; margin: 0 0 8pt; padding-bottom: 5pt; border-bottom: 2.5pt solid var(--accent); page-break-after: avoid; }
+  h3 { font-size: 12.5pt; margin: 14pt 0 5pt; page-break-after: avoid; }
+  p { margin: 0 0 7pt; }
+  ul, ol { margin: 0 0 8pt; padding-left: 16pt; }
+  li { margin: 2pt 0; }
+  .section { page-break-before: always; }
+  .cover { height: 245mm; display: flex; flex-direction: column; justify-content: center; }
+  .cover .mark { width: 70px; height: 70px; border-radius: 16px; background: #15171a; color: #fff; display: grid; place-items: center; font-size: 40pt; font-weight: 700; margin-bottom: 18pt; }
+  .cover .sub { font-size: 14pt; color: var(--muted); margin-bottom: 26pt; }
+  .belts { display: flex; gap: 4pt; margin: 0 0 26pt; }
+  .belts i { width: 38pt; height: 10pt; border-radius: 3pt; border: 0.5pt solid rgba(0,0,0,.15); }
+  .toc { columns: 2; column-gap: 24pt; font-size: 10.5pt; }
+  .toc li { margin: 3pt 0; }
+  figure { margin: 6pt 0 12pt; page-break-inside: avoid; }
+  figure img { width: 100%; border: 0.75pt solid var(--line); border-radius: 6pt; display: block; }
+  figure.half img { width: 72%; margin: 0 auto; }
+  figcaption { font-size: 9pt; color: var(--muted); margin-top: 3pt; text-align: center; }
+  .box { background: var(--soft); border-left: 3.5pt solid var(--accent); border-radius: 0 6pt 6pt 0; padding: 7pt 10pt; margin: 8pt 0 10pt; page-break-inside: avoid; }
+  .box.warn { border-color: #e08a00; background: #fff6e6; }
+  .box b:first-child { display: block; margin-bottom: 2pt; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.3pt; margin: 4pt 0 10pt; page-break-inside: auto; }
+  th, td { text-align: left; vertical-align: top; padding: 4pt 6pt; border-bottom: 0.6pt solid var(--line); }
+  th { background: var(--soft); font-weight: 700; }
+  tr { page-break-inside: avoid; }
+  .k { display: inline-block; padding: 0 5pt; border: 0.75pt solid #b9c0cc; border-radius: 4pt; background: #fff; font-weight: 700; font-size: 9.5pt; white-space: nowrap; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 22pt; margin: 5pt 0; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 15pt; height: 15pt; border-radius: 50%; background: var(--accent); color: #fff; font-size: 8.5pt; font-weight: 700; display: grid; place-items: center; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+  .muted { color: var(--muted); }
+  .star { color: #c98a00; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="mark">א</div>
+  <h1>Aleph Review<br>Admin Guide</h1>
+  <p class="sub">How to run the site: games, words, homework and admins.</p>
+  <div class="belts">
+    <i style="background:#f1f1ee"></i><i style="background:#d62828"></i><i style="background:#f07800"></i><i style="background:#f6c426"></i><i style="background:#2f9e44"></i><i style="background:#1c64d6"></i><i style="background:#7b2cbf"></i><i style="background:#7f4f24"></i><i style="background:#7d838d"></i><i style="background:#15171a"></i>
+  </div>
+  <p><b>Site:</b> yehudakogan770.github.io/Alephreview<br><b>Admin page:</b> the <span class="k">Admin</span> button at the top right of the site</p>
+  <h3>In this guide</h3>
+  <ol class="toc">
+    <li>The site in short</li>
+    <li>Signing in</li>
+    <li>The top bar: Preview and Publish</li>
+    <li>Games tab</li>
+    <li>Making a game</li>
+    <li>All the game types</li>
+    <li>Wordwall games</li>
+    <li>Words on the site</li>
+    <li>How to play</li>
+    <li>Home page</li>
+    <li>Homework</li>
+    <li>Admins</li>
+    <li>What students see</li>
+    <li>Tips and fixes</li>
+  </ol>
+</div>
+
+<!-- 1 -->
+<div class="section">
+  <h2>1. The site in short</h2>
+  <p>Aleph Review is a website of Hebrew reading games for students. The games are sorted like karate belts:</p>
+  <ul>
+    <li><b>10 belts</b>, in this order: White, Red, Orange, Yellow, Green, Blue, Purple, Brown, Gray, Black.</li>
+    <li><b>3 stripes</b> in each belt. Each stripe has its own games.</li>
+    <li>A belt or stripe with no games shows <i>Coming soon</i> and can't be opened.</li>
+  </ul>
+  <p><b>Students</b> play without signing in. They only sign in with Google to see <b>homework</b>.</p>
+  <ul>
+    <li><b>"Played"</b> (the green badge at the top) counts the different games opened <i>on that computer, in that browser</i>. It needs no sign-in. A different computer or browser, or clearing the browser's data, starts again at 0.</li>
+    <li>Students earn a <span class="star">★</span> <b>star</b> for each stripe where they played every game.</li>
+  </ul>
+  <p><b>Admins</b> (teachers) change everything on the <b>admin page</b>: games, words, the home page, homework and other admins. Nothing needs code.</p>
+  <figure><img src="02-home.png"><figcaption>The home page students see.</figcaption></figure>
+</div>
+
+<!-- 2 -->
+<div class="section">
+  <h2>2. Signing in</h2>
+  <ol class="steps">
+    <li>On the site, click <span class="k">Admin</span> at the top right.</li>
+    <li>Click <span class="k">Sign in with Google</span> and pick your school Google account.</li>
+    <li>If your account isn't an admin, the page says so. Click <span class="k">Use a different account</span> to try another one.</li>
+  </ol>
+  <figure class="half"><img src="01-signin.png"><figcaption>The admin page stays locked until an admin signs in.</figcaption></figure>
+  <h3>Two kinds of admins</h3>
+  <table>
+    <tr><th>Full admins</th><td>Can do everything, including adding and removing sub-admins. The list of full admins is kept in the Firebase security rules (Firebase console), not on the admin page.</td></tr>
+    <tr><th>Sub-admins</th><td>Can do everything on the admin page (games, words, homework, publishing) except manage admins. Full admins add them on the <b>Admins</b> tab.</td></tr>
+  </table>
+  <p>To sign out, click <b>Sign out</b> at the top right of the admin page.</p>
+</div>
+
+<!-- 3 -->
+<div class="section">
+  <h2>3. The top bar: Preview and Publish</h2>
+  <p>Changes to <b>games, words, How to play and the home page</b> are a draft first. Students don't see them until you publish.</p>
+  <table>
+    <tr><th style="width:30%">Status (next to the logo)</th><td><b>Everything is published</b>: students see what you see. <b>Unsaved changes</b>: you changed something that isn't live yet.</td></tr>
+    <tr><th>Preview</th><td>Opens the student site with your changes, so you can check them before students see them.</td></tr>
+    <tr><th>Undo all changes</th><td>Throws away every change since the last publish.</td></tr>
+    <tr><th>Save &amp; publish</th><td>Makes your changes live for everyone. Students see them after they reload the page.</td></tr>
+  </table>
+  <div class="box"><b>Your draft is kept in this browser.</b>If you close the tab without publishing, your changes are still there next time. The page asks <i>"You have changes that weren't published yet. Keep working on them?"</i>: <b>OK</b> keeps them, <b>Cancel</b> starts from the live site.</div>
+  <div class="box warn"><b>Homework, classes and admins save right away.</b>They don't need Save &amp; publish. Only games, words, How to play and the home page do.</div>
+  <figure><img src="10-games-tab.png"><figcaption>The admin page, Games tab. The top bar has the status, Preview, Undo all changes and Save &amp; publish.</figcaption></figure>
+</div>
+
+<!-- 4 -->
+<div class="section">
+  <h2>4. Games tab</h2>
+  <ul>
+    <li><b>Pick a belt</b> from the colored chips. The number is how many games the belt has.</li>
+    <li>Each <b>stripe</b> is a column. Games show in the order students see them.</li>
+    <li>Each row shows the game's picture, name and type. <b>"Made here"</b> means a game made on this site (it has a score and can be homework). A gray row with <b>Hidden</b> is hidden from students.</li>
+  </ul>
+  <h3>Moving games</h3>
+  <ul>
+    <li><b>Change the order:</b> drag a game by its <b>⋮⋮</b> handle up or down.</li>
+    <li><b>Move to another stripe:</b> drag it into another stripe's column.</li>
+    <li><b>Move to another belt:</b> drop it on a belt chip at the top. Or edit it and change <b>Belt</b> and <b>Stripe</b>.</li>
+  </ul>
+  <h3>Editing a game</h3>
+  <p>Click <b>✎</b> on a game. For a game made here you can change its name, theme, content, instruction, belt and stripe. You can also:</p>
+  <ul>
+    <li><b>Hide this game from students:</b> it stays on the admin page, so you can show it again later.</li>
+    <li><b>Delete game:</b> removes it for good (after you publish).</li>
+    <li><b>Save and try it:</b> saves and opens the game in a new tab so you can play it.</li>
+  </ul>
+  <figure><img src="11-edit-made-here.png"><figcaption>Editing a game made here.</figcaption></figure>
+  <p class="muted">Remember: after changing games, click <b>Save &amp; publish</b>.</p>
+</div>
+
+<!-- 5 -->
+<div class="section">
+  <h2>5. Making a game</h2>
+  <ol class="steps">
+    <li>On the Games tab, pick a belt and click <span class="k">+ Make a game</span> on a stripe.</li>
+    <li>Type a <b>Name</b> and choose a <b>Game type</b>. The gray line under it says what the type needs.</li>
+    <li>Pick a <b>Theme</b>: the picture behind the game (Meadow, Desert, Ocean, Space or Classic).</li>
+    <li>Fill in the rows. Click <span class="k">+ Add a row</span> for more.</li>
+    <li>Or use <b>Paste many at once</b>: one row per line, parts split by <b>|</b>. Pairs can also use <b>=</b>. Then click <span class="k">Add these</span>.</li>
+    <li>Optional: an <b>Instruction</b> line. It shows under How to play for this game only.</li>
+    <li>Click <span class="k">Save and try it</span> to play it, or <span class="k">Add game</span>. Then <b>Save &amp; publish</b>.</li>
+  </ol>
+  <figure><img src="13-make-game.png"><figcaption>Making a "Pick the answer" quiz with Paste many at once.</figcaption></figure>
+  <div class="box"><b>Paste many: examples</b>
+    Pairs: <code>Alef = (the letter)</code> or <code>(letter) | Alef</code><br>
+    Questions: <code>Which one is Beis? | (right answer) | (wrong), (wrong)</code><br>
+    Groups: <code>Beis | (item), (item), (item)</code><br>
+    Lines with gaps: put <b>[ ]</b> around the missing part, like <code>(letter) (letter) [(letter)] (letter)</code>
+  </div>
+  <p>Games with more rows than one round holds are split into even rounds by themselves.</p>
+</div>
+
+<!-- 6 -->
+<div class="section">
+  <h2>6. All the game types</h2>
+  <p>Every type below is made on this site, so it knows the score. All of them can be homework except the four marked <b>*</b>, which have no right or wrong answers.</p>
+  <table>
+    <tr><th style="width:24%">Type</th><th style="width:22%">Like Wordwall's</th><th>What you type in</th></tr>
+    <tr><td><b>Match it</b></td><td>Match up</td><td>Pairs: a tile, and the word it goes next to.</td></tr>
+    <tr><td><b>Flip and match</b></td><td>Matching pairs</td><td>Pairs, played as face-down cards.</td></tr>
+    <tr><td><b>Find it</b></td><td>Find the match</td><td>Pairs: students see the word and tap its tile.</td></tr>
+    <tr><td><b>Right or wrong</b></td><td>True or false</td><td>Pairs (the site mixes some up), or rows with yes/no.</td></tr>
+    <tr><td><b>Pick the answer</b></td><td>Quiz</td><td>Questions: question | right answer(s) | wrong answers.</td></tr>
+    <tr><td><b>Game show</b></td><td>Gameshow quiz</td><td>Questions, with a clock and two helps (50:50, Second try).</td></tr>
+    <tr><td><b>Win or lose</b></td><td>Win or lose quiz</td><td>Questions; students pick points before each one.</td></tr>
+    <tr><td><b>Sort it</b></td><td>Group sort</td><td>2 to 4 groups: group name | items.</td></tr>
+    <tr><td><b>Fast sort</b></td><td>Speed sorting</td><td>2 groups; tiles come one at a time.</td></tr>
+    <tr><td><b>Sort the table</b></td><td>Categorize</td><td>Groups shown as columns, checked with Submit.</td></tr>
+    <tr><td><b>Put in order</b></td><td>Rank order</td><td>A list, typed in the right order.</td></tr>
+    <tr><td><b>Build the word</b></td><td>Anagram</td><td>Words; the letters keep their vowels.</td></tr>
+    <tr><td><b>Fill the gaps</b></td><td>Complete the sentence</td><td>Lines with [ ] around the missing parts.</td></tr>
+    <tr><td><b>Label it</b></td><td>Labelled diagram</td><td>Pairs: a big part on a board, and its label.</td></tr>
+    <tr><td><b>Pop the balloons</b></td><td>Balloon pop</td><td>Pairs: the tile on the balloon, the word on its cart.</td></tr>
+    <tr><td><b>Fruit catch</b></td><td>Flying fruit</td><td>Pairs or questions: what to find.</td></tr>
+    <tr><td><b>Whack it</b></td><td>Whack-a-mole</td><td>Pairs, or groups (hit the first group only).</td></tr>
+    <tr><td><b>Fly the plane</b></td><td>Airplane</td><td>Pairs or questions: fly into the right cloud.</td></tr>
+    <tr><td><b>Watch and remember</b></td><td>Watch and memorize</td><td>Tiles to remember (at least 8).</td></tr>
+    <tr><td><b>Spin and answer</b></td><td>Spin the wheel (quiz)</td><td>Questions: the wheel picks one.</td></tr>
+    <tr><td><b>Open a box quiz</b></td><td>Open the box (quiz)</td><td>Questions: one in each box.</td></tr>
+    <tr><td><b>Spin it *</b></td><td>Spin the wheel</td><td>What's on the wheel.</td></tr>
+    <tr><td><b>Open a box *</b></td><td>Open the box</td><td>What's in the boxes.</td></tr>
+    <tr><td><b>Flip cards *</b></td><td>Flash cards</td><td>Front and back of each card.</td></tr>
+    <tr><td><b>Pick a card *</b></td><td>Speaking cards</td><td>The cards in the deck.</td></tr>
+  </table>
+  <p class="muted">Every game made here has a Start screen, a clock, a sound button (sound on/off), a score at the end, <b>Try again</b> and <b>Show answers</b>. Some games also read aloud with the computer's voice; the sound button turns that off too.</p>
+</div>
+
+<!-- 7 -->
+<div class="section">
+  <h2>7. Wordwall games</h2>
+  <p>The site first used games from Wordwall. Every Wordwall game has been copied into a game made here, with the same title, words and answers, in the same place. The Wordwall versions are <b>hidden</b> (still on the admin page, marked Hidden).</p>
+  <ul>
+    <li>Wordwall can't tell the site a student's score, so <b>Wordwall games can't be homework</b>. That's why they were copied.</li>
+    <li>Where Wordwall showed a letter as a picture, the copy has the letter typed in. For some picture-only games the letters are a best guess; you received a separate list of those to check.</li>
+    <li>To bring a Wordwall game back: click <b>✎</b>, untick <b>Hide this game from students</b>, Save, then <b>Save &amp; publish</b>.</li>
+  </ul>
+  <h3>Adding a new Wordwall game</h3>
+  <ol class="steps">
+    <li>On Wordwall, open the game, click <b>Share</b>, then <b>Embed</b>, and copy the code.</li>
+    <li>On the Games tab, click <span class="k">+ Add game</span> on a stripe and paste it. The site fills in what it can, like the name and picture.</li>
+    <li>Choose the <b>Game type</b> (it picks the How to play text), then <span class="k">Add game</span> and <b>Save &amp; publish</b>.</li>
+  </ol>
+  <div class="two">
+    <figure><img src="14-add-wordwall.png"><figcaption>Adding a Wordwall game.</figcaption></figure>
+    <figure><img src="12-edit-wordwall.png"><figcaption>Editing a Wordwall game: Hide, Delete or Open on Wordwall.</figcaption></figure>
+  </div>
+</div>
+
+<!-- 8, 9, 10 -->
+<div class="section">
+  <h2>8. Words on the site</h2>
+  <p>Every word students see can be changed here: the home page, belts and stripes, How to play, the stripe-done message, homework, the words inside games, and the footer.</p>
+  <ul>
+    <li>Keep words short and simple. Students are kids.</li>
+    <li>To make a word <b>bold</b>, put two stars on each side: <code>**Start**</code>.</li>
+    <li>Words in curly brackets, like <code>{n}</code> or <code>{belt}</code>, are filled in by the site. Keep them.</li>
+  </ul>
+  <figure><img src="20-words.png"><figcaption>Words on the site.</figcaption></figure>
+  <h2 style="margin-top:14pt">9. How to play</h2>
+  <p>Each game page has a <b>How to play</b> box with 3 steps. Step 2 comes from the game's type and is set here, one line per game type. A game's own <b>Instruction</b> (set when editing the game) is added under it.</p>
+</div>
+
+<div class="section">
+  <figure><img src="21-howto.png"><figcaption>How to play: step 2 for each game type.</figcaption></figure>
+  <h2 style="margin-top:14pt">10. Home page</h2>
+  <p>Choose what shows on the home page:</p>
+  <ul>
+    <li><b>Letter tiles:</b> the colored letter tiles. Each one opens its belt.</li>
+    <li><b>Numbers row:</b> games to play, games played and stars earned.</li>
+  </ul>
+  <p>To change the home page's words (headline, buttons), use <b>Words on the site</b>.</p>
+  <figure class="half"><img src="22-home.png"><figcaption>Home page settings.</figcaption></figure>
+</div>
+
+<!-- 11 -->
+<div class="section">
+  <h2>11. Homework</h2>
+  <p>Give a class games to do at home and see who passed. Homework uses only games made on this site (not Wordwall games, and not the four card games with no score).</p>
+  <h3>Step 1: make a class</h3>
+  <ol class="steps">
+    <li>On the <b>Homework</b> tab, click <span class="k">+ New class</span>.</li>
+    <li>Type a <b>Class name</b> and paste the students' <b>Google emails</b>, one per line (or with commas). <span class="k">Import a file…</span> takes a CSV or text file, like a Google Workspace export.</li>
+    <li>Click <span class="k">Save</span>. It saves right away.</li>
+  </ol>
+  <figure class="half"><img src="31-class.png"><figcaption>A new class.</figcaption></figure>
+  <div class="box warn"><b>Use the right emails.</b>Students see only homework for the email they sign in with. It must match the email in the class.</div>
+</div>
+
+<div class="section">
+  <h3>Step 2: make homework</h3>
+  <ol class="steps">
+    <li>Click <span class="k">+ New homework</span>.</li>
+    <li>Type a <b>Title</b>, pick the <b>Class</b>, a <b>Due</b> date and the <b>Passing score</b> (for example 80%).</li>
+    <li>Under <b>Games</b>, type in the search box and click games to add them. Use <b>↑</b> to change the order and <b>✕</b> to remove one.</li>
+    <li>Click <span class="k">Save</span>. The class can see it right away.</li>
+  </ol>
+  <figure><img src="32-homework-new.png"><figcaption>New homework: title, class, due date, passing score and games.</figcaption></figure>
+  <p>A game counts as <b>done</b> only when the student reaches the passing score. They can try again as many times as they like.</p>
+</div>
+
+<div class="section">
+  <h3>Step 3: see who did it</h3>
+  <p>On the Homework tab, click <span class="k">Who did it</span> next to a homework.</p>
+  <table>
+    <tr><th style="width:22%">What you see</th><th>Meaning</th></tr>
+    <tr><td><b style="color:#1f9d55">✓ 100%</b></td><td>Passed, with their best score, the number of tries and the time spent.</td></tr>
+    <tr><td><b style="color:#b35c00">✗ 60%</b></td><td>Played but not passed yet (their best score so far).</td></tr>
+    <tr><td><b>Opened</b></td><td>Opened the game but didn't finish it.</td></tr>
+    <tr><td><b>—</b></td><td>Not opened yet.</td></tr>
+    <tr><td><b>Passed 2/2</b></td><td>How many of the games they passed.</td></tr>
+  </table>
+  <figure><img src="33-results.png"><figcaption>Who did it: each student, each game.</figcaption></figure>
+  <p>To change or delete a homework or a class, click <span class="k">Edit</span> next to it.</p>
+</div>
+
+<div class="section">
+  <h3>What students see</h3>
+  <ol class="steps">
+    <li>Students click <span class="k">My homework</span> at the top of the site.</li>
+    <li>They click <b>Sign in with Google</b> and use the email that's in their class.</li>
+    <li>They see their homework, the due date, and each game. A game shows <b>Done</b> when it's passed.</li>
+  </ol>
+  <figure><img src="34-student-homework.png"><figcaption>A student's homework page.</figcaption></figure>
+  <p class="muted">Playing games never needs sign-in. Only homework does.</p>
+</div>
+
+<!-- 12 -->
+<div class="section">
+  <h2>12. Admins</h2>
+  <p>Only <b>full admins</b> see this tab.</p>
+  <ul>
+    <li><b>Add sub-admins:</b> paste teachers' Google emails (one per line or with commas) and click <span class="k">Add</span>. <span class="k">Import a file…</span> adds every email in a CSV or text file.</li>
+    <li><b>Remove</b> a sub-admin with the Remove button next to their email.</li>
+    <li><b>Full admins</b> are set in the Firebase security rules (Firebase console), not here.</li>
+  </ul>
+  <p>Changes on this tab save right away.</p>
+  <figure><img src="40-admins.png"><figcaption>The Admins tab.</figcaption></figure>
+</div>
+
+<!-- 13 -->
+<div class="section">
+  <h2>13. What students see</h2>
+  <div class="two">
+    <figure><img src="03-stripe.png"><figcaption>A stripe page: the games, how many are played, and filters by game type.</figcaption></figure>
+    <figure><img src="04-game-start.png"><figcaption>A game page: How to play on the left, the game on the right.</figcaption></figure>
+  </div>
+  <ul>
+    <li>Game pages have <b>Previous</b> and <b>Next game</b> buttons, a <b>Full screen</b> button, and a button back to the stripe.</li>
+    <li>Games made here show a score at the end. Outside homework there's no pass mark; in homework they see the passing score.</li>
+    <li>When a student has played every game in a stripe, they get a star and a short message.</li>
+  </ul>
+  <figure class="half"><img src="05-game-play.png"><figcaption>Playing a game made on the site.</figcaption></figure>
+</div>
+
+<!-- 14 -->
+<div class="section">
+  <h2>14. Tips and fixes</h2>
+  <table>
+    <tr><th style="width:36%">If…</th><th>Do this</th></tr>
+    <tr><td>Students don't see my change</td><td>Click <b>Save &amp; publish</b>. Then reload the site (on a computer: <b>Ctrl + Shift + R</b>).</td></tr>
+    <tr><td>+ Make a game does nothing</td><td>Reload the admin page (Ctrl + Shift + R). If it asks to keep your unpublished changes, either answer works.</td></tr>
+    <tr><td>I made a mistake and want to start over</td><td>Click <b>Undo all changes</b> (only for changes not yet published).</td></tr>
+    <tr><td>I want to check before students see it</td><td>Click <b>Preview</b>.</td></tr>
+    <tr><td>A game should be gone for a while</td><td>Edit it and tick <b>Hide this game from students</b> (you can show it again later). Delete only if you won't need it.</td></tr>
+    <tr><td>A student can't see homework</td><td>Check their email is in the class exactly, and that they signed in with that account.</td></tr>
+    <tr><td>A game can't be picked for homework</td><td>Only games made on this site with a score can be homework. Copy the game as a game made here.</td></tr>
+    <tr><td>"Played" number looks wrong</td><td>It counts games opened in that browser on that computer. It's not the same on other computers.</td></tr>
+    <tr><td>A game reads aloud and I don't want it</td><td>Students can press the game's sound button. To stop it for everyone, ask for the game's reading aloud to be turned off.</td></tr>
+    <tr><td>The admin page says I'm not an admin</td><td>Click <b>Use a different account</b> and pick your school account, or ask a full admin to add you.</td></tr>
+  </table>
+  <div class="box"><b>Good habits</b>Keep words short and simple for kids. Try each new game with <b>Save and try it</b>. Publish when you're done, then check the site.</div>
+</div>
+
+</body>
+</html>

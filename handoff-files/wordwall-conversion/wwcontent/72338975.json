@@ -1,0 +1,126 @@
+{
+ "belt": "orange",
+ "stripe": "2",
+ "id": "72338975",
+ "title": "פתח קמץ drag and drop Game",
+ "game": "Speed sorting",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 72338975,
+  "activityGuid": "b0b2b2c44af346afae4d8b9b09eb7cb6",
+  "activityTitle": " פתח קמץ drag and drop Game ",
+  "fontStackId": 12,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 81,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 81,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>KAMATZ</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>אָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>כָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>פָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>צָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>בָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>טָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>זָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>מָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>תָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>PATACH</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "<n>רַ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>אַ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "text": "<n>יַ</n>",
+       "image": null,
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

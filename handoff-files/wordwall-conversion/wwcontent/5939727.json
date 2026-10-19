@@ -1,0 +1,198 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "5939727",
+ "title": "Hebrew Aleph Bet",
+ "game": "Labelled diagram",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 5939727,
+  "activityGuid": "2ab93598e07a4d4caba2530b4062cfd9",
+  "activityTitle": "Hebrew Aleph Bet",
+  "fontStackId": 0,
+  "authorUserId": 1447896,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 22,
+  "themeId": 41,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 22,
+  "type": 16,
+  "instruction": null,
+  "content": {
+   "labels": [
+    {
+     "x": 0.9038854805725971,
+     "y": 0.24074074074074073,
+     "text": "<n>Aleph</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.7750511247443763,
+     "y": 0.24338624338624337,
+     "text": "<n>Bet</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.5357873210633947,
+     "y": 0.24603174603174602,
+     "text": "<n>Gimel</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.43149284253578735,
+     "y": 0.24338624338624337,
+     "text": "<n>Dalet</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.2883435582822086,
+     "y": 0.24074074074074073,
+     "text": "<n>Hey</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.18200408997955012,
+     "y": 0.24338624338624337,
+     "text": "<n>Vav</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.081799591002045,
+     "y": 0.24074074074074073,
+     "text": "<n>Zayin</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.8895705521472392,
+     "y": 0.4576719576719577,
+     "text": "<n>Chet</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.7607361963190185,
+     "y": 0.4576719576719577,
+     "text": "<n>Tet</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.6339468302658486,
+     "y": 0.4126984126984127,
+     "text": "<n>Yud</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.50920245398773,
+     "y": 0.455026455026455,
+     "text": "<n>Kaf</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.09815950920245399,
+     "y": 0.4497354497354497,
+     "text": "<n>Lamed</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.9079754601226994,
+     "y": 0.6640211640211641,
+     "text": "<n>Mem</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.7034764826175869,
+     "y": 0.6640211640211641,
+     "text": "<n>Nun</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.5316973415132924,
+     "y": 0.6534391534391535,
+     "text": "<n>Samech</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.41922290388548056,
+     "y": 0.656084656084656,
+     "text": "<n>Ayin</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.3067484662576687,
+     "y": 0.6534391534391535,
+     "text": "<n>Pey</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.9202453987730062,
+     "y": 0.873015873015873,
+     "text": "<n>Tzadee</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.689161554192229,
+     "y": 0.8703703703703703,
+     "text": "<n>Koof</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.5705521472392638,
+     "y": 0.8703703703703703,
+     "text": "<n>Resh</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.4335378323108384,
+     "y": 0.873015873015873,
+     "text": "<n>Shin</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "x": 0.19427402862985685,
+     "y": 0.8677248677248677,
+     "text": "<n>Tav</n>",
+     "image": null,
+     "sound": null
+    }
+   ],
+   "image": "user/1447896/2ab93598e07a4d4caba2530b4062cfd9-0"
+  }
+ }
+}

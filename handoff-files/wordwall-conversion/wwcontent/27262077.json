@@ -1,0 +1,139 @@
+{
+ "belt": "red",
+ "stripe": "1",
+ "id": "27262077",
+ "title": "Look Alikes",
+ "game": "Find the match",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 27262077,
+  "activityGuid": "210c753c4d83456da1bcb959ab1a6609",
+  "activityTitle": "Look Alikes",
+  "fontStackId": 0,
+  "authorUserId": 8397496,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 46,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 46,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>Pay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-0",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Veis</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-1",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Kaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-2",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Fey</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-3",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Chaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-4",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Chaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-5",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Fay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-6",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Beis</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/8397496/210c753c4d83456da1bcb959ab1a6609-7",
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

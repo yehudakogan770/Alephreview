@@ -1,0 +1,549 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "94305897",
+ "title": "Find the Hebrew letters Quiz with Sound",
+ "game": "Quiz",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 94305897,
+  "activityGuid": "96380917dd114167ade84ba3bd443382",
+  "activityTitle": "Find the Hebrew letters Quiz with Sound R3",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 5,
+  "themeId": 2,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 5,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>Find the Bet?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/d4a6128af1deac17563cc324115fe205.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-0",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-1",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-2",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-3",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-4",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-5",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Kaf?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/edd22a519fdcaeccea3051338282576e.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-6",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-7",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-8",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-9",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-10",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-11",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Pey?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/fe61fa97bed8b21bc6563f6f071b5e4c.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-12",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-13",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-14",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-15",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-16",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-17",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Fey?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/9f64840cb949173cc3453abe26f81521.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-18",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-19",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-20",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-21",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-22",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-23",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Shin?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/1466771dab65c86d9522c4d3da92b413.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-24",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-25",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-26",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-27",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-28",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-29",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Tav?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/6c9f5a0e7b70d0994202c3408debb2c0.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-30",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-31",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-32",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-33",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-34",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-35",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Dalet?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/f135001aa9835951a66e31ebdcf3f98e.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-36",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-37",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-38",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-39",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-40",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-41",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Mem?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/f241a17bf09e294d0def7a3619bb52e4.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-42",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-43",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-44",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-45",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-46",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-47",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Tet?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/d835074f3676e5fd98183e138912d881.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-48",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-49",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-50",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-51",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-52",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-53",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Gimel?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/1eaa25cce4e5c4c911c073faa47a7fcf.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-54",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-55",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-56",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-57",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-58",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-59",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Find the Samech?</n>",
+      "image": null,
+      "sound": "/tts/en-gb-sonianeural/8e93a8be968adfd8a445e85d44524d03.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-60",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-61",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-62",
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-63",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-64",
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "",
+       "image": "user/11749933/96380917dd114167ade84ba3bd443382-65",
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

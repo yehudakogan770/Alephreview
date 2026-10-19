@@ -1,0 +1,34 @@
+1 pair rows: 8 | toast: Added 8.
+2 admin row: Made here · Match it · 8 pairs | status: Unsaved changes
+2 preview start screen: Match it Letters and names Drag each tile to its match. Then press Submit. Start
+3 round: Round 1 of 2 | prompts: [] | tiles: 4
+4 end: 75% 6 of 8 right 0:03 Show answers Try again | dots: no,no,ok,ok,ok,ok,ok,ok
+4 no pass mark outside homework: true | errors: undefined
+5 picker lists only own games: [
+  'Letters א to וWhite Belt, Stripe 1 · Match it',
+  'Flip and match: א to וWhite Belt, Stripe 1 · Flip and match',
+  'Beis or Veis?White Belt, Stripe 1 · Pick the answer',
+  'Game show: א to וWhite Belt, Stripe 1 · Game show',
+  'Put in order: א to וWhite Belt, Stripe 1 · Put in order',
+  'Label it: א to הWhite Belt, Stripe 1 · Label it',
+  'Pop the balloons: א to וWhite Belt, Stripe 1 · Pop the balloons',
+  'Letters and namesWhite Belt, Stripe 1 · Match it',
+  'Letters א to יWhite Belt, Stripe 2 · Match it',
+  'Find it: א to יWhite Belt, Stripe 2 · Find it',
+  'Right or wrong: Hey and ChesWhite Belt, Stripe 2 · Right or wrong',
+  'Sort it: first or second halfWhite Belt, Stripe 2 · Sort it'
+]
+5 homework stored: {"pass":90,"items":[{"game":"own-white-1"}]}
+DBG user: sara@school.org
+DBG list: 1
+DBG hw page:  All belts/My homework My homework Letter names Not started Letters א to ו sara@school.org · Sign out  | errs []
+6 homework start screen: Match it Letters א to ו Drag each tile to its match. Then press Submit. Get 90% to pass. Start
+7 try 1: 71% 5 of 7 right 0:03 You need 90% to pass. Try again. Show answers Try again Back to my homework →
+7 list after try 1: 71% · Try again | 0 of 1 passed
+8 try 2: 100% 7 of 7 right 0:03 ✓ Passed Show answers Try again Back to my homework →
+8 list after try 2:  Done | All done
+9 results: [
+  'Sara Cohensara@school.org ✓ 100% · 2 tries · under 1 min 1/1',
+  'dov@school.org — 0/1'
+] | Grade 1 · Pass: 90% · 1 of 2 students passed every game
+errors: [] []

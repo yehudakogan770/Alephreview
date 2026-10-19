@@ -1,0 +1,141 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "32068686",
+ "title": "Shin and Sin",
+ "game": "True or false",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 32068686,
+  "activityGuid": "c9c098324aba4dbbb69d1f0b97fcdba2",
+  "activityTitle": " Shin and Sin",
+  "fontStackId": 0,
+  "authorUserId": 3231496,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 35,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 35,
+  "type": 15,
+  "instruction": null,
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Shin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-4",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-7",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Sin</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-8",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-9",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-10",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-11",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-12",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-13",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-14",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3231496/c9c098324aba4dbbb69d1f0b97fcdba2-15",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

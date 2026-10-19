@@ -1,0 +1,93 @@
+{
+ "belt": "orange",
+ "stripe": "2",
+ "id": "9864550",
+ "title": "קמץ פתח-קריאת צרופים 2",
+ "game": "Spin the wheel",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 9864550,
+  "activityGuid": "54badd3c9aa54cf696d172011cc51e24",
+  "activityTitle": "קמץ פתח-קריאת צרופים 2",
+  "fontStackId": 0,
+  "authorUserId": 3566028,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 8,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 8,
+  "type": 2,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "<n>מַ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>צָ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>חַ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>רַ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>עָ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>שָׁ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>אָ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>לַ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>נָ</n>",
+     "image": null,
+     "sound": null
+    },
+    {
+     "text": "<n>סַ</n>",
+     "image": null,
+     "sound": null
+    }
+   ]
+  }
+ }
+}

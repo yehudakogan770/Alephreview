@@ -1,0 +1,213 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "94310389",
+ "title": "Catch the Answer Open Syllables O1",
+ "game": "Flying fruit",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 94310389,
+  "activityGuid": "afbee68c60a14d5e9506ae4856e0fe73",
+  "activityTitle": "Catch the Answer Open Syllables O1",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 82,
+  "themeId": 55,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 82,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "",
+      "image": null,
+      "sound": "/tts/en-nz-mollyneural/d22eecd293cb20789c88c483f60e4c27.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>לָהּ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>רָע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָא</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": null,
+      "sound": "/tts/pt-br-franciscaneural/1644f1a571de34f6b3597bba304e7c05.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>בָהּ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָהּ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>בָּא</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": null,
+      "sound": "/tts/fil-ph-blessicaneural/1aa304151c024d2ada8c067c052e51eb.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>גָע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>בָּא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>רָע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָא</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": null,
+      "sound": "/tts/fil-ph-blessicaneural/c56efb94d3943fc77fef3eb949ab540d.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>בָּא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָהּ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>רָע</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": null,
+      "sound": "/tts/fil-ph-blessicaneural/b476dd1f2e29b48fea39d7af0d307101.mp3"
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>נָא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָע</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>בָּא</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>רָּע</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

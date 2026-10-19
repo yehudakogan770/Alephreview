@@ -1,0 +1,332 @@
+{
+ "belt": "red",
+ "stripe": "1",
+ "id": "94190811",
+ "title": "Hebrew Letter Match R1",
+ "game": "Match up",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityInstruction": "Drag and Match the correct letter to the name",
+  "activityId": 94190811,
+  "activityGuid": "86a7195850964c4c91db724aace65d85",
+  "activityTitle": "Hebrew Letter Match R1 Copy of Aleph Bet Chart",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 3,
+  "themeId": 2,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 3,
+  "type": 7,
+  "instruction": "Drag and Match the correct letter to the name",
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>Aleph</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>א</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Bet</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>בּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Vet</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ב</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Gimel</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ג</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Dalet/Daled</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ד</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Hay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ה</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Vav</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ו</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Zayin</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ז</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Chet</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ח</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Tet</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ט</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Yud</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>י</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Kaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>כּ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Chaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>כ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Chaf</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ך</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Lamed</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ל</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Mem</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>מ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Mem</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ם</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Nun</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>נ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Nun</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ן</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Samach</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ס</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Ayin</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ע</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Pay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>פּ </n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Fay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>פ</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>Final Fay</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ף</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

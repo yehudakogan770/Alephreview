@@ -1,0 +1,115 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "5783609",
+ "title": "Hebrew letters (alef- vav)",
+ "game": "Match up",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 5783609,
+  "activityGuid": "ff7e1272547c42c69fe391aada949e1e",
+  "activityTitle": "Hebrew letters (alef- vav)",
+  "fontStackId": 0,
+  "authorUserId": 1383986,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 3,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 3,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-0",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>alef</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-1",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>bet</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-2",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>gimmel</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-3",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>dalet</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-4",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>hay</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/1383986/ff7e1272547c42c69fe391aada949e1e-5",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>vav</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

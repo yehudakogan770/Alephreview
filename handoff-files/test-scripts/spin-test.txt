@@ -1,0 +1,32 @@
+own-white-2-ww28882327 |  | 49s
+  end: All done 0:32 Play again Next game →
+own-white-3-spin |  | 49s
+  end: All done 0:32 Play again Next game →
+own-red-1-deal |  | 20s
+  end: All done 0:04 Play again Next game →
+own-red-1-ww38449199 |  | 19s
+  end: All done 0:03 Play again Next game →
+own-red-2-ww94193075 | 100% 10 of 10 right | 86s
+own-red-3-ww94305103 |  | 20s
+  end: All done 0:03 Play again Next game →
+own-orange-1-ww26271863 |  | 49s
+  end: All done 0:32 Play again Next game →
+own-orange-2-spin |  | 49s
+  end: All done 0:32 Play again Next game →
+own-orange-2-deal |  | 18s
+  end: All done 0:02 Play again Next game →
+own-orange-2-ww94381851 | 100% 16 of 16 right | 138s
+own-orange-2-ww28339377 |  | 49s
+  end: All done 0:32 Play again Next game →
+own-orange-2-ww9864550 |  | 49s
+  end: All done 0:32 Play again Next game →
+own-orange-2-ww94349304 |  | 20s
+  end: All done 0:04 Play again Next game →
+own-orange-2-ww9769123 |  | 18s
+  end: All done 0:02 Play again Next game →
+own-orange-2-ww52227625 |  | 19s
+  end: All done 0:02 Play again Next game →
+own-orange-2-ww94393866 |  | 19s
+  end: All done 0:02 Play again
+page errors: [] 
+PROBLEMS: 0

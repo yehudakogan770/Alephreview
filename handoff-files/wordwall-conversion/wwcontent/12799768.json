@@ -1,0 +1,137 @@
+{
+ "belt": "red",
+ "stripe": "1",
+ "id": "12799768",
+ "title": "Pay Vs Fay",
+ "game": "Whack-a-mole",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityInstruction": "Hit the Moles with the Letter FAY",
+  "activityId": 12799768,
+  "activityGuid": "a4955f479da746c2ac384a0c1bb8db89",
+  "activityTitle": "Pay Vs Fay",
+  "fontStackId": 0,
+  "authorUserId": 3621747,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 45,
+  "themeId": 22,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 45,
+  "type": 15,
+  "instruction": "Hit the Moles with the Letter FAY",
+  "content": {
+   "groups": [
+    {
+     "header": {
+      "text": "<n>Fay</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-0",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-1",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-2",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-3",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-4",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-5",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-6",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-7",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-8",
+       "sound": null
+      }
+     ]
+    },
+    {
+     "header": {
+      "text": "<n>Pay</n>",
+      "image": null,
+      "sound": null
+     },
+     "items": [
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-9",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-10",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-11",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-12",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-13",
+       "sound": null
+      },
+      {
+       "text": "",
+       "image": "user/3621747/a4955f479da746c2ac384a0c1bb8db89-14",
+       "sound": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

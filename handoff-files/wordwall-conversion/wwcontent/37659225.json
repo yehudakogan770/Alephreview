@@ -1,0 +1,73 @@
+{
+ "belt": "orange",
+ "stripe": "2",
+ "id": "37659225",
+ "title": "משחק זיכרון אותיות ראשונות בפתח",
+ "game": "Matching pairs",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": false,
+  "activityId": 37659225,
+  "activityGuid": "cc7f809459f6473abe83893933575cda",
+  "activityTitle": "משחק זיכרון אותיות ראשונות בפתח ",
+  "fontStackId": 0,
+  "authorUserId": 919847,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 25,
+  "themeId": 65,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 25,
+  "type": 3,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-0",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-1",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-2",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-3",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-4",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/919847/cc7f809459f6473abe83893933575cda-5",
+     "sound": null
+    }
+   ]
+  }
+ }
+}

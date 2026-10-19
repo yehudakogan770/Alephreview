@@ -1,0 +1,106 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "59696981",
+ "title": "What is the order? Alef - Vav Match",
+ "game": null,
+ "page": {
+  "templateId": 3,
+  "authorUserId": 11749933,
+  "activityGuid": "d831f5c674de481bbbb5c724ed9e0420"
+ },
+ "content": {
+  "version": 1,
+  "templateId": 3,
+  "type": 7,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "<n>1</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-0",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>5</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-1",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>2</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-2",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>6</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-3",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>4</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-4",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>3</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-5",
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "<n>7</n>",
+      "image": null,
+      "sound": null
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/d831f5c674de481bbbb5c724ed9e0420-6",
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

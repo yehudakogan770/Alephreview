@@ -1,0 +1,451 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "18981842",
+ "title": "letter plus kamatz",
+ "game": "Open the box",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 18981842,
+  "activityGuid": "8e3f172d192b479f91fde3c718cd5d97",
+  "activityTitle": "letter plus kamatz",
+  "fontStackId": 0,
+  "authorUserId": 3551631,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 30,
+  "themeId": 65,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 30,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "<n>bah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>בָּ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>חָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>מָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>Lah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>מָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>דָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>הָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>gah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>נָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>סָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>גָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>nah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>נָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>צָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>יָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>dah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>כָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>רָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>דָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>rah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>עָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>פָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>רָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>fah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>פָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>זָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>zah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>סָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>הָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>זָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>מָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>mah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>זָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>אָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>לָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>מָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>aah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>קָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>אָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>טָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>וָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>yah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>יָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>חָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>עָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>גָ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "<n>shah</n>",
+      "image": null,
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>בָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>הָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>נָ</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>שָׁ</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}

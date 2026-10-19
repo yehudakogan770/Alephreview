@@ -1,0 +1,133 @@
+{
+ "belt": "orange",
+ "stripe": "1",
+ "id": "38552490",
+ "title": "Alef Bet Gan K 18.7",
+ "game": "Watch and memorize",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 38552490,
+  "activityGuid": "8ca49ded68544d34b2e9ee91d9d71b74",
+  "activityTitle": "Alef Bet Gan K 18.7 ",
+  "fontStackId": 0,
+  "authorUserId": 9788342,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 23,
+  "themeId": 1,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 23,
+  "type": 3,
+  "instruction": null,
+  "content": {
+   "items": [
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-0",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-1",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-2",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-3",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-4",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-5",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-6",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-7",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-8",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-9",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-10",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-11",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-12",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-13",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-14",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-15",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-16",
+     "sound": null
+    },
+    {
+     "text": "",
+     "image": "user/9788342/8ca49ded68544d34b2e9ee91d9d71b74-17",
+     "sound": null
+    }
+   ]
+  }
+ }
+}

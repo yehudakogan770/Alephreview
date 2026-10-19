@@ -1,0 +1,24 @@
+const { chromium } = require('playwright');
+(async () => {
+  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const p = await b.newPage({ viewport: { width: 1280, height: 760 } });
+  const errs = []; p.on('pageerror', e => errs.push(e.message));
+  await p.route('https://firestore.googleapis.com/**', r => r.abort());
+  const shot = async n => p.screenshot({ path: __dirname + `/cmp/new-${n}.png`, clip: await (await p.$('#player')).boundingBox() });
+  await p.goto('http://localhost:8784/#/orange/1/play/own-orange-1-ww26271863'); await p.waitForTimeout(900);
+  await p.click('[data-start]'); await p.waitForTimeout(500); await shot('spin-1');
+  await p.click('[data-spin]'); await p.waitForTimeout(2000); await shot('spin-mid');
+  await p.waitForTimeout(4200); await shot('spin-2');
+  await p.click('[data-out]'); await p.waitForTimeout(1000); await shot('spin-3');
+  await p.goto('http://localhost:8784/#/red/2/play/own-red-2-ww94193075'); await p.waitForTimeout(900);
+  await p.click('[data-start]'); await p.waitForTimeout(500);
+  await p.click('[data-spin]'); await p.waitForTimeout(6300); await shot('spinq-2');
+  await p.click('.og-spinq .og-answer'); await p.waitForTimeout(500); await shot('spinq-3');
+  await p.goto('http://localhost:8784/#/orange/2/play/own-orange-2-ww94349304'); await p.waitForTimeout(900);
+  await p.click('[data-start]'); await p.waitForTimeout(500); await shot('deal-1');
+  await p.click('[data-deal]'); await p.waitForTimeout(600); await shot('deal-2');
+  for (let i = 0; i < 8; i++) await p.click('[data-deal]');
+  await p.waitForTimeout(600); await shot('deal-3');
+  console.log('errors', errs);
+  await b.close();
+})();

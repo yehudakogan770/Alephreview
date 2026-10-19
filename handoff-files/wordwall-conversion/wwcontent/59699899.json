@@ -1,0 +1,427 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "59699899",
+ "title": "Double Sided Letters Aleph-Tav Flash Cards",
+ "game": "Flash cards",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 59699899,
+  "activityGuid": "2b678c7a036b4015bf4d299467034cd4",
+  "activityTitle": "Double Sided Letters Aleph-Tav Flash Cards Copy of Lamdeni Letters Aleph-Tav Flash Cards",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 76,
+  "themeId": 2,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 76,
+  "type": 8,
+  "instruction": null,
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-0",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ALEF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-1",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>BET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-2",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>VET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-3",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>GIMMEL</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-4",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>DALET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-5",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>HEY</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-6",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>VAV</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-7",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>ZAYIN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-8",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>CHET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-9",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>TET</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-10",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>YUD</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-11",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>KAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-12",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>CHAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-13",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FINAL CHAF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-14",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>LAMED</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-15",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>MEM</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-16",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FINAL MEM</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-17",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>NUN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-18",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FINAL NUN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-19",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>SAMECH </n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-20",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>AYIN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-21",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>PEY</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-22",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FEY</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-23",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FINAL FEY</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-24",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>TZADIK</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-25",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>FINAL TZADIK</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-26",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>KUF</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-27",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>REISH</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-28",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>SHIN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-29",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>SIN</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-30",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>TAV</n>",
+      "image": null,
+      "sound": null
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/2b678c7a036b4015bf4d299467034cd4-31",
+      "sound": null
+     },
+     "secondary": {
+      "text": "<n>TAV</n>",
+      "image": null,
+      "sound": null
+     }
+    }
+   ]
+  }
+ }
+}

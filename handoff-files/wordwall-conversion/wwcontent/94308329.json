@@ -1,0 +1,68 @@
+{
+ "belt": "red",
+ "stripe": "3",
+ "id": "94308329",
+ "title": "Missing Letter R3",
+ "game": "Complete the sentence",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityInstruction": "Drag to fill in the missing letter",
+  "activityId": 94308329,
+  "activityGuid": "18330cb69faf420d99293b3a2e69dd8b",
+  "activityTitle": "Missing Letter R3",
+  "fontStackId": 2,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 36,
+  "themeId": 50,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 36,
+  "type": 17,
+  "instruction": "Drag to fill in the missing letter",
+  "content": {
+   "sentences": [
+    {
+     "markupText": "[א] בּ ב ג ד [ה] ו ז ח ט י [כּ] כ ךְ ל מ ם [נ] ן ס ע פּ פ ף [צ] ץ ק ר שׁ שֹ תּ [ת]  ",
+     "wrongWords": [],
+     "image": null,
+     "sound": null
+    },
+    {
+     "markupText": "א בּ [ב] ג ד ה ו [ז] ח ט [י] כּ כ ךְ ל מ [ם] נ [ן] ס ע פּ [פ] ף צ [ץ] ק ר שׁ שֹ תּ [ת]   ",
+     "wrongWords": [],
+     "image": null,
+     "sound": null
+    },
+    {
+     "markupText": "א בּ ב ג ד ה ו [ז] [ח] ט י כּ [כ] ךְ ל מ ם נ ן [ס] ע פּ פ ף [צ] ץ ק ר שׁ [שֹ] תּ ת    ",
+     "wrongWords": [],
+     "image": null,
+     "sound": null
+    },
+    {
+     "markupText": "א [בּ] [ב] ג ד ה ו ז ח ט י [כּ] [כ] ךְ ל מ ם נ ן ס ע [פּ] [פ] ף צ ץ ק ר [שׁ] [שֹ] תּ ת    ",
+     "wrongWords": [],
+     "image": null,
+     "sound": null
+    }
+   ]
+  }
+ }
+}

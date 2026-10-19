@@ -1,0 +1,116 @@
+{
+ "belt": "red",
+ "stripe": "2",
+ "id": "78507850",
+ "title": "Match אותיות סופיות",
+ "game": "Matching pairs",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityInstruction": "Match each letter to its final letter",
+  "activityId": 78507850,
+  "activityGuid": "ce2f8e1c8f7443ad8cfa1613d101993c",
+  "activityTitle": "Match אותיות סופיות",
+  "fontStackId": 0,
+  "authorUserId": 11749933,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 25,
+  "themeId": 65,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 25,
+  "type": 7,
+  "instruction": "Match each letter to its final letter",
+  "content": {
+   "pairs": [
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-0",
+      "sound": "/tts/he-il-hilaneural/1688914a840f270c5a9e7cd8b19829bf.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-1",
+      "sound": "/tts/he-il-hilaneural/0c6e09d07bf0d8a98118bfb019af1e43.mp3"
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-2",
+      "sound": "/tts/he-il-hilaneural/69cd2e8bf30dd91185685898c226d754.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-3",
+      "sound": "/tts/de-de-katjaneural/b2fbf94c2c86fee46cccd0867fb2610d.mp3"
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-4",
+      "sound": "/tts/he-il-hilaneural/38e826d2396e63c9671a62636c4de026.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-5",
+      "sound": "/tts/he-il-hilaneural/8a9c4d86c11d9de4cce46541eb0d38f5.mp3"
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-6",
+      "sound": "/tts/he-il-hilaneural/40d11484cc528256d2e641c832c4ab0c.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-7",
+      "sound": "/tts/he-il-hilaneural/0acdd75d3834151d11982c48a0a6999d.mp3"
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-8",
+      "sound": "/tts/fi-fi-selmaneural/ab5af156e6f9b4a7b0e2ab2fd87c4563.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/c0eb209434104a949a74e1b073a78031-9",
+      "sound": "/tts/en-us-avaneural/7aaa7c90857cebc0cfda52a37e30a930.mp3"
+     }
+    },
+    {
+     "primary": {
+      "text": "",
+      "image": "user/11749933/37cfd5e2d97b4f669e193426803062b3",
+      "sound": "/tts/he-il-hilaneural/3f7f8dcd3eb0d8ad0f916ed38d385c7f.mp3"
+     },
+     "secondary": {
+      "text": "",
+      "image": "user/11749933/154aabdd12e945d280eea5a19f7fa2aa",
+      "sound": "/tts/he-il-hilaneural/478f2e5283500795b257b3cdd2ea46be.mp3"
+     }
+    }
+   ]
+  }
+ }
+}

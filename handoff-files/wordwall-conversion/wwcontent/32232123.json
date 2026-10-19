@@ -1,0 +1,263 @@
+{
+ "belt": "white",
+ "stripe": "1",
+ "id": "32232123",
+ "title": "Bet Vs. Vet",
+ "game": "Quiz",
+ "page": {
+  "isEmbed": true,
+  "isLeaderboardEnabled": true,
+  "activityId": 32232123,
+  "activityGuid": "9350d1b56af74e4e9ca7493c1ee56240",
+  "activityTitle": "Bet Vs. Vet",
+  "fontStackId": 0,
+  "authorUserId": 7530149,
+  "hasError": false,
+  "isLoggedIn": false,
+  "isGuest": true,
+  "pageId": 21,
+  "userId": 0,
+  "isPro": false,
+  "isBasic": false,
+  "isTest": false,
+  "languageId": 0,
+  "localeId": 1033,
+  "iso6391Code": "en",
+  "guestExperimentVariations": [],
+  "policyVersion": 1,
+  "templateId": 5,
+  "themeId": 46,
+  "isCached": true,
+  "regionalSocialMedia": 0
+ },
+ "content": {
+  "version": 1,
+  "templateId": 5,
+  "type": 11,
+  "instruction": null,
+  "content": {
+   "questions": [
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-0",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-1",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-2",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-3",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-4",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-5",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-6",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": true,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-7",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-8",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    },
+    {
+     "question": {
+      "text": "",
+      "image": "user/7530149/9350d1b56af74e4e9ca7493c1ee56240-9",
+      "sound": null
+     },
+     "answers": [
+      {
+       "isCorrect": false,
+       "text": "<n>Bet</n>",
+       "image": null,
+       "sound": null
+      },
+      {
+       "isCorrect": true,
+       "text": "<n>Vet</n>",
+       "image": null,
+       "sound": null
+      }
+     ],
+     "requiredNumberOfAnswers": 1
+    }
+   ]
+  }
+ }
+}
