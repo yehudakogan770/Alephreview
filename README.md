@@ -6,6 +6,11 @@ A website of Hebrew reading review games for kids, set up like karate belts.
 - **3 stripes on each belt.** Each stripe has its own games.
 - Games play inside the site. Each game page has a short **How to play** box.
 - Students earn a star for each finished stripe. Progress is saved in each computer's browser.
+- **Free play** (link at the top): every original Wordwall game by belt and stripe, with nothing saved and no stars.
+- All 115 original Wordwall games were recreated as games made on this site (ids `own-<belt>-<stripe>-ww<wordwall id>`); the Wordwall originals are hidden from the star path but still play in Free play.
+- Games made here play background music (the owner's niggun recordings in `music/`), have a sound and a music button, and can read words aloud.
+- Hebrew letters use bold Times New Roman (Frank Ruhl Libre on computers without it, from `fonts/`).
+- Works on computers and phones (on phones it suggests turning sideways).
 
 The site is plain HTML, CSS and JavaScript with no build step. It's hosted on GitHub Pages from `main`.
 
@@ -56,7 +61,9 @@ Pick a game type, a theme (Meadow, Desert, Ocean, Space or Classic), and type th
 | **Flip cards** * | Flash cards | Front and back of each card |
 | **Pick a card** * | Speaking cards | The cards in the deck |
 
-\* No score (for reading out loud), so these can't be homework.
+\* No score (for reading out loud). As homework they count as done when the student plays to the end.
+
+Each game also has a **Read the words out loud** box (not on types that never read anything).
 
 More than a round's worth is split into even rounds.
 
@@ -67,7 +74,7 @@ Ready-made games of each type are already at the top of the White, Red and Orang
 ### Homework
 
 1. On the **Homework** tab, click **+ New class**. Name it and paste the students' Google emails (or **Import a file**).
-2. Click **+ New homework**. Give it a title, pick the class, a due date and the **passing score**, and add games made on this site.
+2. Click **+ New homework**. Give it a title, pick the class, a due date and the **passing score**, and add games made on this site. (Older homework that lists Wordwall games plays the copy made here instead.)
 3. Students click **My homework** at the top of the site and sign in with Google. They see only their homework. A game is **Done** only when they pass it; they can try again as many times as they like. Anyone can still play the games without signing in.
 4. Click **Who did it** to see each student's best score, how many tries, and whether they passed.
 
@@ -158,5 +165,11 @@ The first **Save & publish** copies everything into Firebase. After that, the si
 | `js/site-data.js` | Loads the site's words and games (from Firebase, or `data/site.json` if Firebase isn't set up) |
 | `js/firebase-config.js` | Firebase settings |
 | `data/site.json` | The starting copy of all words, settings and games, and the backup if Firebase can't be reached |
+| `js/games/thumbs.js` | The game card pictures for games made here |
+| `js/games/themes.js` | The game backgrounds (meadow, desert, ocean, space, classic) |
+| `music/` | Background music (MP3), picked in `GAME_MUSIC` in `js/games/engine.js` |
+| `fonts/` | Frank Ruhl Libre Bold, Hebrew letters only (SIL Open Font License) |
+| `img/` | Site icon and the Ganeinu Academy logo (footer) |
+| `CLAUDE.md`, `HANDOFF.md` | Notes for Claude: rules, history, and where everything lives |
 
 After changing a `.js` or `.css` file by hand, raise the `?v=` number for it in `index.html` and `admin.html` so browsers load the new version. Changes made on the admin page don't need this.
